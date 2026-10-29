@@ -1,0 +1,13601 @@
+export default [
+  {
+    "id": "241FA04035",
+    "slNo": 1,
+    "roll": "241FA04035",
+    "name": "SIKHA SRUJANA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04054",
+    "slNo": 2,
+    "roll": "241FA04054",
+    "name": "TADIBOINA MOUNIKA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04062",
+    "slNo": 3,
+    "roll": "241FA04062",
+    "name": "GANGIREDDY RUPA SREE",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04067",
+    "slNo": 4,
+    "roll": "241FA04067",
+    "name": "KUKKALA HARI VENKAT",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04083",
+    "slNo": 5,
+    "roll": "241FA04083",
+    "name": "RAVULA NAGA AMRUTHA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04114",
+    "slNo": 6,
+    "roll": "241FA04114",
+    "name": "KANTANI ROHITH SAI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04115",
+    "slNo": 7,
+    "roll": "241FA04115",
+    "name": "KATTA SOWMYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04124",
+    "slNo": 8,
+    "roll": "241FA04124",
+    "name": "VADRANAPU SAIRAM",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04134",
+    "slNo": 9,
+    "roll": "241FA04134",
+    "name": "KANALA HARI PRIYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04152",
+    "slNo": 10,
+    "roll": "241FA04152",
+    "name": "BODAPATI LASYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04179",
+    "slNo": 11,
+    "roll": "241FA04179",
+    "name": "KOLLURI THANUSH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04207",
+    "slNo": 12,
+    "roll": "241FA04207",
+    "name": "ABID BAIG",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04208",
+    "slNo": 13,
+    "roll": "241FA04208",
+    "name": "THAKUR J L N T SIRI BAI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04307",
+    "slNo": 14,
+    "roll": "241FA04307",
+    "name": "ADAPA PRANITH REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04357",
+    "slNo": 15,
+    "roll": "241FA04357",
+    "name": "SRIVALLI KATYAYANI TANGIRALA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04361",
+    "slNo": 16,
+    "roll": "241FA04361",
+    "name": "SHAIK KOWSAR FIRDOUSE",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04362",
+    "slNo": 17,
+    "roll": "241FA04362",
+    "name": "PACHIGALLA LAKSHMI SIRI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04485",
+    "slNo": 18,
+    "roll": "241FA04485",
+    "name": "KARNATI VENKATESWARA RAO",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Gujjula Murali"
+  },
+  {
+    "id": "241FA04520",
+    "slNo": 19,
+    "roll": "241FA04520",
+    "name": "VANDANAPU HEMANTH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04529",
+    "slNo": 20,
+    "roll": "241FA04529",
+    "name": "SAGI VENKATA SAI RAM",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04540",
+    "slNo": 21,
+    "roll": "241FA04540",
+    "name": "SHAIK MOHAMMAD SHOYAB AKMAL",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04546",
+    "slNo": 22,
+    "roll": "241FA04546",
+    "name": "MALLELA LAKSHMI LAVANYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04553",
+    "slNo": 23,
+    "roll": "241FA04553",
+    "name": "KALAVA SRAVAN KUMAR",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04579",
+    "slNo": 24,
+    "roll": "241FA04579",
+    "name": "DEVASANI ANJI REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04585",
+    "slNo": 25,
+    "roll": "241FA04585",
+    "name": "DARMAVARAPU PAVAN KUMAR",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04591",
+    "slNo": 26,
+    "roll": "241FA04591",
+    "name": "MARRI MAHESH REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04592",
+    "slNo": 27,
+    "roll": "241FA04592",
+    "name": "THOPURI CHANDRA SIVA BALAJI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04593",
+    "slNo": 28,
+    "roll": "241FA04593",
+    "name": "NADELLA MANOGNA SAI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04598",
+    "slNo": 29,
+    "roll": "241FA04598",
+    "name": "BELLAM NAGA VEDIK KRISHNA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04612",
+    "slNo": 30,
+    "roll": "241FA04612",
+    "name": "SHAIK DADA VALI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04621",
+    "slNo": 31,
+    "roll": "241FA04621",
+    "name": "SANNAPUREDDY BHANUPRATHAP REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04622",
+    "slNo": 32,
+    "roll": "241FA04622",
+    "name": "BOLLU DEEPIKA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04623",
+    "slNo": 33,
+    "roll": "241FA04623",
+    "name": "GALLA CHARNI SRI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04628",
+    "slNo": 34,
+    "roll": "241FA04628",
+    "name": "AVULA VINAY SAI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04634",
+    "slNo": 35,
+    "roll": "241FA04634",
+    "name": "TANGU GANGADHAR SRIKANTH REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04675",
+    "slNo": 36,
+    "roll": "241FA04675",
+    "name": "KILARI BHAVYA SRI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04692",
+    "slNo": 37,
+    "roll": "241FA04692",
+    "name": "VASIREDDY BHARGAVA SATYA SAI KARTHIK",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04789",
+    "slNo": 38,
+    "roll": "241FA04789",
+    "name": "VEGIRAJU ARAVIND VARMA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04871",
+    "slNo": 39,
+    "roll": "241FA04871",
+    "name": "TANNIRU ABHILASH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04905",
+    "slNo": 40,
+    "roll": "241FA04905",
+    "name": "KURUBA DEVA RAJU",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04908",
+    "slNo": 41,
+    "roll": "241FA04908",
+    "name": "KUCHINAPUDI JATHIN TEJ",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04933",
+    "slNo": 42,
+    "roll": "241FA04933",
+    "name": "BALINENI GOPI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Yechu Harshitha"
+  },
+  {
+    "id": "241FA04935",
+    "slNo": 43,
+    "roll": "241FA04935",
+    "name": "PATTABHI YASWANTH NARENDRA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04943",
+    "slNo": 44,
+    "roll": "241FA04943",
+    "name": "SAMMATA HARI KARTHIKEYA REDDY",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04958",
+    "slNo": 45,
+    "roll": "241FA04958",
+    "name": "BAILADUGU VARAPRASAD",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04959",
+    "slNo": 46,
+    "roll": "241FA04959",
+    "name": "DHANEKULA MANVITHA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04964",
+    "slNo": 47,
+    "roll": "241FA04964",
+    "name": "BOLLIMUNTHA HEMA AMAR NADH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04965",
+    "slNo": 48,
+    "roll": "241FA04965",
+    "name": "JETTY VENKATA JAGADEESH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04966",
+    "slNo": 49,
+    "roll": "241FA04966",
+    "name": "PERNI SIVA PRAKASH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04969",
+    "slNo": 50,
+    "roll": "241FA04969",
+    "name": "YARLAGADDA CHAITANYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04980",
+    "slNo": 51,
+    "roll": "241FA04980",
+    "name": "TANANKI VENKATA DEEKSHITH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04981",
+    "slNo": 52,
+    "roll": "241FA04981",
+    "name": "KOLLI MEDHA GAYATHRI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04A15",
+    "slNo": 53,
+    "roll": "241FA04A15",
+    "name": "KOVURI HARISH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04A68",
+    "slNo": 54,
+    "roll": "241FA04A68",
+    "name": "CHANDU VENKATA LAKSHMI SAI ANUHYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04A85",
+    "slNo": 55,
+    "roll": "241FA04A85",
+    "name": "AVALA TARAKA LAKSHMI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04A95",
+    "slNo": 56,
+    "roll": "241FA04A95",
+    "name": "POTHUREDDY THOSHITHA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04A99",
+    "slNo": 57,
+    "roll": "241FA04A99",
+    "name": "ENUGUKONDA MOHANAKEERTHI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04B14",
+    "slNo": 58,
+    "roll": "241FA04B14",
+    "name": "KALLURI SAI VARSHINI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04B70",
+    "slNo": 59,
+    "roll": "241FA04B70",
+    "name": "SATHENAPALLI MODITHA KRISHNA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04B88",
+    "slNo": 60,
+    "roll": "241FA04B88",
+    "name": "MYLA KRISHNA PAVANI",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04C61",
+    "slNo": 61,
+    "roll": "241FA04C61",
+    "name": "KOPPULA SASI KUMAR",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04E42",
+    "slNo": 62,
+    "roll": "241FA04E42",
+    "name": "VUNDAVALLI SREE RAM",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04E43",
+    "slNo": 63,
+    "roll": "241FA04E43",
+    "name": "YEMINENI KANESH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04E56",
+    "slNo": 64,
+    "roll": "241FA04E56",
+    "name": "LAKKAKULA SAI PRIYANKA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04E64",
+    "slNo": 65,
+    "roll": "241FA04E64",
+    "name": "RAJARAPU LAKSHMI SURYA PRAKASH",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04E71",
+    "slNo": 66,
+    "roll": "241FA04E71",
+    "name": "SYED ALTHAF HUSSAIN",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Ms. Gaddam Tejaswi"
+  },
+  {
+    "id": "241FA04F17",
+    "slNo": 67,
+    "roll": "241FA04F17",
+    "name": "PALADUGU SAI SATHISH KUMAR",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04F38",
+    "slNo": 68,
+    "roll": "241FA04F38",
+    "name": "KANNEBOYINA CHANDRA TEJA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04F76",
+    "slNo": 69,
+    "roll": "241FA04F76",
+    "name": "NADENDLA NAVYA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04F83",
+    "slNo": 70,
+    "roll": "241FA04F83",
+    "name": "AMJAD HABIB HAMED HAMAD",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04F84",
+    "slNo": 71,
+    "roll": "241FA04F84",
+    "name": "MOHAMMED GAMAL MOHAMMED ABDEEN",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "241FA04F95",
+    "slNo": 72,
+    "roll": "241FA04F95",
+    "name": "ZIKPI MERKEL SAMUELA",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "counsellor": "Mr. Adnan Ahmad Khan"
+  },
+  {
+    "id": "231FA04639",
+    "slNo": 73,
+    "roll": "231FA04639",
+    "name": "BANDLAMUDI BHUVAN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "231FA04941",
+    "slNo": 74,
+    "roll": "231FA04941",
+    "name": "ALOKAM NEERAJ",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "231FA04F29",
+    "slNo": 75,
+    "roll": "231FA04F29",
+    "name": "TAMTAM MARUTHI SAI RAM",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04048",
+    "slNo": 76,
+    "roll": "241FA04048",
+    "name": "BATTULA ABHISHEK",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04052",
+    "slNo": 77,
+    "roll": "241FA04052",
+    "name": "VISSA NAGABABU",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04133",
+    "slNo": 78,
+    "roll": "241FA04133",
+    "name": "KAPA VENUGOPAL",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04183",
+    "slNo": 79,
+    "roll": "241FA04183",
+    "name": "SHAIK JANI BASHA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04191",
+    "slNo": 80,
+    "roll": "241FA04191",
+    "name": "RAMAVATH PAWAN NAIK",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04203",
+    "slNo": 81,
+    "roll": "241FA04203",
+    "name": "GOCHIPATALA AJAY TEJA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04206",
+    "slNo": 82,
+    "roll": "241FA04206",
+    "name": "VANGAVETI VARUN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04265",
+    "slNo": 83,
+    "roll": "241FA04265",
+    "name": "BATTULA VENKATA NAGA KOTI ANIL KUMAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04344",
+    "slNo": 84,
+    "roll": "241FA04344",
+    "name": "MOHAMMED EASA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04349",
+    "slNo": 85,
+    "roll": "241FA04349",
+    "name": "GARAPATI VENKATA SIVA SAI",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04477",
+    "slNo": 86,
+    "roll": "241FA04477",
+    "name": "SHAIK ASHRAF",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04511",
+    "slNo": 87,
+    "roll": "241FA04511",
+    "name": "THUMATI VENKATA ROHITH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04522",
+    "slNo": 88,
+    "roll": "241FA04522",
+    "name": "MANGA MUKESH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04523",
+    "slNo": 89,
+    "roll": "241FA04523",
+    "name": "SYAMALA HARSHITH REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Dr. R. Renugadevi"
+  },
+  {
+    "id": "241FA04533",
+    "slNo": 90,
+    "roll": "241FA04533",
+    "name": "LUKKA VENKATESH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04538",
+    "slNo": 91,
+    "roll": "241FA04538",
+    "name": "VARRI TEJA SAI KIRAN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04544",
+    "slNo": 92,
+    "roll": "241FA04544",
+    "name": "VEMULA BALU",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04599",
+    "slNo": 93,
+    "roll": "241FA04599",
+    "name": "VAKA MOHAN REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04607",
+    "slNo": 94,
+    "roll": "241FA04607",
+    "name": "MEESALA MUKESH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04613",
+    "slNo": 95,
+    "roll": "241FA04613",
+    "name": "VENNU RAVI CHANDRA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04620",
+    "slNo": 96,
+    "roll": "241FA04620",
+    "name": "YADANABOINA YASWANTH KRISHNA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04625",
+    "slNo": 97,
+    "roll": "241FA04625",
+    "name": "THUMMA VENKATA KRISHNA REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04629",
+    "slNo": 98,
+    "roll": "241FA04629",
+    "name": "ANNA MOHIT",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04630",
+    "slNo": 99,
+    "roll": "241FA04630",
+    "name": "SANKARASETTI GANESH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04684",
+    "slNo": 100,
+    "roll": "241FA04684",
+    "name": "PESALA NIKHIL KUMAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04685",
+    "slNo": 101,
+    "roll": "241FA04685",
+    "name": "MIRIYALA JAYA PRAKASH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04699",
+    "slNo": 102,
+    "roll": "241FA04699",
+    "name": "SHAIK SOHIL ANJUM",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04700",
+    "slNo": 103,
+    "roll": "241FA04700",
+    "name": "PODILI DINESH RAJA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04807",
+    "slNo": 104,
+    "roll": "241FA04807",
+    "name": "YALAMANCHILI KARTHIKEYA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04819",
+    "slNo": 105,
+    "roll": "241FA04819",
+    "name": "DANABOYINA PAVAN SAI",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04824",
+    "slNo": 106,
+    "roll": "241FA04824",
+    "name": "KAKARAPARTHI JITHENDRA SURYA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04829",
+    "slNo": 107,
+    "roll": "241FA04829",
+    "name": "MUVVA SREE VEERENDRA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04832",
+    "slNo": 108,
+    "roll": "241FA04832",
+    "name": "YENUMULA DEVENDHAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04834",
+    "slNo": 109,
+    "roll": "241FA04834",
+    "name": "SHAIK MAHABOOB ARMAN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04837",
+    "slNo": 110,
+    "roll": "241FA04837",
+    "name": "RAMANA SUDHAMSU SAI",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Ms. Peeka Anusha"
+  },
+  {
+    "id": "241FA04886",
+    "slNo": 111,
+    "roll": "241FA04886",
+    "name": "JADDA MAHESH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04891",
+    "slNo": 112,
+    "roll": "241FA04891",
+    "name": "SHAIK SAHIL SIDDIQ",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04893",
+    "slNo": 113,
+    "roll": "241FA04893",
+    "name": "MAHARSHI BUDDA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04900",
+    "slNo": 114,
+    "roll": "241FA04900",
+    "name": "MALLAVARAPU KIRAN REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04901",
+    "slNo": 115,
+    "roll": "241FA04901",
+    "name": "DEVAVARAPU VENKATA HEMANTH CHOWDARY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04904",
+    "slNo": 116,
+    "roll": "241FA04904",
+    "name": "SAMPATI SAI TEJA REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04953",
+    "slNo": 117,
+    "roll": "241FA04953",
+    "name": "UPPALAPATI VIVEK SAI VARMA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04B05",
+    "slNo": 118,
+    "roll": "241FA04B05",
+    "name": "SUNKARA HEMANTH KRISHNA MURTHY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04B17",
+    "slNo": 119,
+    "roll": "241FA04B17",
+    "name": "YENIMI REEDY VENKATA PRANAY KUMAR REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04B20",
+    "slNo": 120,
+    "roll": "241FA04B20",
+    "name": "KASANI YASWANTH DURGA SIVA KUMAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04B21",
+    "slNo": 121,
+    "roll": "241FA04B21",
+    "name": "KANUMILLI BHARGAVI SRI SANDEEP PRASAD",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04B22",
+    "slNo": 122,
+    "roll": "241FA04B22",
+    "name": "DAGGULA BHARGAVA REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04B82",
+    "slNo": 123,
+    "roll": "241FA04B82",
+    "name": "JANDRAJUPALLI VIVEK",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04C45",
+    "slNo": 124,
+    "roll": "241FA04C45",
+    "name": "SURAM VINITH KUMAR REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04C53",
+    "slNo": 125,
+    "roll": "241FA04C53",
+    "name": "MEDHARAMETLA MANIDEEP",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04C58",
+    "slNo": 126,
+    "roll": "241FA04C58",
+    "name": "MANDAPATI SIVA SANKARA NARAYANA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04C62",
+    "slNo": 127,
+    "roll": "241FA04C62",
+    "name": "TELAPROLU ARUN TEJA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04C63",
+    "slNo": 128,
+    "roll": "241FA04C63",
+    "name": "MULPURI BASAVA MOHAN REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04D77",
+    "slNo": 129,
+    "roll": "241FA04D77",
+    "name": "KALISETTY DEV HARSHA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04D87",
+    "slNo": 130,
+    "roll": "241FA04D87",
+    "name": "AVULA VISHNU VARDHAN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04D96",
+    "slNo": 131,
+    "roll": "241FA04D96",
+    "name": "HARDHIK ALLAMSETTY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04E60",
+    "slNo": 132,
+    "roll": "241FA04E60",
+    "name": "MOTAPOTHULA VENKATA NAGA HARSHA SUHITH",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04E80",
+    "slNo": 133,
+    "roll": "241FA04E80",
+    "name": "KAKKERA PRANAV",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04E86",
+    "slNo": 134,
+    "roll": "241FA04E86",
+    "name": "GADDAM BHANUPRAKASH CHOWDARY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04E89",
+    "slNo": 135,
+    "roll": "241FA04E89",
+    "name": "PATIBANDLA ROHITH KRISHNA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04E91",
+    "slNo": 136,
+    "roll": "241FA04E91",
+    "name": "NAYUDU NAVADHEER",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04F06",
+    "slNo": 137,
+    "roll": "241FA04F06",
+    "name": "JALLELA KARTHIK",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04F08",
+    "slNo": 138,
+    "roll": "241FA04F08",
+    "name": "GOSU MANI VARDHAN",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04F12",
+    "slNo": 139,
+    "roll": "241FA04F12",
+    "name": "VEERAMACHA M N V SWAROOP",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04F13",
+    "slNo": 140,
+    "roll": "241FA04F13",
+    "name": "SUDHABATTULA DHINESH KUMAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Vishal Jaiswal"
+  },
+  {
+    "id": "241FA04F20",
+    "slNo": 141,
+    "roll": "241FA04F20",
+    "name": "MAYALURI SHASHIKANTH REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04F42",
+    "slNo": 142,
+    "roll": "241FA04F42",
+    "name": "AVVARU SAI CHAITANYA",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04F46",
+    "slNo": 143,
+    "roll": "241FA04F46",
+    "name": "KONDAVEETI VARUN SAI",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04F66",
+    "slNo": 144,
+    "roll": "241FA04F66",
+    "name": "PULI NAGENDRA BABU",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04F73",
+    "slNo": 145,
+    "roll": "241FA04F73",
+    "name": "NARAM ROHITH KUMAR",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04F77",
+    "slNo": 146,
+    "roll": "241FA04F77",
+    "name": "MULE VIJAY SEKHAR REDDY",
+    "section": "Section 2",
+    "sectionNum": 2,
+    "counsellor": "Mr. Allamudi Kalyan Babu"
+  },
+  {
+    "id": "241FA04001",
+    "slNo": 147,
+    "roll": "241FA04001",
+    "name": "POLINA VARSHITHA KANTHAM",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04007",
+    "slNo": 148,
+    "roll": "241FA04007",
+    "name": "MANGAMURI VYSHNAVI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04010",
+    "slNo": 149,
+    "roll": "241FA04010",
+    "name": "MAGHAM TEJASWI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04011",
+    "slNo": 150,
+    "roll": "241FA04011",
+    "name": "CHADALAVADA RUCHIR VENKATA CHOWDARY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04017",
+    "slNo": 151,
+    "roll": "241FA04017",
+    "name": "VARALA PRASANNA PUJITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04025",
+    "slNo": 152,
+    "roll": "241FA04025",
+    "name": "GUNDALA MALLIKA LAKSHMI NARASIMHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04028",
+    "slNo": 153,
+    "roll": "241FA04028",
+    "name": "CHERUVU VENKATA NAGA SUDHA SREENIDHI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04033",
+    "slNo": 154,
+    "roll": "241FA04033",
+    "name": "PADIRA CHANDRA SEKHAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04041",
+    "slNo": 155,
+    "roll": "241FA04041",
+    "name": "MADDIPATLA MADHU",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04043",
+    "slNo": 156,
+    "roll": "241FA04043",
+    "name": "MUDDANA VENKATA PRAVEEN",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04044",
+    "slNo": 157,
+    "roll": "241FA04044",
+    "name": "PENDEM UMADEVI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04047",
+    "slNo": 158,
+    "roll": "241FA04047",
+    "name": "GALAM ANIL NAGA KUMAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04050",
+    "slNo": 159,
+    "roll": "241FA04050",
+    "name": "KANNEGANTI LIKHITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04056",
+    "slNo": 160,
+    "roll": "241FA04056",
+    "name": "AVVARU HIMANI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04059",
+    "slNo": 161,
+    "roll": "241FA04059",
+    "name": "GADDE ASHWITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04065",
+    "slNo": 162,
+    "roll": "241FA04065",
+    "name": "PAGADALA BAAJI GURUNADHAM",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04069",
+    "slNo": 163,
+    "roll": "241FA04069",
+    "name": "KAKANI SHACHIRITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04070",
+    "slNo": 164,
+    "roll": "241FA04070",
+    "name": "SAGAR KUMBHAKAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04252",
+    "slNo": 165,
+    "roll": "241FA04252",
+    "name": "NAGARAJU LIKHITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04397",
+    "slNo": 166,
+    "roll": "241FA04397",
+    "name": "DUGGEMPUDI VENKATA NAGA LAKSHMI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04398",
+    "slNo": 167,
+    "roll": "241FA04398",
+    "name": "BODDOJI PALLAVI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04399",
+    "slNo": 168,
+    "roll": "241FA04399",
+    "name": "SILARI SUPRAJA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04403",
+    "slNo": 169,
+    "roll": "241FA04403",
+    "name": "HUNENDRA PARVATHANENI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04408",
+    "slNo": 170,
+    "roll": "241FA04408",
+    "name": "JAMI SAI GUPTHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04437",
+    "slNo": 171,
+    "roll": "241FA04437",
+    "name": "GANTALA CHARAN MOHAN",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04441",
+    "slNo": 172,
+    "roll": "241FA04441",
+    "name": "NALLURI VENKATA SPURTHIKA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04442",
+    "slNo": 173,
+    "roll": "241FA04442",
+    "name": "RAPURI VENKATA SUBRAMANYA SAI SREEHARSHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04443",
+    "slNo": 174,
+    "roll": "241FA04443",
+    "name": "PAGOLU VENKATA RAGHAVA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04447",
+    "slNo": 175,
+    "roll": "241FA04447",
+    "name": "BARMA HEMANTH",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04451",
+    "slNo": 176,
+    "roll": "241FA04451",
+    "name": "BOGGAVARAPU VENKATA CHANDRA KARUNYA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04452",
+    "slNo": 177,
+    "roll": "241FA04452",
+    "name": "MYNENI SRIVALLIKA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04459",
+    "slNo": 178,
+    "roll": "241FA04459",
+    "name": "PARA HEMANTH",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04461",
+    "slNo": 179,
+    "roll": "241FA04461",
+    "name": "NAMBURI MAHITH",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04462",
+    "slNo": 180,
+    "roll": "241FA04462",
+    "name": "SADINENI SRIHARI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04467",
+    "slNo": 181,
+    "roll": "241FA04467",
+    "name": "KUKKA VEDESWARA SARVANANDU",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04469",
+    "slNo": 182,
+    "roll": "241FA04469",
+    "name": "PASUPULETI SHANMUKHA VARDHAN",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04471",
+    "slNo": 183,
+    "roll": "241FA04471",
+    "name": "UPPUTURI ROHITHA NAGA LAKSHMI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04473",
+    "slNo": 184,
+    "roll": "241FA04473",
+    "name": "PANDI VENKATESWARA RAO",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Dr. Phanindra Thota"
+  },
+  {
+    "id": "241FA04475",
+    "slNo": 185,
+    "roll": "241FA04475",
+    "name": "MD ASAD RAZA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04479",
+    "slNo": 186,
+    "roll": "241FA04479",
+    "name": "JAYANT KUMAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04482",
+    "slNo": 187,
+    "roll": "241FA04482",
+    "name": "MULLAPUDI ABHIRAM CHOWDARY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04483",
+    "slNo": 188,
+    "roll": "241FA04483",
+    "name": "PANGULURI BHARGAV",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04569",
+    "slNo": 189,
+    "roll": "241FA04569",
+    "name": "VANKA DURGA PRASAD",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04746",
+    "slNo": 190,
+    "roll": "241FA04746",
+    "name": "POONDLA YASWITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04878",
+    "slNo": 191,
+    "roll": "241FA04878",
+    "name": "PANGA SRESHTA RANI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04912",
+    "slNo": 192,
+    "roll": "241FA04912",
+    "name": "MEDAPATI DEELIP MANIKANTA YASWANTH REDDY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04917",
+    "slNo": 193,
+    "roll": "241FA04917",
+    "name": "VAKADA JYOTHI PRAKASH NAIDU",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04983",
+    "slNo": 194,
+    "roll": "241FA04983",
+    "name": "MANYAM KAVYA SRI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04989",
+    "slNo": 195,
+    "roll": "241FA04989",
+    "name": "MARNENI MOHANA KRISHNA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04990",
+    "slNo": 196,
+    "roll": "241FA04990",
+    "name": "JALLIPALLI NAGA HASINI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04993",
+    "slNo": 197,
+    "roll": "241FA04993",
+    "name": "KANTIPUDI SAHITHI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04997",
+    "slNo": 198,
+    "roll": "241FA04997",
+    "name": "YADLAPALLI LAVANYA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A02",
+    "slNo": 199,
+    "roll": "241FA04A02",
+    "name": "MUTTINA HRUDAY KUMAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A03",
+    "slNo": 200,
+    "roll": "241FA04A03",
+    "name": "GANDU HEMA REDDY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A05",
+    "slNo": 201,
+    "roll": "241FA04A05",
+    "name": "GOGINENI DEEKSHITHA CHOWDARY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A12",
+    "slNo": 202,
+    "roll": "241FA04A12",
+    "name": "EKAMBARAM DIVYA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A13",
+    "slNo": 203,
+    "roll": "241FA04A13",
+    "name": "ALAKUNTA PUJASREE",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A16",
+    "slNo": 204,
+    "roll": "241FA04A16",
+    "name": "BOPPUDI SAI MAHITHA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A19",
+    "slNo": 205,
+    "roll": "241FA04A19",
+    "name": "GURRAM SRI RAM",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A24",
+    "slNo": 206,
+    "roll": "241FA04A24",
+    "name": "KOLLA TEJASWI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A33",
+    "slNo": 207,
+    "roll": "241FA04A33",
+    "name": "VEMULAKONDA YATISHA LAKSHMI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A34",
+    "slNo": 208,
+    "roll": "241FA04A34",
+    "name": "MUKKU REVANTH PHANINDRA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A36",
+    "slNo": 209,
+    "roll": "241FA04A36",
+    "name": "GOTTAM HARITHA LAKSHMI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A41",
+    "slNo": 210,
+    "roll": "241FA04A41",
+    "name": "BASIT ABBAS",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A46",
+    "slNo": 211,
+    "roll": "241FA04A46",
+    "name": "SHAIK NOUSHEN",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A47",
+    "slNo": 212,
+    "roll": "241FA04A47",
+    "name": "NARAPURAM RANGA SHANMUKHA SAI VISHAL",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04A48",
+    "slNo": 213,
+    "roll": "241FA04A48",
+    "name": "DIVYANSHU RAJ",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04B30",
+    "slNo": 214,
+    "roll": "241FA04B30",
+    "name": "KANNADARI HARINI",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04B46",
+    "slNo": 215,
+    "roll": "241FA04B46",
+    "name": "KOMMINA SPANDANNA",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04B92",
+    "slNo": 216,
+    "roll": "241FA04B92",
+    "name": "SNEH RANJAN",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04D75",
+    "slNo": 217,
+    "roll": "241FA04D75",
+    "name": "AKULA SRIRAM",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04F70",
+    "slNo": 218,
+    "roll": "241FA04F70",
+    "name": "SHUBHAM KUMAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04F89",
+    "slNo": 219,
+    "roll": "241FA04F89",
+    "name": "SUSHANT KUMAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04F97",
+    "slNo": 220,
+    "roll": "241FA04F97",
+    "name": "RAKESH THAKUR LOHAR",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04F98",
+    "slNo": 221,
+    "roll": "241FA04F98",
+    "name": "MUKESH PANDEY",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04F99",
+    "slNo": 222,
+    "roll": "241FA04F99",
+    "name": "REMON LAMICHHANE",
+    "section": "Section 3",
+    "sectionNum": 3,
+    "counsellor": "Mr. Lalu Naick Bhukya"
+  },
+  {
+    "id": "241FA04026",
+    "slNo": 223,
+    "roll": "241FA04026",
+    "name": "PASULA VYSHNAVI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04078",
+    "slNo": 224,
+    "roll": "241FA04078",
+    "name": "KODI NIHARIKA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04080",
+    "slNo": 225,
+    "roll": "241FA04080",
+    "name": "YELIKA GOWRI SAILAJA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04082",
+    "slNo": 226,
+    "roll": "241FA04082",
+    "name": "KOTHURU JAGADISH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04085",
+    "slNo": 227,
+    "roll": "241FA04085",
+    "name": "YELAMPALLE BHAVYA REDDY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04089",
+    "slNo": 228,
+    "roll": "241FA04089",
+    "name": "ANNAPUREDDY VENKATA DURGA SIVA PRASAD",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04090",
+    "slNo": 229,
+    "roll": "241FA04090",
+    "name": "TELLURI ANIL KUMAR REDDY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04091",
+    "slNo": 230,
+    "roll": "241FA04091",
+    "name": "NARNEPATI DEVI PRIYA VARSHINI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04092",
+    "slNo": 231,
+    "roll": "241FA04092",
+    "name": "SYED SAMEEM",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04093",
+    "slNo": 232,
+    "roll": "241FA04093",
+    "name": "VENNA LIKHITHA REDDY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04095",
+    "slNo": 233,
+    "roll": "241FA04095",
+    "name": "CHEBROLU SRUTHI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04101",
+    "slNo": 234,
+    "roll": "241FA04101",
+    "name": "GUNTUR LEELA SAGAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04103",
+    "slNo": 235,
+    "roll": "241FA04103",
+    "name": "LINGALA GNANA VAISHNAVI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04104",
+    "slNo": 236,
+    "roll": "241FA04104",
+    "name": "KAJA BHAVYA SRI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04105",
+    "slNo": 237,
+    "roll": "241FA04105",
+    "name": "VARIKUTI NAGA SRAVANTHI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04107",
+    "slNo": 238,
+    "roll": "241FA04107",
+    "name": "MANCHINENI SAI NAGA CHARAN",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04108",
+    "slNo": 239,
+    "roll": "241FA04108",
+    "name": "POKURI PRIYA VYSHNAVI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04109",
+    "slNo": 240,
+    "roll": "241FA04109",
+    "name": "NUVVULA RAGHA SAI PRIYA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04111",
+    "slNo": 241,
+    "roll": "241FA04111",
+    "name": "KETHA SREE VARA SIDDHI THRIMURTHULU",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04122",
+    "slNo": 242,
+    "roll": "241FA04122",
+    "name": "CHALLA SAMBASIVA RAO",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04127",
+    "slNo": 243,
+    "roll": "241FA04127",
+    "name": "PICHIKALA HARI PRIYA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04128",
+    "slNo": 244,
+    "roll": "241FA04128",
+    "name": "GADDAM NAGA SNEHITHA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04135",
+    "slNo": 245,
+    "roll": "241FA04135",
+    "name": "CHANDRA SPOORTHI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04136",
+    "slNo": 246,
+    "roll": "241FA04136",
+    "name": "RAVELLA MOHANA PRIYA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04151",
+    "slNo": 247,
+    "roll": "241FA04151",
+    "name": "BALINA SAI VYSHNAVI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04153",
+    "slNo": 248,
+    "roll": "241FA04153",
+    "name": "NAKKA ABHIRAM",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04154",
+    "slNo": 249,
+    "roll": "241FA04154",
+    "name": "SURAGANI TEJA SAI VENKATA KOTESWARI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04156",
+    "slNo": 250,
+    "roll": "241FA04156",
+    "name": "KIKKURI YASHWANT REDDY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04157",
+    "slNo": 251,
+    "roll": "241FA04157",
+    "name": "KARNATI JHANSI RAM",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04162",
+    "slNo": 252,
+    "roll": "241FA04162",
+    "name": "P KARTIK LAXMI SRINIVAS REDDY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04165",
+    "slNo": 253,
+    "roll": "241FA04165",
+    "name": "MAMILLA PREMALATHA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04167",
+    "slNo": 254,
+    "roll": "241FA04167",
+    "name": "KOTA MOHAN",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04168",
+    "slNo": 255,
+    "roll": "241FA04168",
+    "name": "TAMMISETTI RAJESWAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04169",
+    "slNo": 256,
+    "roll": "241FA04169",
+    "name": "YENUMULA VENKATA NAGA SAI POOJITHA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04175",
+    "slNo": 257,
+    "roll": "241FA04175",
+    "name": "MEKALA ROHITH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. R. Prathap Kumar"
+  },
+  {
+    "id": "241FA04177",
+    "slNo": 258,
+    "roll": "241FA04177",
+    "name": "YALAM OM VENKATA SAI KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04185",
+    "slNo": 259,
+    "roll": "241FA04185",
+    "name": "PRAYASH KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04192",
+    "slNo": 260,
+    "roll": "241FA04192",
+    "name": "RAJEEV KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04197",
+    "slNo": 261,
+    "roll": "241FA04197",
+    "name": "UNDAVALLI JASWITHA SAI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04202",
+    "slNo": 262,
+    "roll": "241FA04202",
+    "name": "NADELLA YASASWI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04493",
+    "slNo": 263,
+    "roll": "241FA04493",
+    "name": "CHERUKURI UHANJALI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04499",
+    "slNo": 264,
+    "roll": "241FA04499",
+    "name": "BATTULA SAMBA SIVENDRA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04507",
+    "slNo": 265,
+    "roll": "241FA04507",
+    "name": "NANNURI BHANU PRAKASH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04594",
+    "slNo": 266,
+    "roll": "241FA04594",
+    "name": "RATAKONDA KEERTHI KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04845",
+    "slNo": 267,
+    "roll": "241FA04845",
+    "name": "YAMALA LOKESH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04846",
+    "slNo": 268,
+    "roll": "241FA04846",
+    "name": "KADIYALA VENKATA SWATHI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04857",
+    "slNo": 269,
+    "roll": "241FA04857",
+    "name": "PINNELLI BINDU SRI",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04861",
+    "slNo": 270,
+    "roll": "241FA04861",
+    "name": "KARANAM SINDHUSREE",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04863",
+    "slNo": 271,
+    "roll": "241FA04863",
+    "name": "KATLA NEELIMA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04874",
+    "slNo": 272,
+    "roll": "241FA04874",
+    "name": "RAGIPATI ASHIK ABEED",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04877",
+    "slNo": 273,
+    "roll": "241FA04877",
+    "name": "GURRAM DIVYA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04890",
+    "slNo": 274,
+    "roll": "241FA04890",
+    "name": "PERUMALLA DEVIKA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04896",
+    "slNo": 275,
+    "roll": "241FA04896",
+    "name": "AALOK KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04898",
+    "slNo": 276,
+    "roll": "241FA04898",
+    "name": "CHALUVADI ABHINAY KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04910",
+    "slNo": 277,
+    "roll": "241FA04910",
+    "name": "RAJA SAI MOHITH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E06",
+    "slNo": 278,
+    "roll": "241FA04E06",
+    "name": "THIMMAPURAM HEMANTH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E14",
+    "slNo": 279,
+    "roll": "241FA04E14",
+    "name": "THATIKONDA KEDHAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E23",
+    "slNo": 280,
+    "roll": "241FA04E23",
+    "name": "BATCHU VENKATA CHENNA LAKSHMI SUJITHA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E27",
+    "slNo": 281,
+    "roll": "241FA04E27",
+    "name": "MATTA VENKATA DEEPAK",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E37",
+    "slNo": 282,
+    "roll": "241FA04E37",
+    "name": "KOMMANABOINA SREERAM",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E39",
+    "slNo": 283,
+    "roll": "241FA04E39",
+    "name": "GURRAM GANGA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E47",
+    "slNo": 284,
+    "roll": "241FA04E47",
+    "name": "POTHURAJU LEELA AVINASH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E51",
+    "slNo": 285,
+    "roll": "241FA04E51",
+    "name": "GONUGUNTA NITEESH",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E54",
+    "slNo": 286,
+    "roll": "241FA04E54",
+    "name": "SHAIK MOHAMMED SUHEL",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04E58",
+    "slNo": 287,
+    "roll": "241FA04E58",
+    "name": "VUNNAM HYNDAVI CHOWDARY",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04F49",
+    "slNo": 288,
+    "roll": "241FA04F49",
+    "name": "PANKAJ KUMAR CHAURASIYA",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04F85",
+    "slNo": 289,
+    "roll": "241FA04F85",
+    "name": "SATYAJEET RAJ",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04F88",
+    "slNo": 290,
+    "roll": "241FA04F88",
+    "name": "HARSHVARDHAN KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04F90",
+    "slNo": 291,
+    "roll": "241FA04F90",
+    "name": "RAKESH KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "251LA04001",
+    "slNo": 292,
+    "roll": "251LA04001",
+    "name": "SHUBHAM SAGAR SANJAY KUMAR",
+    "section": "Section 4",
+    "sectionNum": 4,
+    "counsellor": "Dr. M. Raja Rao"
+  },
+  {
+    "id": "241FA04057",
+    "slNo": 293,
+    "roll": "241FA04057",
+    "name": "ANIKET RAJ",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04216",
+    "slNo": 294,
+    "roll": "241FA04216",
+    "name": "GOLAM RASHMITHA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04219",
+    "slNo": 295,
+    "roll": "241FA04219",
+    "name": "NANDHYALA SOWMYAREDDY",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04220",
+    "slNo": 296,
+    "roll": "241FA04220",
+    "name": "BOPPANA VARSHITHA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04226",
+    "slNo": 297,
+    "roll": "241FA04226",
+    "name": "MUKKAPATI MANOJ KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04227",
+    "slNo": 298,
+    "roll": "241FA04227",
+    "name": "SHAIK MOHAMMAD ILLIYAS",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04228",
+    "slNo": 299,
+    "roll": "241FA04228",
+    "name": "JYOTHIKA PEDDIBOYINA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04231",
+    "slNo": 300,
+    "roll": "241FA04231",
+    "name": "TARIGOPPULA MANOHAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04239",
+    "slNo": 301,
+    "roll": "241FA04239",
+    "name": "TAMMISETTI AASISH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04241",
+    "slNo": 302,
+    "roll": "241FA04241",
+    "name": "GANGAVARAPU SAI SREEMANTH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04245",
+    "slNo": 303,
+    "roll": "241FA04245",
+    "name": "ALAHARI SAITEJA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04249",
+    "slNo": 304,
+    "roll": "241FA04249",
+    "name": "DESAM MYTHILI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04253",
+    "slNo": 305,
+    "roll": "241FA04253",
+    "name": "UNDAVALLI GEETHANJALI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04259",
+    "slNo": 306,
+    "roll": "241FA04259",
+    "name": "MODAPALLI JAYARAM CHARI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04267",
+    "slNo": 307,
+    "roll": "241FA04267",
+    "name": "CHUTTURI BHANU SRIKAR SAI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04268",
+    "slNo": 308,
+    "roll": "241FA04268",
+    "name": "KATTA HEMA SANKAR VEERA ASWANT",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04274",
+    "slNo": 309,
+    "roll": "241FA04274",
+    "name": "HARI JAHNAVI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04412",
+    "slNo": 310,
+    "roll": "241FA04412",
+    "name": "SHIVAM KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04679",
+    "slNo": 311,
+    "roll": "241FA04679",
+    "name": "AKHILESH KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04709",
+    "slNo": 312,
+    "roll": "241FA04709",
+    "name": "ADIGARLA JAHNAVI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04710",
+    "slNo": 313,
+    "roll": "241FA04710",
+    "name": "DUGGIDEVI OMKARESWARA VARSHITH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04722",
+    "slNo": 314,
+    "roll": "241FA04722",
+    "name": "KOTHAGUNDLA KEERTHI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04726",
+    "slNo": 315,
+    "roll": "241FA04726",
+    "name": "SINGOTHU DURGA MAHESH VARMA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04727",
+    "slNo": 316,
+    "roll": "241FA04727",
+    "name": "NUKALA DURGA PRASAD",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Upalanchi Vara Lakshmi"
+  },
+  {
+    "id": "241FA04732",
+    "slNo": 317,
+    "roll": "241FA04732",
+    "name": "CHALUVADI PATTABHI RAMAIAH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04737",
+    "slNo": 318,
+    "roll": "241FA04737",
+    "name": "KANDAVALLI SMILY",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04738",
+    "slNo": 319,
+    "roll": "241FA04738",
+    "name": "SANKA PRANEETHA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04739",
+    "slNo": 320,
+    "roll": "241FA04739",
+    "name": "VARALA VISHNU VARDHAN",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04743",
+    "slNo": 321,
+    "roll": "241FA04743",
+    "name": "SHAIK JANI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04744",
+    "slNo": 322,
+    "roll": "241FA04744",
+    "name": "VALLAPUNENI BHANNUMALLI PRASAD",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04753",
+    "slNo": 323,
+    "roll": "241FA04753",
+    "name": "ALA SHANMUKHA VENKATESH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04756",
+    "slNo": 324,
+    "roll": "241FA04756",
+    "name": "VUDALA CHANDAN",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04767",
+    "slNo": 325,
+    "roll": "241FA04767",
+    "name": "ISHAN RAJ",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04841",
+    "slNo": 326,
+    "roll": "241FA04841",
+    "name": "TENETI ESWARA REDDY",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04919",
+    "slNo": 327,
+    "roll": "241FA04919",
+    "name": "TATHIREDDY HIMASRI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04939",
+    "slNo": 328,
+    "roll": "241FA04939",
+    "name": "VANGAVOLU SYAM PRASAD",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04940",
+    "slNo": 329,
+    "roll": "241FA04940",
+    "name": "GONUGUNTLA SPANDANA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04952",
+    "slNo": 330,
+    "roll": "241FA04952",
+    "name": "ASHU KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04957",
+    "slNo": 331,
+    "roll": "241FA04957",
+    "name": "GOWTHAM CHOWDARY EDPUGANTI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04971",
+    "slNo": 332,
+    "roll": "241FA04971",
+    "name": "SHAIK MULLA SOHAIL BASHA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04A86",
+    "slNo": 333,
+    "roll": "241FA04A86",
+    "name": "MADINENI PRASANTH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04B90",
+    "slNo": 334,
+    "roll": "241FA04B90",
+    "name": "ARYAN PATEL",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04B95",
+    "slNo": 335,
+    "roll": "241FA04B95",
+    "name": "NADIPUDI VEERA MANIKANTA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E81",
+    "slNo": 336,
+    "roll": "241FA04E81",
+    "name": "JALE RAJASRI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E83",
+    "slNo": 337,
+    "roll": "241FA04E83",
+    "name": "DIWAS KUMAR SUMAN",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E90",
+    "slNo": 338,
+    "roll": "241FA04E90",
+    "name": "DESETTI KAVYANJALI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E93",
+    "slNo": 339,
+    "roll": "241FA04E93",
+    "name": "BANAVATHU SIRI VENNELA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E95",
+    "slNo": 340,
+    "roll": "241FA04E95",
+    "name": "SALLAGUNDLA PENCHULA JEEVAN PRASAD",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04E98",
+    "slNo": 341,
+    "roll": "241FA04E98",
+    "name": "MITTAPALLI AARTHI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F03",
+    "slNo": 342,
+    "roll": "241FA04F03",
+    "name": "CHAKKA VENKATA SAI LOHITHA KRISHNA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F09",
+    "slNo": 343,
+    "roll": "241FA04F09",
+    "name": "GUMMADI GOWTHAM KRISHNA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F10",
+    "slNo": 344,
+    "roll": "241FA04F10",
+    "name": "PADAMATA BHARGAV",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F14",
+    "slNo": 345,
+    "roll": "241FA04F14",
+    "name": "KILARI NARESH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F25",
+    "slNo": 346,
+    "roll": "241FA04F25",
+    "name": "SUDHIDEVARA ABHINASH CHOWDARY",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F31",
+    "slNo": 347,
+    "roll": "241FA04F31",
+    "name": "MEDURI DHONI SAI BADRA THILAK",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F33",
+    "slNo": 348,
+    "roll": "241FA04F33",
+    "name": "THATIKONDA BHANU PRAKASH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F35",
+    "slNo": 349,
+    "roll": "241FA04F35",
+    "name": "GUTLAPALLI MANASA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F37",
+    "slNo": 350,
+    "roll": "241FA04F37",
+    "name": "SATYAPRAKASH",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F39",
+    "slNo": 351,
+    "roll": "241FA04F39",
+    "name": "MALIREDDY YASWANTH REDDY",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F40",
+    "slNo": 352,
+    "roll": "241FA04F40",
+    "name": "MANDADI KAVYA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F43",
+    "slNo": 353,
+    "roll": "241FA04F43",
+    "name": "GUDISE BHAVANA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F44",
+    "slNo": 354,
+    "roll": "241FA04F44",
+    "name": "MANIKANTA SAKETI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Mr. Shashi Mani"
+  },
+  {
+    "id": "241FA04F47",
+    "slNo": 355,
+    "roll": "241FA04F47",
+    "name": "CHERUKURI NIKITHA SRI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F51",
+    "slNo": 356,
+    "roll": "241FA04F51",
+    "name": "KUNDAM NAGA JAYATHI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F57",
+    "slNo": 357,
+    "roll": "241FA04F57",
+    "name": "KAMINENI BHAVITHA",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F59",
+    "slNo": 358,
+    "roll": "241FA04F59",
+    "name": "BALU TRINADH NEKKALAPUDI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F61",
+    "slNo": 359,
+    "roll": "241FA04F61",
+    "name": "MARISETTI MOHAN CHANDRA DURGA SAI KIRAN",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F63",
+    "slNo": 360,
+    "roll": "241FA04F63",
+    "name": "MUNUGOTI SRIVALLI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F64",
+    "slNo": 361,
+    "roll": "241FA04F64",
+    "name": "HARSH NANDAN KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F65",
+    "slNo": 362,
+    "roll": "241FA04F65",
+    "name": "TANANKI NIKHIL SAI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F68",
+    "slNo": 363,
+    "roll": "241FA04F68",
+    "name": "GUDIMELLI JASWANTHI",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04F74",
+    "slNo": 364,
+    "roll": "241FA04F74",
+    "name": "SITESH KUMAR",
+    "section": "Section 5",
+    "sectionNum": 5,
+    "counsellor": "Ms. Koppula Anitha"
+  },
+  {
+    "id": "241FA04326",
+    "slNo": 365,
+    "roll": "241FA04326",
+    "name": "ROHIT MAHAKUD",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04601",
+    "slNo": 366,
+    "roll": "241FA04601",
+    "name": "SANGANA YASWANTH KUMAR REDDY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04740",
+    "slNo": 367,
+    "roll": "241FA04740",
+    "name": "REDDEM ASRITHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A63",
+    "slNo": 368,
+    "roll": "241FA04A63",
+    "name": "KUNDURU VENKATA KARTHIK REDDY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A64",
+    "slNo": 369,
+    "roll": "241FA04A64",
+    "name": "THUMMURI TEJA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A71",
+    "slNo": 370,
+    "roll": "241FA04A71",
+    "name": "CHEBROLU VENKATA SAI GAYATHRI SOWPARNIKA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A72",
+    "slNo": 371,
+    "roll": "241FA04A72",
+    "name": "VAKA SANDEEP",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A80",
+    "slNo": 372,
+    "roll": "241FA04A80",
+    "name": "VANKAYALAPATI AMRUTHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A82",
+    "slNo": 373,
+    "roll": "241FA04A82",
+    "name": "ANGULURI NAGA VENKATA LAKSHMI SINDHU SREE",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A88",
+    "slNo": 374,
+    "roll": "241FA04A88",
+    "name": "PALLA JAYA SRI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A94",
+    "slNo": 375,
+    "roll": "241FA04A94",
+    "name": "GORANTLA HEMANTH KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A96",
+    "slNo": 376,
+    "roll": "241FA04A96",
+    "name": "MANDATI HAMESHITHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04A97",
+    "slNo": 377,
+    "roll": "241FA04A97",
+    "name": "SHAIK ASHAREEF",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B03",
+    "slNo": 378,
+    "roll": "241FA04B03",
+    "name": "KOTA SATYA ANVESH",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B08",
+    "slNo": 379,
+    "roll": "241FA04B08",
+    "name": "MUNAGALA VENKAT NANDHAN REDDY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B19",
+    "slNo": 380,
+    "roll": "241FA04B19",
+    "name": "S T N VENKATA SATHYANARAYANA BOPPANA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B24",
+    "slNo": 381,
+    "roll": "241FA04B24",
+    "name": "DODDAPANENI AMRUTHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B33",
+    "slNo": 382,
+    "roll": "241FA04B33",
+    "name": "ANUMOLA LOKESH GUPTHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B34",
+    "slNo": 383,
+    "roll": "241FA04B34",
+    "name": "MAKIREDDI ARAVIND",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B35",
+    "slNo": 384,
+    "roll": "241FA04B35",
+    "name": "UPPALA HEMALATHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B39",
+    "slNo": 385,
+    "roll": "241FA04B39",
+    "name": "SHAIK AASIFA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B51",
+    "slNo": 386,
+    "roll": "241FA04B51",
+    "name": "BAGUDU VISHNU VARDHAN BABU",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B53",
+    "slNo": 387,
+    "roll": "241FA04B53",
+    "name": "CHATTALA SAI GOPI KRISHNA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B54",
+    "slNo": 388,
+    "roll": "241FA04B54",
+    "name": "MALLINENI VINEETHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B56",
+    "slNo": 389,
+    "roll": "241FA04B56",
+    "name": "MYNENI HANSITH VENKAT SAI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B59",
+    "slNo": 390,
+    "roll": "241FA04B59",
+    "name": "SAYYAD HUSSAIN",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B68",
+    "slNo": 391,
+    "roll": "241FA04B68",
+    "name": "KANDIMALLA ESWARA RAJU",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B75",
+    "slNo": 392,
+    "roll": "241FA04B75",
+    "name": "MEKALA KISHOR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B78",
+    "slNo": 393,
+    "roll": "241FA04B78",
+    "name": "MALIPEDDI RAHUL",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04B87",
+    "slNo": 394,
+    "roll": "241FA04B87",
+    "name": "MANNEM TULASI ANJANEYA PRASAD",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C01",
+    "slNo": 395,
+    "roll": "241FA04C01",
+    "name": "NAKKANABOINA SANDHYA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C09",
+    "slNo": 396,
+    "roll": "241FA04C09",
+    "name": "POPURI LAHARI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C11",
+    "slNo": 397,
+    "roll": "241FA04C11",
+    "name": "CHEBROLU BHAVANI NAGA PRASAD",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C13",
+    "slNo": 398,
+    "roll": "241FA04C13",
+    "name": "KAMINENI HIMABINDU",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C20",
+    "slNo": 399,
+    "roll": "241FA04C20",
+    "name": "MALLELA SREE GEETHA PARVATHI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C25",
+    "slNo": 400,
+    "roll": "241FA04C25",
+    "name": "THOTA VIJAYENDRA RAGHU NARAYANA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C27",
+    "slNo": 401,
+    "roll": "241FA04C27",
+    "name": "PENDEM CHANDRIKA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C28",
+    "slNo": 402,
+    "roll": "241FA04C28",
+    "name": "TIRUMALASETTI MURALI KRISHNA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Mr. Sk. Sikindar"
+  },
+  {
+    "id": "241FA04C31",
+    "slNo": 403,
+    "roll": "241FA04C31",
+    "name": "KURUPATI ABHIRAM",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C35",
+    "slNo": 404,
+    "roll": "241FA04C35",
+    "name": "PINNIBOYINA VENKATA NAGA LAKSHMI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C37",
+    "slNo": 405,
+    "roll": "241FA04C37",
+    "name": "THOTTEMPUDI VENKATA SAI REETHIKA CHOWDARY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C39",
+    "slNo": 406,
+    "roll": "241FA04C39",
+    "name": "VEERANKI SRUTHI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C40",
+    "slNo": 407,
+    "roll": "241FA04C40",
+    "name": "DUGGINENI MADHU LASYA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C44",
+    "slNo": 408,
+    "roll": "241FA04C44",
+    "name": "SUSHMA MAKINENI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C46",
+    "slNo": 409,
+    "roll": "241FA04C46",
+    "name": "EDARA ARAVINDA SAI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C47",
+    "slNo": 410,
+    "roll": "241FA04C47",
+    "name": "NAGA SAI CHANDU BANDLAMUDI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C55",
+    "slNo": 411,
+    "roll": "241FA04C55",
+    "name": "THUMATI SAI TEJASWINI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C56",
+    "slNo": 412,
+    "roll": "241FA04C56",
+    "name": "GANGULI KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C60",
+    "slNo": 413,
+    "roll": "241FA04C60",
+    "name": "JAGRITI KUMARI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C71",
+    "slNo": 414,
+    "roll": "241FA04C71",
+    "name": "VENNELA HEMANTH KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C73",
+    "slNo": 415,
+    "roll": "241FA04C73",
+    "name": "VADLAPATLA LIKITHA SRI TULASI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C74",
+    "slNo": 416,
+    "roll": "241FA04C74",
+    "name": "NAGIREDDY SUDHARSHAN REDDY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C78",
+    "slNo": 417,
+    "roll": "241FA04C78",
+    "name": "CHELLINGI VARSHINI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C80",
+    "slNo": 418,
+    "roll": "241FA04C80",
+    "name": "YADLAPALLI NAVYA VENKATA SRI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C81",
+    "slNo": 419,
+    "roll": "241FA04C81",
+    "name": "PARIMI NAVEEN",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C82",
+    "slNo": 420,
+    "roll": "241FA04C82",
+    "name": "MADDUKURI YUKTHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C85",
+    "slNo": 421,
+    "roll": "241FA04C85",
+    "name": "MOPARTHI HARSHITHA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C89",
+    "slNo": 422,
+    "roll": "241FA04C89",
+    "name": "DANDU BALA VAMSI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C92",
+    "slNo": 423,
+    "roll": "241FA04C92",
+    "name": "POKURI HIMAJA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C93",
+    "slNo": 424,
+    "roll": "241FA04C93",
+    "name": "CHINTALAPUDI VENKATA PRADEEP",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C95",
+    "slNo": 425,
+    "roll": "241FA04C95",
+    "name": "KANISETTI RESHMA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04C96",
+    "slNo": 426,
+    "roll": "241FA04C96",
+    "name": "TADIMALLA SREE SATYA DHATRI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D01",
+    "slNo": 427,
+    "roll": "241FA04D01",
+    "name": "CHALAMALASETTI JAYA DEEP SATYA SAI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D04",
+    "slNo": 428,
+    "roll": "241FA04D04",
+    "name": "BANDARU ANJANEYULU",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D06",
+    "slNo": 429,
+    "roll": "241FA04D06",
+    "name": "VAKA KHUSHUL",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D07",
+    "slNo": 430,
+    "roll": "241FA04D07",
+    "name": "GRANDHI LAKSHMI NARAYANA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D18",
+    "slNo": 431,
+    "roll": "241FA04D18",
+    "name": "KOLLA LILA MANOHARA VIKAS CHOWDARY",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D20",
+    "slNo": 432,
+    "roll": "241FA04D20",
+    "name": "GOPU VYSHNAVI",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D26",
+    "slNo": 433,
+    "roll": "241FA04D26",
+    "name": "NANDIGAM MANOJ KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D27",
+    "slNo": 434,
+    "roll": "241FA04D27",
+    "name": "KOTHURI SYAM NAGENDRA",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D29",
+    "slNo": 435,
+    "roll": "241FA04D29",
+    "name": "RAJAT KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D31",
+    "slNo": 436,
+    "roll": "241FA04D31",
+    "name": "ANISH SINGH",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D32",
+    "slNo": 437,
+    "roll": "241FA04D32",
+    "name": "THUMMALAPALLI JASWANTH",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04D34",
+    "slNo": 438,
+    "roll": "241FA04D34",
+    "name": "SHUBHAM KUMAR",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04E79",
+    "slNo": 439,
+    "roll": "241FA04E79",
+    "name": "UDUGU VEDAVYAS NAIDU",
+    "section": "Section 6",
+    "sectionNum": 6,
+    "counsellor": "Ms. Kandula Divya"
+  },
+  {
+    "id": "241FA04004",
+    "slNo": 440,
+    "roll": "241FA04004",
+    "name": "SHIAK SHAMEED",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04094",
+    "slNo": 441,
+    "roll": "241FA04094",
+    "name": "ALLAPARTHI NAGA SHALINI DEVI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04106",
+    "slNo": 442,
+    "roll": "241FA04106",
+    "name": "KONDAVEETI RAJASRI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04142",
+    "slNo": 443,
+    "roll": "241FA04142",
+    "name": "YADARAPU KOMALA JAHNAVI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04143",
+    "slNo": 444,
+    "roll": "241FA04143",
+    "name": "MUPPA DIVYA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04145",
+    "slNo": 445,
+    "roll": "241FA04145",
+    "name": "VAISHNAVI VENNA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04148",
+    "slNo": 446,
+    "roll": "241FA04148",
+    "name": "TANGU MAHESH REDDY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04236",
+    "slNo": 447,
+    "roll": "241FA04236",
+    "name": "ARE VIJAYA LAKSHMI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04281",
+    "slNo": 448,
+    "roll": "241FA04281",
+    "name": "GANGAVARAPU HARIKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04282",
+    "slNo": 449,
+    "roll": "241FA04282",
+    "name": "CHERUKURU RENUKA BHARGAVI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04290",
+    "slNo": 450,
+    "roll": "241FA04290",
+    "name": "TELAGAMSETTY SIVAMEGHANA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04302",
+    "slNo": 451,
+    "roll": "241FA04302",
+    "name": "CHANUMOLU POOJITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04322",
+    "slNo": 452,
+    "roll": "241FA04322",
+    "name": "PILLI GEETHIKA SAI SANTHOSHINI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04352",
+    "slNo": 453,
+    "roll": "241FA04352",
+    "name": "SEELAM BHAVANA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04364",
+    "slNo": 454,
+    "roll": "241FA04364",
+    "name": "AKURATI YAMINI SRI HARSHITA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04427",
+    "slNo": 455,
+    "roll": "241FA04427",
+    "name": "KALASANI ANUSRI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04428",
+    "slNo": 456,
+    "roll": "241FA04428",
+    "name": "GOOLI CHETHAN KARTHIK REDDY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04434",
+    "slNo": 457,
+    "roll": "241FA04434",
+    "name": "YARRAM VENKATA DEEPTHI SRI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04455",
+    "slNo": 458,
+    "roll": "241FA04455",
+    "name": "PAPPU BHAGYA SRI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04457",
+    "slNo": 459,
+    "roll": "241FA04457",
+    "name": "NARIPEDDI YUVATEJA THARANI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04465",
+    "slNo": 460,
+    "roll": "241FA04465",
+    "name": "NUKA HEMA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04530",
+    "slNo": 461,
+    "roll": "241FA04530",
+    "name": "VENNA SRINIVASA REDDY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04561",
+    "slNo": 462,
+    "roll": "241FA04561",
+    "name": "SHAIK AFEESHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04563",
+    "slNo": 463,
+    "roll": "241FA04563",
+    "name": "KATASANI SAI ANJANA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04567",
+    "slNo": 464,
+    "roll": "241FA04567",
+    "name": "PENUGONDA MANASVI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04614",
+    "slNo": 465,
+    "roll": "241FA04614",
+    "name": "SHAIK KARIMULLA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04636",
+    "slNo": 466,
+    "roll": "241FA04636",
+    "name": "VAJINEPALLI RISHITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04702",
+    "slNo": 467,
+    "roll": "241FA04702",
+    "name": "PODILI SUSMITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04703",
+    "slNo": 468,
+    "roll": "241FA04703",
+    "name": "KUKKALA POOJITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04705",
+    "slNo": 469,
+    "roll": "241FA04705",
+    "name": "GOPI NARASIMHA MANDLA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04708",
+    "slNo": 470,
+    "roll": "241FA04708",
+    "name": "UNDAVALLI LAKSHMI PRAVALLIKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04771",
+    "slNo": 471,
+    "roll": "241FA04771",
+    "name": "VEMPA KUSUMA SRAVYA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04772",
+    "slNo": 472,
+    "roll": "241FA04772",
+    "name": "JAVVAJI MONIKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04791",
+    "slNo": 473,
+    "roll": "241FA04791",
+    "name": "KOLLA TANUJA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04812",
+    "slNo": 474,
+    "roll": "241FA04812",
+    "name": "ABBURI NAMITH CHOWDARY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Dr. O. Bhaskar"
+  },
+  {
+    "id": "241FA04914",
+    "slNo": 475,
+    "roll": "241FA04914",
+    "name": "CHELLUBOINA SRI RATNANJALI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04921",
+    "slNo": 476,
+    "roll": "241FA04921",
+    "name": "DASARI YASESWINI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04930",
+    "slNo": 477,
+    "roll": "241FA04930",
+    "name": "ANANTHU RAVI KUMAR",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04979",
+    "slNo": 478,
+    "roll": "241FA04979",
+    "name": "KILARI GEETHIKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04987",
+    "slNo": 479,
+    "roll": "241FA04987",
+    "name": "GATTU RAJA VENKATA SIVA MANIKANTA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04996",
+    "slNo": 480,
+    "roll": "241FA04996",
+    "name": "YADLAPALLI BHAVANI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A01",
+    "slNo": 481,
+    "roll": "241FA04A01",
+    "name": "VEESAM JAYANTH",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A06",
+    "slNo": 482,
+    "roll": "241FA04A06",
+    "name": "CHENNUPATI HARIKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A20",
+    "slNo": 483,
+    "roll": "241FA04A20",
+    "name": "CHAVVA SARITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A35",
+    "slNo": 484,
+    "roll": "241FA04A35",
+    "name": "MADALA SRAVANI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A37",
+    "slNo": 485,
+    "roll": "241FA04A37",
+    "name": "CHODISETTY GANGA SRINIVAS",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04A89",
+    "slNo": 486,
+    "roll": "241FA04A89",
+    "name": "MANUKONDA AUSRITHA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B23",
+    "slNo": 487,
+    "roll": "241FA04B23",
+    "name": "JULAKANTI RAMA LAKSHMI SAI BHAVANA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B26",
+    "slNo": 488,
+    "roll": "241FA04B26",
+    "name": "PELLURI BINDHU MADHURI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B31",
+    "slNo": 489,
+    "roll": "241FA04B31",
+    "name": "MALLELA KALYANI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B32",
+    "slNo": 490,
+    "roll": "241FA04B32",
+    "name": "PERNETI RAJESWARI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B55",
+    "slNo": 491,
+    "roll": "241FA04B55",
+    "name": "LOKKU CHARUNYA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04B98",
+    "slNo": 492,
+    "roll": "241FA04B98",
+    "name": "PERAM GOPI KRISHNA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04C94",
+    "slNo": 493,
+    "roll": "241FA04C94",
+    "name": "DEVIREDDY SNEHITHA REDDY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D37",
+    "slNo": 494,
+    "roll": "241FA04D37",
+    "name": "PONNAPATI KARUNAKAR REDDY",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D39",
+    "slNo": 495,
+    "roll": "241FA04D39",
+    "name": "TEDLA BHAVYASRI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D42",
+    "slNo": 496,
+    "roll": "241FA04D42",
+    "name": "PUPPALA RUPESH SESHA SAI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D44",
+    "slNo": 497,
+    "roll": "241FA04D44",
+    "name": "PINNIBOINA SRI VIDYA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D45",
+    "slNo": 498,
+    "roll": "241FA04D45",
+    "name": "MURADANDA HALYA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D60",
+    "slNo": 499,
+    "roll": "241FA04D60",
+    "name": "KONAGANTI SINDHU",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04D82",
+    "slNo": 500,
+    "roll": "241FA04D82",
+    "name": "MOHAMMED SAHAZAD KHAN",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04E16",
+    "slNo": 501,
+    "roll": "241FA04E16",
+    "name": "GORRE VISHNU SAI PRATHEEKA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04E87",
+    "slNo": 502,
+    "roll": "241FA04E87",
+    "name": "BUSHA UMA MAHESWARI",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04F60",
+    "slNo": 503,
+    "roll": "241FA04F60",
+    "name": "ABDUL HAFEEZ BATLA",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04F75",
+    "slNo": 504,
+    "roll": "241FA04F75",
+    "name": "AASHISH KUMAR",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04F92",
+    "slNo": 505,
+    "roll": "241FA04F92",
+    "name": "MD SONU",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04F94",
+    "slNo": 506,
+    "roll": "241FA04F94",
+    "name": "KARISHMA KUMARI SAH",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04F96",
+    "slNo": 507,
+    "roll": "241FA04F96",
+    "name": "MANIK SHAH",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "251LA04002",
+    "slNo": 508,
+    "roll": "251LA04002",
+    "name": "NAYUDU BHARATH",
+    "section": "Section 7",
+    "sectionNum": 7,
+    "counsellor": "Ms. Vyshnavi Kagga"
+  },
+  {
+    "id": "241FA04008",
+    "slNo": 509,
+    "roll": "241FA04008",
+    "name": "CHINTHANIPPU VENKATESWAR RAO",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04014",
+    "slNo": 510,
+    "roll": "241FA04014",
+    "name": "SAMINENI ESWAR SAI KRISHNA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04016",
+    "slNo": 511,
+    "roll": "241FA04016",
+    "name": "VANKAYALA SRUJANA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04020",
+    "slNo": 512,
+    "roll": "241FA04020",
+    "name": "PARIMISETTI SUHITHA SREE",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04021",
+    "slNo": 513,
+    "roll": "241FA04021",
+    "name": "RAVULAPALLI VENKATA SUBBARAYUDU",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04022",
+    "slNo": 514,
+    "roll": "241FA04022",
+    "name": "AVULA RAGHAVENDRA REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04027",
+    "slNo": 515,
+    "roll": "241FA04027",
+    "name": "BONTHU BHARATH MANIKANTA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04030",
+    "slNo": 516,
+    "roll": "241FA04030",
+    "name": "AVULURI ARUN KUMAR REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04031",
+    "slNo": 517,
+    "roll": "241FA04031",
+    "name": "SINGAMANENI JAGADEESWAR",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04032",
+    "slNo": 518,
+    "roll": "241FA04032",
+    "name": "YELLIPAYALA SAI KIRAN KUMAR REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04034",
+    "slNo": 519,
+    "roll": "241FA04034",
+    "name": "BOMMAREDDY GREESHMANTH REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04051",
+    "slNo": 520,
+    "roll": "241FA04051",
+    "name": "AMMISETTI MANOHAR",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04063",
+    "slNo": 521,
+    "roll": "241FA04063",
+    "name": "LAGADAPATI VENKATESH",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04073",
+    "slNo": 522,
+    "roll": "241FA04073",
+    "name": "KOLA Y SRAVAN KUMAR",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04096",
+    "slNo": 523,
+    "roll": "241FA04096",
+    "name": "KUNDURTHI SRIKANTH",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04120",
+    "slNo": 524,
+    "roll": "241FA04120",
+    "name": "JASTI PRASAD",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04144",
+    "slNo": 525,
+    "roll": "241FA04144",
+    "name": "KATHI TEJASWINI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04147",
+    "slNo": 526,
+    "roll": "241FA04147",
+    "name": "TRIPURAMALLU G S S SWARNIKA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04155",
+    "slNo": 527,
+    "roll": "241FA04155",
+    "name": "BALA HARI KRISHNA REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04158",
+    "slNo": 528,
+    "roll": "241FA04158",
+    "name": "MANNEPALLI SAI SESHA VARSHITH",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04160",
+    "slNo": 529,
+    "roll": "241FA04160",
+    "name": "LAKKIMSETTY SAI VARSHITHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04164",
+    "slNo": 530,
+    "roll": "241FA04164",
+    "name": "POTHANABOINA MAHALAKSHMI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04166",
+    "slNo": 531,
+    "roll": "241FA04166",
+    "name": "ADDAGADA PAVANI NAGA JYOTHI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04173",
+    "slNo": 532,
+    "roll": "241FA04173",
+    "name": "VANGA VENKATA SAI CHARAN",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04174",
+    "slNo": 533,
+    "roll": "241FA04174",
+    "name": "RAAVI CHANDANA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04190",
+    "slNo": 534,
+    "roll": "241FA04190",
+    "name": "KUPPALA VENKATESWARA RAO",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04294",
+    "slNo": 535,
+    "roll": "241FA04294",
+    "name": "KAMJULA LAHARI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04297",
+    "slNo": 536,
+    "roll": "241FA04297",
+    "name": "KAMISETTY PALLAVI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04299",
+    "slNo": 537,
+    "roll": "241FA04299",
+    "name": "GALI LAKSHMI JAHNAVI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04300",
+    "slNo": 538,
+    "roll": "241FA04300",
+    "name": "DANDA SRIJA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04303",
+    "slNo": 539,
+    "roll": "241FA04303",
+    "name": "AKANKSHA SAI YEDURURI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04304",
+    "slNo": 540,
+    "roll": "241FA04304",
+    "name": "DANDE AKHILA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04305",
+    "slNo": 541,
+    "roll": "241FA04305",
+    "name": "BANDI VENGAMAMBA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04325",
+    "slNo": 542,
+    "roll": "241FA04325",
+    "name": "NEKKALAPU NAGA PAVAN SAI SRIRAM",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Dr. G. Balu Narasimha Rao"
+  },
+  {
+    "id": "241FA04343",
+    "slNo": 543,
+    "roll": "241FA04343",
+    "name": "CHAVA SIRISHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04426",
+    "slNo": 544,
+    "roll": "241FA04426",
+    "name": "TEPPALI CHAITANYA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04570",
+    "slNo": 545,
+    "roll": "241FA04570",
+    "name": "MUVVA BHANU SANJAY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04574",
+    "slNo": 546,
+    "roll": "241FA04574",
+    "name": "AMBATI LAKSHMI HEMALATHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04576",
+    "slNo": 547,
+    "roll": "241FA04576",
+    "name": "KISARI MANASA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04580",
+    "slNo": 548,
+    "roll": "241FA04580",
+    "name": "KALLURI RANI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04584",
+    "slNo": 549,
+    "roll": "241FA04584",
+    "name": "KORLAPATI LEELA SIRIJA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04586",
+    "slNo": 550,
+    "roll": "241FA04586",
+    "name": "MADDUKURU DEEKSHITHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04595",
+    "slNo": 551,
+    "roll": "241FA04595",
+    "name": "PONNAPALLI LAKSHMI DAMAYANTHI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04608",
+    "slNo": 552,
+    "roll": "241FA04608",
+    "name": "CHINTHA LAKSHMI PRIYA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04616",
+    "slNo": 553,
+    "roll": "241FA04616",
+    "name": "AVVARU POOJITHA SAI DURGA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04618",
+    "slNo": 554,
+    "roll": "241FA04618",
+    "name": "CHALASANI KEERTHANA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04647",
+    "slNo": 555,
+    "roll": "241FA04647",
+    "name": "SANAGARI VIKRANTH REDDY",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04648",
+    "slNo": 556,
+    "roll": "241FA04648",
+    "name": "VANKAYALA VASAVI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04650",
+    "slNo": 557,
+    "roll": "241FA04650",
+    "name": "PUVVADA SWAROOP KOWSHIK",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04651",
+    "slNo": 558,
+    "roll": "241FA04651",
+    "name": "PANGULURI MAHATHI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04652",
+    "slNo": 559,
+    "roll": "241FA04652",
+    "name": "TELLAMEKALA VENKATA GIRI BABU",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04661",
+    "slNo": 560,
+    "roll": "241FA04661",
+    "name": "ALAPATI REVANTH SAI SANKAR",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04662",
+    "slNo": 561,
+    "roll": "241FA04662",
+    "name": "GOTTUMUKKALA SAKETH VARMA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04778",
+    "slNo": 562,
+    "roll": "241FA04778",
+    "name": "UPPALA HEMANTH SREENIVAS",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04852",
+    "slNo": 563,
+    "roll": "241FA04852",
+    "name": "THALLAPALLI JYOSHNA PRAMODA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04859",
+    "slNo": 564,
+    "roll": "241FA04859",
+    "name": "VADDEPALLI YASWANTH",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04864",
+    "slNo": 565,
+    "roll": "241FA04864",
+    "name": "AKURATHI KOMALI KUMARI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04866",
+    "slNo": 566,
+    "roll": "241FA04866",
+    "name": "PALADUGU SIRISHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04867",
+    "slNo": 567,
+    "roll": "241FA04867",
+    "name": "TELLA VAISHNAVI",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04869",
+    "slNo": 568,
+    "roll": "241FA04869",
+    "name": "PATIBANDLA PHANINDRA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04873",
+    "slNo": 569,
+    "roll": "241FA04873",
+    "name": "PALYALA VASUDEV",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04880",
+    "slNo": 570,
+    "roll": "241FA04880",
+    "name": "GANJI SUMALATHA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04882",
+    "slNo": 571,
+    "roll": "241FA04882",
+    "name": "DARA SINDHU",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04A77",
+    "slNo": 572,
+    "roll": "241FA04A77",
+    "name": "KAKARLA RIZWANA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04C03",
+    "slNo": 573,
+    "roll": "241FA04C03",
+    "name": "ADDANKI VENKATESH",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04C88",
+    "slNo": 574,
+    "roll": "241FA04C88",
+    "name": "NADELLA SAI SATHVIKA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04D38",
+    "slNo": 575,
+    "roll": "241FA04D38",
+    "name": "MADDALI JAGADEESH KUMAR",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04E29",
+    "slNo": 576,
+    "roll": "241FA04E29",
+    "name": "NALLABHOTULA NAGA MANI KANTA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04F82",
+    "slNo": 577,
+    "roll": "241FA04F82",
+    "name": "DIDLA SUSANNA",
+    "section": "Section 8",
+    "sectionNum": 8,
+    "counsellor": "Mrs. Varagani Tejaswi"
+  },
+  {
+    "id": "241FA04217",
+    "slNo": 578,
+    "roll": "241FA04217",
+    "name": "BUSI VENKATA THULASI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04221",
+    "slNo": 579,
+    "roll": "241FA04221",
+    "name": "GADDALAPATI MADHURI BALA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04248",
+    "slNo": 580,
+    "roll": "241FA04248",
+    "name": "ILLURI SAI SUSHMITHA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04261",
+    "slNo": 581,
+    "roll": "241FA04261",
+    "name": "NEMALA DEVA HARSHA SAI MANIKANTA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04263",
+    "slNo": 582,
+    "roll": "241FA04263",
+    "name": "MALASANI NIKHITHA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04269",
+    "slNo": 583,
+    "roll": "241FA04269",
+    "name": "PONNAM BINDHU SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04270",
+    "slNo": 584,
+    "roll": "241FA04270",
+    "name": "REDDY SAVARNIKA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04358",
+    "slNo": 585,
+    "roll": "241FA04358",
+    "name": "PARIMI VARA PRASAD",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04390",
+    "slNo": 586,
+    "roll": "241FA04390",
+    "name": "RAJABOYINA DEVARAJ",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04393",
+    "slNo": 587,
+    "roll": "241FA04393",
+    "name": "VAKA HARI VENKATA RAM",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04404",
+    "slNo": 588,
+    "roll": "241FA04404",
+    "name": "SAMPATHI PRAVALLIKA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04407",
+    "slNo": 589,
+    "roll": "241FA04407",
+    "name": "DARSI THRIMAHESWARI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04416",
+    "slNo": 590,
+    "roll": "241FA04416",
+    "name": "MUPPALA MEGHANA CHOWDARY",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04470",
+    "slNo": 591,
+    "roll": "241FA04470",
+    "name": "DEVARAPALLI THARUN",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04615",
+    "slNo": 592,
+    "roll": "241FA04615",
+    "name": "YAKKALI BHAVYA SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04637",
+    "slNo": 593,
+    "roll": "241FA04637",
+    "name": "TARAMATTA MEGHANA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04696",
+    "slNo": 594,
+    "roll": "241FA04696",
+    "name": "SWARNA ABHINAY",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04697",
+    "slNo": 595,
+    "roll": "241FA04697",
+    "name": "RAVURI PUSHPANJALI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04698",
+    "slNo": 596,
+    "roll": "241FA04698",
+    "name": "GUNDA SAI MANIKANTA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04707",
+    "slNo": 597,
+    "roll": "241FA04707",
+    "name": "GURRAM RATHNA GEETHIKA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04712",
+    "slNo": 598,
+    "roll": "241FA04712",
+    "name": "VADLAMUDI RUPESH KUMAR",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04717",
+    "slNo": 599,
+    "roll": "241FA04717",
+    "name": "PANDI AKSHAYA PRAVEENA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04718",
+    "slNo": 600,
+    "roll": "241FA04718",
+    "name": "UMMALAREDDY PUJITHA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04720",
+    "slNo": 601,
+    "roll": "241FA04720",
+    "name": "THOTA CHAKRITH CHOWDARY",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04730",
+    "slNo": 602,
+    "roll": "241FA04730",
+    "name": "AVULA TEJASWINI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04741",
+    "slNo": 603,
+    "roll": "241FA04741",
+    "name": "REGANDLA VARUN",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04742",
+    "slNo": 604,
+    "roll": "241FA04742",
+    "name": "MANNEMNEDI NAGA MANASA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04748",
+    "slNo": 605,
+    "roll": "241FA04748",
+    "name": "KONKAYALA LOUKIKA REDDY",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04749",
+    "slNo": 606,
+    "roll": "241FA04749",
+    "name": "VEMULAKONDA KALYANI LAKSHMI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04755",
+    "slNo": 607,
+    "roll": "241FA04755",
+    "name": "KAPPA KOUSHIK REDDY",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04760",
+    "slNo": 608,
+    "roll": "241FA04760",
+    "name": "KOPPULA VISHNU VARDHAN",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04763",
+    "slNo": 609,
+    "roll": "241FA04763",
+    "name": "VELPULA GANESH BABU",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04768",
+    "slNo": 610,
+    "roll": "241FA04768",
+    "name": "CHEEDELLA SIVA VENKATA NAGA SAI KIRAN",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04843",
+    "slNo": 611,
+    "roll": "241FA04843",
+    "name": "VUNNAM TULASI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04872",
+    "slNo": 612,
+    "roll": "241FA04872",
+    "name": "SHABANA SHAIK",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Ongole Gandhi"
+  },
+  {
+    "id": "241FA04915",
+    "slNo": 613,
+    "roll": "241FA04915",
+    "name": "SANGANA MANISHA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04925",
+    "slNo": 614,
+    "roll": "241FA04925",
+    "name": "JAMMULA SRI VENKATA SAI LEELAVATHI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04932",
+    "slNo": 615,
+    "roll": "241FA04932",
+    "name": "KAMMA LAKSHMI SAHITHI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04944",
+    "slNo": 616,
+    "roll": "241FA04944",
+    "name": "GUNTURU SRI ABHINAYA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04946",
+    "slNo": 617,
+    "roll": "241FA04946",
+    "name": "GADDE NAVEEN KUMAR",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04949",
+    "slNo": 618,
+    "roll": "241FA04949",
+    "name": "SYED BASHU PARVEJ",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04956",
+    "slNo": 619,
+    "roll": "241FA04956",
+    "name": "KALLUBAVI AKSHAYA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04960",
+    "slNo": 620,
+    "roll": "241FA04960",
+    "name": "RAYAPATI MAHESH BABU",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04961",
+    "slNo": 621,
+    "roll": "241FA04961",
+    "name": "SANDU LAKSHMI VENKATA NAGA SIVA VYSHNAVI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04970",
+    "slNo": 622,
+    "roll": "241FA04970",
+    "name": "VIKKURTHI BHAVYA SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04972",
+    "slNo": 623,
+    "roll": "241FA04972",
+    "name": "RATAKONDA ANJALI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B41",
+    "slNo": 624,
+    "roll": "241FA04B41",
+    "name": "BADIGUNCHALA YASWANTH",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B58",
+    "slNo": 625,
+    "roll": "241FA04B58",
+    "name": "MALASANI KEERTHI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B61",
+    "slNo": 626,
+    "roll": "241FA04B61",
+    "name": "BOMMAVARAPU SHALEM SANTHOSH",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B62",
+    "slNo": 627,
+    "roll": "241FA04B62",
+    "name": "CHITTURI ARCHANA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B63",
+    "slNo": 628,
+    "roll": "241FA04B63",
+    "name": "MUSUGU POOJITHA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B64",
+    "slNo": 629,
+    "roll": "241FA04B64",
+    "name": "NADIMPALLI PAVITRA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B71",
+    "slNo": 630,
+    "roll": "241FA04B71",
+    "name": "PEETHA ANJALI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B72",
+    "slNo": 631,
+    "roll": "241FA04B72",
+    "name": "RAMANABOINA VENKATA KAVYA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04B83",
+    "slNo": 632,
+    "roll": "241FA04B83",
+    "name": "KOTAMSETTY NUTHANA SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04C14",
+    "slNo": 633,
+    "roll": "241FA04C14",
+    "name": "BOLLA SOMA SRI VALLI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04C32",
+    "slNo": 634,
+    "roll": "241FA04C32",
+    "name": "MORLA MANASA PRIYA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E15",
+    "slNo": 635,
+    "roll": "241FA04E15",
+    "name": "MALASANI MEGHANA",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E21",
+    "slNo": 636,
+    "roll": "241FA04E21",
+    "name": "KORAPATI RENU SREE",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E26",
+    "slNo": 637,
+    "roll": "241FA04E26",
+    "name": "KORLAPATI SATYA SAI DURGA SATWIK",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E36",
+    "slNo": 638,
+    "roll": "241FA04E36",
+    "name": "NANDIGAM SHANMUKHA GANESH",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E38",
+    "slNo": 639,
+    "roll": "241FA04E38",
+    "name": "VINAY BABU MORU",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E41",
+    "slNo": 640,
+    "roll": "241FA04E41",
+    "name": "YARLAGADDA TARA SAI GANESH",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E44",
+    "slNo": 641,
+    "roll": "241FA04E44",
+    "name": "THUMATI KEERTHI SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04E72",
+    "slNo": 642,
+    "roll": "241FA04E72",
+    "name": "RAJ KUMAR",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04F15",
+    "slNo": 643,
+    "roll": "241FA04F15",
+    "name": "KINTALI KARTEEK",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04F16",
+    "slNo": 644,
+    "roll": "241FA04F16",
+    "name": "POLISETTI ABHILASH KUMAR",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04F53",
+    "slNo": 645,
+    "roll": "241FA04F53",
+    "name": "YARRAGUNTLA PADMA SRI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04F69",
+    "slNo": 646,
+    "roll": "241FA04F69",
+    "name": "SAMARTH VARMA MANDAPATI",
+    "section": "Section 9",
+    "sectionNum": 9,
+    "counsellor": "Mr. Munipalli Veerendra"
+  },
+  {
+    "id": "241FA04193",
+    "slNo": 647,
+    "roll": "241FA04193",
+    "name": "MANDA VENKATA PUSHPALATHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04387",
+    "slNo": 648,
+    "roll": "241FA04387",
+    "name": "BURA RAAGAAMRUTHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04464",
+    "slNo": 649,
+    "roll": "241FA04464",
+    "name": "VUNNAM SAI GOPI CHAND",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04496",
+    "slNo": 650,
+    "roll": "241FA04496",
+    "name": "GUGGILAM JUHITHA SUMATHI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04501",
+    "slNo": 651,
+    "roll": "241FA04501",
+    "name": "MANNEM JYOTHIRLATHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04521",
+    "slNo": 652,
+    "roll": "241FA04521",
+    "name": "RAMISETTY MOHANA NAGA PRIYA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04526",
+    "slNo": 653,
+    "roll": "241FA04526",
+    "name": "POLEPALLI SAI YASHASWINI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04539",
+    "slNo": 654,
+    "roll": "241FA04539",
+    "name": "GURRAM PRASANNA LAKSHMI PRANATHI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04549",
+    "slNo": 655,
+    "roll": "241FA04549",
+    "name": "TINKAL KUMAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04609",
+    "slNo": 656,
+    "roll": "241FA04609",
+    "name": "KOMATI GAYATHRI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04680",
+    "slNo": 657,
+    "roll": "241FA04680",
+    "name": "CHILAMKURI LAKSHMI RASAGNA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04683",
+    "slNo": 658,
+    "roll": "241FA04683",
+    "name": "SHAIK SAMEER",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04687",
+    "slNo": 659,
+    "roll": "241FA04687",
+    "name": "KOMMANABOINA NAGA RAMESH",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04779",
+    "slNo": 660,
+    "roll": "241FA04779",
+    "name": "GOLLA ANITHA JYOTHI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04784",
+    "slNo": 661,
+    "roll": "241FA04784",
+    "name": "ARRIBOYINA SREERAM",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04787",
+    "slNo": 662,
+    "roll": "241FA04787",
+    "name": "MADDULA GAYATHRI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04792",
+    "slNo": 663,
+    "roll": "241FA04792",
+    "name": "GARRE LIKHITA RATNA KUMARI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04800",
+    "slNo": 664,
+    "roll": "241FA04800",
+    "name": "DEVINENI AKHIL CHANDRA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04802",
+    "slNo": 665,
+    "roll": "241FA04802",
+    "name": "KANNETI VYSHNAVI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04803",
+    "slNo": 666,
+    "roll": "241FA04803",
+    "name": "PATHAN IRFAN KHAN",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04804",
+    "slNo": 667,
+    "roll": "241FA04804",
+    "name": "TADIKAMALLA SRI LEKHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04806",
+    "slNo": 668,
+    "roll": "241FA04806",
+    "name": "CHABOLU VENKATA KASI RANJITH KUMAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04808",
+    "slNo": 669,
+    "roll": "241FA04808",
+    "name": "ANGIREKULA SAI VENKATA TEJA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04809",
+    "slNo": 670,
+    "roll": "241FA04809",
+    "name": "KUNDURU VENKATA KASI VARSHINI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04815",
+    "slNo": 671,
+    "roll": "241FA04815",
+    "name": "KANDURI VENKATA AKSHAYA DHANASRI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04817",
+    "slNo": 672,
+    "roll": "241FA04817",
+    "name": "NARISETTY JAYADEEPIKA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04831",
+    "slNo": 673,
+    "roll": "241FA04831",
+    "name": "KURAPATI NITEESH KUMAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04838",
+    "slNo": 674,
+    "roll": "241FA04838",
+    "name": "BHAVIRISETTY DHARANI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04840",
+    "slNo": 675,
+    "roll": "241FA04840",
+    "name": "NIRAJ KUMAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04855",
+    "slNo": 676,
+    "roll": "241FA04855",
+    "name": "MANDLA NAGESWARI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04954",
+    "slNo": 677,
+    "roll": "241FA04954",
+    "name": "KAMMA DORA BABU",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04994",
+    "slNo": 678,
+    "roll": "241FA04994",
+    "name": "PAKALAPATI BHAVYA MANJUSHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04A75",
+    "slNo": 679,
+    "roll": "241FA04A75",
+    "name": "VARDHINENI DEEPTHIKA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Mr. Sk. Khadersha"
+  },
+  {
+    "id": "241FA04A78",
+    "slNo": 680,
+    "roll": "241FA04A78",
+    "name": "DODDA KEERTHI REDDY",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04A79",
+    "slNo": 681,
+    "roll": "241FA04A79",
+    "name": "SHASHANK VARMA GEDELA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04A81",
+    "slNo": 682,
+    "roll": "241FA04A81",
+    "name": "JAMMANABOINA PRABHAKAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04A90",
+    "slNo": 683,
+    "roll": "241FA04A90",
+    "name": "JAMA JEEVAN",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04A92",
+    "slNo": 684,
+    "roll": "241FA04A92",
+    "name": "PONNAPATI NAVYA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04A93",
+    "slNo": 685,
+    "roll": "241FA04A93",
+    "name": "PUSALA ANSHITHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B06",
+    "slNo": 686,
+    "roll": "241FA04B06",
+    "name": "GUNJI NAVA NANDU",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B07",
+    "slNo": 687,
+    "roll": "241FA04B07",
+    "name": "RUPESH KUMAR",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B09",
+    "slNo": 688,
+    "roll": "241FA04B09",
+    "name": "PUJALA BALA GANESH",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B13",
+    "slNo": 689,
+    "roll": "241FA04B13",
+    "name": "MANCHU AVINASH",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B18",
+    "slNo": 690,
+    "roll": "241FA04B18",
+    "name": "TALABHADRA SAI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04B65",
+    "slNo": 691,
+    "roll": "241FA04B65",
+    "name": "SHANAGA SILPA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04C64",
+    "slNo": 692,
+    "roll": "241FA04C64",
+    "name": "CHINTAKAYALA PRAVALLIKA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04C68",
+    "slNo": 693,
+    "roll": "241FA04C68",
+    "name": "ANNA VENKATA GNANA PRANITHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04C69",
+    "slNo": 694,
+    "roll": "241FA04C69",
+    "name": "KOTA HASINI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D11",
+    "slNo": 695,
+    "roll": "241FA04D11",
+    "name": "INAGALLA RAMYA SRI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D13",
+    "slNo": 696,
+    "roll": "241FA04D13",
+    "name": "YERNENI REESHMA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D40",
+    "slNo": 697,
+    "roll": "241FA04D40",
+    "name": "PALADUGU KARTHIK",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D41",
+    "slNo": 698,
+    "roll": "241FA04D41",
+    "name": "BIKKASANI GEETHANJALI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D43",
+    "slNo": 699,
+    "roll": "241FA04D43",
+    "name": "SINGALAREDDY RAVINDRA REDDY",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D46",
+    "slNo": 700,
+    "roll": "241FA04D46",
+    "name": "GOKAVARAPU TEJASWAROOP",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D48",
+    "slNo": 701,
+    "roll": "241FA04D48",
+    "name": "NUKA CHANNA VARDHANA CHOWDARY",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D52",
+    "slNo": 702,
+    "roll": "241FA04D52",
+    "name": "DADDINAPALLI VARSHINI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D53",
+    "slNo": 703,
+    "roll": "241FA04D53",
+    "name": "BODDU POOJA VARSHINI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D56",
+    "slNo": 704,
+    "roll": "241FA04D56",
+    "name": "KOTARU SAI DHANUSHKA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D58",
+    "slNo": 705,
+    "roll": "241FA04D58",
+    "name": "NIMMAKURI MOUNISH SAI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D68",
+    "slNo": 706,
+    "roll": "241FA04D68",
+    "name": "KANDULA GOPINATH",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D69",
+    "slNo": 707,
+    "roll": "241FA04D69",
+    "name": "DAGGUMALLI DIVYA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D70",
+    "slNo": 708,
+    "roll": "241FA04D70",
+    "name": "MANDADI CHIRANJEEVI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D72",
+    "slNo": 709,
+    "roll": "241FA04D72",
+    "name": "MALAMPATI MAHITHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D73",
+    "slNo": 710,
+    "roll": "241FA04D73",
+    "name": "MADAPAKULA SAI RAMYA SRI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D85",
+    "slNo": 711,
+    "roll": "241FA04D85",
+    "name": "DHIKONDA MAHALAKSHMI",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04D93",
+    "slNo": 712,
+    "roll": "241FA04D93",
+    "name": "REDDY BHANDHAVI YOJITHA",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04E02",
+    "slNo": 713,
+    "roll": "241FA04E02",
+    "name": "KRISH NAVIN SINGH",
+    "section": "Section 10",
+    "sectionNum": 10,
+    "counsellor": "Ms. Bhimavarapu Jyothika"
+  },
+  {
+    "id": "241FA04023",
+    "slNo": 714,
+    "roll": "241FA04023",
+    "name": "DHULIPALLA SRUTHI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04046",
+    "slNo": 715,
+    "roll": "241FA04046",
+    "name": "DONTULA SAMPATH SRIHARI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04064",
+    "slNo": 716,
+    "roll": "241FA04064",
+    "name": "SUMIT KUMAR",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04071",
+    "slNo": 717,
+    "roll": "241FA04071",
+    "name": "GURRAM BHAVANA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04075",
+    "slNo": 718,
+    "roll": "241FA04075",
+    "name": "DAVULURI BHARGAVI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04079",
+    "slNo": 719,
+    "roll": "241FA04079",
+    "name": "SHARABU ASRITHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04086",
+    "slNo": 720,
+    "roll": "241FA04086",
+    "name": "VUNNAM YASWITHA CHOWDARY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04088",
+    "slNo": 721,
+    "roll": "241FA04088",
+    "name": "THULIMILLI JOSHNA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04211",
+    "slNo": 722,
+    "roll": "241FA04211",
+    "name": "DARA KRISHNA BALAJI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04213",
+    "slNo": 723,
+    "roll": "241FA04213",
+    "name": "CHAVA JOSHITHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04214",
+    "slNo": 724,
+    "roll": "241FA04214",
+    "name": "BELLAMKONDA BHANU TEJASRI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04292",
+    "slNo": 725,
+    "roll": "241FA04292",
+    "name": "GUDIPATI BALA MANIKANTA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04296",
+    "slNo": 726,
+    "roll": "241FA04296",
+    "name": "PEDDI BHAVYA SRI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04310",
+    "slNo": 727,
+    "roll": "241FA04310",
+    "name": "KALLEPALLI SAI VENKATA SATYA PHANI KASYAP",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04321",
+    "slNo": 728,
+    "roll": "241FA04321",
+    "name": "RAJESH KUMAR",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04351",
+    "slNo": 729,
+    "roll": "241FA04351",
+    "name": "THOTAKURA AMRUTHA SAI SRI CHANDRIKA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04353",
+    "slNo": 730,
+    "roll": "241FA04353",
+    "name": "PAPPULA GAYATHRI SOWMYA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04363",
+    "slNo": 731,
+    "roll": "241FA04363",
+    "name": "KONDAVEETI MANASA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04365",
+    "slNo": 732,
+    "roll": "241FA04365",
+    "name": "PONNAGANTI NAGA VENKATA SIVA GANESH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04372",
+    "slNo": 733,
+    "roll": "241FA04372",
+    "name": "KATAKAM SRIJA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04374",
+    "slNo": 734,
+    "roll": "241FA04374",
+    "name": "SIVAPURAM HASINI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04376",
+    "slNo": 735,
+    "roll": "241FA04376",
+    "name": "AMBATI DURGA NAGA LAKSHMI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04379",
+    "slNo": 736,
+    "roll": "241FA04379",
+    "name": "MOTAMARRI SRIJA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04382",
+    "slNo": 737,
+    "roll": "241FA04382",
+    "name": "MOHAMMAD SALMA SHAHEEN",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04383",
+    "slNo": 738,
+    "roll": "241FA04383",
+    "name": "PALADUGU RAVI TEJA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04389",
+    "slNo": 739,
+    "roll": "241FA04389",
+    "name": "NOONI VARUN SRI RAMA CHOWADARY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04421",
+    "slNo": 740,
+    "roll": "241FA04421",
+    "name": "BARMA VENNELA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04423",
+    "slNo": 741,
+    "roll": "241FA04423",
+    "name": "ALUGUPALLY SUSHMA SWARAJ",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04424",
+    "slNo": 742,
+    "roll": "241FA04424",
+    "name": "JAGARLAPUDI VENKATA SAI MANASWINI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04429",
+    "slNo": 743,
+    "roll": "241FA04429",
+    "name": "INNAMURI VENKATA BALA SRUJANA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04433",
+    "slNo": 744,
+    "roll": "241FA04433",
+    "name": "KALAKONDA HARSHA VARDHINI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04439",
+    "slNo": 745,
+    "roll": "241FA04439",
+    "name": "KANDEPU NEHAN SAI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04449",
+    "slNo": 746,
+    "roll": "241FA04449",
+    "name": "YARAGADDA VENKATA NARESH YADAV",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04491",
+    "slNo": 747,
+    "roll": "241FA04491",
+    "name": "KANCHARLA SAHITHI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04492",
+    "slNo": 748,
+    "roll": "241FA04492",
+    "name": "BUTHUKURI SUNITHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04500",
+    "slNo": 749,
+    "roll": "241FA04500",
+    "name": "KOMMINENI SAI SNEHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Bathula Anil Babu"
+  },
+  {
+    "id": "241FA04505",
+    "slNo": 750,
+    "roll": "241FA04505",
+    "name": "ISUKAPATLA GANESH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04506",
+    "slNo": 751,
+    "roll": "241FA04506",
+    "name": "VENIGALLA SAMHITH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04513",
+    "slNo": 752,
+    "roll": "241FA04513",
+    "name": "SARIPELLA BALA SRAVANTHI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04514",
+    "slNo": 753,
+    "roll": "241FA04514",
+    "name": "THOKALA CHANDANA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04518",
+    "slNo": 754,
+    "roll": "241FA04518",
+    "name": "IDAPALAPATI HARDHIK",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04527",
+    "slNo": 755,
+    "roll": "241FA04527",
+    "name": "KOMMI LASYA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04528",
+    "slNo": 756,
+    "roll": "241FA04528",
+    "name": "RAVINUTALA PAVAN SAI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04532",
+    "slNo": 757,
+    "roll": "241FA04532",
+    "name": "MATURU GEETHIKA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04534",
+    "slNo": 758,
+    "roll": "241FA04534",
+    "name": "BABUL KUMAR",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04535",
+    "slNo": 759,
+    "roll": "241FA04535",
+    "name": "MAGANTI DHANUSH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04536",
+    "slNo": 760,
+    "roll": "241FA04536",
+    "name": "RANJNA RAY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04543",
+    "slNo": 761,
+    "roll": "241FA04543",
+    "name": "KORRAPATI SUPRAJA LAKSHMI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04552",
+    "slNo": 762,
+    "roll": "241FA04552",
+    "name": "AYUSH KUMAR",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04554",
+    "slNo": 763,
+    "roll": "241FA04554",
+    "name": "VELPULA DEVI NAGA VYSHNAVI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04562",
+    "slNo": 764,
+    "roll": "241FA04562",
+    "name": "TENETI YAGNESHWAR REDDY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04624",
+    "slNo": 765,
+    "roll": "241FA04624",
+    "name": "DEV RAJ",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04631",
+    "slNo": 766,
+    "roll": "241FA04631",
+    "name": "REPALLE CHANVITHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04640",
+    "slNo": 767,
+    "roll": "241FA04640",
+    "name": "NAGUBADI GOPI CHAND",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04642",
+    "slNo": 768,
+    "roll": "241FA04642",
+    "name": "LELLA SRI LAKSHMI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04713",
+    "slNo": 769,
+    "roll": "241FA04713",
+    "name": "KADAGALA KARTHIK",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04776",
+    "slNo": 770,
+    "roll": "241FA04776",
+    "name": "POLANKI GREESHMA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04777",
+    "slNo": 771,
+    "roll": "241FA04777",
+    "name": "PABOLU ROHITH SAI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04781",
+    "slNo": 772,
+    "roll": "241FA04781",
+    "name": "GADAMSETTI MEGHANA CHANDRAKALA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04783",
+    "slNo": 773,
+    "roll": "241FA04783",
+    "name": "VARADA VEERA VENKATA NAGAJYOTHI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04785",
+    "slNo": 774,
+    "roll": "241FA04785",
+    "name": "CHALUVADI SOHITH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04788",
+    "slNo": 775,
+    "roll": "241FA04788",
+    "name": "GUNJI RAJYALAKSHMI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04795",
+    "slNo": 776,
+    "roll": "241FA04795",
+    "name": "MAGULURI DHATHRI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04805",
+    "slNo": 777,
+    "roll": "241FA04805",
+    "name": "MULAKALA KUMARI VENKATA SRI HARSHA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04820",
+    "slNo": 778,
+    "roll": "241FA04820",
+    "name": "CHAVA JASWANTH",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04B48",
+    "slNo": 779,
+    "roll": "241FA04B48",
+    "name": "MANOJ KUMAR BEHARA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04C07",
+    "slNo": 780,
+    "roll": "241FA04C07",
+    "name": "MUVVALA NANDINI",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04D36",
+    "slNo": 781,
+    "roll": "241FA04D36",
+    "name": "SHAIK SUNERIYA SHABNUM",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04D63",
+    "slNo": 782,
+    "roll": "241FA04D63",
+    "name": "MOLAKA SANTHOSH REDDY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04D80",
+    "slNo": 783,
+    "roll": "241FA04D80",
+    "name": "PALAVALLI KARTHIK REDDY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04E01",
+    "slNo": 784,
+    "roll": "241FA04E01",
+    "name": "BHOGADI LAKSHMI CHARISHMA",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04E05",
+    "slNo": 785,
+    "roll": "241FA04E05",
+    "name": "GYAN RANJAN",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04E13",
+    "slNo": 786,
+    "roll": "241FA04E13",
+    "name": "SINGAM VENKATA CHARAN KUMAR REDDY",
+    "section": "Section 11",
+    "sectionNum": 11,
+    "counsellor": "Mr. Palavelli Vamsi Krishna"
+  },
+  {
+    "id": "241FA04002",
+    "slNo": 787,
+    "roll": "241FA04002",
+    "name": "NALAM HASINI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04006",
+    "slNo": 788,
+    "roll": "241FA04006",
+    "name": "CHALLA RISHITHA SAI MEGHANA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04012",
+    "slNo": 789,
+    "roll": "241FA04012",
+    "name": "SIMHADRI HARSHA NAGA SAIRAM",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04019",
+    "slNo": 790,
+    "roll": "241FA04019",
+    "name": "SHAIK KARISHMA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04087",
+    "slNo": 791,
+    "roll": "241FA04087",
+    "name": "CHINNABATHINI STEPHY",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04098",
+    "slNo": 792,
+    "roll": "241FA04098",
+    "name": "DAPPINI ASWITHA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04150",
+    "slNo": 793,
+    "roll": "241FA04150",
+    "name": "VALLAPUNENI DIVIJA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04170",
+    "slNo": 794,
+    "roll": "241FA04170",
+    "name": "SHAIK RESHMA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04171",
+    "slNo": 795,
+    "roll": "241FA04171",
+    "name": "CHOPPAKATLA POOJITHA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04172",
+    "slNo": 796,
+    "roll": "241FA04172",
+    "name": "KODALI JEEVANA NAGA BHAVYA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04176",
+    "slNo": 797,
+    "roll": "241FA04176",
+    "name": "SHAIK AISHA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04189",
+    "slNo": 798,
+    "roll": "241FA04189",
+    "name": "SIGILISETTY KAVYA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04195",
+    "slNo": 799,
+    "roll": "241FA04195",
+    "name": "KATTULA JAGADEESH",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04196",
+    "slNo": 800,
+    "roll": "241FA04196",
+    "name": "PAREPALLI SRI VENKATA SAIRAM",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04198",
+    "slNo": 801,
+    "roll": "241FA04198",
+    "name": "MUNNANGI POORVAJA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04209",
+    "slNo": 802,
+    "roll": "241FA04209",
+    "name": "DASARI JASWANTH",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04222",
+    "slNo": 803,
+    "roll": "241FA04222",
+    "name": "MUMMANENI OM NARAYANA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04229",
+    "slNo": 804,
+    "roll": "241FA04229",
+    "name": "BADISA VENKATA GOPI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04230",
+    "slNo": 805,
+    "roll": "241FA04230",
+    "name": "MANNE HARSHA SRIRAM",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04232",
+    "slNo": 806,
+    "roll": "241FA04232",
+    "name": "KAMMA MEGHANA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04254",
+    "slNo": 807,
+    "roll": "241FA04254",
+    "name": "APPALA ABHITEJA SAI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04260",
+    "slNo": 808,
+    "roll": "241FA04260",
+    "name": "LANKAPALLI TEJA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04266",
+    "slNo": 809,
+    "roll": "241FA04266",
+    "name": "SYED AKHIF",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04279",
+    "slNo": 810,
+    "roll": "241FA04279",
+    "name": "BHUVANAGIRI DHEERAJ",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04280",
+    "slNo": 811,
+    "roll": "241FA04280",
+    "name": "INAVOLU AKASH BHARADWAZ",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04298",
+    "slNo": 812,
+    "roll": "241FA04298",
+    "name": "INUPAMUKKALA SAHITHI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04309",
+    "slNo": 813,
+    "roll": "241FA04309",
+    "name": "SHAIK RUKSANA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04339",
+    "slNo": 814,
+    "roll": "241FA04339",
+    "name": "S VEEKSHITHA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04435",
+    "slNo": 815,
+    "roll": "241FA04435",
+    "name": "MOPIDEVI THANUJA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04436",
+    "slNo": 816,
+    "roll": "241FA04436",
+    "name": "YELIKA PAVANI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. D. Tipura"
+  },
+  {
+    "id": "241FA04438",
+    "slNo": 817,
+    "roll": "241FA04438",
+    "name": "SATULURI GOPIKA SRI SAI SUSMITHA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04444",
+    "slNo": 818,
+    "roll": "241FA04444",
+    "name": "AYINAVOLU DHARANI CHAND",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04495",
+    "slNo": 819,
+    "roll": "241FA04495",
+    "name": "SHAIK HIBA THARUNNUM",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04508",
+    "slNo": 820,
+    "roll": "241FA04508",
+    "name": "AKULA JITHENDRA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04509",
+    "slNo": 821,
+    "roll": "241FA04509",
+    "name": "JAKKA SWAPNIKA KRISHNA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04525",
+    "slNo": 822,
+    "roll": "241FA04525",
+    "name": "LOKARAPU MADHU",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04573",
+    "slNo": 823,
+    "roll": "241FA04573",
+    "name": "UGGALA GEETHA SIVA CHARAN NAIDU",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04575",
+    "slNo": 824,
+    "roll": "241FA04575",
+    "name": "JANGA JASWANTH REDDY",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04583",
+    "slNo": 825,
+    "roll": "241FA04583",
+    "name": "SHAIK SHAKEERA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04606",
+    "slNo": 826,
+    "roll": "241FA04606",
+    "name": "BRUNDA ADDAGALLA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04610",
+    "slNo": 827,
+    "roll": "241FA04610",
+    "name": "MANDURI GIRIDHAR KRISHNA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04643",
+    "slNo": 828,
+    "roll": "241FA04643",
+    "name": "MANNEM MANIDEEP CHOWDARY",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04706",
+    "slNo": 829,
+    "roll": "241FA04706",
+    "name": "POGADADANDA KEERTHI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04716",
+    "slNo": 830,
+    "roll": "241FA04716",
+    "name": "ADDAGALLA NITHYA SREE",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04775",
+    "slNo": 831,
+    "roll": "241FA04775",
+    "name": "BHARATH REDDY DEVAGIRI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04780",
+    "slNo": 832,
+    "roll": "241FA04780",
+    "name": "MANIKE PHANENDRA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04782",
+    "slNo": 833,
+    "roll": "241FA04782",
+    "name": "VUPPULURI VENKATA SRIDATTA GANESH",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04848",
+    "slNo": 834,
+    "roll": "241FA04848",
+    "name": "SRIBHASHYAM VENKATA SAI GOPAL",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04911",
+    "slNo": 835,
+    "roll": "241FA04911",
+    "name": "CHINNAM MEGHANA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04913",
+    "slNo": 836,
+    "roll": "241FA04913",
+    "name": "KOSURU KHAAYA SRI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04931",
+    "slNo": 837,
+    "roll": "241FA04931",
+    "name": "SHAIK ARFA ANJUM",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04995",
+    "slNo": 838,
+    "roll": "241FA04995",
+    "name": "DAVULURI HANSIKA KEERTHI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04A10",
+    "slNo": 839,
+    "roll": "241FA04A10",
+    "name": "CHENNAM RAM CHARAN SAI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04A59",
+    "slNo": 840,
+    "roll": "241FA04A59",
+    "name": "DEVARASETTY CHETHANA LAXMI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04A62",
+    "slNo": 841,
+    "roll": "241FA04A62",
+    "name": "POKALA AKSHAYA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04B25",
+    "slNo": 842,
+    "roll": "241FA04B25",
+    "name": "VADLAMUDI LAKSHMI PRAVALLIKA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04B52",
+    "slNo": 843,
+    "roll": "241FA04B52",
+    "name": "CHIRUMAMILLA GEETHA SRI",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04C83",
+    "slNo": 844,
+    "roll": "241FA04C83",
+    "name": "PAVULURI VENNELA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04D62",
+    "slNo": 845,
+    "roll": "241FA04D62",
+    "name": "KORAMPALLI SRINIVAS",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04E07",
+    "slNo": 846,
+    "roll": "241FA04E07",
+    "name": "MOGULLURI AKSHAYA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04E82",
+    "slNo": 847,
+    "roll": "241FA04E82",
+    "name": "SANE HARIKA",
+    "section": "Section 12",
+    "sectionNum": 12,
+    "counsellor": "Mrs. Guggilam Navya"
+  },
+  {
+    "id": "241FA04024",
+    "slNo": 848,
+    "roll": "241FA04024",
+    "name": "MUNAGA GNANA PRASANNA LAKSHMI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04038",
+    "slNo": 849,
+    "roll": "241FA04038",
+    "name": "GAVINI ASMITHA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04039",
+    "slNo": 850,
+    "roll": "241FA04039",
+    "name": "JANNU RAVI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04053",
+    "slNo": 851,
+    "roll": "241FA04053",
+    "name": "SHAIK KALESHA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04055",
+    "slNo": 852,
+    "roll": "241FA04055",
+    "name": "GUTTULA DEVIKA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04058",
+    "slNo": 853,
+    "roll": "241FA04058",
+    "name": "NAGISETTY UMA DURGA MANIKANTA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04060",
+    "slNo": 854,
+    "roll": "241FA04060",
+    "name": "KATARU NARASIMHA RAO",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04074",
+    "slNo": 855,
+    "roll": "241FA04074",
+    "name": "BOMMANABOINA DAYANANDA BABU",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04081",
+    "slNo": 856,
+    "roll": "241FA04081",
+    "name": "SYED ADIL",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04084",
+    "slNo": 857,
+    "roll": "241FA04084",
+    "name": "MEDA HEMANTH KUMAR",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04099",
+    "slNo": 858,
+    "roll": "241FA04099",
+    "name": "KONDRAKUNTA KRUSHITHA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04100",
+    "slNo": 859,
+    "roll": "241FA04100",
+    "name": "DODLA MURALI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04102",
+    "slNo": 860,
+    "roll": "241FA04102",
+    "name": "PASUPULETI VARSHITHA SAI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04112",
+    "slNo": 861,
+    "roll": "241FA04112",
+    "name": "KARNATI RANA CHOWDARY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04116",
+    "slNo": 862,
+    "roll": "241FA04116",
+    "name": "CHELLI RITESH KUMAR",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04117",
+    "slNo": 863,
+    "roll": "241FA04117",
+    "name": "MEDIKONDA NAGASRI APOORVA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04118",
+    "slNo": 864,
+    "roll": "241FA04118",
+    "name": "VURMI GNANA SRI LAKSHMI GAYATHRI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04119",
+    "slNo": 865,
+    "roll": "241FA04119",
+    "name": "SHAIK ABDUL RAHEEM",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04123",
+    "slNo": 866,
+    "roll": "241FA04123",
+    "name": "MURUGESAN KALAI SELVI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04125",
+    "slNo": 867,
+    "roll": "241FA04125",
+    "name": "BALLEPALLI LEELA PRAHARSHITHA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04129",
+    "slNo": 868,
+    "roll": "241FA04129",
+    "name": "MIRIYALA NAGA SANTOSH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Mrs. Anusha Kakumanu"
+  },
+  {
+    "id": "241FA04130",
+    "slNo": 869,
+    "roll": "241FA04130",
+    "name": "KANDI JAYA SAI REDDY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04131",
+    "slNo": 870,
+    "roll": "241FA04131",
+    "name": "DAGANI MUKESH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04132",
+    "slNo": 871,
+    "roll": "241FA04132",
+    "name": "DHANA LAKSHMI VADRANAM",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04138",
+    "slNo": 872,
+    "roll": "241FA04138",
+    "name": "LANKA HARSHA VARDHAN",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04139",
+    "slNo": 873,
+    "roll": "241FA04139",
+    "name": "VENKATA SRUJIKA PESARLANKA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04355",
+    "slNo": 874,
+    "roll": "241FA04355",
+    "name": "DODDAKA GOPI NADH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04359",
+    "slNo": 875,
+    "roll": "241FA04359",
+    "name": "BELLAMKONDA BALA VENKATA SAI TEJA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04360",
+    "slNo": 876,
+    "roll": "241FA04360",
+    "name": "KARANAM MOKSHAGNA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04367",
+    "slNo": 877,
+    "roll": "241FA04367",
+    "name": "BADUGU STANLEY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04369",
+    "slNo": 878,
+    "roll": "241FA04369",
+    "name": "BATCHU SATHVIKA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04371",
+    "slNo": 879,
+    "roll": "241FA04371",
+    "name": "CHEGIREDDY VENKATA NARENDRA REDDY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04378",
+    "slNo": 880,
+    "roll": "241FA04378",
+    "name": "DOPPALAPUDI KUMARA SWAMI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04380",
+    "slNo": 881,
+    "roll": "241FA04380",
+    "name": "KODURU NAMITHA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04384",
+    "slNo": 882,
+    "roll": "241FA04384",
+    "name": "KALLAM PURNA SEKHAR REDDY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04386",
+    "slNo": 883,
+    "roll": "241FA04386",
+    "name": "VUMMADISETTI SHASHANK",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04392",
+    "slNo": 884,
+    "roll": "241FA04392",
+    "name": "VAKA ROHITH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04394",
+    "slNo": 885,
+    "roll": "241FA04394",
+    "name": "JAVVAJI ADITHYA RAM",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04395",
+    "slNo": 886,
+    "roll": "241FA04395",
+    "name": "SHAIK FAZAL AHMAD",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04396",
+    "slNo": 887,
+    "roll": "241FA04396",
+    "name": "YADLAPALLI DINESH BABU",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04400",
+    "slNo": 888,
+    "roll": "241FA04400",
+    "name": "KARRI THRISHA SAI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04401",
+    "slNo": 889,
+    "roll": "241FA04401",
+    "name": "PATHAN YASIN",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04406",
+    "slNo": 890,
+    "roll": "241FA04406",
+    "name": "CHALICHAM THANMAI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04409",
+    "slNo": 891,
+    "roll": "241FA04409",
+    "name": "BOLLIMUNTHA PREM SWAROOP",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04556",
+    "slNo": 892,
+    "roll": "241FA04556",
+    "name": "NALLEBOINA ESWARA SAI MANIKANTA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04641",
+    "slNo": 893,
+    "roll": "241FA04641",
+    "name": "GUNUKULA CHARAN NAGA TEJA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04644",
+    "slNo": 894,
+    "roll": "241FA04644",
+    "name": "THOTA VAMSI KRISHNA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04655",
+    "slNo": 895,
+    "roll": "241FA04655",
+    "name": "KONA GANGABHAVANI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04656",
+    "slNo": 896,
+    "roll": "241FA04656",
+    "name": "KANKANAMPATI HIMAJA SRI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04667",
+    "slNo": 897,
+    "roll": "241FA04667",
+    "name": "DASARI VENKATA SUBRAMANYAM",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04715",
+    "slNo": 898,
+    "roll": "241FA04715",
+    "name": "MODUKURU SRAVYA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04719",
+    "slNo": 899,
+    "roll": "241FA04719",
+    "name": "KANNEGANTI JAHNAVI DATTA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04723",
+    "slNo": 900,
+    "roll": "241FA04723",
+    "name": "RAMUNI LAKSHMI PRIYA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04724",
+    "slNo": 901,
+    "roll": "241FA04724",
+    "name": "VALLABHANENI SUSHMA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Ravuri Lalitha"
+  },
+  {
+    "id": "241FA04728",
+    "slNo": 902,
+    "roll": "241FA04728",
+    "name": "SYED ABDUL MUNNAF",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04733",
+    "slNo": 903,
+    "roll": "241FA04733",
+    "name": "VANIMIREDDY JAHNAVI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04734",
+    "slNo": 904,
+    "roll": "241FA04734",
+    "name": "GUMMADIDALA ARYAN TIRUMALESH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04735",
+    "slNo": 905,
+    "roll": "241FA04735",
+    "name": "DADI VIJAYA LAKSHMI",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04750",
+    "slNo": 906,
+    "roll": "241FA04750",
+    "name": "NALLAMEKALA VENKATA NARAYANA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04754",
+    "slNo": 907,
+    "roll": "241FA04754",
+    "name": "ANGAJAL MANOJ KUMAR",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04758",
+    "slNo": 908,
+    "roll": "241FA04758",
+    "name": "ALLA SHANMUKHA PRIYA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04759",
+    "slNo": 909,
+    "roll": "241FA04759",
+    "name": "KASINIKOTA JAHNAVI RATNA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04761",
+    "slNo": 910,
+    "roll": "241FA04761",
+    "name": "CHIRALA VINAY KUMAR REDDY",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04762",
+    "slNo": 911,
+    "roll": "241FA04762",
+    "name": "ANNAPUREDDY GEETHIKA",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04770",
+    "slNo": 912,
+    "roll": "241FA04770",
+    "name": "ANNAPUREDDY YASWANTH",
+    "section": "Section 13",
+    "sectionNum": 13,
+    "counsellor": "Ms. Kunapareddy Deepikasri Sai"
+  },
+  {
+    "id": "241FA04286",
+    "slNo": 913,
+    "roll": "241FA04286",
+    "name": "POTHARLANKA SEMANTHIKA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04287",
+    "slNo": 914,
+    "roll": "241FA04287",
+    "name": "VEERISETTI BHARGAVI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04293",
+    "slNo": 915,
+    "roll": "241FA04293",
+    "name": "MATTUPALLI THIRU SHEKAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04306",
+    "slNo": 916,
+    "roll": "241FA04306",
+    "name": "SYED NAZIMA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04317",
+    "slNo": 917,
+    "roll": "241FA04317",
+    "name": "BALLEPALLI ASRITHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04333",
+    "slNo": 918,
+    "roll": "241FA04333",
+    "name": "KUPPAGIRI ANUSHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04336",
+    "slNo": 919,
+    "roll": "241FA04336",
+    "name": "MADDULA LAKSHMI PARVATHI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04338",
+    "slNo": 920,
+    "roll": "241FA04338",
+    "name": "KUNDETI NAGA DHASHMITHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04340",
+    "slNo": 921,
+    "roll": "241FA04340",
+    "name": "ADUSUMALLI BHARGAVI SAI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04341",
+    "slNo": 922,
+    "roll": "241FA04341",
+    "name": "VADDE BHUVANA TEJA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04342",
+    "slNo": 923,
+    "roll": "241FA04342",
+    "name": "TULLIMILLI GOPI PHANINDRA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04350",
+    "slNo": 924,
+    "roll": "241FA04350",
+    "name": "KANAGALA DHARAHAS MOURYA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04402",
+    "slNo": 925,
+    "roll": "241FA04402",
+    "name": "NAGIREDDY JAYA SANKAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04413",
+    "slNo": 926,
+    "roll": "241FA04413",
+    "name": "GHANTA VIGNESH",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04414",
+    "slNo": 927,
+    "roll": "241FA04414",
+    "name": "MADALA DHANUSH DEEPAK",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04415",
+    "slNo": 928,
+    "roll": "241FA04415",
+    "name": "SHAIK MOIN AHMAD",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04494",
+    "slNo": 929,
+    "roll": "241FA04494",
+    "name": "KALEPALLI NIKHIL",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04498",
+    "slNo": 930,
+    "roll": "241FA04498",
+    "name": "POLASAM LAKSHMANA SAI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04502",
+    "slNo": 931,
+    "roll": "241FA04502",
+    "name": "PASUPULETI LAKSHMI KARTHIK",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04670",
+    "slNo": 932,
+    "roll": "241FA04670",
+    "name": "RAMISETTY GOUTHAM KARTHIKEYA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04673",
+    "slNo": 933,
+    "roll": "241FA04673",
+    "name": "RIYA SHAIK",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04676",
+    "slNo": 934,
+    "roll": "241FA04676",
+    "name": "PADALA JOSHITHA SRI RAMYA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04691",
+    "slNo": 935,
+    "roll": "241FA04691",
+    "name": "KATLA CHANDU",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04916",
+    "slNo": 936,
+    "roll": "241FA04916",
+    "name": "MEKA NAVYA GEETHIKA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04924",
+    "slNo": 937,
+    "roll": "241FA04924",
+    "name": "YEPURI AJAY KUMAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04934",
+    "slNo": 938,
+    "roll": "241FA04934",
+    "name": "JOGI LASYA PHANI SRI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04936",
+    "slNo": 939,
+    "roll": "241FA04936",
+    "name": "ARAVAPALLI RESHMAN",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04937",
+    "slNo": 940,
+    "roll": "241FA04937",
+    "name": "MISALA GOUTAM",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04938",
+    "slNo": 941,
+    "roll": "241FA04938",
+    "name": "BURAGAPU AKSHITHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04941",
+    "slNo": 942,
+    "roll": "241FA04941",
+    "name": "MUDRABOINA MADHURI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04942",
+    "slNo": 943,
+    "roll": "241FA04942",
+    "name": "KUNTA SRINIVASU",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04951",
+    "slNo": 944,
+    "roll": "241FA04951",
+    "name": "MANTHRI CHANDHANA SRI ALEKHYA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Mr. Dega Balakotaiah"
+  },
+  {
+    "id": "241FA04955",
+    "slNo": 945,
+    "roll": "241FA04955",
+    "name": "SRISAILAPU SIVA MANIKANTA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04962",
+    "slNo": 946,
+    "roll": "241FA04962",
+    "name": "KARUMANCHI KEDARESWAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04963",
+    "slNo": 947,
+    "roll": "241FA04963",
+    "name": "NALLURI MEGHANADH",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04967",
+    "slNo": 948,
+    "roll": "241FA04967",
+    "name": "LOKESH YARRAMSETTY",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04968",
+    "slNo": 949,
+    "roll": "241FA04968",
+    "name": "KONGARA SUMANJALI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04974",
+    "slNo": 950,
+    "roll": "241FA04974",
+    "name": "PARIMI VALLI SRI HASINI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04975",
+    "slNo": 951,
+    "roll": "241FA04975",
+    "name": "MADDULA SOMANADH SUJITH",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04976",
+    "slNo": 952,
+    "roll": "241FA04976",
+    "name": "ALAPATI MEGHA SYAM",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04978",
+    "slNo": 953,
+    "roll": "241FA04978",
+    "name": "KARETI YESWITHANJANI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04A38",
+    "slNo": 954,
+    "roll": "241FA04A38",
+    "name": "BALUSU AJAY BABU",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04B01",
+    "slNo": 955,
+    "roll": "241FA04B01",
+    "name": "KOTA CHARAN",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D35",
+    "slNo": 956,
+    "roll": "241FA04D35",
+    "name": "KAKARLA VENKATA KALYANI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D50",
+    "slNo": 957,
+    "roll": "241FA04D50",
+    "name": "CHENNU RISHMITHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D51",
+    "slNo": 958,
+    "roll": "241FA04D51",
+    "name": "CHINKA SIVA SAI KRISHNA PRASAD",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D54",
+    "slNo": 959,
+    "roll": "241FA04D54",
+    "name": "VARADA GOPIKA VENKATA SRI SAI KALYANI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D55",
+    "slNo": 960,
+    "roll": "241FA04D55",
+    "name": "AMMISETTY RESHMA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D57",
+    "slNo": 961,
+    "roll": "241FA04D57",
+    "name": "RAYIDI VYSHNAVI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D64",
+    "slNo": 962,
+    "roll": "241FA04D64",
+    "name": "BOMMISETTY KEERTHANA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D65",
+    "slNo": 963,
+    "roll": "241FA04D65",
+    "name": "GONELA SHIVANI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D66",
+    "slNo": 964,
+    "roll": "241FA04D66",
+    "name": "GOPALAM LEELA MANASA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D71",
+    "slNo": 965,
+    "roll": "241FA04D71",
+    "name": "KOPPULA KEERTHI REDDY",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D76",
+    "slNo": 966,
+    "roll": "241FA04D76",
+    "name": "VAJJA PADMA PRANAVI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D78",
+    "slNo": 967,
+    "roll": "241FA04D78",
+    "name": "JASTI HEMANTH SAI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D81",
+    "slNo": 968,
+    "roll": "241FA04D81",
+    "name": "BHEEMIREDDY LALITHA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D84",
+    "slNo": 969,
+    "roll": "241FA04D84",
+    "name": "MOHAMMAD DINUL NAWAJ",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D92",
+    "slNo": 970,
+    "roll": "241FA04D92",
+    "name": "NAREDLA VARUN SAI TEJ",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D97",
+    "slNo": 971,
+    "roll": "241FA04D97",
+    "name": "PIDIKITI VENKATA PAVAN KUMAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04D99",
+    "slNo": 972,
+    "roll": "241FA04D99",
+    "name": "SUNKARA SRAVYA LAKSHMI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04E03",
+    "slNo": 973,
+    "roll": "241FA04E03",
+    "name": "MAKKENA RAMATULASI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04E08",
+    "slNo": 974,
+    "roll": "241FA04E08",
+    "name": "SANAMPUDI MITHILESH",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04E32",
+    "slNo": 975,
+    "roll": "241FA04E32",
+    "name": "KALAKA GOPI",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04E52",
+    "slNo": 976,
+    "roll": "241FA04E52",
+    "name": "MOHITH KONDEBOYENA",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04G02",
+    "slNo": 977,
+    "roll": "241FA04G02",
+    "name": "THOKALA SATHVIK SANKAR",
+    "section": "Section 14",
+    "sectionNum": 14,
+    "counsellor": "Ms. Swathi Koganti"
+  },
+  {
+    "id": "241FA04137",
+    "slNo": 978,
+    "roll": "241FA04137",
+    "name": "TANNIRU VEENITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04140",
+    "slNo": 979,
+    "roll": "241FA04140",
+    "name": "PADALA KOMAL VENKATA NAGA SAI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04420",
+    "slNo": 980,
+    "roll": "241FA04420",
+    "name": "NALLABOTHULA MANOHAR SAI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04422",
+    "slNo": 981,
+    "roll": "241FA04422",
+    "name": "DHARMIREDDI MANJULA DEVI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04425",
+    "slNo": 982,
+    "roll": "241FA04425",
+    "name": "GRANDHI SARVAN",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04430",
+    "slNo": 983,
+    "roll": "241FA04430",
+    "name": "VANGA SUMANTH REDDY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04431",
+    "slNo": 984,
+    "roll": "241FA04431",
+    "name": "SARIKONDA GAYATHRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04432",
+    "slNo": 985,
+    "roll": "241FA04432",
+    "name": "DRONADULA NAGASIRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04440",
+    "slNo": 986,
+    "roll": "241FA04440",
+    "name": "ANNAPUREDDY VARALAKSHMI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04445",
+    "slNo": 987,
+    "roll": "241FA04445",
+    "name": "MEKALA SONY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04448",
+    "slNo": 988,
+    "roll": "241FA04448",
+    "name": "PALEM USHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04450",
+    "slNo": 989,
+    "roll": "241FA04450",
+    "name": "POLURU YAGNA SRINIVASA REDDY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04453",
+    "slNo": 990,
+    "roll": "241FA04453",
+    "name": "SNEHAL PANCHARIYA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04454",
+    "slNo": 991,
+    "roll": "241FA04454",
+    "name": "MAINENI SAI SUBHANA SRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04456",
+    "slNo": 992,
+    "roll": "241FA04456",
+    "name": "PINNIKA ANUSHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04458",
+    "slNo": 993,
+    "roll": "241FA04458",
+    "name": "POKALA PREM CHAND",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04463",
+    "slNo": 994,
+    "roll": "241FA04463",
+    "name": "SHAIK AMEENA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04468",
+    "slNo": 995,
+    "roll": "241FA04468",
+    "name": "MALLARAPU JISHNUMATHI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04472",
+    "slNo": 996,
+    "roll": "241FA04472",
+    "name": "KATTA HIMA SAI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04480",
+    "slNo": 997,
+    "roll": "241FA04480",
+    "name": "GUDIPUDI JASWANTH NAIDU",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04488",
+    "slNo": 998,
+    "roll": "241FA04488",
+    "name": "MANIKONDA PARDHA SARADHI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04504",
+    "slNo": 999,
+    "roll": "241FA04504",
+    "name": "BALINENI NAGA MOUNIKA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04510",
+    "slNo": 1000,
+    "roll": "241FA04510",
+    "name": "DEVIREDDY SRI HARI KRISHNA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04515",
+    "slNo": 1001,
+    "roll": "241FA04515",
+    "name": "SANKA THANVITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04517",
+    "slNo": 1002,
+    "roll": "241FA04517",
+    "name": "TUNGALA NAVYA SRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04519",
+    "slNo": 1003,
+    "roll": "241FA04519",
+    "name": "KARANAM MOKSHITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04524",
+    "slNo": 1004,
+    "roll": "241FA04524",
+    "name": "YARRA LAKSHMI CHAITANYA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04531",
+    "slNo": 1005,
+    "roll": "241FA04531",
+    "name": "BYKA MOHAN KRISHNA REDDY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04537",
+    "slNo": 1006,
+    "roll": "241FA04537",
+    "name": "BHIMA GEETHIKA SAI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04541",
+    "slNo": 1007,
+    "roll": "241FA04541",
+    "name": "BUGGINENI TEJA SRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04542",
+    "slNo": 1008,
+    "roll": "241FA04542",
+    "name": "GAJULA SANJANA GAYATRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04545",
+    "slNo": 1009,
+    "roll": "241FA04545",
+    "name": "KALISETTI KUMARI MAHITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04548",
+    "slNo": 1010,
+    "roll": "241FA04548",
+    "name": "DANDAMUDI HANSIKA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Ms. Yalavarthi Sai Eswari"
+  },
+  {
+    "id": "241FA04555",
+    "slNo": 1011,
+    "roll": "241FA04555",
+    "name": "NELLURI BABY RAGHAVI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04557",
+    "slNo": 1012,
+    "roll": "241FA04557",
+    "name": "VANGARA SAI NAGA KOUSHIK",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04559",
+    "slNo": 1013,
+    "roll": "241FA04559",
+    "name": "MUDUNDI NISHITHAA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04560",
+    "slNo": 1014,
+    "roll": "241FA04560",
+    "name": "KONDURU MAHESWAR",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04694",
+    "slNo": 1015,
+    "roll": "241FA04694",
+    "name": "RAJABOINA BALA VENKATA BALARAMA RAJU",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04725",
+    "slNo": 1016,
+    "roll": "241FA04725",
+    "name": "PANTHAM ANJANEYA TARUN",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04849",
+    "slNo": 1017,
+    "roll": "241FA04849",
+    "name": "CHEPUMUDI SIVAJI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04854",
+    "slNo": 1018,
+    "roll": "241FA04854",
+    "name": "BONDILI SIVA SANTHOSH SINGH",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04860",
+    "slNo": 1019,
+    "roll": "241FA04860",
+    "name": "BURRI HEMALATHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04903",
+    "slNo": 1020,
+    "roll": "241FA04903",
+    "name": "PAGADALA SASHANKPANY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04B97",
+    "slNo": 1021,
+    "roll": "241FA04B97",
+    "name": "SHAIK LEENA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04C02",
+    "slNo": 1022,
+    "roll": "241FA04C02",
+    "name": "KALLI RISHITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04C05",
+    "slNo": 1023,
+    "roll": "241FA04C05",
+    "name": "MENDEM NAGASHREE",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04C08",
+    "slNo": 1024,
+    "roll": "241FA04C08",
+    "name": "BOMMASANI JAGADEESH VENKATA SAI MANIDEEP",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E10",
+    "slNo": 1025,
+    "roll": "241FA04E10",
+    "name": "GOLI ANKITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E12",
+    "slNo": 1026,
+    "roll": "241FA04E12",
+    "name": "VARIKUTI PUJA SRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E17",
+    "slNo": 1027,
+    "roll": "241FA04E17",
+    "name": "PEDAPUDI YAKSHITA UDAY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E18",
+    "slNo": 1028,
+    "roll": "241FA04E18",
+    "name": "PEDAMALLU PARDHA SARADHI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E22",
+    "slNo": 1029,
+    "roll": "241FA04E22",
+    "name": "LINGINENI PADMA SRI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E24",
+    "slNo": 1030,
+    "roll": "241FA04E24",
+    "name": "SHAIK MUSHTAAQ",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E25",
+    "slNo": 1031,
+    "roll": "241FA04E25",
+    "name": "DUDALA HEMANJALI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E28",
+    "slNo": 1032,
+    "roll": "241FA04E28",
+    "name": "BONTA VIJAYA LAKSHMI",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E30",
+    "slNo": 1033,
+    "roll": "241FA04E30",
+    "name": "ELCHURI YASWANTH",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E31",
+    "slNo": 1034,
+    "roll": "241FA04E31",
+    "name": "PARVATHAREDDY MAHESH ANJAN KUMAR",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E33",
+    "slNo": 1035,
+    "roll": "241FA04E33",
+    "name": "NALLAMALA VARSHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E34",
+    "slNo": 1036,
+    "roll": "241FA04E34",
+    "name": "MARTHA MOUNIKA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E35",
+    "slNo": 1037,
+    "roll": "241FA04E35",
+    "name": "PALLI MOHITH",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E45",
+    "slNo": 1038,
+    "roll": "241FA04E45",
+    "name": "KALLURI SIVA NAGA SUDHEER",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E48",
+    "slNo": 1039,
+    "roll": "241FA04E48",
+    "name": "KANUGOLU DIVYA SRI NAGA DURGA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E53",
+    "slNo": 1040,
+    "roll": "241FA04E53",
+    "name": "DASARI LAKSHMI PRIYA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E57",
+    "slNo": 1041,
+    "roll": "241FA04E57",
+    "name": "KATTA MADHUMITHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E69",
+    "slNo": 1042,
+    "roll": "241FA04E69",
+    "name": "SAMMETA ABHISHEK REDDY",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E73",
+    "slNo": 1043,
+    "roll": "241FA04E73",
+    "name": "KARANAM VENKATA SUJATHA",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "241FA04E74",
+    "slNo": 1044,
+    "roll": "241FA04E74",
+    "name": "BOKKA KOUSHAL",
+    "section": "Section 15",
+    "sectionNum": 15,
+    "counsellor": "Mr. Y. Rama Mohan"
+  },
+  {
+    "id": "221FA04251",
+    "slNo": 1045,
+    "roll": "221FA04251",
+    "name": "AMARA NAGA CHAITANYA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04068",
+    "slNo": 1046,
+    "roll": "241FA04068",
+    "name": "MUTYALA PRUDHVI SRI VARDHAN TEJA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04373",
+    "slNo": 1047,
+    "roll": "241FA04373",
+    "name": "KOKKILIGADDA RUSHI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04418",
+    "slNo": 1048,
+    "roll": "241FA04418",
+    "name": "VASIREDDY HARIESHWAR",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04790",
+    "slNo": 1049,
+    "roll": "241FA04790",
+    "name": "PAVULURI VENKATA SAI DHANUSH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04794",
+    "slNo": 1050,
+    "roll": "241FA04794",
+    "name": "RAVULAPALLI VENKATA SAI GOPI NADH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04798",
+    "slNo": 1051,
+    "roll": "241FA04798",
+    "name": "SOMAROUTHU SAI VENKATA SUBHASH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04799",
+    "slNo": 1052,
+    "roll": "241FA04799",
+    "name": "ELAKOTI RAMADEVI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04810",
+    "slNo": 1053,
+    "roll": "241FA04810",
+    "name": "CHIMALADINNE BHANU PRAKASH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04811",
+    "slNo": 1054,
+    "roll": "241FA04811",
+    "name": "BATHINENI TANUJA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04818",
+    "slNo": 1055,
+    "roll": "241FA04818",
+    "name": "BHATTIPROLU VENKATESWARA RAO",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04822",
+    "slNo": 1056,
+    "roll": "241FA04822",
+    "name": "PORANKI GOKULESH VARMA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04825",
+    "slNo": 1057,
+    "roll": "241FA04825",
+    "name": "GAIRUBOINA PRIYA DARSHINI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04827",
+    "slNo": 1058,
+    "roll": "241FA04827",
+    "name": "SADHWIK MUNAGA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04830",
+    "slNo": 1059,
+    "roll": "241FA04830",
+    "name": "PONNAGANTI SANJAY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04836",
+    "slNo": 1060,
+    "roll": "241FA04836",
+    "name": "NAGA PRAVALLIKA DENABOINA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04862",
+    "slNo": 1061,
+    "roll": "241FA04862",
+    "name": "BANDI DEVI SRIDHAR KUMAR REDDY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04865",
+    "slNo": 1062,
+    "roll": "241FA04865",
+    "name": "YADAGIRI RAVI TEJA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04868",
+    "slNo": 1063,
+    "roll": "241FA04868",
+    "name": "TAMMINENI BHARGAV REDDY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04870",
+    "slNo": 1064,
+    "roll": "241FA04870",
+    "name": "KANDULA GANESH BALAJI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04875",
+    "slNo": 1065,
+    "roll": "241FA04875",
+    "name": "TATIPARTHI SAHITHI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04879",
+    "slNo": 1066,
+    "roll": "241FA04879",
+    "name": "UDUMULA RAKESH REDDY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C10",
+    "slNo": 1067,
+    "roll": "241FA04C10",
+    "name": "AMULOTHU UDAYA CHANDRIKA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C12",
+    "slNo": 1068,
+    "roll": "241FA04C12",
+    "name": "CHALLA JYOTHENDRA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C15",
+    "slNo": 1069,
+    "roll": "241FA04C15",
+    "name": "MEKALA MOHANA VENKATA PRAVEEN CHAND",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C16",
+    "slNo": 1070,
+    "roll": "241FA04C16",
+    "name": "NERELLA NAGA SRIPRADA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C17",
+    "slNo": 1071,
+    "roll": "241FA04C17",
+    "name": "VINAY VADRANAM",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C21",
+    "slNo": 1072,
+    "roll": "241FA04C21",
+    "name": "VICHARAPU REVANTH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C23",
+    "slNo": 1073,
+    "roll": "241FA04C23",
+    "name": "CHAVVAKULA DIVYA MANJARI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C26",
+    "slNo": 1074,
+    "roll": "241FA04C26",
+    "name": "SHAIK IRFAN",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C29",
+    "slNo": 1075,
+    "roll": "241FA04C29",
+    "name": "AITHAPU MANOGNA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C34",
+    "slNo": 1076,
+    "roll": "241FA04C34",
+    "name": "NEELI NIKHIL SRI SAI SIVESH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C43",
+    "slNo": 1077,
+    "roll": "241FA04C43",
+    "name": "VUDUTHA SUGUN PREETHI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Dr. Simhadri Chinna Gopi"
+  },
+  {
+    "id": "241FA04C48",
+    "slNo": 1078,
+    "roll": "241FA04C48",
+    "name": "VUNNAM CHANDU",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C49",
+    "slNo": 1079,
+    "roll": "241FA04C49",
+    "name": "TIWARI KAVYA MAHESWARI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C50",
+    "slNo": 1080,
+    "roll": "241FA04C50",
+    "name": "SHAIK NIJAMUDDIN",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C51",
+    "slNo": 1081,
+    "roll": "241FA04C51",
+    "name": "ASA VENKATA JHANSI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C54",
+    "slNo": 1082,
+    "roll": "241FA04C54",
+    "name": "MEKA GIRIDHAR",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C65",
+    "slNo": 1083,
+    "roll": "241FA04C65",
+    "name": "ETUKURI VENKATA MURALI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C75",
+    "slNo": 1084,
+    "roll": "241FA04C75",
+    "name": "GAJAVALLI RUKESH GOPALA KRISHNA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C77",
+    "slNo": 1085,
+    "roll": "241FA04C77",
+    "name": "GOVINDU NANI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C79",
+    "slNo": 1086,
+    "roll": "241FA04C79",
+    "name": "VASIREDDY DIVYA SRI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C90",
+    "slNo": 1087,
+    "roll": "241FA04C90",
+    "name": "BHEEMAVARAPU PRANAY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C97",
+    "slNo": 1088,
+    "roll": "241FA04C97",
+    "name": "RAMINENI HARSHA VARDHAN",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04C99",
+    "slNo": 1089,
+    "roll": "241FA04C99",
+    "name": "MEDISETTI KARTHIK",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D03",
+    "slNo": 1090,
+    "roll": "241FA04D03",
+    "name": "DEEVI SAHITHI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D08",
+    "slNo": 1091,
+    "roll": "241FA04D08",
+    "name": "GONUGUNTLA LEELA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D10",
+    "slNo": 1092,
+    "roll": "241FA04D10",
+    "name": "NADALA SABEEHA SULTANA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D12",
+    "slNo": 1093,
+    "roll": "241FA04D12",
+    "name": "GUDIBANDI TARUN REDDY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D14",
+    "slNo": 1094,
+    "roll": "241FA04D14",
+    "name": "PUSHADAPU LOKESH",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D17",
+    "slNo": 1095,
+    "roll": "241FA04D17",
+    "name": "GOPISETTY HEMA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D19",
+    "slNo": 1096,
+    "roll": "241FA04D19",
+    "name": "YECHURI LAKSHMI SRAVYA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D22",
+    "slNo": 1097,
+    "roll": "241FA04D22",
+    "name": "BODE KARTHIK",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D23",
+    "slNo": 1098,
+    "roll": "241FA04D23",
+    "name": "TADIKONDA SIVA NAGA MALLESWARI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D24",
+    "slNo": 1099,
+    "roll": "241FA04D24",
+    "name": "PUSULURI DHANUSH PHANI VISHNU VARDHAN BABU",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D25",
+    "slNo": 1100,
+    "roll": "241FA04D25",
+    "name": "MOHAMMAD MUTAHARUN",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D28",
+    "slNo": 1101,
+    "roll": "241FA04D28",
+    "name": "PALLA VARUN GOPAL",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D30",
+    "slNo": 1102,
+    "roll": "241FA04D30",
+    "name": "ALAPARTHY LOHITH SAI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04D33",
+    "slNo": 1103,
+    "roll": "241FA04D33",
+    "name": "MADDUKURI LIKITH SAI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04E59",
+    "slNo": 1104,
+    "roll": "241FA04E59",
+    "name": "KAIPU DEEPIKA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04E88",
+    "slNo": 1105,
+    "roll": "241FA04E88",
+    "name": "JASTI SURYA MANIKANTA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04F02",
+    "slNo": 1106,
+    "roll": "241FA04F02",
+    "name": "KODALI JASWANTH CHOWDARY",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04F11",
+    "slNo": 1107,
+    "roll": "241FA04F11",
+    "name": "MATHUKUMALLI VENKATA DIVYA SRI SAI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04F36",
+    "slNo": 1108,
+    "roll": "241FA04F36",
+    "name": "VEERAMACHU LIKHITHA",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "251LA04004",
+    "slNo": 1109,
+    "roll": "251LA04004",
+    "name": "KOTA SRI LAKSHMI",
+    "section": "Section 16",
+    "sectionNum": 16,
+    "counsellor": "Mr. G. Ramanjaneyulu"
+  },
+  {
+    "id": "241FA04277",
+    "slNo": 1110,
+    "roll": "241FA04277",
+    "name": "REGULA VENKATA NIKHIL CHOWDARY",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04391",
+    "slNo": 1111,
+    "roll": "241FA04391",
+    "name": "KOMMINENI RAVI DEVI RAJU",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04596",
+    "slNo": 1112,
+    "roll": "241FA04596",
+    "name": "ARUDALA REVATHI GOPI SREE",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04600",
+    "slNo": 1113,
+    "roll": "241FA04600",
+    "name": "PANGULURI GNANA SINDHU",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04602",
+    "slNo": 1114,
+    "roll": "241FA04602",
+    "name": "YENDURI DEVI SWARITHA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04603",
+    "slNo": 1115,
+    "roll": "241FA04603",
+    "name": "KOSURI HIMAJA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04626",
+    "slNo": 1116,
+    "roll": "241FA04626",
+    "name": "MALLADI MADHAVI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04885",
+    "slNo": 1117,
+    "roll": "241FA04885",
+    "name": "SHAIK ZABIYA TAHSEEN",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04895",
+    "slNo": 1118,
+    "roll": "241FA04895",
+    "name": "ALLATIPALLI MANASA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04907",
+    "slNo": 1119,
+    "roll": "241FA04907",
+    "name": "DADI VINAY BABU",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04984",
+    "slNo": 1120,
+    "roll": "241FA04984",
+    "name": "RAMINENI PAVAN TEJA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04992",
+    "slNo": 1121,
+    "roll": "241FA04992",
+    "name": "KANAMARLAPUDI ASWIN KUMAR",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04999",
+    "slNo": 1122,
+    "roll": "241FA04999",
+    "name": "KUMBA PRABHU PRASAD",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04A07",
+    "slNo": 1123,
+    "roll": "241FA04A07",
+    "name": "SHAIK ATHIQ",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04A08",
+    "slNo": 1124,
+    "roll": "241FA04A08",
+    "name": "SODISETTY CHAITRA HASINI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04A09",
+    "slNo": 1125,
+    "roll": "241FA04A09",
+    "name": "SHAIK KARISHMA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A14",
+    "slNo": 1126,
+    "roll": "241FA04A14",
+    "name": "THOTA NAGA SRUTHY",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A17",
+    "slNo": 1127,
+    "roll": "241FA04A17",
+    "name": "BEJJAM BHARATH SAI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A22",
+    "slNo": 1128,
+    "roll": "241FA04A22",
+    "name": "YARRAKULA ANJAN KUMAR",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A23",
+    "slNo": 1129,
+    "roll": "241FA04A23",
+    "name": "SHAIK TAJ BAL SHAIDA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A25",
+    "slNo": 1130,
+    "roll": "241FA04A25",
+    "name": "POLU SAIBODHANA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A26",
+    "slNo": 1131,
+    "roll": "241FA04A26",
+    "name": "POTTURI VENKATA NAGA VISHNU VARDHAN",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A27",
+    "slNo": 1132,
+    "roll": "241FA04A27",
+    "name": "EDA THIRUMALA SAI REDDY",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A28",
+    "slNo": 1133,
+    "roll": "241FA04A28",
+    "name": "MANNEM SAI DARSHITHA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A39",
+    "slNo": 1134,
+    "roll": "241FA04A39",
+    "name": "CHANDANAM DHANA VENKATA SAI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A42",
+    "slNo": 1135,
+    "roll": "241FA04A42",
+    "name": "KONAGAMLLA M N V S S R S TARUN PUNNA RAO",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A43",
+    "slNo": 1136,
+    "roll": "241FA04A43",
+    "name": "GOKANABOYINA V VENKATA SATYANARAYANA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A45",
+    "slNo": 1137,
+    "roll": "241FA04A45",
+    "name": "PUNUGOTI JAYA CHANDRA REDDY",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A53",
+    "slNo": 1138,
+    "roll": "241FA04A53",
+    "name": "MAMILLAPALLI TRIPURA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A54",
+    "slNo": 1139,
+    "roll": "241FA04A54",
+    "name": "SHAIK MASEERA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A66",
+    "slNo": 1140,
+    "roll": "241FA04A66",
+    "name": "PULLAMSHETTI NIVEDITHA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A69",
+    "slNo": 1141,
+    "roll": "241FA04A69",
+    "name": "DORNALA DIVYA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A70",
+    "slNo": 1142,
+    "roll": "241FA04A70",
+    "name": "SHAIK MOHAMMAD HASHIM",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A74",
+    "slNo": 1143,
+    "roll": "241FA04A74",
+    "name": "SHAIK SAMI AFROZ",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A87",
+    "slNo": 1144,
+    "roll": "241FA04A87",
+    "name": "NAGASARAPU VENKATA SAI ANILA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Arumalla Gopya Sri"
+  },
+  {
+    "id": "241FA04A91",
+    "slNo": 1145,
+    "roll": "241FA04A91",
+    "name": "GUDE MANISHA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B10",
+    "slNo": 1146,
+    "roll": "241FA04B10",
+    "name": "PARUCHURI RUPA SRI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B12",
+    "slNo": 1147,
+    "roll": "241FA04B12",
+    "name": "KOVI BINDU HASINI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B37",
+    "slNo": 1148,
+    "roll": "241FA04B37",
+    "name": "PATTAN REHAAN BASHA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B40",
+    "slNo": 1149,
+    "roll": "241FA04B40",
+    "name": "MUTHIREDDY PRAKASH",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B43",
+    "slNo": 1150,
+    "roll": "241FA04B43",
+    "name": "CHUNDU AJAY KUMAR",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B44",
+    "slNo": 1151,
+    "roll": "241FA04B44",
+    "name": "GANGISETTY VENKATA NAGA PUSHPA JYOTHIRMAI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B45",
+    "slNo": 1152,
+    "roll": "241FA04B45",
+    "name": "GADE CHETAN",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B50",
+    "slNo": 1153,
+    "roll": "241FA04B50",
+    "name": "BUKKI HEMANTH SAI KUMAR",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B60",
+    "slNo": 1154,
+    "roll": "241FA04B60",
+    "name": "GUGGILAM RAHITHYA NAGA VENKATA SAI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04B66",
+    "slNo": 1155,
+    "roll": "241FA04B66",
+    "name": "JANGALA SIKHA JOYCEE",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04B73",
+    "slNo": 1156,
+    "roll": "241FA04B73",
+    "name": "ALURI H S SAI MANIKANTA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04B74",
+    "slNo": 1157,
+    "roll": "241FA04B74",
+    "name": "CHADALAWADA NIHARIKA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04B76",
+    "slNo": 1158,
+    "roll": "241FA04B76",
+    "name": "PULIGADDA RAKESH",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Mr. Madugula Anil"
+  },
+  {
+    "id": "241FA04B77",
+    "slNo": 1159,
+    "roll": "241FA04B77",
+    "name": "KONIKI MANOJ KUMAR",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B79",
+    "slNo": 1160,
+    "roll": "241FA04B79",
+    "name": "NAGALINGAM TEJASWI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B80",
+    "slNo": 1161,
+    "roll": "241FA04B80",
+    "name": "RASAMSETTY KEERTHANA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B86",
+    "slNo": 1162,
+    "roll": "241FA04B86",
+    "name": "KAMBHAMPATI GIRI CHARAN",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04B91",
+    "slNo": 1163,
+    "roll": "241FA04B91",
+    "name": "ANKIT RAI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04C22",
+    "slNo": 1164,
+    "roll": "241FA04C22",
+    "name": "IPPILI TARUN",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04C57",
+    "slNo": 1165,
+    "roll": "241FA04C57",
+    "name": "MERUVA JAYANTH",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04C98",
+    "slNo": 1166,
+    "roll": "241FA04C98",
+    "name": "SURAGANI JASWANTH",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04D79",
+    "slNo": 1167,
+    "roll": "241FA04D79",
+    "name": "TUMULURI RAJINI",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04F54",
+    "slNo": 1168,
+    "roll": "241FA04F54",
+    "name": "MYDHILI MARELLA",
+    "section": "Section 17",
+    "sectionNum": 17,
+    "counsellor": "Ms. Cheggu Manasa"
+  },
+  {
+    "id": "241FA04003",
+    "slNo": 1169,
+    "roll": "241FA04003",
+    "name": "GARIKAPATI PURNA SAI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04009",
+    "slNo": 1170,
+    "roll": "241FA04009",
+    "name": "CHANDANAM KESAVA HARSHAVARDHAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04015",
+    "slNo": 1171,
+    "roll": "241FA04015",
+    "name": "GALAM PAVAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04029",
+    "slNo": 1172,
+    "roll": "241FA04029",
+    "name": "PADALA JAGRUTI SRI LAVANYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04036",
+    "slNo": 1173,
+    "roll": "241FA04036",
+    "name": "KALLAGUNTA YASASWINI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04037",
+    "slNo": 1174,
+    "roll": "241FA04037",
+    "name": "SATISH KUMAR NALLURI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04042",
+    "slNo": 1175,
+    "roll": "241FA04042",
+    "name": "SIMHADRI RAJESH",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04045",
+    "slNo": 1176,
+    "roll": "241FA04045",
+    "name": "MUPPALLA HEMANTH KUMAR",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04061",
+    "slNo": 1177,
+    "roll": "241FA04061",
+    "name": "CHAPARAPU ASHOK REDDY",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04066",
+    "slNo": 1178,
+    "roll": "241FA04066",
+    "name": "MUKIRI JOHN WESLY",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04072",
+    "slNo": 1179,
+    "roll": "241FA04072",
+    "name": "YAGANTI SRIKEERTHI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04077",
+    "slNo": 1180,
+    "roll": "241FA04077",
+    "name": "BONAMUKKALA SAI KARTHIK REDDY",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04113",
+    "slNo": 1181,
+    "roll": "241FA04113",
+    "name": "KOTHA VENKATA SAIPAVAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04121",
+    "slNo": 1182,
+    "roll": "241FA04121",
+    "name": "CHANDU HIMABINDHU",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04126",
+    "slNo": 1183,
+    "roll": "241FA04126",
+    "name": "CHINNI HEMANTH KUMAR",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04141",
+    "slNo": 1184,
+    "roll": "241FA04141",
+    "name": "THUMMAPUDI YAMUNA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04225",
+    "slNo": 1185,
+    "roll": "241FA04225",
+    "name": "ATCHYUTA HANSIKA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04235",
+    "slNo": 1186,
+    "roll": "241FA04235",
+    "name": "BOLLINENI ROSHITHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04331",
+    "slNo": 1187,
+    "roll": "241FA04331",
+    "name": "PURAM MOHANA SRIJA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04564",
+    "slNo": 1188,
+    "roll": "241FA04564",
+    "name": "GALLA VENKATA NAGA YASASWINI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04633",
+    "slNo": 1189,
+    "roll": "241FA04633",
+    "name": "BHIMANA LAKSHMI ALEKHYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04654",
+    "slNo": 1190,
+    "roll": "241FA04654",
+    "name": "SHAIK MAHEY JABEIN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04701",
+    "slNo": 1191,
+    "roll": "241FA04701",
+    "name": "ANNA PRATHYUSHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04704",
+    "slNo": 1192,
+    "roll": "241FA04704",
+    "name": "THANMAI KOTHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04711",
+    "slNo": 1193,
+    "roll": "241FA04711",
+    "name": "PAJJURU UDAY KIRAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04714",
+    "slNo": 1194,
+    "roll": "241FA04714",
+    "name": "CHANDU KARTHIK",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04729",
+    "slNo": 1195,
+    "roll": "241FA04729",
+    "name": "SHAIK ARSHIYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04752",
+    "slNo": 1196,
+    "roll": "241FA04752",
+    "name": "SANAM YASHWANTH",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04766",
+    "slNo": 1197,
+    "roll": "241FA04766",
+    "name": "SEELAM MARUTHI SRI SAI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04769",
+    "slNo": 1198,
+    "roll": "241FA04769",
+    "name": "YELAM TULASI VENKATA RAMNA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04773",
+    "slNo": 1199,
+    "roll": "241FA04773",
+    "name": "JAVANGULA CHARITHA SRI SATHYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04813",
+    "slNo": 1200,
+    "roll": "241FA04813",
+    "name": "SHAIK SHAISTHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04842",
+    "slNo": 1201,
+    "roll": "241FA04842",
+    "name": "GELLI VEDA VYSHNAVI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Ms. Shaik Kareena Yashmin"
+  },
+  {
+    "id": "241FA04850",
+    "slNo": 1202,
+    "roll": "241FA04850",
+    "name": "POTHURI GEETHANVITHA SRI LAKSHMI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04853",
+    "slNo": 1203,
+    "roll": "241FA04853",
+    "name": "KOMMA MRUDHULA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04918",
+    "slNo": 1204,
+    "roll": "241FA04918",
+    "name": "PAMIDI GAYATHRI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04920",
+    "slNo": 1205,
+    "roll": "241FA04920",
+    "name": "DAMARLA BHANDHAVI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04927",
+    "slNo": 1206,
+    "roll": "241FA04927",
+    "name": "PASALA GEETHASRI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04947",
+    "slNo": 1207,
+    "roll": "241FA04947",
+    "name": "OBINENI ALEKHYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04982",
+    "slNo": 1208,
+    "roll": "241FA04982",
+    "name": "BHUNAM BHAVYA NAGA SAI SRI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04985",
+    "slNo": 1209,
+    "roll": "241FA04985",
+    "name": "TOLUCHURI SADASIVA RAO",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04986",
+    "slNo": 1210,
+    "roll": "241FA04986",
+    "name": "BANDARU SRI LAKSHMI SIVANI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04A52",
+    "slNo": 1211,
+    "roll": "241FA04A52",
+    "name": "BANDARUPALLI NAVYA SRI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04B57",
+    "slNo": 1212,
+    "roll": "241FA04B57",
+    "name": "BONDILI DEVI RAGHUVEERA BAI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04B94",
+    "slNo": 1213,
+    "roll": "241FA04B94",
+    "name": "KADAVAKOLLU KRUPA GHAGAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04B99",
+    "slNo": 1214,
+    "roll": "241FA04B99",
+    "name": "KANKANALA VENKATA SURYA YASWIN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04C04",
+    "slNo": 1215,
+    "roll": "241FA04C04",
+    "name": "ANKEM CHARAN TEJA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04C06",
+    "slNo": 1216,
+    "roll": "241FA04C06",
+    "name": "BONDILI SARDAR KARTIKEYA SINGH",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04C67",
+    "slNo": 1217,
+    "roll": "241FA04C67",
+    "name": "GANDLA ROSHITHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04C86",
+    "slNo": 1218,
+    "roll": "241FA04C86",
+    "name": "GALAM SAI ROHITH",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04D16",
+    "slNo": 1219,
+    "roll": "241FA04D16",
+    "name": "MACHAVARAPU TANMAI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04D49",
+    "slNo": 1220,
+    "roll": "241FA04D49",
+    "name": "AVULA YASWANTH REDDY",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04D61",
+    "slNo": 1221,
+    "roll": "241FA04D61",
+    "name": "JAMMULA NIKHIL",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04E40",
+    "slNo": 1222,
+    "roll": "241FA04E40",
+    "name": "MALLACHERUVU KRISHNA ADITYA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04E77",
+    "slNo": 1223,
+    "roll": "241FA04E77",
+    "name": "DOPPALAPUDI RAKESH",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04E97",
+    "slNo": 1224,
+    "roll": "241FA04E97",
+    "name": "PANCHUMARTHI HARSHAVARDHAN",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F04",
+    "slNo": 1225,
+    "roll": "241FA04F04",
+    "name": "SEELAMNENI MEGHANA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F05",
+    "slNo": 1226,
+    "roll": "241FA04F05",
+    "name": "RAVIPATI HARSHINI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F18",
+    "slNo": 1227,
+    "roll": "241FA04F18",
+    "name": "VARAPARLA NARASIMHA NAIDU",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F23",
+    "slNo": 1228,
+    "roll": "241FA04F23",
+    "name": "KALAGOTLA KOWSAR",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F28",
+    "slNo": 1229,
+    "roll": "241FA04F28",
+    "name": "BOMMU JOHN RONALD",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F29",
+    "slNo": 1230,
+    "roll": "241FA04F29",
+    "name": "SOMU PAVAN SAI KRISHNA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F30",
+    "slNo": 1231,
+    "roll": "241FA04F30",
+    "name": "BATTINI NIKHILESWAR",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F32",
+    "slNo": 1232,
+    "roll": "241FA04F32",
+    "name": "BHAVIRISETTY NITHIN SAI",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F34",
+    "slNo": 1233,
+    "roll": "241FA04F34",
+    "name": "VALETI RAGHAVA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F41",
+    "slNo": 1234,
+    "roll": "241FA04F41",
+    "name": "SAYYAD MUBARAK",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04F67",
+    "slNo": 1235,
+    "roll": "241FA04F67",
+    "name": "CHINTHAPALLI SWETHA",
+    "section": "Section 18",
+    "sectionNum": 18,
+    "counsellor": "Mr. Kudupudi Raj Kiran"
+  },
+  {
+    "id": "241FA04076",
+    "slNo": 1236,
+    "roll": "241FA04076",
+    "name": "ANKEM NAVYASRI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04146",
+    "slNo": 1237,
+    "roll": "241FA04146",
+    "name": "ANNE HARSHA SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04178",
+    "slNo": 1238,
+    "roll": "241FA04178",
+    "name": "MATURI MANIKANTA SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04181",
+    "slNo": 1239,
+    "roll": "241FA04181",
+    "name": "RAYANKULA VIVEK",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04182",
+    "slNo": 1240,
+    "roll": "241FA04182",
+    "name": "MOGILICHARLA SRI SHIRDI SAI HANUMAN",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04184",
+    "slNo": 1241,
+    "roll": "241FA04184",
+    "name": "GUDE MAHINDRA SAI ARAVIND",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04186",
+    "slNo": 1242,
+    "roll": "241FA04186",
+    "name": "YETUKURI MOHANA SRINIVAS",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04194",
+    "slNo": 1243,
+    "roll": "241FA04194",
+    "name": "REGALLA DURGA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04199",
+    "slNo": 1244,
+    "roll": "241FA04199",
+    "name": "KONDAMUDI SATHWIK",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04200",
+    "slNo": 1245,
+    "roll": "241FA04200",
+    "name": "DARLA KAPIL SAKETHA RAM",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04201",
+    "slNo": 1246,
+    "roll": "241FA04201",
+    "name": "YARRAMRAJU BHANOJI VARMA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04210",
+    "slNo": 1247,
+    "roll": "241FA04210",
+    "name": "BOLAGANI MOHAN SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04215",
+    "slNo": 1248,
+    "roll": "241FA04215",
+    "name": "KATTA SRAVANTHI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04224",
+    "slNo": 1249,
+    "roll": "241FA04224",
+    "name": "CHOKKA NIVRITHA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04237",
+    "slNo": 1250,
+    "roll": "241FA04237",
+    "name": "PARITALA TEJA CHANDRASEKHAR",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04238",
+    "slNo": 1251,
+    "roll": "241FA04238",
+    "name": "BHUPATHI KALI AKSHAYA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04240",
+    "slNo": 1252,
+    "roll": "241FA04240",
+    "name": "VELLALACHERUVU GIRVANI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. D. Senthil"
+  },
+  {
+    "id": "241FA04243",
+    "slNo": 1253,
+    "roll": "241FA04243",
+    "name": "GANTA ANIL",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04244",
+    "slNo": 1254,
+    "roll": "241FA04244",
+    "name": "YECHURI HASINI CHOWDARY",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04246",
+    "slNo": 1255,
+    "roll": "241FA04246",
+    "name": "EMANI KALI KRISHNA VARA PRASAD",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04247",
+    "slNo": 1256,
+    "roll": "241FA04247",
+    "name": "TUMMA SASIDHAR REDDY",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04250",
+    "slNo": 1257,
+    "roll": "241FA04250",
+    "name": "SANDU LAKSHMAN RAO",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04251",
+    "slNo": 1258,
+    "roll": "241FA04251",
+    "name": "SHAIK SAMEER",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04255",
+    "slNo": 1259,
+    "roll": "241FA04255",
+    "name": "SHAIK KHAJA MUSKAN",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04257",
+    "slNo": 1260,
+    "roll": "241FA04257",
+    "name": "PATHAN IMRAN KHAN",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04258",
+    "slNo": 1261,
+    "roll": "241FA04258",
+    "name": "JONNA KUMAR SIVA SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04262",
+    "slNo": 1262,
+    "roll": "241FA04262",
+    "name": "GOGISETTY VYSHNAVI NAIDU",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04271",
+    "slNo": 1263,
+    "roll": "241FA04271",
+    "name": "THOTA LAHARI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04272",
+    "slNo": 1264,
+    "roll": "241FA04272",
+    "name": "BITRA HEMAKESH AYYAPPA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04275",
+    "slNo": 1265,
+    "roll": "241FA04275",
+    "name": "KANAGALA PARIPURNA PRASAD",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04276",
+    "slNo": 1266,
+    "roll": "241FA04276",
+    "name": "SHAIK SHIFA ANJUM",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04278",
+    "slNo": 1267,
+    "roll": "241FA04278",
+    "name": "MUDRABOINA VIJAYA LAKSHMI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04283",
+    "slNo": 1268,
+    "roll": "241FA04283",
+    "name": "UDAY BAVIREDDY",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04284",
+    "slNo": 1269,
+    "roll": "241FA04284",
+    "name": "MEKA SIVA KUMAR",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Ms. Athota Padmaja"
+  },
+  {
+    "id": "241FA04288",
+    "slNo": 1270,
+    "roll": "241FA04288",
+    "name": "GOLLAPUDI NAGA PRAMOD GUPTA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04289",
+    "slNo": 1271,
+    "roll": "241FA04289",
+    "name": "PALLAPROLU NIKHIL SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04308",
+    "slNo": 1272,
+    "roll": "241FA04308",
+    "name": "CHALLA DEEPIKA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04312",
+    "slNo": 1273,
+    "roll": "241FA04312",
+    "name": "KAVURI PAVAN SAI RAM LIKHITH",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04313",
+    "slNo": 1274,
+    "roll": "241FA04313",
+    "name": "POPURI HARSHITHA LAKSHMI KUMARI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04319",
+    "slNo": 1275,
+    "roll": "241FA04319",
+    "name": "PORUMALLA MADHAVI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04323",
+    "slNo": 1276,
+    "roll": "241FA04323",
+    "name": "RAJAVARAPU KHANISHQ VENKAT",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04324",
+    "slNo": 1277,
+    "roll": "241FA04324",
+    "name": "DADINABOINA LOKESH NAGA GOPI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04328",
+    "slNo": 1278,
+    "roll": "241FA04328",
+    "name": "BOINA PAVAN SAI PRAVEEN",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04329",
+    "slNo": 1279,
+    "roll": "241FA04329",
+    "name": "TAMMISETTI CHIRANJEEVI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04332",
+    "slNo": 1280,
+    "roll": "241FA04332",
+    "name": "SHAIK AJMAL",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04334",
+    "slNo": 1281,
+    "roll": "241FA04334",
+    "name": "ADDA SAI LIKHITHA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04335",
+    "slNo": 1282,
+    "roll": "241FA04335",
+    "name": "JAMPANI SRI MANI DEEPAK",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04337",
+    "slNo": 1283,
+    "roll": "241FA04337",
+    "name": "BANDARUPALLI AKHIL",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04345",
+    "slNo": 1284,
+    "roll": "241FA04345",
+    "name": "TADIBOINA SIVA KUMAR",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04348",
+    "slNo": 1285,
+    "roll": "241FA04348",
+    "name": "THOTA HARI KRISHNA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Kanna Hareesh"
+  },
+  {
+    "id": "241FA04474",
+    "slNo": 1286,
+    "roll": "241FA04474",
+    "name": "TURAKA SANDEEP",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04484",
+    "slNo": 1287,
+    "roll": "241FA04484",
+    "name": "YEDLAPALLI RAKESH SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04558",
+    "slNo": 1288,
+    "roll": "241FA04558",
+    "name": "NALLANI TRINADH",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04823",
+    "slNo": 1289,
+    "roll": "241FA04823",
+    "name": "GADIPARTHI JAYANTH",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04839",
+    "slNo": 1290,
+    "roll": "241FA04839",
+    "name": "SAPAVATH LIKITH DATTA TEJA SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D47",
+    "slNo": 1291,
+    "roll": "241FA04D47",
+    "name": "EMANI HEMA SAI SHREE",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D59",
+    "slNo": 1292,
+    "roll": "241FA04D59",
+    "name": "GOURI RAHULU",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D74",
+    "slNo": 1293,
+    "roll": "241FA04D74",
+    "name": "VAGICHARLA V N S M L POOJITHA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D83",
+    "slNo": 1294,
+    "roll": "241FA04D83",
+    "name": "SHAIK ISMAIL JABIVULLA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D88",
+    "slNo": 1295,
+    "roll": "241FA04D88",
+    "name": "SHAIK SAHIL",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D89",
+    "slNo": 1296,
+    "roll": "241FA04D89",
+    "name": "GALI MANOLINI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D90",
+    "slNo": 1297,
+    "roll": "241FA04D90",
+    "name": "NUSALA VENU",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04D91",
+    "slNo": 1298,
+    "roll": "241FA04D91",
+    "name": "THOTA RUDRA PAVAN",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04E19",
+    "slNo": 1299,
+    "roll": "241FA04E19",
+    "name": "PASUPULETI SATHWIK",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04F19",
+    "slNo": 1300,
+    "roll": "241FA04F19",
+    "name": "AVULAMANDA SAI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04F58",
+    "slNo": 1301,
+    "roll": "241FA04F58",
+    "name": "OGURI YAMINI TEJESWINI",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "241FA04G01",
+    "slNo": 1302,
+    "roll": "241FA04G01",
+    "name": "ODETI SAI BHAVAGNA",
+    "section": "Section 19",
+    "sectionNum": 19,
+    "counsellor": "Mr. Chennamsetty Naga Gopi"
+  },
+  {
+    "id": "231FA04416",
+    "slNo": 1303,
+    "roll": "231FA04416",
+    "name": "POTRU THRIVENI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04159",
+    "slNo": 1304,
+    "roll": "241FA04159",
+    "name": "PASUMARTHI TEJASRI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04163",
+    "slNo": 1305,
+    "roll": "241FA04163",
+    "name": "PEDDI NEHA PUSHPA SRI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04180",
+    "slNo": 1306,
+    "roll": "241FA04180",
+    "name": "CHIRUMAMILLA DEEPTHI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04187",
+    "slNo": 1307,
+    "roll": "241FA04187",
+    "name": "PARCHURI THANUJA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04234",
+    "slNo": 1308,
+    "roll": "241FA04234",
+    "name": "DAMMALAPATI HEMA MANIKANTA HARIBABU",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04356",
+    "slNo": 1309,
+    "roll": "241FA04356",
+    "name": "BIKKINA AMRUTHA VALLI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04366",
+    "slNo": 1310,
+    "roll": "241FA04366",
+    "name": "LELLA PARTHIV REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04368",
+    "slNo": 1311,
+    "roll": "241FA04368",
+    "name": "MUPPA VENKATA KUSUMA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04375",
+    "slNo": 1312,
+    "roll": "241FA04375",
+    "name": "BAJI AHAMED BAIG",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04381",
+    "slNo": 1313,
+    "roll": "241FA04381",
+    "name": "VINNAKOTA VIJAYAKRISHNA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04385",
+    "slNo": 1314,
+    "roll": "241FA04385",
+    "name": "CHENNURI HARINI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04388",
+    "slNo": 1315,
+    "roll": "241FA04388",
+    "name": "NELLURI NAVYA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04405",
+    "slNo": 1316,
+    "roll": "241FA04405",
+    "name": "VEERISETTY VYSHNAVI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04410",
+    "slNo": 1317,
+    "roll": "241FA04410",
+    "name": "SRIRAM SAIPRAGNESH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04411",
+    "slNo": 1318,
+    "roll": "241FA04411",
+    "name": "VADDI SRIKAR BABU",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04419",
+    "slNo": 1319,
+    "roll": "241FA04419",
+    "name": "PINNAMANENI ANJANI KUMAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04446",
+    "slNo": 1320,
+    "roll": "241FA04446",
+    "name": "DUGGEMPUDI RAMESH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04476",
+    "slNo": 1321,
+    "roll": "241FA04476",
+    "name": "BOTTU HEMANTH NAGA SAI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04478",
+    "slNo": 1322,
+    "roll": "241FA04478",
+    "name": "JONNALA VENKATA SURYA PRATHAP REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04486",
+    "slNo": 1323,
+    "roll": "241FA04486",
+    "name": "THAMIDHALA NAGA VIVEK REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04489",
+    "slNo": 1324,
+    "roll": "241FA04489",
+    "name": "YADLAPALLI JEEVAN LAKSHMI KUMAR BABU",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04551",
+    "slNo": 1325,
+    "roll": "241FA04551",
+    "name": "MACHIRAJU JASWANTH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04590",
+    "slNo": 1326,
+    "roll": "241FA04590",
+    "name": "NAGA NARASIMHA RAO",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04695",
+    "slNo": 1327,
+    "roll": "241FA04695",
+    "name": "KOTHAGUNDI K N M V KEERTHI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04731",
+    "slNo": 1328,
+    "roll": "241FA04731",
+    "name": "RAMISETTY GANESH SAILESWAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04774",
+    "slNo": 1329,
+    "roll": "241FA04774",
+    "name": "TADIVAKA PAVANA SRADDHA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04786",
+    "slNo": 1330,
+    "roll": "241FA04786",
+    "name": "JYOSHIKA GADDIPATI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04793",
+    "slNo": 1331,
+    "roll": "241FA04793",
+    "name": "SYED SHAHID",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04797",
+    "slNo": 1332,
+    "roll": "241FA04797",
+    "name": "SANIVARAPU DEEKSHITHA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04814",
+    "slNo": 1333,
+    "roll": "241FA04814",
+    "name": "ALLAMSETTI PRUDVI VIJAY KUMAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04816",
+    "slNo": 1334,
+    "roll": "241FA04816",
+    "name": "GANDLA TANUJA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04833",
+    "slNo": 1335,
+    "roll": "241FA04833",
+    "name": "KOKKIRALA PAVANI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04945",
+    "slNo": 1336,
+    "roll": "241FA04945",
+    "name": "GAVINI JAYA SRI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. P. Venkata Rajulu"
+  },
+  {
+    "id": "241FA04948",
+    "slNo": 1337,
+    "roll": "241FA04948",
+    "name": "NARIKELAPU SRILAKSHMI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04973",
+    "slNo": 1338,
+    "roll": "241FA04973",
+    "name": "PULI SARANYA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04988",
+    "slNo": 1339,
+    "roll": "241FA04988",
+    "name": "YEDDULA CHAKRESH ROYAL",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04B38",
+    "slNo": 1340,
+    "roll": "241FA04B38",
+    "name": "CHINTHAMALLA BLESSY SAHITHI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04B67",
+    "slNo": 1341,
+    "roll": "241FA04B67",
+    "name": "VAVILLAPALLI GIRIDHAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04B69",
+    "slNo": 1342,
+    "roll": "241FA04B69",
+    "name": "GRANDHI HEMANTH SAI KUMAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04B85",
+    "slNo": 1343,
+    "roll": "241FA04B85",
+    "name": "KOTA PUJITHA PRASANNA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04B89",
+    "slNo": 1344,
+    "roll": "241FA04B89",
+    "name": "BATHULA TRIVENI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C18",
+    "slNo": 1345,
+    "roll": "241FA04C18",
+    "name": "NARNE KAVITHA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C19",
+    "slNo": 1346,
+    "roll": "241FA04C19",
+    "name": "LATCHI JASMITHA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C24",
+    "slNo": 1347,
+    "roll": "241FA04C24",
+    "name": "ARLA GANGOTRI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C33",
+    "slNo": 1348,
+    "roll": "241FA04C33",
+    "name": "MUNGARA CHIRU LOKESH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C42",
+    "slNo": 1349,
+    "roll": "241FA04C42",
+    "name": "MULE VENKATA ADITHYA REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C59",
+    "slNo": 1350,
+    "roll": "241FA04C59",
+    "name": "NUNAVATH BHARANI NAYAK",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C76",
+    "slNo": 1351,
+    "roll": "241FA04C76",
+    "name": "THALLAM VENKATA SUNEEL",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04C84",
+    "slNo": 1352,
+    "roll": "241FA04C84",
+    "name": "INDUKURI ROHIT VENKATA KOTI REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D02",
+    "slNo": 1353,
+    "roll": "241FA04D02",
+    "name": "PATHIPATI BHUVAN CHAND REDDY",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D05",
+    "slNo": 1354,
+    "roll": "241FA04D05",
+    "name": "VUYYURU ASISH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D09",
+    "slNo": 1355,
+    "roll": "241FA04D09",
+    "name": "CHENNUPATI CHARAN TEJA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D15",
+    "slNo": 1356,
+    "roll": "241FA04D15",
+    "name": "SHAIK IRSHAD",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D94",
+    "slNo": 1357,
+    "roll": "241FA04D94",
+    "name": "MANNAVA YASHASWI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04D98",
+    "slNo": 1358,
+    "roll": "241FA04D98",
+    "name": "ANGADALA VENKATA DHANUSH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E20",
+    "slNo": 1359,
+    "roll": "241FA04E20",
+    "name": "CHENCHALA MUKESH KUMAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E46",
+    "slNo": 1360,
+    "roll": "241FA04E46",
+    "name": "ETUKALA CHANDRA SHEKAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E49",
+    "slNo": 1361,
+    "roll": "241FA04E49",
+    "name": "SEKH SAHIL",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E50",
+    "slNo": 1362,
+    "roll": "241FA04E50",
+    "name": "YESAPOGU JOSH RUFUS",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E55",
+    "slNo": 1363,
+    "roll": "241FA04E55",
+    "name": "YARLAGADDA NARENDRA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E61",
+    "slNo": 1364,
+    "roll": "241FA04E61",
+    "name": "PANJAGALA SAI RAMYA SRI",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E62",
+    "slNo": 1365,
+    "roll": "241FA04E62",
+    "name": "PAMULA KRANTHI KIRAN",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E67",
+    "slNo": 1366,
+    "roll": "241FA04E67",
+    "name": "DASARI SANTHOSH",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E70",
+    "slNo": 1367,
+    "roll": "241FA04E70",
+    "name": "PALAM PRAVEEN KUMAR",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04E75",
+    "slNo": 1368,
+    "roll": "241FA04E75",
+    "name": "KONETI SURYA",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "251LA04003",
+    "slNo": 1369,
+    "roll": "251LA04003",
+    "name": "SHAIK FIROZ",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "251LA04009",
+    "slNo": 1370,
+    "roll": "251LA04009",
+    "name": "SHAIK SAMEER",
+    "section": "Section 20",
+    "sectionNum": 20,
+    "counsellor": "Mr. Shaik Dehtaj"
+  },
+  {
+    "id": "241FA04161",
+    "slNo": 1371,
+    "roll": "241FA04161",
+    "name": "ANKEM SRI RAMA TEJA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04188",
+    "slNo": 1372,
+    "roll": "241FA04188",
+    "name": "KOTAPATI SAI LAKSHMI CHANDRIKA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04481",
+    "slNo": 1373,
+    "roll": "241FA04481",
+    "name": "SADINENI JOTHI CHARAN",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04512",
+    "slNo": 1374,
+    "roll": "241FA04512",
+    "name": "SEEMAKURTHI RUPASRI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04582",
+    "slNo": 1375,
+    "roll": "241FA04582",
+    "name": "UGGALA DHANA LAKSHMI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04604",
+    "slNo": 1376,
+    "roll": "241FA04604",
+    "name": "GUNTUPALLI SREE VAISHNAVI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04605",
+    "slNo": 1377,
+    "roll": "241FA04605",
+    "name": "SYED ASIYA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04611",
+    "slNo": 1378,
+    "roll": "241FA04611",
+    "name": "ANIRUDH JAGANATH KOSARAJU",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04619",
+    "slNo": 1379,
+    "roll": "241FA04619",
+    "name": "SHAIK ANEES JAHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04635",
+    "slNo": 1380,
+    "roll": "241FA04635",
+    "name": "PASUPULA JAHNAVI LAKSHMI SNEHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04653",
+    "slNo": 1381,
+    "roll": "241FA04653",
+    "name": "REDROUTHU HEMANTH GANESH",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04659",
+    "slNo": 1382,
+    "roll": "241FA04659",
+    "name": "BOLAGANI VIJAYA DURGA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04660",
+    "slNo": 1383,
+    "roll": "241FA04660",
+    "name": "UPPALA YOSHITA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04664",
+    "slNo": 1384,
+    "roll": "241FA04664",
+    "name": "TIRUMALASETTY HARSHITHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04666",
+    "slNo": 1385,
+    "roll": "241FA04666",
+    "name": "GONEPALLI SAI NIRMALA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04668",
+    "slNo": 1386,
+    "roll": "241FA04668",
+    "name": "VISHNUMOLAKALA NIKHITHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04669",
+    "slNo": 1387,
+    "roll": "241FA04669",
+    "name": "NALLAMOTHU SAI HAREESH",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04672",
+    "slNo": 1388,
+    "roll": "241FA04672",
+    "name": "SUNKARA DHANUSH KUMAR",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04674",
+    "slNo": 1389,
+    "roll": "241FA04674",
+    "name": "MUMMANENI SUJITH SAI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04677",
+    "slNo": 1390,
+    "roll": "241FA04677",
+    "name": "MERIKINAPALLI SRI HARI SAI ESWAR",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04678",
+    "slNo": 1391,
+    "roll": "241FA04678",
+    "name": "JINNA NIHAL REDDY",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04681",
+    "slNo": 1392,
+    "roll": "241FA04681",
+    "name": "SOMU TEENA DURGA ANDALU RAMADEVI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04682",
+    "slNo": 1393,
+    "roll": "241FA04682",
+    "name": "KOLLA JITENDRA KUMAR",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04688",
+    "slNo": 1394,
+    "roll": "241FA04688",
+    "name": "AALA BALA SIVA PUNNARAO",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04689",
+    "slNo": 1395,
+    "roll": "241FA04689",
+    "name": "MANNEM BHARGAVI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04690",
+    "slNo": 1396,
+    "roll": "241FA04690",
+    "name": "SHAIK SUMAYYA PARVEEN",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04693",
+    "slNo": 1397,
+    "roll": "241FA04693",
+    "name": "VENIGALLA YASHODHAR",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04736",
+    "slNo": 1398,
+    "roll": "241FA04736",
+    "name": "NALLAGORLA KARTHIKEYAN",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04757",
+    "slNo": 1399,
+    "roll": "241FA04757",
+    "name": "BURRI SIDDARDHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04847",
+    "slNo": 1400,
+    "roll": "241FA04847",
+    "name": "GADHAMSETTY GLADESS CHANDRA LEELA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04851",
+    "slNo": 1401,
+    "roll": "241FA04851",
+    "name": "VINUKONDA VEERA NAGA VINAY",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04858",
+    "slNo": 1402,
+    "roll": "241FA04858",
+    "name": "POTHURI KRISHNA MANI TEJA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04881",
+    "slNo": 1403,
+    "roll": "241FA04881",
+    "name": "YASWANTH CHOWDARY GARAPATI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04884",
+    "slNo": 1404,
+    "roll": "241FA04884",
+    "name": "VANUKURI HASITHA SAI LAKSHMI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Nase Bandhike Akhilandeswari"
+  },
+  {
+    "id": "241FA04887",
+    "slNo": 1405,
+    "roll": "241FA04887",
+    "name": "VEESAMNIRAJ KUMAR",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04888",
+    "slNo": 1406,
+    "roll": "241FA04888",
+    "name": "PEDDIBOYINA YUKTHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04889",
+    "slNo": 1407,
+    "roll": "241FA04889",
+    "name": "KAKARLAPUDI AKSHAYA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04892",
+    "slNo": 1408,
+    "roll": "241FA04892",
+    "name": "DANABOINA KOMALI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04894",
+    "slNo": 1409,
+    "roll": "241FA04894",
+    "name": "EMADABATHUNI NAGA SAI JAIDEEP",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04897",
+    "slNo": 1410,
+    "roll": "241FA04897",
+    "name": "SOMAROWTHU SAI DEEPIKA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04899",
+    "slNo": 1411,
+    "roll": "241FA04899",
+    "name": "SAMBA SIVA RAO NARALASETTY",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04906",
+    "slNo": 1412,
+    "roll": "241FA04906",
+    "name": "MADAPURA GIRISH SHREYA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04909",
+    "slNo": 1413,
+    "roll": "241FA04909",
+    "name": "RAMINENI VENKATA THANMAIE",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04998",
+    "slNo": 1414,
+    "roll": "241FA04998",
+    "name": "JAGARLAMUDI SOUMYA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A21",
+    "slNo": 1415,
+    "roll": "241FA04A21",
+    "name": "KOGANTI SRAVYASRI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A29",
+    "slNo": 1416,
+    "roll": "241FA04A29",
+    "name": "THUMMURI SAI REVATHI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A30",
+    "slNo": 1417,
+    "roll": "241FA04A30",
+    "name": "YECHURI KRISHNA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A32",
+    "slNo": 1418,
+    "roll": "241FA04A32",
+    "name": "SINGAMSETTY RAMA BRAHMA HITESH",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A40",
+    "slNo": 1419,
+    "roll": "241FA04A40",
+    "name": "BIJJAM VENKATA HARSHITHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A49",
+    "slNo": 1420,
+    "roll": "241FA04A49",
+    "name": "SYED AFREEN",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A67",
+    "slNo": 1421,
+    "roll": "241FA04A67",
+    "name": "BOMMU LAHARI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A83",
+    "slNo": 1422,
+    "roll": "241FA04A83",
+    "name": "SARIKONDA NAVYA SRI LAKSHMI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04A98",
+    "slNo": 1423,
+    "roll": "241FA04A98",
+    "name": "VENKATA PAVAN KUMAR CHILLARA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04B02",
+    "slNo": 1424,
+    "roll": "241FA04B02",
+    "name": "PULIGADDA KOMALA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04B04",
+    "slNo": 1425,
+    "roll": "241FA04B04",
+    "name": "KOTTE SESHAGIRI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04B15",
+    "slNo": 1426,
+    "roll": "241FA04B15",
+    "name": "PASUPULETI GEETHIKA VALLI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04B36",
+    "slNo": 1427,
+    "roll": "241FA04B36",
+    "name": "SAJJA NAGA SAI SRIRAM",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04B49",
+    "slNo": 1428,
+    "roll": "241FA04B49",
+    "name": "KOYI AKSHAYA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04F79",
+    "slNo": 1429,
+    "roll": "241FA04F79",
+    "name": "SATHALA RAKESH SAI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04F81",
+    "slNo": 1430,
+    "roll": "241FA04F81",
+    "name": "MD KAFAITULLAH",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04F86",
+    "slNo": 1431,
+    "roll": "241FA04F86",
+    "name": "MODATHER GAMARELDEN AHMED OMER",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04F87",
+    "slNo": 1432,
+    "roll": "241FA04F87",
+    "name": "GUDIVADA VASU DEVA RAO",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04005",
+    "slNo": 1433,
+    "roll": "251LA04005",
+    "name": "VARE BHUVANESWARI",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04007",
+    "slNo": 1434,
+    "roll": "251LA04007",
+    "name": "THUMMA BALA JAISON REDDY",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04008",
+    "slNo": 1435,
+    "roll": "251LA04008",
+    "name": "BINGI MANIKANTA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04010",
+    "slNo": 1436,
+    "roll": "251LA04010",
+    "name": "RAVULA IMMANUEL PRANEETH",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04011",
+    "slNo": 1437,
+    "roll": "251LA04011",
+    "name": "GULLAPALLI PUJITHA",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "251LA04012",
+    "slNo": 1438,
+    "roll": "251LA04012",
+    "name": "PRIYA POOJITHA ANNAM",
+    "section": "Section 21",
+    "sectionNum": 21,
+    "counsellor": "Ms. Annam Durga Bhavani"
+  },
+  {
+    "id": "241FA04212",
+    "slNo": 1439,
+    "roll": "241FA04212",
+    "name": "MANCHALA HARIKA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04242",
+    "slNo": 1440,
+    "roll": "241FA04242",
+    "name": "AKHILMANI TIRUNAGARI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04285",
+    "slNo": 1441,
+    "roll": "241FA04285",
+    "name": "HIMAVATH DANDAMUDI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04295",
+    "slNo": 1442,
+    "roll": "241FA04295",
+    "name": "KATTA SAHITHI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04301",
+    "slNo": 1443,
+    "roll": "241FA04301",
+    "name": "KORRAPATI NIKHIL",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04314",
+    "slNo": 1444,
+    "roll": "241FA04314",
+    "name": "NAVULURI CHAYANAND",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04315",
+    "slNo": 1445,
+    "roll": "241FA04315",
+    "name": "LAKKOJU SAI RAKESH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04316",
+    "slNo": 1446,
+    "roll": "241FA04316",
+    "name": "CHANDOLU LAKSHMI SAHITHI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04318",
+    "slNo": 1447,
+    "roll": "241FA04318",
+    "name": "SHAIK BANIF KHASIM",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04320",
+    "slNo": 1448,
+    "roll": "241FA04320",
+    "name": "TALARI SANJAY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04327",
+    "slNo": 1449,
+    "roll": "241FA04327",
+    "name": "CHALLAGUNDLA ABHI RISON",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04330",
+    "slNo": 1450,
+    "roll": "241FA04330",
+    "name": "MANDAVA JYOTHSNA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04347",
+    "slNo": 1451,
+    "roll": "241FA04347",
+    "name": "CHALLA CHARISHMA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04565",
+    "slNo": 1452,
+    "roll": "241FA04565",
+    "name": "YEMIREDDY PURUSHOTHAM REDDY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04572",
+    "slNo": 1453,
+    "roll": "241FA04572",
+    "name": "DAVULURI PRAHARSHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04577",
+    "slNo": 1454,
+    "roll": "241FA04577",
+    "name": "DURISALA RAJESH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04587",
+    "slNo": 1455,
+    "roll": "241FA04587",
+    "name": "THATAVARTHI SAI TRIVENI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04589",
+    "slNo": 1456,
+    "roll": "241FA04589",
+    "name": "NALLAPATI RAGHAVENDRA SAI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04617",
+    "slNo": 1457,
+    "roll": "241FA04617",
+    "name": "RAVIPATI RAGHAVENDRA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04632",
+    "slNo": 1458,
+    "roll": "241FA04632",
+    "name": "GURRAM BHAVYA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04639",
+    "slNo": 1459,
+    "roll": "241FA04639",
+    "name": "KOPURI SRI HARSHITHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04649",
+    "slNo": 1460,
+    "roll": "241FA04649",
+    "name": "EDARA LEELADHAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04657",
+    "slNo": 1461,
+    "roll": "241FA04657",
+    "name": "MAGANTI SRI VAISHNAVI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04658",
+    "slNo": 1462,
+    "roll": "241FA04658",
+    "name": "MADDULA VENKATA NAGA RAGHAVENDRA JAYANTH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04663",
+    "slNo": 1463,
+    "roll": "241FA04663",
+    "name": "MADASU SANJEEV PHANI SAI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04745",
+    "slNo": 1464,
+    "roll": "241FA04745",
+    "name": "AYUSH RAJ",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04747",
+    "slNo": 1465,
+    "roll": "241FA04747",
+    "name": "ASTUTI KUMARI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04844",
+    "slNo": 1466,
+    "roll": "241FA04844",
+    "name": "KANDRU CHAITANYA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04856",
+    "slNo": 1467,
+    "roll": "241FA04856",
+    "name": "GUNTURI RITHIKA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04922",
+    "slNo": 1468,
+    "roll": "241FA04922",
+    "name": "MANDALAPU TANUJA SRI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04923",
+    "slNo": 1469,
+    "roll": "241FA04923",
+    "name": "KATTUBOINA SANDHYA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04926",
+    "slNo": 1470,
+    "roll": "241FA04926",
+    "name": "PAPPU LAKSHYA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04928",
+    "slNo": 1471,
+    "roll": "241FA04928",
+    "name": "ISANAKA RESHMITHA SRIHASINI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04950",
+    "slNo": 1472,
+    "roll": "241FA04950",
+    "name": "VELUGOTI BHAVYA SRI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04991",
+    "slNo": 1473,
+    "roll": "241FA04991",
+    "name": "KOTAPATI MOKSHA SRI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04A44",
+    "slNo": 1474,
+    "roll": "241FA04A44",
+    "name": "SRIJAN KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04A51",
+    "slNo": 1475,
+    "roll": "241FA04A51",
+    "name": "PIYUSH KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Dr. J. Veeranjaneyulu"
+  },
+  {
+    "id": "241FA04A55",
+    "slNo": 1476,
+    "roll": "241FA04A55",
+    "name": "DARIMADUGU LAKSHMI GANESH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A56",
+    "slNo": 1477,
+    "roll": "241FA04A56",
+    "name": "LABALA SAI KIRAN",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A57",
+    "slNo": 1478,
+    "roll": "241FA04A57",
+    "name": "GOLI CHINA BABU REDDY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A58",
+    "slNo": 1479,
+    "roll": "241FA04A58",
+    "name": "VUNNAM MOUNIKA CHOWDARY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A60",
+    "slNo": 1480,
+    "roll": "241FA04A60",
+    "name": "PADMANABHUNI ANAND BABU",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A61",
+    "slNo": 1481,
+    "roll": "241FA04A61",
+    "name": "SANIMELLA MOHAN MAHESH REDDY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A65",
+    "slNo": 1482,
+    "roll": "241FA04A65",
+    "name": "TALASILA KOWSIK",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04A76",
+    "slNo": 1483,
+    "roll": "241FA04A76",
+    "name": "BANDARU THARUN KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B27",
+    "slNo": 1484,
+    "roll": "241FA04B27",
+    "name": "DODDAPUNENI AMRUTHA VARSHINI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B29",
+    "slNo": 1485,
+    "roll": "241FA04B29",
+    "name": "SIGINAM HEPSIBHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B42",
+    "slNo": 1486,
+    "roll": "241FA04B42",
+    "name": "VENATI SUJITHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B47",
+    "slNo": 1487,
+    "roll": "241FA04B47",
+    "name": "KATREDDY SUBBA REDDY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B93",
+    "slNo": 1488,
+    "roll": "241FA04B93",
+    "name": "RAMINENI LALITHA CHOWDARI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04B96",
+    "slNo": 1489,
+    "roll": "241FA04B96",
+    "name": "NAGUBANDI S V S S M BAVITHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04C30",
+    "slNo": 1490,
+    "roll": "241FA04C30",
+    "name": "BODDEPALLI KAYURA SAI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04C38",
+    "slNo": 1491,
+    "roll": "241FA04C38",
+    "name": "TABREZ AHMAD",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04C70",
+    "slNo": 1492,
+    "roll": "241FA04C70",
+    "name": "METTA KANCHANA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04D86",
+    "slNo": 1493,
+    "roll": "241FA04D86",
+    "name": "JYOTI KUMARI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E11",
+    "slNo": 1494,
+    "roll": "241FA04E11",
+    "name": "MADDI SAI SWETHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E63",
+    "slNo": 1495,
+    "roll": "241FA04E63",
+    "name": "INAVOLU LIKHITH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E65",
+    "slNo": 1496,
+    "roll": "241FA04E65",
+    "name": "VELAGATURI MANOJ KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E66",
+    "slNo": 1497,
+    "roll": "241FA04E66",
+    "name": "VINIT RAJAK",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E68",
+    "slNo": 1498,
+    "roll": "241FA04E68",
+    "name": "MATTA NAGA DEEPIKA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E76",
+    "slNo": 1499,
+    "roll": "241FA04E76",
+    "name": "MANNAM AMRUTHA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04E94",
+    "slNo": 1500,
+    "roll": "241FA04E94",
+    "name": "SANDU HARI SAI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F01",
+    "slNo": 1501,
+    "roll": "241FA04F01",
+    "name": "GADE SREE POOJA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F07",
+    "slNo": 1502,
+    "roll": "241FA04F07",
+    "name": "KONDA JASHIKA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F21",
+    "slNo": 1503,
+    "roll": "241FA04F21",
+    "name": "BANDARU DURGA SARANYA",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F26",
+    "slNo": 1504,
+    "roll": "241FA04F26",
+    "name": "HARSH RAJ",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F27",
+    "slNo": 1505,
+    "roll": "241FA04F27",
+    "name": "VELPULA CHANDRA SHEKHAR REDDY",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F55",
+    "slNo": 1506,
+    "roll": "241FA04F55",
+    "name": "KAMJULA REVANTH",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F56",
+    "slNo": 1507,
+    "roll": "241FA04F56",
+    "name": "ACHYUT ANAND",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F71",
+    "slNo": 1508,
+    "roll": "241FA04F71",
+    "name": "CHALAKANTI SAI SANKEERTHI",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F72",
+    "slNo": 1509,
+    "roll": "241FA04F72",
+    "name": "AVINASH KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F80",
+    "slNo": 1510,
+    "roll": "241FA04F80",
+    "name": "RAJU KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  },
+  {
+    "id": "241FA04F93",
+    "slNo": 1511,
+    "roll": "241FA04F93",
+    "name": "ABHISHEK KUMAR",
+    "section": "Section 22",
+    "sectionNum": 22,
+    "counsellor": "Ms. Korrapati Christiana Rose Elizabeth"
+  }
+];

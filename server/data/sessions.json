@@ -1,0 +1,1111 @@
+[
+  {
+    "id": "session_1793080212196",
+    "date": "2026-10-27",
+    "period": "4",
+    "subject": "Optimization Techniques (OT)",
+    "section": "1 CSE",
+    "facultyName": "MFEF",
+    "facultyPhone": "93473 89313",
+    "total": 70,
+    "presentCount": 54,
+    "absentCount": 16,
+    "percentage": "77.1",
+    "absentRolls": [
+      {
+        "roll": "241FA04124",
+        "name": "SAIRAM"
+      },
+      {
+        "roll": "241FA04152",
+        "name": "LASYA"
+      },
+      {
+        "roll": "241FA04357",
+        "name": "SRIVALLI KATYAYANI"
+      },
+      {
+        "roll": "241FA04546",
+        "name": "LAKSHMI LAVANYA"
+      },
+      {
+        "roll": "241FA04579",
+        "name": "ANJI REDDY"
+      },
+      {
+        "roll": "241FA04591",
+        "name": "MAHESH REDDY"
+      },
+      {
+        "roll": "241FA04593",
+        "name": "MANOGNA SAI"
+      },
+      {
+        "roll": "241FA04623",
+        "name": "CHARNI SRI"
+      },
+      {
+        "roll": "241FA04675",
+        "name": "BHAVYA SRI"
+      },
+      {
+        "roll": "241FA04789",
+        "name": "ARAVIND VARMA"
+      },
+      {
+        "roll": "241FA04905",
+        "name": "DEVA RAJU"
+      },
+      {
+        "roll": "241FA04935",
+        "name": "YASWANTH NARENDRA"
+      },
+      {
+        "roll": "241FA04964",
+        "name": "HEMA AMAR NADH"
+      },
+      {
+        "roll": "241FA04966",
+        "name": "SIVA PRAKASH"
+      },
+      {
+        "roll": "241FA04981",
+        "name": "(LR)GAYATHRI"
+      },
+      {
+        "roll": "241FA04F76",
+        "name": "NAVYA"
+      }
+    ],
+    "presentRolls": [
+      {
+        "roll": "241FA04035",
+        "name": "SRUJANA"
+      },
+      {
+        "roll": "241FA04054",
+        "name": "MOUNIKA"
+      },
+      {
+        "roll": "241FA04062",
+        "name": "RUPA SREE"
+      },
+      {
+        "roll": "241FA04067",
+        "name": "HARI VENKAT"
+      },
+      {
+        "roll": "241FA04083",
+        "name": "NAGA AMRUTHA"
+      },
+      {
+        "roll": "241FA04114",
+        "name": "ROHITH SAI"
+      },
+      {
+        "roll": "241FA04115",
+        "name": "SOWMYA"
+      },
+      {
+        "roll": "241FA04134",
+        "name": "HARI PRIYA"
+      },
+      {
+        "roll": "241FA04179",
+        "name": "THANUSH"
+      },
+      {
+        "roll": "241FA04207",
+        "name": "ABID BAIG"
+      },
+      {
+        "roll": "241FA04208",
+        "name": "SIRI BAI"
+      },
+      {
+        "roll": "241FA04307",
+        "name": "PRANITH REDDY"
+      },
+      {
+        "roll": "241FA04361",
+        "name": "KOWSAR"
+      },
+      {
+        "roll": "241FA04362",
+        "name": "LAKSHMI SIRI"
+      },
+      {
+        "roll": "241FA04485",
+        "name": "VENKATESWARA RAO"
+      },
+      {
+        "roll": "241FA04520",
+        "name": "HEMANTH"
+      },
+      {
+        "roll": "241FA04529",
+        "name": "VENKATA SAIRAM"
+      },
+      {
+        "roll": "241FA04540",
+        "name": "SHOYAB AKMAL"
+      },
+      {
+        "roll": "241FA04553",
+        "name": "SRAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04585",
+        "name": "PAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04592",
+        "name": "CHANDRA SIVA BALAJI"
+      },
+      {
+        "roll": "241FA04598",
+        "name": "NAGA VEDIK KRISHNA"
+      },
+      {
+        "roll": "241FA04612",
+        "name": "Sk.Ashiq"
+      },
+      {
+        "roll": "241FA04621",
+        "name": "BHANUPRATHAP REDDY"
+      },
+      {
+        "roll": "241FA04622",
+        "name": "DEEPIKA"
+      },
+      {
+        "roll": "241FA04628",
+        "name": "VINAY SAI"
+      },
+      {
+        "roll": "241FA04634",
+        "name": "GANGADHAR SRIKANTH REDDY"
+      },
+      {
+        "roll": "241FA04692",
+        "name": "BHARGAVA"
+      },
+      {
+        "roll": "241FA04871",
+        "name": "ABHILASH"
+      },
+      {
+        "roll": "241FA04908",
+        "name": "JATHIN TEJ"
+      },
+      {
+        "roll": "241FA04933",
+        "name": "GOPI"
+      },
+      {
+        "roll": "241FA04943",
+        "name": "KARTHIKEYA REDDY"
+      },
+      {
+        "roll": "241FA04958",
+        "name": "VARAPRASAD"
+      },
+      {
+        "roll": "241FA04959",
+        "name": "MANVITHA"
+      },
+      {
+        "roll": "241FA04965",
+        "name": "VENKATA JAGADEESH"
+      },
+      {
+        "roll": "241FA04969",
+        "name": "CHAITANYA"
+      },
+      {
+        "roll": "241FA04980",
+        "name": "DEEKSHITH"
+      },
+      {
+        "roll": "241FA04A15",
+        "name": "HARISH"
+      },
+      {
+        "roll": "241FA04A68",
+        "name": "LAKSHMI SAI ANUHYA"
+      },
+      {
+        "roll": "241FA04A85",
+        "name": "TARAKA LAKSHMI"
+      },
+      {
+        "roll": "241FA04A95",
+        "name": "THOSHITHA"
+      },
+      {
+        "roll": "241FA04A99",
+        "name": "MOHANAKEERTHI"
+      },
+      {
+        "roll": "241FA04B14",
+        "name": "SAI VARSHINI"
+      },
+      {
+        "roll": "241FA04B70",
+        "name": "MODITHA KRISHNA"
+      },
+      {
+        "roll": "241FA04B88",
+        "name": "PAVANI"
+      },
+      {
+        "roll": "241FA04E42",
+        "name": "SREE RAM"
+      },
+      {
+        "roll": "241FA04E43",
+        "name": "KANESH"
+      },
+      {
+        "roll": "241FA04E56",
+        "name": "PRIYANKA"
+      },
+      {
+        "roll": "241FA04E71",
+        "name": "ALTHAF"
+      },
+      {
+        "roll": "241FA04F17",
+        "name": "SATHISH"
+      },
+      {
+        "roll": "241FA04F38",
+        "name": "CHANDRA TEJA"
+      },
+      {
+        "roll": "241FA04F83",
+        "name": "AMJAD"
+      },
+      {
+        "roll": "241FA04F84",
+        "name": "MOHAMMED GAMAL"
+      },
+      {
+        "roll": "241FA04F95",
+        "name": " SAMUELA"
+      }
+    ],
+    "attendance": {
+      "241FA04035": "present",
+      "241FA04054": "present",
+      "241FA04062": "present",
+      "241FA04067": "present",
+      "241FA04083": "present",
+      "241FA04114": "present",
+      "241FA04115": "present",
+      "241FA04124": "absent",
+      "241FA04134": "present",
+      "241FA04152": "absent",
+      "241FA04179": "present",
+      "241FA04207": "present",
+      "241FA04208": "present",
+      "241FA04307": "present",
+      "241FA04357": "absent",
+      "241FA04361": "present",
+      "241FA04362": "present",
+      "241FA04485": "present",
+      "241FA04520": "present",
+      "241FA04529": "present",
+      "241FA04540": "present",
+      "241FA04546": "absent",
+      "241FA04553": "present",
+      "241FA04579": "absent",
+      "241FA04585": "present",
+      "241FA04591": "absent",
+      "241FA04592": "present",
+      "241FA04593": "absent",
+      "241FA04598": "present",
+      "241FA04612": "present",
+      "241FA04621": "present",
+      "241FA04622": "present",
+      "241FA04623": "absent",
+      "241FA04628": "present",
+      "241FA04634": "present",
+      "241FA04675": "absent",
+      "241FA04692": "present",
+      "241FA04789": "absent",
+      "241FA04871": "present",
+      "241FA04905": "absent",
+      "241FA04908": "present",
+      "241FA04933": "present",
+      "241FA04935": "absent",
+      "241FA04943": "present",
+      "241FA04958": "present",
+      "241FA04959": "present",
+      "241FA04964": "absent",
+      "241FA04965": "present",
+      "241FA04966": "absent",
+      "241FA04969": "present",
+      "241FA04980": "present",
+      "241FA04981": "absent",
+      "241FA04A15": "present",
+      "241FA04A68": "present",
+      "241FA04A85": "present",
+      "241FA04A95": "present",
+      "241FA04A99": "present",
+      "241FA04B14": "present",
+      "241FA04B70": "present",
+      "241FA04B88": "present",
+      "241FA04E42": "present",
+      "241FA04E43": "present",
+      "241FA04E56": "present",
+      "241FA04E71": "present",
+      "241FA04F17": "present",
+      "241FA04F38": "present",
+      "241FA04F76": "absent",
+      "241FA04F83": "present",
+      "241FA04F84": "present",
+      "241FA04F95": "present"
+    },
+    "timestamp": "2026-10-27T05:50:12.196Z"
+  },
+  {
+    "id": "session_1793079802222",
+    "date": "2026-10-27",
+    "period": "4",
+    "subject": "PC LAB",
+    "section": "1 CSE",
+    "facultyName": "MFEF",
+    "facultyPhone": "93473 89313",
+    "total": 70,
+    "presentCount": 70,
+    "absentCount": 0,
+    "percentage": "100.0",
+    "absentRolls": [],
+    "presentRolls": [
+      {
+        "roll": "241FA04035",
+        "name": "SRUJANA"
+      },
+      {
+        "roll": "241FA04054",
+        "name": "MOUNIKA"
+      },
+      {
+        "roll": "241FA04062",
+        "name": "RUPA SREE"
+      },
+      {
+        "roll": "241FA04067",
+        "name": "HARI VENKAT"
+      },
+      {
+        "roll": "241FA04083",
+        "name": "NAGA AMRUTHA"
+      },
+      {
+        "roll": "241FA04114",
+        "name": "ROHITH SAI"
+      },
+      {
+        "roll": "241FA04115",
+        "name": "SOWMYA"
+      },
+      {
+        "roll": "241FA04124",
+        "name": "SAIRAM"
+      },
+      {
+        "roll": "241FA04134",
+        "name": "HARI PRIYA"
+      },
+      {
+        "roll": "241FA04152",
+        "name": "LASYA"
+      },
+      {
+        "roll": "241FA04179",
+        "name": "THANUSH"
+      },
+      {
+        "roll": "241FA04207",
+        "name": "ABID BAIG"
+      },
+      {
+        "roll": "241FA04208",
+        "name": "SIRI BAI"
+      },
+      {
+        "roll": "241FA04307",
+        "name": "PRANITH REDDY"
+      },
+      {
+        "roll": "241FA04357",
+        "name": "SRIVALLI KATYAYANI"
+      },
+      {
+        "roll": "241FA04361",
+        "name": "KOWSAR"
+      },
+      {
+        "roll": "241FA04362",
+        "name": "LAKSHMI SIRI"
+      },
+      {
+        "roll": "241FA04485",
+        "name": "VENKATESWARA RAO"
+      },
+      {
+        "roll": "241FA04520",
+        "name": "HEMANTH"
+      },
+      {
+        "roll": "241FA04529",
+        "name": "VENKATA SAIRAM"
+      },
+      {
+        "roll": "241FA04540",
+        "name": "SHOYAB AKMAL"
+      },
+      {
+        "roll": "241FA04546",
+        "name": "LAKSHMI LAVANYA"
+      },
+      {
+        "roll": "241FA04553",
+        "name": "SRAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04579",
+        "name": "ANJI REDDY"
+      },
+      {
+        "roll": "241FA04585",
+        "name": "PAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04591",
+        "name": "MAHESH REDDY"
+      },
+      {
+        "roll": "241FA04592",
+        "name": "CHANDRA SIVA BALAJI"
+      },
+      {
+        "roll": "241FA04593",
+        "name": "MANOGNA SAI"
+      },
+      {
+        "roll": "241FA04598",
+        "name": "NAGA VEDIK KRISHNA"
+      },
+      {
+        "roll": "241FA04612",
+        "name": "Sk.Ashiq"
+      },
+      {
+        "roll": "241FA04621",
+        "name": "BHANUPRATHAP REDDY"
+      },
+      {
+        "roll": "241FA04622",
+        "name": "DEEPIKA"
+      },
+      {
+        "roll": "241FA04623",
+        "name": "CHARNI SRI"
+      },
+      {
+        "roll": "241FA04628",
+        "name": "VINAY SAI"
+      },
+      {
+        "roll": "241FA04634",
+        "name": "GANGADHAR SRIKANTH REDDY"
+      },
+      {
+        "roll": "241FA04675",
+        "name": "BHAVYA SRI"
+      },
+      {
+        "roll": "241FA04692",
+        "name": "BHARGAVA"
+      },
+      {
+        "roll": "241FA04789",
+        "name": "ARAVIND VARMA"
+      },
+      {
+        "roll": "241FA04871",
+        "name": "ABHILASH"
+      },
+      {
+        "roll": "241FA04905",
+        "name": "DEVA RAJU"
+      },
+      {
+        "roll": "241FA04908",
+        "name": "JATHIN TEJ"
+      },
+      {
+        "roll": "241FA04933",
+        "name": "GOPI"
+      },
+      {
+        "roll": "241FA04935",
+        "name": "YASWANTH NARENDRA"
+      },
+      {
+        "roll": "241FA04943",
+        "name": "KARTHIKEYA REDDY"
+      },
+      {
+        "roll": "241FA04958",
+        "name": "VARAPRASAD"
+      },
+      {
+        "roll": "241FA04959",
+        "name": "MANVITHA"
+      },
+      {
+        "roll": "241FA04964",
+        "name": "HEMA AMAR NADH"
+      },
+      {
+        "roll": "241FA04965",
+        "name": "VENKATA JAGADEESH"
+      },
+      {
+        "roll": "241FA04966",
+        "name": "SIVA PRAKASH"
+      },
+      {
+        "roll": "241FA04969",
+        "name": "CHAITANYA"
+      },
+      {
+        "roll": "241FA04980",
+        "name": "DEEKSHITH"
+      },
+      {
+        "roll": "241FA04981",
+        "name": "(LR)GAYATHRI"
+      },
+      {
+        "roll": "241FA04A15",
+        "name": "HARISH"
+      },
+      {
+        "roll": "241FA04A68",
+        "name": "LAKSHMI SAI ANUHYA"
+      },
+      {
+        "roll": "241FA04A85",
+        "name": "TARAKA LAKSHMI"
+      },
+      {
+        "roll": "241FA04A95",
+        "name": "THOSHITHA"
+      },
+      {
+        "roll": "241FA04A99",
+        "name": "MOHANAKEERTHI"
+      },
+      {
+        "roll": "241FA04B14",
+        "name": "SAI VARSHINI"
+      },
+      {
+        "roll": "241FA04B70",
+        "name": "MODITHA KRISHNA"
+      },
+      {
+        "roll": "241FA04B88",
+        "name": "PAVANI"
+      },
+      {
+        "roll": "241FA04E42",
+        "name": "SREE RAM"
+      },
+      {
+        "roll": "241FA04E43",
+        "name": "KANESH"
+      },
+      {
+        "roll": "241FA04E56",
+        "name": "PRIYANKA"
+      },
+      {
+        "roll": "241FA04E71",
+        "name": "ALTHAF"
+      },
+      {
+        "roll": "241FA04F17",
+        "name": "SATHISH"
+      },
+      {
+        "roll": "241FA04F38",
+        "name": "CHANDRA TEJA"
+      },
+      {
+        "roll": "241FA04F76",
+        "name": "NAVYA"
+      },
+      {
+        "roll": "241FA04F83",
+        "name": "AMJAD"
+      },
+      {
+        "roll": "241FA04F84",
+        "name": "MOHAMMED GAMAL"
+      },
+      {
+        "roll": "241FA04F95",
+        "name": " SAMUELA"
+      }
+    ],
+    "attendance": {
+      "241FA04035": "present",
+      "241FA04054": "present",
+      "241FA04062": "present",
+      "241FA04067": "present",
+      "241FA04083": "present",
+      "241FA04114": "present",
+      "241FA04115": "present",
+      "241FA04124": "present",
+      "241FA04134": "present",
+      "241FA04152": "present",
+      "241FA04179": "present",
+      "241FA04207": "present",
+      "241FA04208": "present",
+      "241FA04307": "present",
+      "241FA04357": "present",
+      "241FA04361": "present",
+      "241FA04362": "present",
+      "241FA04485": "present",
+      "241FA04520": "present",
+      "241FA04529": "present",
+      "241FA04540": "present",
+      "241FA04546": "present",
+      "241FA04553": "present",
+      "241FA04579": "present",
+      "241FA04585": "present",
+      "241FA04591": "present",
+      "241FA04592": "present",
+      "241FA04593": "present",
+      "241FA04598": "present",
+      "241FA04612": "present",
+      "241FA04621": "present",
+      "241FA04622": "present",
+      "241FA04623": "present",
+      "241FA04628": "present",
+      "241FA04634": "present",
+      "241FA04675": "present",
+      "241FA04692": "present",
+      "241FA04789": "present",
+      "241FA04871": "present",
+      "241FA04905": "present",
+      "241FA04908": "present",
+      "241FA04933": "present",
+      "241FA04935": "present",
+      "241FA04943": "present",
+      "241FA04958": "present",
+      "241FA04959": "present",
+      "241FA04964": "present",
+      "241FA04965": "present",
+      "241FA04966": "present",
+      "241FA04969": "present",
+      "241FA04980": "present",
+      "241FA04981": "present",
+      "241FA04A15": "present",
+      "241FA04A68": "present",
+      "241FA04A85": "present",
+      "241FA04A95": "present",
+      "241FA04A99": "present",
+      "241FA04B14": "present",
+      "241FA04B70": "present",
+      "241FA04B88": "present",
+      "241FA04E42": "present",
+      "241FA04E43": "present",
+      "241FA04E56": "present",
+      "241FA04E71": "present",
+      "241FA04F17": "present",
+      "241FA04F38": "present",
+      "241FA04F76": "present",
+      "241FA04F83": "present",
+      "241FA04F84": "present",
+      "241FA04F95": "present"
+    },
+    "timestamp": "2026-10-27T05:43:22.222Z"
+  },
+  {
+    "id": "session_1789132800356",
+    "date": "2026-09-11",
+    "period": "1-2 (Lab)",
+    "subject": "TRAINING-(N-415)",
+    "section": "1 CSE",
+    "facultyName": "4TH FLOOR ATT",
+    "facultyPhone": "99666 86095",
+    "total": 70,
+    "presentCount": 61,
+    "absentCount": 9,
+    "percentage": "87.1",
+    "absentRolls": [
+      {
+        "roll": "241FA04307",
+        "name": "PRANITH REDDY"
+      },
+      {
+        "roll": "241FA04357",
+        "name": "SRIVALLI KATYAYANI"
+      },
+      {
+        "roll": "241FA04591",
+        "name": "MAHESH REDDY"
+      },
+      {
+        "roll": "241FA04598",
+        "name": "NAGA VEDIK KRISHNA"
+      },
+      {
+        "roll": "241FA04612",
+        "name": "Sk.Ashiq"
+      },
+      {
+        "roll": "241FA04623",
+        "name": "CHARNI SRI"
+      },
+      {
+        "roll": "241FA04958",
+        "name": "VARAPRASAD"
+      },
+      {
+        "roll": "241FA04966",
+        "name": "SIVA PRAKASH"
+      },
+      {
+        "roll": "241FA04E43",
+        "name": "KANESH"
+      }
+    ],
+    "presentRolls": [
+      {
+        "roll": "241FA04035",
+        "name": "SRUJANA"
+      },
+      {
+        "roll": "241FA04054",
+        "name": "MOUNIKA"
+      },
+      {
+        "roll": "241FA04062",
+        "name": "RUPA SREE"
+      },
+      {
+        "roll": "241FA04067",
+        "name": "HARI VENKAT"
+      },
+      {
+        "roll": "241FA04083",
+        "name": "NAGA AMRUTHA"
+      },
+      {
+        "roll": "241FA04114",
+        "name": "ROHITH SAI"
+      },
+      {
+        "roll": "241FA04115",
+        "name": "SOWMYA"
+      },
+      {
+        "roll": "241FA04124",
+        "name": "SAIRAM"
+      },
+      {
+        "roll": "241FA04134",
+        "name": "HARI PRIYA"
+      },
+      {
+        "roll": "241FA04152",
+        "name": "LASYA"
+      },
+      {
+        "roll": "241FA04179",
+        "name": "THANUSH"
+      },
+      {
+        "roll": "241FA04207",
+        "name": "ABID BAIG"
+      },
+      {
+        "roll": "241FA04208",
+        "name": "SIRI BAI"
+      },
+      {
+        "roll": "241FA04361",
+        "name": "KOWSAR"
+      },
+      {
+        "roll": "241FA04362",
+        "name": "LAKSHMI SIRI"
+      },
+      {
+        "roll": "241FA04485",
+        "name": "VENKATESWARA RAO"
+      },
+      {
+        "roll": "241FA04520",
+        "name": "HEMANTH"
+      },
+      {
+        "roll": "241FA04529",
+        "name": "VENKATA SAIRAM"
+      },
+      {
+        "roll": "241FA04540",
+        "name": "SHOYAB AKMAL"
+      },
+      {
+        "roll": "241FA04546",
+        "name": "LAKSHMI LAVANYA"
+      },
+      {
+        "roll": "241FA04553",
+        "name": "SRAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04579",
+        "name": "ANJI REDDY"
+      },
+      {
+        "roll": "241FA04585",
+        "name": "PAVAN KUMAR"
+      },
+      {
+        "roll": "241FA04592",
+        "name": "CHANDRA SIVA BALAJI"
+      },
+      {
+        "roll": "241FA04593",
+        "name": "MANOGNA SAI"
+      },
+      {
+        "roll": "241FA04621",
+        "name": "BHANUPRATHAP REDDY"
+      },
+      {
+        "roll": "241FA04622",
+        "name": "DEEPIKA"
+      },
+      {
+        "roll": "241FA04628",
+        "name": "VINAY SAI"
+      },
+      {
+        "roll": "241FA04634",
+        "name": "GANGADHAR SRIKANTH REDDY"
+      },
+      {
+        "roll": "241FA04675",
+        "name": "BHAVYA SRI"
+      },
+      {
+        "roll": "241FA04692",
+        "name": "BHARGAVA"
+      },
+      {
+        "roll": "241FA04789",
+        "name": "ARAVIND VARMA"
+      },
+      {
+        "roll": "241FA04871",
+        "name": "ABHILASH"
+      },
+      {
+        "roll": "241FA04905",
+        "name": "DEVA RAJU"
+      },
+      {
+        "roll": "241FA04908",
+        "name": "JATHIN TEJ"
+      },
+      {
+        "roll": "241FA04933",
+        "name": "GOPI"
+      },
+      {
+        "roll": "241FA04935",
+        "name": "YASWANTH NARENDRA"
+      },
+      {
+        "roll": "241FA04943",
+        "name": "KARTHIKEYA REDDY"
+      },
+      {
+        "roll": "241FA04959",
+        "name": "MANVITHA"
+      },
+      {
+        "roll": "241FA04964",
+        "name": "HEMA AMAR NADH"
+      },
+      {
+        "roll": "241FA04965",
+        "name": "VENKATA JAGADEESH"
+      },
+      {
+        "roll": "241FA04969",
+        "name": "CHAITANYA"
+      },
+      {
+        "roll": "241FA04980",
+        "name": "DEEKSHITH"
+      },
+      {
+        "roll": "241FA04981",
+        "name": "(LR)GAYATHRI"
+      },
+      {
+        "roll": "241FA04A15",
+        "name": "HARISH"
+      },
+      {
+        "roll": "241FA04A68",
+        "name": "CHANDU VENKATA LAKSHMI SAI ANUHYA"
+      },
+      {
+        "roll": "241FA04A85",
+        "name": "TARAKA LAKSHMI"
+      },
+      {
+        "roll": "241FA04A95",
+        "name": "THOSHITHA"
+      },
+      {
+        "roll": "241FA04A99",
+        "name": "MOHANAKEERTHI"
+      },
+      {
+        "roll": "241FA04B14",
+        "name": "SAI VARSHINI"
+      },
+      {
+        "roll": "241FA04B70",
+        "name": "MODITHA KRISHNA"
+      },
+      {
+        "roll": "241FA04B88",
+        "name": "PAVANI"
+      },
+      {
+        "roll": "241FA04E42",
+        "name": "SREE RAM"
+      },
+      {
+        "roll": "241FA04E56",
+        "name": "PRIYANKA"
+      },
+      {
+        "roll": "241FA04E71",
+        "name": "ALTHAF"
+      },
+      {
+        "roll": "241FA04F17",
+        "name": "SATHISH"
+      },
+      {
+        "roll": "241FA04F38",
+        "name": "CHANDRA TEJA"
+      },
+      {
+        "roll": "241FA04F76",
+        "name": "NAVYA"
+      },
+      {
+        "roll": "241FA04F83",
+        "name": "AMJAD"
+      },
+      {
+        "roll": "241FA04F84",
+        "name": "MOHAMMED GAMAL"
+      },
+      {
+        "roll": "241FA04F95",
+        "name": " SAMUELA"
+      }
+    ],
+    "attendance": {
+      "241FA04035": "present",
+      "241FA04054": "present",
+      "241FA04062": "present",
+      "241FA04067": "present",
+      "241FA04083": "present",
+      "241FA04114": "present",
+      "241FA04115": "present",
+      "241FA04124": "present",
+      "241FA04134": "present",
+      "241FA04152": "present",
+      "241FA04179": "present",
+      "241FA04207": "present",
+      "241FA04208": "present",
+      "241FA04307": "absent",
+      "241FA04357": "absent",
+      "241FA04361": "present",
+      "241FA04362": "present",
+      "241FA04485": "present",
+      "241FA04520": "present",
+      "241FA04529": "present",
+      "241FA04540": "present",
+      "241FA04546": "present",
+      "241FA04553": "present",
+      "241FA04579": "present",
+      "241FA04585": "present",
+      "241FA04591": "absent",
+      "241FA04592": "present",
+      "241FA04593": "present",
+      "241FA04598": "absent",
+      "241FA04612": "absent",
+      "241FA04621": "present",
+      "241FA04622": "present",
+      "241FA04623": "absent",
+      "241FA04628": "present",
+      "241FA04634": "present",
+      "241FA04675": "present",
+      "241FA04692": "present",
+      "241FA04789": "present",
+      "241FA04871": "present",
+      "241FA04905": "present",
+      "241FA04908": "present",
+      "241FA04933": "present",
+      "241FA04935": "present",
+      "241FA04943": "present",
+      "241FA04958": "absent",
+      "241FA04959": "present",
+      "241FA04964": "present",
+      "241FA04965": "present",
+      "241FA04966": "absent",
+      "241FA04969": "present",
+      "241FA04980": "present",
+      "241FA04981": "present",
+      "241FA04A15": "present",
+      "241FA04A68": "present",
+      "241FA04A85": "present",
+      "241FA04A95": "present",
+      "241FA04A99": "present",
+      "241FA04B14": "present",
+      "241FA04B70": "present",
+      "241FA04B88": "present",
+      "241FA04E42": "present",
+      "241FA04E43": "absent",
+      "241FA04E56": "present",
+      "241FA04E71": "present",
+      "241FA04F17": "present",
+      "241FA04F38": "present",
+      "241FA04F76": "present",
+      "241FA04F83": "present",
+      "241FA04F84": "present",
+      "241FA04F95": "present"
+    },
+    "timestamp": "2026-09-11T13:20:00.356Z"
+  }
+]

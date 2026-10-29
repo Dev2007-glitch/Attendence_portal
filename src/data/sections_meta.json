@@ -1,0 +1,674 @@
+{
+  "totalStudents": 1511,
+  "totalSections": 22,
+  "sections": [
+    {
+      "section": "Section 1",
+      "sectionNum": 1,
+      "room": "Room N-402",
+      "studentCount": 72,
+      "counsellors": [
+        "Mr. Adnan Ahmad Khan",
+        "Mr. Gujjula Murali",
+        "Ms. Gaddam Tejaswi",
+        "Ms. Yechu Harshitha"
+      ],
+      "firstRoll": "241FA04035",
+      "lastRoll": "241FA04F95",
+      "classTeacher": "Mr. Adnan Ahmad Khan"
+    },
+    {
+      "section": "Section 2",
+      "sectionNum": 2,
+      "room": "Room N-403",
+      "studentCount": 74,
+      "counsellors": [
+        "Dr. R. Renugadevi",
+        "Mr. Allamudi Kalyan Babu",
+        "Mr. Vishal Jaiswal",
+        "Ms. Peeka Anusha"
+      ],
+      "firstRoll": "231FA04639",
+      "lastRoll": "241FA04F77",
+      "classTeacher": "Dr. R. Renugadevi"
+    },
+    {
+      "section": "Section 3",
+      "sectionNum": 3,
+      "room": "Room N-404",
+      "studentCount": 76,
+      "counsellors": [
+        "Dr. Phanindra Thota",
+        "Mr. Lalu Naick Bhukya"
+      ],
+      "firstRoll": "241FA04001",
+      "lastRoll": "241FA04F99",
+      "classTeacher": "Dr. Phanindra Thota"
+    },
+    {
+      "section": "Section 4",
+      "sectionNum": 4,
+      "room": "Room N-405",
+      "studentCount": 70,
+      "counsellors": [
+        "Dr. M. Raja Rao",
+        "Dr. R. Prathap Kumar"
+      ],
+      "firstRoll": "241FA04026",
+      "lastRoll": "251LA04001",
+      "classTeacher": "Dr. M. Raja Rao"
+    },
+    {
+      "section": "Section 5",
+      "sectionNum": 5,
+      "room": "Room N-406",
+      "studentCount": 72,
+      "counsellors": [
+        "Mr. Shashi Mani",
+        "Ms. Koppula Anitha",
+        "Ms. Upalanchi Vara Lakshmi"
+      ],
+      "firstRoll": "241FA04057",
+      "lastRoll": "241FA04F74",
+      "classTeacher": "Mr. Shashi Mani"
+    },
+    {
+      "section": "Section 6",
+      "sectionNum": 6,
+      "room": "Room N-407",
+      "studentCount": 75,
+      "counsellors": [
+        "Mr. Sk. Sikindar",
+        "Ms. Kandula Divya"
+      ],
+      "firstRoll": "241FA04326",
+      "lastRoll": "241FA04E79",
+      "classTeacher": "Mr. Sk. Sikindar"
+    },
+    {
+      "section": "Section 7",
+      "sectionNum": 7,
+      "room": "Room N-408",
+      "studentCount": 69,
+      "counsellors": [
+        "Dr. O. Bhaskar",
+        "Ms. Vyshnavi Kagga"
+      ],
+      "firstRoll": "241FA04004",
+      "lastRoll": "251LA04002",
+      "classTeacher": "Dr. O. Bhaskar"
+    },
+    {
+      "section": "Section 8",
+      "sectionNum": 8,
+      "room": "Room N-409",
+      "studentCount": 69,
+      "counsellors": [
+        "Dr. G. Balu Narasimha Rao",
+        "Mrs. Varagani Tejaswi"
+      ],
+      "firstRoll": "241FA04008",
+      "lastRoll": "241FA04F82",
+      "classTeacher": "Dr. G. Balu Narasimha Rao"
+    },
+    {
+      "section": "Section 9",
+      "sectionNum": 9,
+      "room": "Room N-4010",
+      "studentCount": 69,
+      "counsellors": [
+        "Mr. Munipalli Veerendra",
+        "Mr. Ongole Gandhi"
+      ],
+      "firstRoll": "241FA04217",
+      "lastRoll": "241FA04F69",
+      "classTeacher": "Mr. Munipalli Veerendra"
+    },
+    {
+      "section": "Section 10",
+      "sectionNum": 10,
+      "room": "Room N-401",
+      "studentCount": 67,
+      "counsellors": [
+        "Mr. Sk. Khadersha",
+        "Ms. Bhimavarapu Jyothika"
+      ],
+      "firstRoll": "241FA04193",
+      "lastRoll": "241FA04E02",
+      "classTeacher": "Mr. Sk. Khadersha"
+    },
+    {
+      "section": "Section 11",
+      "sectionNum": 11,
+      "room": "Room N-402",
+      "studentCount": 73,
+      "counsellors": [
+        "Mr. Bathula Anil Babu",
+        "Mr. Palavelli Vamsi Krishna"
+      ],
+      "firstRoll": "241FA04023",
+      "lastRoll": "241FA04E13",
+      "classTeacher": "Mr. Bathula Anil Babu"
+    },
+    {
+      "section": "Section 12",
+      "sectionNum": 12,
+      "room": "Room N-403",
+      "studentCount": 61,
+      "counsellors": [
+        "Mrs. D. Tipura",
+        "Mrs. Guggilam Navya"
+      ],
+      "firstRoll": "241FA04002",
+      "lastRoll": "241FA04E82",
+      "classTeacher": "Mrs. D. Tipura"
+    },
+    {
+      "section": "Section 13",
+      "sectionNum": 13,
+      "room": "Room N-404",
+      "studentCount": 65,
+      "counsellors": [
+        "Mrs. Anusha Kakumanu",
+        "Ms. Kunapareddy Deepikasri Sai",
+        "Ms. Ravuri Lalitha"
+      ],
+      "firstRoll": "241FA04024",
+      "lastRoll": "241FA04770",
+      "classTeacher": "Mrs. Anusha Kakumanu"
+    },
+    {
+      "section": "Section 14",
+      "sectionNum": 14,
+      "room": "Room N-405",
+      "studentCount": 65,
+      "counsellors": [
+        "Mr. Dega Balakotaiah",
+        "Ms. Swathi Koganti"
+      ],
+      "firstRoll": "241FA04286",
+      "lastRoll": "241FA04G02",
+      "classTeacher": "Mr. Dega Balakotaiah"
+    },
+    {
+      "section": "Section 15",
+      "sectionNum": 15,
+      "room": "Room N-406",
+      "studentCount": 67,
+      "counsellors": [
+        "Mr. Y. Rama Mohan",
+        "Ms. Yalavarthi Sai Eswari"
+      ],
+      "firstRoll": "241FA04137",
+      "lastRoll": "241FA04E74",
+      "classTeacher": "Mr. Y. Rama Mohan"
+    },
+    {
+      "section": "Section 16",
+      "sectionNum": 16,
+      "room": "Room N-407",
+      "studentCount": 65,
+      "counsellors": [
+        "Dr. Simhadri Chinna Gopi",
+        "Mr. G. Ramanjaneyulu"
+      ],
+      "firstRoll": "221FA04251",
+      "lastRoll": "251LA04004",
+      "classTeacher": "Dr. Simhadri Chinna Gopi"
+    },
+    {
+      "section": "Section 17",
+      "sectionNum": 17,
+      "room": "Room N-408",
+      "studentCount": 59,
+      "counsellors": [
+        "Mr. Madugula Anil",
+        "Ms. Arumalla Gopya Sri",
+        "Ms. Cheggu Manasa"
+      ],
+      "firstRoll": "241FA04277",
+      "lastRoll": "241FA04F54",
+      "classTeacher": "Mr. Madugula Anil"
+    },
+    {
+      "section": "Section 18",
+      "sectionNum": 18,
+      "room": "Room N-409",
+      "studentCount": 67,
+      "counsellors": [
+        "Mr. Kudupudi Raj Kiran",
+        "Ms. Shaik Kareena Yashmin"
+      ],
+      "firstRoll": "241FA04003",
+      "lastRoll": "241FA04F67",
+      "classTeacher": "Mr. Kudupudi Raj Kiran"
+    },
+    {
+      "section": "Section 19",
+      "sectionNum": 19,
+      "room": "Room N-4010",
+      "studentCount": 67,
+      "counsellors": [
+        "Mr. Chennamsetty Naga Gopi",
+        "Mr. D. Senthil",
+        "Mr. Kanna Hareesh",
+        "Ms. Athota Padmaja"
+      ],
+      "firstRoll": "241FA04076",
+      "lastRoll": "241FA04G01",
+      "classTeacher": "Mr. Chennamsetty Naga Gopi"
+    },
+    {
+      "section": "Section 20",
+      "sectionNum": 20,
+      "room": "Room N-401",
+      "studentCount": 68,
+      "counsellors": [
+        "Mr. P. Venkata Rajulu",
+        "Mr. Shaik Dehtaj"
+      ],
+      "firstRoll": "231FA04416",
+      "lastRoll": "251LA04009",
+      "classTeacher": "Mr. P. Venkata Rajulu"
+    },
+    {
+      "section": "Section 21",
+      "sectionNum": 21,
+      "room": "Room N-402",
+      "studentCount": 68,
+      "counsellors": [
+        "Ms. Annam Durga Bhavani",
+        "Ms. Nase Bandhike Akhilandeswari"
+      ],
+      "firstRoll": "241FA04161",
+      "lastRoll": "251LA04012",
+      "classTeacher": "Ms. Annam Durga Bhavani"
+    },
+    {
+      "section": "Section 22",
+      "sectionNum": 22,
+      "room": "Room N-403",
+      "studentCount": 73,
+      "counsellors": [
+        "Dr. J. Veeranjaneyulu",
+        "Ms. Korrapati Christiana Rose Elizabeth"
+      ],
+      "firstRoll": "241FA04212",
+      "lastRoll": "241FA04F93",
+      "classTeacher": "Dr. J. Veeranjaneyulu"
+    }
+  ],
+  "counsellors": [
+    {
+      "name": "Dr. G. Balu Narasimha Rao",
+      "sections": [
+        8
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Dr. J. Veeranjaneyulu",
+      "sections": [
+        22
+      ],
+      "studentCount": 37
+    },
+    {
+      "name": "Dr. M. Raja Rao",
+      "sections": [
+        4
+      ],
+      "studentCount": 35
+    },
+    {
+      "name": "Dr. O. Bhaskar",
+      "sections": [
+        7
+      ],
+      "studentCount": 35
+    },
+    {
+      "name": "Dr. Phanindra Thota",
+      "sections": [
+        3
+      ],
+      "studentCount": 38
+    },
+    {
+      "name": "Dr. R. Prathap Kumar",
+      "sections": [
+        4
+      ],
+      "studentCount": 35
+    },
+    {
+      "name": "Dr. R. Renugadevi",
+      "sections": [
+        2
+      ],
+      "studentCount": 17
+    },
+    {
+      "name": "Dr. Simhadri Chinna Gopi",
+      "sections": [
+        16
+      ],
+      "studentCount": 33
+    },
+    {
+      "name": "Mr. Adnan Ahmad Khan",
+      "sections": [
+        1
+      ],
+      "studentCount": 18
+    },
+    {
+      "name": "Mr. Allamudi Kalyan Babu",
+      "sections": [
+        2
+      ],
+      "studentCount": 19
+    },
+    {
+      "name": "Mr. Bathula Anil Babu",
+      "sections": [
+        11
+      ],
+      "studentCount": 36
+    },
+    {
+      "name": "Mr. Chennamsetty Naga Gopi",
+      "sections": [
+        19
+      ],
+      "studentCount": 17
+    },
+    {
+      "name": "Mr. D. Senthil",
+      "sections": [
+        19
+      ],
+      "studentCount": 17
+    },
+    {
+      "name": "Mr. Dega Balakotaiah",
+      "sections": [
+        14
+      ],
+      "studentCount": 32
+    },
+    {
+      "name": "Mr. G. Ramanjaneyulu",
+      "sections": [
+        16
+      ],
+      "studentCount": 32
+    },
+    {
+      "name": "Mr. Gujjula Murali",
+      "sections": [
+        1
+      ],
+      "studentCount": 18
+    },
+    {
+      "name": "Mr. Kanna Hareesh",
+      "sections": [
+        19
+      ],
+      "studentCount": 16
+    },
+    {
+      "name": "Mr. Kudupudi Raj Kiran",
+      "sections": [
+        18
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Mr. Lalu Naick Bhukya",
+      "sections": [
+        3
+      ],
+      "studentCount": 38
+    },
+    {
+      "name": "Mr. Madugula Anil",
+      "sections": [
+        17
+      ],
+      "studentCount": 20
+    },
+    {
+      "name": "Mr. Munipalli Veerendra",
+      "sections": [
+        9
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Mr. Ongole Gandhi",
+      "sections": [
+        9
+      ],
+      "studentCount": 35
+    },
+    {
+      "name": "Mr. P. Venkata Rajulu",
+      "sections": [
+        20
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Mr. Palavelli Vamsi Krishna",
+      "sections": [
+        11
+      ],
+      "studentCount": 37
+    },
+    {
+      "name": "Mr. Shaik Dehtaj",
+      "sections": [
+        20
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Mr. Shashi Mani",
+      "sections": [
+        5
+      ],
+      "studentCount": 24
+    },
+    {
+      "name": "Mr. Sk. Khadersha",
+      "sections": [
+        10
+      ],
+      "studentCount": 33
+    },
+    {
+      "name": "Mr. Sk. Sikindar",
+      "sections": [
+        6
+      ],
+      "studentCount": 38
+    },
+    {
+      "name": "Mr. Vishal Jaiswal",
+      "sections": [
+        2
+      ],
+      "studentCount": 20
+    },
+    {
+      "name": "Mr. Y. Rama Mohan",
+      "sections": [
+        15
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Mrs. Anusha Kakumanu",
+      "sections": [
+        13
+      ],
+      "studentCount": 21
+    },
+    {
+      "name": "Mrs. D. Tipura",
+      "sections": [
+        12
+      ],
+      "studentCount": 30
+    },
+    {
+      "name": "Mrs. Guggilam Navya",
+      "sections": [
+        12
+      ],
+      "studentCount": 31
+    },
+    {
+      "name": "Mrs. Varagani Tejaswi",
+      "sections": [
+        8
+      ],
+      "studentCount": 35
+    },
+    {
+      "name": "Ms. Annam Durga Bhavani",
+      "sections": [
+        21
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Ms. Arumalla Gopya Sri",
+      "sections": [
+        17
+      ],
+      "studentCount": 20
+    },
+    {
+      "name": "Ms. Athota Padmaja",
+      "sections": [
+        19
+      ],
+      "studentCount": 17
+    },
+    {
+      "name": "Ms. Bhimavarapu Jyothika",
+      "sections": [
+        10
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Ms. Cheggu Manasa",
+      "sections": [
+        17
+      ],
+      "studentCount": 19
+    },
+    {
+      "name": "Ms. Gaddam Tejaswi",
+      "sections": [
+        1
+      ],
+      "studentCount": 18
+    },
+    {
+      "name": "Ms. Kandula Divya",
+      "sections": [
+        6
+      ],
+      "studentCount": 37
+    },
+    {
+      "name": "Ms. Koppula Anitha",
+      "sections": [
+        5
+      ],
+      "studentCount": 24
+    },
+    {
+      "name": "Ms. Korrapati Christiana Rose Elizabeth",
+      "sections": [
+        22
+      ],
+      "studentCount": 36
+    },
+    {
+      "name": "Ms. Kunapareddy Deepikasri Sai",
+      "sections": [
+        13
+      ],
+      "studentCount": 22
+    },
+    {
+      "name": "Ms. Nase Bandhike Akhilandeswari",
+      "sections": [
+        21
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Ms. Peeka Anusha",
+      "sections": [
+        2
+      ],
+      "studentCount": 18
+    },
+    {
+      "name": "Ms. Ravuri Lalitha",
+      "sections": [
+        13
+      ],
+      "studentCount": 22
+    },
+    {
+      "name": "Ms. Shaik Kareena Yashmin",
+      "sections": [
+        18
+      ],
+      "studentCount": 33
+    },
+    {
+      "name": "Ms. Swathi Koganti",
+      "sections": [
+        14
+      ],
+      "studentCount": 33
+    },
+    {
+      "name": "Ms. Upalanchi Vara Lakshmi",
+      "sections": [
+        5
+      ],
+      "studentCount": 24
+    },
+    {
+      "name": "Ms. Vyshnavi Kagga",
+      "sections": [
+        7
+      ],
+      "studentCount": 34
+    },
+    {
+      "name": "Ms. Yalavarthi Sai Eswari",
+      "sections": [
+        15
+      ],
+      "studentCount": 33
+    },
+    {
+      "name": "Ms. Yechu Harshitha",
+      "sections": [
+        1
+      ],
+      "studentCount": 18
+    }
+  ]
+}
