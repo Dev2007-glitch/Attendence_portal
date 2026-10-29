@@ -8332,6 +8332,277 @@ body {
   color: #64748b;
 }
 
+/* Enhanced Login Security & Access Alert */
+.login-error-alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #ef4444;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.08);
+  animation: fadeIn 0.25s ease-out;
+}
+
+.login-error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.error-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.error-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #991b1b;
+  letter-spacing: 0.02em;
+}
+
+.error-message {
+  font-size: 0.78rem;
+  color: #b91c1c;
+  line-height: 1.4;
+}
+
+.error-dismiss-btn {
+  background: transparent;
+  border: none;
+  color: #991b1b;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.error-dismiss-btn:hover {
+  background: #fee2e2;
+}
+
+/* Dedicated Role-Based Google OAuth Access Points in Login Screen */
+.role-oauth-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 18px;
+  transition: all 0.2s ease;
+}
+
+.role-oauth-box.admin-oauth-box {
+  background: linear-gradient(145deg, #fff5f5 0%, #fef2f2 100%);
+  border: 1.5px solid #fecaca;
+}
+
+.role-oauth-box.faculty-oauth-box {
+  background: linear-gradient(145deg, #fbf7ff 0%, #f5f3ff 100%);
+  border: 1.5px solid #ddd6fe;
+}
+
+.role-oauth-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.role-oauth-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.role-oauth-badge.admin-badge {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.role-oauth-badge.faculty-badge {
+  color: #6d28d9;
+  background: #ede9fe;
+}
+
+.role-oauth-secure-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  background: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.role-oauth-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+}
+
+.role-oauth-sub code {
+  background: #ffffff;
+  padding: 1px 4px;
+  border-radius: 3px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.72rem;
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.google-role-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.google-role-btn.admin-theme {
+  background: #ffffff;
+  color: #991b1b;
+  border: 1.5px solid #f87171;
+}
+
+.google-role-btn.admin-theme:hover {
+  background: #fef2f2;
+  border-color: #ef4444;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+  transform: translateY(-1px);
+}
+
+.google-role-btn.faculty-theme {
+  background: #ffffff;
+  color: #5b21b6;
+  border: 1.5px solid #a78bfa;
+}
+
+.google-role-btn.faculty-theme:hover {
+  background: #f5f3ff;
+  border-color: #8b5cf6;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+  transform: translateY(-1px);
+}
+
+.role-oauth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 12px;
+}
+
+.role-oauth-divider::before,
+.role-oauth-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.role-oauth-divider span {
+  padding: 0 10px;
+  color: #94a3b8;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Modal tags and highlight styles */
+.admin-highlight-card {
+  border-left: 4px solid #ef4444 !important;
+  background: #fef2f2 !important;
+}
+
+.faculty-highlight-card {
+  border-left: 4px solid #8b5cf6 !important;
+  background: #f5f3ff !important;
+}
+
+.unauthorized-test-card {
+  border-left: 4px solid #dc2626 !important;
+  background: #fff5f5 !important;
+}
+
+.google-account-avatar-unauth {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.google-role-badge {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.admin-badge-tag {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.faculty-badge-tag {
+  background: #ede9fe;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+}
+
+.counsellor-badge-tag {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.student-badge-tag {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}
+
+.unauthorized-badge-tag {
+  background: #fee2e2;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
+}
+
+.text-danger {
+  color: #dc2626 !important;
+}
+
+
 
 
 

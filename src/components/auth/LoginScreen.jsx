@@ -96,21 +96,26 @@ export default function LoginScreen({ onLogin, students = [] }) {
     }
   }, [googleConfig.clientId]);
 
-  // Handle Google Token Credential response from GIS
-  const handleGoogleCredentialResponse = async (response) => {
+  // Handle Google Token Credential response from GIS or OAuth Callback
+  const handleGoogleCredentialResponse = async (response, requestedRole = null) => {
     setGoogleLoading(true);
     setError("");
     try {
       const verifyRes = await fetch("/api/auth/google/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ credential: response.credential })
+        body: JSON.stringify({
+          credential: response.credential,
+          code: response.code,
+          redirectUri: window.location.origin + window.location.pathname,
+          requestedRole
+        })
       });
       const data = await verifyRes.json();
       if (data.success && data.user) {
         onLogin(data.user);
       } else {
-        setError(data.error || "Google authentication failed. Please try again.");
+        setError(data.error || "Google authentication failed. Please verify authorization.");
       }
     } catch (err) {
       setError(`Google Auth Error: ${err.message}`);
@@ -119,8 +124,40 @@ export default function LoginScreen({ onLogin, students = [] }) {
     }
   };
 
+  // Google OAuth URL callback listener (handles ?code=..., ?credential=..., #id_token=..., ?error=...)
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get("code");
+    const errorParam = urlParams.get("error");
+    const errorDesc = urlParams.get("error_description");
+
+    // Check hash for ID token
+    let hashCredential = null;
+    if (window.location.hash) {
+      const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+      hashCredential = hashParams.get("id_token") || hashParams.get("credential");
+    }
+
+    if (errorParam) {
+      setError(`Google Sign-In Error: ${errorDesc || errorParam}`);
+      window.history.replaceState({}, document.title, window.location.pathname);
+      return;
+    }
+
+    if (code || hashCredential) {
+      setGoogleLoading(true);
+      setError("");
+      window.history.replaceState({}, document.title, window.location.pathname);
+
+      handleGoogleCredentialResponse(
+        code ? { code } : { credential: hashCredential },
+        activeRole
+      );
+    }
+  }, []);
+
   // Google Sign-In button click handler
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignIn = (roleHint = null) => {
     setError("");
     if (googleConfig.configured && window.google?.accounts?.id) {
       setGoogleLoading(true);
@@ -136,12 +173,12 @@ export default function LoginScreen({ onLogin, students = [] }) {
         setShowGoogleModal(true);
       }
     } else {
-      // If client ID is not yet configured or for instant testing, show Google account modal
+      // Show Google account modal
       setShowGoogleModal(true);
     }
   };
 
-  // Quick Demo Google Sign-In helper
+  // Quick Demo Google Sign-In helper (supports admin, faculty, counsellor, student, and unauthorized rejection test)
   const handleGoogleDemoSelect = async (accountType) => {
     setGoogleLoading(true);
     setError("");
@@ -152,14 +189,16 @@ export default function LoginScreen({ onLogin, students = [] }) {
         body: JSON.stringify({ accountType })
       });
       const data = await res.json();
-      if (data.success && data.user) {
+      if (res.ok && data.success && data.user) {
         setShowGoogleModal(false);
         onLogin(data.user);
       } else {
-        setError("Failed to sign in with demo Google account.");
+        setShowGoogleModal(false);
+        setError(data.error || "Access Denied: Account is not authorized.");
       }
     } catch (e) {
-      setError(e.message);
+      setShowGoogleModal(false);
+      setError(`Authentication Error: ${e.message}`);
     } finally {
       setGoogleLoading(false);
     }
@@ -430,16 +469,97 @@ export default function LoginScreen({ onLogin, students = [] }) {
           )}
         </div>
 
-        {/* Error message */}
+        {/* Enhanced Error / Security Alert */}
         {error && (
           <div className="login-error-alert" role="alert">
-            <AlertCircle size={16} />
-            <span>{error}</span>
+            <div className="login-error-content">
+              <AlertCircle size={20} className="error-icon" style={{ flexShrink: 0, color: "#dc2626" }} />
+              <div className="error-text-container">
+                <span className="error-title">Authentication & Access Alert</span>
+                <span className="error-message">{error}</span>
+              </div>
+            </div>
+            <button
+              type="button"
+              className="error-dismiss-btn"
+              onClick={() => setError("")}
+              title="Dismiss alert"
+            >
+              <X size={16} />
+            </button>
           </div>
         )}
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="login-form">
+          {/* Dedicated Google OAuth Access Point for Admin */}
+          {activeRole === "admin" && (
+            <div className="role-oauth-box admin-oauth-box">
+              <div className="role-oauth-header">
+                <div className="role-oauth-badge admin-badge">
+                  <ShieldCheck size={14} />
+                  <span>High-Priority Administrator Login</span>
+                </div>
+                <span className="role-oauth-secure-tag">RBAC Verified</span>
+              </div>
+              <p className="role-oauth-sub">
+                Protected administrative access. Sign in with an authorized Google account (verified against <code>ADMIN_EMAILS</code>).
+              </p>
+              <button
+                type="button"
+                className="google-role-btn admin-theme"
+                onClick={() => handleGoogleSignIn("admin")}
+                disabled={googleLoading}
+                id="googleAdminRoleSignInBtn"
+              >
+                <svg className="google-icon" viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                </svg>
+                <span>{googleLoading ? "Verifying Administrator Credentials..." : "Sign in as Administrator with Google"}</span>
+              </button>
+              <div className="role-oauth-divider">
+                <span>OR SIGN IN WITH ADMIN CREDENTIALS</span>
+              </div>
+            </div>
+          )}
+
+          {/* Dedicated Google OAuth Access Point for Faculty & Counsellor */}
+          {(activeRole === "faculty" || activeRole === "counsellor") && (
+            <div className="role-oauth-box faculty-oauth-box">
+              <div className="role-oauth-header">
+                <div className="role-oauth-badge faculty-badge">
+                  <BookOpen size={14} />
+                  <span>Authorized Faculty Google Sign-In</span>
+                </div>
+                <span className="role-oauth-secure-tag">Faculty Portal</span>
+              </div>
+              <p className="role-oauth-sub">
+                Mark class attendance, manage section timetables, and record counselling notes with your institutional Google account.
+              </p>
+              <button
+                type="button"
+                className="google-role-btn faculty-theme"
+                onClick={() => handleGoogleSignIn(activeRole)}
+                disabled={googleLoading}
+                id="googleFacultyRoleSignInBtn"
+              >
+                <svg className="google-icon" viewBox="0 0 24 24" width="20" height="20">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                </svg>
+                <span>{googleLoading ? "Connecting to Faculty Portal..." : `Sign in as ${activeRole === "faculty" ? "Faculty" : "Counsellor"} with Google`}</span>
+              </button>
+              <div className="role-oauth-divider">
+                <span>OR SELECT SECTION & SIGN IN MANUALLY</span>
+              </div>
+            </div>
+          )}
+
           {/* Quick Picker for Student role */}
           {activeRole === "student" && (
             <>
@@ -748,61 +868,12 @@ export default function LoginScreen({ onLogin, students = [] }) {
             </p>
 
             <div className="google-account-options-grid">
+              {/* Administrator High-Priority Login */}
               <button
                 type="button"
-                className="google-account-option-btn"
-                onClick={() => handleGoogleDemoSelect("student")}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80"
-                  alt="Student"
-                  className="google-account-avatar"
-                />
-                <div className="google-account-info">
-                  <span className="google-account-name">SRUJANA (Student Google Account)</span>
-                  <span className="google-account-email">241fa04035@vignan.ac.in &bull; Sec 1</span>
-                </div>
-                <GraduationCap size={18} style={{ color: "#2563eb" }} />
-              </button>
-
-              <button
-                type="button"
-                className="google-account-option-btn"
-                onClick={() => handleGoogleDemoSelect("faculty")}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
-                  alt="Faculty"
-                  className="google-account-avatar"
-                />
-                <div className="google-account-info">
-                  <span className="google-account-name">Dr. P. Siva Prasad (Class Teacher Google)</span>
-                  <span className="google-account-email">psivaprasad@vignan.ac.in &bull; Attendance</span>
-                </div>
-                <BookOpen size={18} style={{ color: "#7c3aed" }} />
-              </button>
-
-              <button
-                type="button"
-                className="google-account-option-btn"
-                onClick={() => handleGoogleDemoSelect("counsellor")}
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
-                  alt="Counsellor"
-                  className="google-account-avatar"
-                />
-                <div className="google-account-info">
-                  <span className="google-account-name">Mr. Gujjula Murali (Counsellor Google)</span>
-                  <span className="google-account-email">gmurali@vignan.ac.in &bull; 28 Mentees</span>
-                </div>
-                <UserCheck size={18} style={{ color: "#059669" }} />
-              </button>
-
-              <button
-                type="button"
-                className="google-account-option-btn"
+                className="google-account-option-btn admin-highlight-card"
                 onClick={() => handleGoogleDemoSelect("admin")}
+                title="Sign in with authorized Admin Google Account (ADMIN_EMAILS verified)"
               >
                 <img
                   src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&auto=format&fit=crop&q=80"
@@ -810,10 +881,84 @@ export default function LoginScreen({ onLogin, students = [] }) {
                   className="google-account-avatar"
                 />
                 <div className="google-account-info">
-                  <span className="google-account-name">Dr. K. Ramanjaneyulu (HOD CSE Google)</span>
-                  <span className="google-account-email">hod_cse@vignan.ac.in &bull; Administration</span>
+                  <span className="google-account-name">Dr. K. Ramanjaneyulu (HOD CSE &bull; Admin)</span>
+                  <span className="google-account-email">hod_cse@vignan.ac.in &bull; Verified via ADMIN_EMAILS</span>
                 </div>
-                <ShieldCheck size={18} style={{ color: "#dc2626" }} />
+                <div className="google-role-badge admin-badge-tag">ADMIN (HOD)</div>
+              </button>
+
+              {/* Faculty Class Attendance Login */}
+              <button
+                type="button"
+                className="google-account-option-btn faculty-highlight-card"
+                onClick={() => handleGoogleDemoSelect("faculty")}
+                title="Sign in with verified Faculty Google Account"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                  alt="Faculty"
+                  className="google-account-avatar"
+                />
+                <div className="google-account-info">
+                  <span className="google-account-name">Dr. P. Siva Prasad (Faculty Attendance Marker)</span>
+                  <span className="google-account-email">psivaprasad@vignan.ac.in &bull; Faculty Portal</span>
+                </div>
+                <div className="google-role-badge faculty-badge-tag">FACULTY</div>
+              </button>
+
+              {/* Faculty Counsellor Mentorship Login */}
+              <button
+                type="button"
+                className="google-account-option-btn"
+                onClick={() => handleGoogleDemoSelect("counsellor")}
+                title="Sign in with verified Faculty Counsellor Google Account"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
+                  alt="Counsellor"
+                  className="google-account-avatar"
+                />
+                <div className="google-account-info">
+                  <span className="google-account-name">Mr. Gujjula Murali (Faculty Counsellor)</span>
+                  <span className="google-account-email">gmurali@vignan.ac.in &bull; 28 Mentees</span>
+                </div>
+                <div className="google-role-badge counsellor-badge-tag">MENTOR</div>
+              </button>
+
+              {/* Enrolled Student Login */}
+              <button
+                type="button"
+                className="google-account-option-btn"
+                onClick={() => handleGoogleDemoSelect("student")}
+                title="Sign in with Enrolled Student Google Account"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80"
+                  alt="Student"
+                  className="google-account-avatar"
+                />
+                <div className="google-account-info">
+                  <span className="google-account-name">SIKHA SRUJANA (Enrolled Student)</span>
+                  <span className="google-account-email">241fa04035@vignan.ac.in &bull; Section 1</span>
+                </div>
+                <div className="google-role-badge student-badge-tag">STUDENT</div>
+              </button>
+
+              {/* Unauthorized Account Rejection Test */}
+              <button
+                type="button"
+                className="google-account-option-btn unauthorized-test-card"
+                onClick={() => handleGoogleDemoSelect("unauthorized")}
+                title="Test Unauthorized Google Account (Triggers 403 Access Denied)"
+              >
+                <div className="google-account-avatar-unauth">
+                  <AlertCircle size={22} style={{ color: "#dc2626" }} />
+                </div>
+                <div className="google-account-info">
+                  <span className="google-account-name text-danger">External Account (Test Rejection)</span>
+                  <span className="google-account-email">unauthorized.guest@gmail.com &bull; Not in Whitelist</span>
+                </div>
+                <div className="google-role-badge unauthorized-badge-tag">REJECT 403</div>
               </button>
             </div>
           </div>

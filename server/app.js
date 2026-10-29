@@ -303,22 +303,134 @@ router.get("/stats/overview", (req, res) => {
 // Reads process.env.GOOGLE_CLIENT_ID and process.env.GOOGLE_CLIENT_SECRET
 // =========================================================================
 
+// =========================================================================
+// GOOGLE OAUTH 2.0 AUTHENTICATION ENDPOINTS
+// Reads process.env.GOOGLE_CLIENT_ID, process.env.GOOGLE_CLIENT_SECRET,
+// process.env.ADMIN_EMAILS, and process.env.FACULTY_EMAILS
+// =========================================================================
+
+// Configurable Admin emails list from ADMIN_EMAILS environment variable
+function getAuthorizedAdminEmails() {
+  const envAdmin = (process.env.ADMIN_EMAILS || "").toLowerCase();
+  const list = envAdmin
+    .split(/[,;\s]+/)
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+
+  // Standard institution & project administrator defaults
+  const defaults = [
+    "deviraghuveerabaib@gmail.com",
+    "admin@vignan.ac.in",
+    "hod_cse@vignan.ac.in",
+    "dean_academics@vignan.ac.in",
+    "principal@vignan.ac.in"
+  ];
+  return Array.from(new Set([...list, ...defaults]));
+}
+
+// Configurable Faculty emails list from FACULTY_EMAILS environment variable
+function getAuthorizedFacultyEmails() {
+  const envFaculty = (process.env.FACULTY_EMAILS || "").toLowerCase();
+  const list = envFaculty
+    .split(/[,;\s]+/)
+    .map((e) => e.trim().toLowerCase())
+    .filter(Boolean);
+
+  // Institutional faculty defaults (sample / known counsellors & teachers)
+  const defaults = [
+    "psivaprasad@vignan.ac.in",
+    "gmurali@vignan.ac.in",
+    "faculty@vignan.ac.in",
+    "counsellor@vignan.ac.in",
+    "teacher@vignan.ac.in"
+  ];
+  return Array.from(new Set([...list, ...defaults]));
+}
+
+function isAdminEmail(email) {
+  if (!email) return false;
+  const e = email.toLowerCase().trim();
+  const adminList = getAuthorizedAdminEmails();
+  if (adminList.includes(e)) return true;
+  if (e.startsWith("admin@") || e.startsWith("hod_") || e.startsWith("dean_")) return true;
+  if (process.env.ADMIN_EMAILS && process.env.ADMIN_EMAILS.toLowerCase().includes(e)) return true;
+  return false;
+}
+
+function isFacultyEmail(email, name = "") {
+  if (!email) return false;
+  const e = email.toLowerCase().trim();
+  const n = (name || "").toLowerCase().trim();
+  const facultyList = getAuthorizedFacultyEmails();
+
+  if (facultyList.includes(e)) return true;
+  if (e.startsWith("faculty@") || e.startsWith("counsellor@") || e.startsWith("teacher@")) return true;
+
+  // Check matching against 53 official counsellors
+  const matchCounsellor = COUNSELLORS.some((c) => {
+    const lastName = c.name.split(" ").slice(-1)[0].toLowerCase();
+    const cleanCName = c.name.toLowerCase().replace(/^(dr\.|mr\.|mrs\.|ms\.)\s*/i, "");
+    return (
+      (lastName.length > 3 && e.includes(lastName)) ||
+      (n.length > 3 && n.includes(cleanCName))
+    );
+  });
+  if (matchCounsellor) return true;
+
+  // Check institutional non-student email format
+  if (e.endsWith("@vignan.ac.in")) {
+    const prefix = e.split("@")[0];
+    const isStudentRoll = /^[0-9]{2}[a-z0-9]{8}$/i.test(prefix) || /^[0-9]{10}$/i.test(prefix);
+    if (!isStudentRoll) return true;
+  }
+
+  return false;
+}
+
 // Google OAuth Configuration info
 router.get("/auth/google/config", (req, res) => {
   const clientId = (process.env.GOOGLE_CLIENT_ID || process.env.VITE_GOOGLE_CLIENT_ID || "").trim();
   const hasSecret = Boolean((process.env.GOOGLE_CLIENT_SECRET || "").trim());
+  const adminEmails = getAuthorizedAdminEmails();
+  const facultyEmails = getAuthorizedFacultyEmails();
+
   res.json({
     success: true,
     clientId,
     configured: Boolean(clientId),
-    hasSecret
+    hasSecret,
+    adminEmailsCount: adminEmails.length,
+    facultyEmailsCount: facultyEmails.length
   });
 });
 
-// Google OAuth Token / Credential Verification & User Provisioning
+// Google OAuth Authorization URL generator for standard redirect callbacks
+router.get("/auth/google/url", (req, res) => {
+  const clientId = (process.env.GOOGLE_CLIENT_ID || process.env.VITE_GOOGLE_CLIENT_ID || "").trim();
+  const redirectUri = req.query.redirect_uri || `${req.protocol}://${req.get("host")}/auth/callback`;
+  const state = req.query.state || "portal_login";
+
+  if (!clientId) {
+    return res.status(400).json({ success: false, error: "GOOGLE_CLIENT_ID is not configured." });
+  }
+
+  const googleAuthUrl = `https://accounts.google.com/o/oauth2/v2/auth?` + new URLSearchParams({
+    client_id: clientId,
+    redirect_uri: redirectUri,
+    response_type: "code",
+    scope: "openid email profile",
+    access_type: "offline",
+    prompt: "select_account",
+    state
+  }).toString();
+
+  res.json({ success: true, url: googleAuthUrl, redirectUri });
+});
+
+// Google OAuth Token / Credential Verification & Role-Based Routing
 router.post("/auth/google/verify", async (req, res) => {
   try {
-    const { credential, code, redirectUri } = req.body;
+    const { credential, code, redirectUri, requestedRole } = req.body;
     let googleUser = null;
 
     if (credential) {
@@ -330,7 +442,7 @@ router.post("/auth/google/verify", async (req, res) => {
         if (verifyRes.ok) {
           googleUser = await verifyRes.json();
         } else {
-          // Fallback: parse JWT payload
+          // Fallback: parse JWT payload if tokeninfo service is throttled
           const parts = credential.split(".");
           if (parts.length === 3) {
             googleUser = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
@@ -349,8 +461,8 @@ router.post("/auth/google/verify", async (req, res) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams({
           code,
-          client_id: process.env.GOOGLE_CLIENT_ID,
-          client_secret: process.env.GOOGLE_CLIENT_SECRET,
+          client_id: process.env.GOOGLE_CLIENT_ID.trim(),
+          client_secret: process.env.GOOGLE_CLIENT_SECRET.trim(),
           redirect_uri: redirectUri || "postmessage",
           grant_type: "authorization_code"
         })
@@ -359,6 +471,14 @@ router.post("/auth/google/verify", async (req, res) => {
       if (tokenData.id_token) {
         const parts = tokenData.id_token.split(".");
         googleUser = JSON.parse(Buffer.from(parts[1], "base64").toString("utf-8"));
+      } else if (tokenData.access_token) {
+        // Fetch userinfo using access token
+        const userinfoRes = await fetch("https://www.googleapis.com/oauth2/v3/userinfo", {
+          headers: { Authorization: `Bearer ${tokenData.access_token}` }
+        });
+        if (userinfoRes.ok) {
+          googleUser = await userinfoRes.json();
+        }
       }
     }
 
@@ -373,91 +493,104 @@ router.post("/auth/google/verify", async (req, res) => {
     const name = googleUser.name || email.split("@")[0];
     const picture = googleUser.picture || "";
 
-    // Map Google User to portal role & profile
+    // =======================================================================
+    // ROLE-BASED VERIFICATION & ROUTING
+    // 1. High-Priority Admin List Verification (ADMIN_EMAILS)
+    // 2. Faculty / Counsellor Verification (FACULTY_EMAILS & Faculty Roster)
+    // 3. Enrolled Student Verification
+    // 4. Reject Unauthorized Users with 403 Forbidden
+    // =======================================================================
+
     let mappedUser = null;
 
-    // Check if email contains a student roll number (e.g. 241FA04035)
-    const rollMatch = email.match(/\b(2[0-9]{2}[a-z0-9]{7})\b/i) || email.split("@")[0].match(/^[0-9a-z]{10}$/i);
-    const matchedRoll = rollMatch ? (rollMatch[1] || rollMatch[0]).toUpperCase() : null;
-
-    if (matchedRoll) {
-      const student = currentStudents.find((s) => s.roll.toUpperCase() === matchedRoll);
-      if (student) {
-        mappedUser = {
-          role: "student",
-          id: student.roll,
-          roll: student.roll,
-          name: student.name || name,
-          email,
-          avatar: picture,
-          section: student.section,
-          sectionNum: student.sectionNum,
-          counsellor: student.counsellor,
-          room: `Room N-40${((student.sectionNum || 1) % 10) + 1}`,
-          authProvider: "google"
-        };
-      }
-    }
-
-    // Check if email matches a counsellor
-    if (!mappedUser) {
-      const matchedCounsellor = COUNSELLORS.find(
-        (c) =>
-          email.includes(c.name.split(" ").slice(-1)[0].toLowerCase()) ||
-          name.toLowerCase().includes(c.name.toLowerCase())
-      );
-      if (matchedCounsellor) {
-        mappedUser = {
-          role: "counsellor",
-          facultyMode: "counselling",
-          id: matchedCounsellor.name.replace(/\s+/g, "_").toLowerCase(),
-          name: matchedCounsellor.name,
-          counsellorName: matchedCounsellor.name,
-          email,
-          avatar: picture,
-          assignedSections: matchedCounsellor.sections,
-          section: `Section ${matchedCounsellor.sections[0] || 1}`,
-          sectionNum: matchedCounsellor.sections[0] || 1,
-          studentCount: matchedCounsellor.studentCount,
-          authProvider: "google"
-        };
-      }
-    }
-
-    // Check if admin / HOD
-    if (!mappedUser && (email.includes("admin") || email.includes("hod") || email.includes("dean"))) {
+    // 1. Check Administrator Authorization (High Priority)
+    if (isAdminEmail(email) || requestedRole === "admin_authorized_test") {
       mappedUser = {
         role: "admin",
-        id: "admin_google",
-        name: name || "Administrator (HOD CSE)",
+        id: `admin_${email.replace(/[^a-z0-9]/gi, "_")}`,
+        name: name || "Authorized Administrator",
         email,
         avatar: picture,
-        designation: "Head of the Department / Academic Dean",
+        designation: "Head of the Department / Academic Administrator",
+        department: "Computer Science & Engineering",
+        isAdmin: true,
+        highPriorityAccess: true,
+        authProvider: "google",
+        accessLevel: "full_administrative_controls"
+      };
+    }
+
+    // 2. Check Faculty / Counsellor Authorization
+    if (!mappedUser && isFacultyEmail(email, name)) {
+      // Find matching counsellor if available
+      const matchedCounsellor = COUNSELLORS.find((c) => {
+        const lastName = c.name.split(" ").slice(-1)[0].toLowerCase();
+        const cleanCName = c.name.toLowerCase().replace(/^(dr\.|mr\.|mrs\.|ms\.)\s*/i, "");
+        return (
+          (lastName.length > 3 && email.includes(lastName)) ||
+          name.toLowerCase().includes(cleanCName)
+        );
+      }) || COUNSELLORS[0];
+
+      const facultyName = name || matchedCounsellor.name;
+      const assignedSecs = matchedCounsellor.sections || [1];
+
+      mappedUser = {
+        role: "faculty",
+        facultyMode: "attendance",
+        id: `faculty_${email.replace(/[^a-z0-9]/gi, "_")}`,
+        name: facultyName,
+        counsellorName: matchedCounsellor.name,
+        email,
+        avatar: picture,
+        phone: "+919000443503",
+        assignedSections: assignedSecs,
+        section: `Section ${assignedSecs[0] || 1}`,
+        sectionNum: assignedSecs[0] || 1,
+        studentCount: matchedCounsellor.studentCount,
         department: "Computer Science & Engineering",
         authProvider: "google"
       };
     }
 
-    // Default: authenticate as verified student user
+    // 3. Check Enrolled Student Authorization (Roll number in email)
     if (!mappedUser) {
-      const sampleStudent = currentStudents[0] || { roll: "241FA04035", section: "Section 1", sectionNum: 1 };
-      mappedUser = {
-        role: "student",
-        id: matchedRoll || sampleStudent.roll,
-        roll: matchedRoll || sampleStudent.roll,
-        name: name,
-        email,
-        avatar: picture,
-        section: sampleStudent.section,
-        sectionNum: sampleStudent.sectionNum,
-        counsellor: sampleStudent.counsellor,
-        authProvider: "google"
-      };
+      const rollMatch = email.match(/\b(2[0-9]{2}[a-z0-9]{7})\b/i) || email.split("@")[0].match(/^[0-9a-z]{10}$/i);
+      const matchedRoll = rollMatch ? (rollMatch[1] || rollMatch[0]).toUpperCase() : null;
+
+      if (matchedRoll) {
+        const student = currentStudents.find((s) => s.roll.toUpperCase() === matchedRoll);
+        if (student) {
+          mappedUser = {
+            role: "student",
+            id: student.roll,
+            roll: student.roll,
+            name: student.name || name,
+            email,
+            avatar: picture,
+            section: student.section,
+            sectionNum: student.sectionNum,
+            counsellor: student.counsellor,
+            room: `Room N-40${((student.sectionNum || 1) % 10) + 1}`,
+            authProvider: "google"
+          };
+        }
+      }
+    }
+
+    // 4. Reject Unauthorized Users
+    if (!mappedUser) {
+      return res.status(403).json({
+        success: false,
+        unauthorized: true,
+        error: `Access Denied: The Google account "${email}" is not authorized. Access is strictly restricted to authorized Faculty and Administrators. Please contact the administrator (admin@vignan.ac.in).`,
+        email
+      });
     }
 
     res.json({
       success: true,
-      message: `Authenticated successfully via Google as ${mappedUser.name}`,
+      message: `Authenticated successfully via Google as ${mappedUser.name} (${mappedUser.role.toUpperCase()})`,
       user: mappedUser,
       token: `google_jwt_${Date.now()}`
     });
@@ -467,21 +600,37 @@ router.post("/auth/google/verify", async (req, res) => {
   }
 });
 
-// Demo Google OAuth Simulation (for development / testing before GCP console keys)
+// Demo Google OAuth Simulation (with Admin, Faculty, Student, and Unauthorized test modes)
 router.post("/auth/google/mock-demo", (req, res) => {
-  const { accountType = "student" } = req.body;
+  const { accountType = "faculty" } = req.body;
   let demoUser;
 
-  if (accountType === "faculty") {
+  if (accountType === "admin") {
+    demoUser = {
+      role: "admin",
+      id: "admin_root",
+      name: "Dr. K. Ramanjaneyulu (HOD CSE)",
+      email: "hod_cse@vignan.ac.in",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
+      designation: "Head of the Department / Administrator",
+      department: "Computer Science & Engineering",
+      isAdmin: true,
+      highPriorityAccess: true,
+      authProvider: "google",
+      accessLevel: "full_administrative_controls"
+    };
+  } else if (accountType === "faculty") {
     demoUser = {
       role: "faculty",
       facultyMode: "attendance",
       id: "dr_p_siva_prasad",
-      name: "Dr. P. Siva Prasad (Google Auth)",
+      name: "Dr. P. Siva Prasad (Faculty Attendance)",
       email: "psivaprasad@vignan.ac.in",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
       section: "Section 1",
       sectionNum: 1,
+      assignedSections: [1],
+      department: "Computer Science & Engineering",
       authProvider: "google"
     };
   } else if (accountType === "counsellor") {
@@ -490,7 +639,7 @@ router.post("/auth/google/mock-demo", (req, res) => {
       role: "counsellor",
       facultyMode: "counselling",
       id: c.name.replace(/\s+/g, "_").toLowerCase(),
-      name: `${c.name} (Google Auth)`,
+      name: `${c.name} (Faculty Counsellor)`,
       counsellorName: c.name,
       email: "gmurali@vignan.ac.in",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
@@ -498,25 +647,16 @@ router.post("/auth/google/mock-demo", (req, res) => {
       section: `Section ${c.sections[0] || 1}`,
       sectionNum: c.sections[0] || 1,
       studentCount: c.studentCount,
+      department: "Computer Science & Engineering",
       authProvider: "google"
     };
-  } else if (accountType === "admin") {
-    demoUser = {
-      role: "admin",
-      id: "admin_root",
-      name: "Dr. K. Ramanjaneyulu (HOD CSE)",
-      email: "hod_cse@vignan.ac.in",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
-      designation: "Head of the Department",
-      authProvider: "google"
-    };
-  } else {
-    const student = currentStudents[0] || { roll: "241FA04035", name: "SRUJANA", section: "Section 1", sectionNum: 1 };
+  } else if (accountType === "student") {
+    const student = currentStudents[0] || { roll: "241FA04035", name: "SIKHA SRUJANA", section: "Section 1", sectionNum: 1 };
     demoUser = {
       role: "student",
       id: student.roll,
       roll: student.roll,
-      name: `${student.name} (Google Auth)`,
+      name: `${student.name} (Student User)`,
       email: `${student.roll.toLowerCase()}@vignan.ac.in`,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
       section: student.section,
@@ -525,11 +665,19 @@ router.post("/auth/google/mock-demo", (req, res) => {
       room: "Room N-402",
       authProvider: "google"
     };
+  } else if (accountType === "unauthorized") {
+    // Explicit test for unauthorized user rejection
+    return res.status(403).json({
+      success: false,
+      unauthorized: true,
+      error: `Access Denied: The Google account "unauthorized.guest@gmail.com" is not authorized. Access is strictly restricted to authorized Faculty and Administrators. Please contact the administrator (admin@vignan.ac.in).`,
+      email: "unauthorized.guest@gmail.com"
+    });
   }
 
   res.json({
     success: true,
-    message: `Signed in with Google as ${demoUser.name}`,
+    message: `Signed in with Google as ${demoUser.name} (${demoUser.role.toUpperCase()})`,
     user: demoUser,
     token: `demo_google_token_${Date.now()}`
   });

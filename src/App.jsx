@@ -195,10 +195,20 @@ export default function App() {
     return false;
   };
 
-  // Auth Handlers with RBAC Access Control
+  // Auth Handlers with RBAC Access Control & Role-Based Routing
   const handleLogin = (user) => {
     setCurrentUser(user);
-    setActiveDashboard(user.role);
+    // Role-based routing: Admin -> Admin Dashboard, Faculty/Counsellor -> Faculty Portal, Student -> Student Dashboard
+    if (user.role === "admin") {
+      setActiveDashboard("admin");
+    } else if (user.role === "faculty" || user.role === "counsellor") {
+      setActiveDashboard("faculty");
+    } else if (user.role === "student") {
+      setActiveDashboard("student");
+    } else {
+      setActiveDashboard(user.role || "faculty");
+    }
+
     if (user.sectionNum) {
       setSelectedSection(user.sectionNum);
     }
