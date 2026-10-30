@@ -1,991 +1,1281 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   Calendar as CalendarIcon,
   ChevronLeft,
   ChevronRight,
-  Plus,
   Clock,
   CheckCircle2,
   AlertTriangle,
   FileText,
-  FileCheck,
-  Download,
-  Share2,
   Search,
   Bell,
   Mail,
   User,
   X,
-  Eye,
-  Check,
-  Star,
+  Plus,
+  Bookmark,
+  Sparkles,
+  ExternalLink,
+  ShieldCheck,
+  Send,
+  Trash2,
+  BookOpen,
+  Award,
   Layers,
-  Shield,
-  Briefcase,
-  DollarSign,
-  Grid,
-  Settings,
-  Home,
-  MessageSquare,
-  HelpCircle,
-  ExternalLink
+  Filter
 } from "lucide-react";
+import {
+  ACADEMIC_SEMESTER_INFO,
+  OFFICIAL_CALENDAR_EVENTS,
+  ACADEMIC_WEEKS_TABLE,
+  CALENDAR_COLOR_SCHEME
+} from "../../data/academic_calendar";
 
 export default function AcademicCalendarView({
   currentUser,
-  onShowToast,
-  onSwitchView
+  onShowToast = () => {},
+  onSwitchView = () => {}
 }) {
-  // Calendar Month Navigation
-  const [currentDate, setCurrentDate] = useState(() => new Date(2026, 3, 1)); // April 2026 as per Image 2 reference
-  const [selectedDay, setSelectedDay] = useState(29); // Highlighted active day
+  // Navigation: Months from July 2026 to December 2026
+  // Default to October 2026 (or current date within semester)
+  const [currentYear, setCurrentYear] = useState(2026);
+  const [currentMonth, setCurrentMonth] = useState(9); // 0-indexed: 6 = July, 9 = October
+  const [activeTab, setActiveTab] = useState("month"); // "month" | "matrix" | "events" | "reminders"
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategoryFilter, setSelectedCategoryFilter] = useState("ALL");
 
-  // Modal State for Image 2 "New event" dialog
-  const [showNewEventModal, setShowNewEventModal] = useState(false);
-  const [eventTitle, setEventTitle] = useState("Weekly Strategic Planning");
-  const [eventCategory, setEventCategory] = useState("IMPORTANT");
-  const [eventFrom, setEventFrom] = useState("08:00, Wed, 15 Apr");
-  const [eventTo, setEventTo] = useState("14:00, Mon, 20 Apr");
-  const [selectedMembers, setSelectedMembers] = useState([
-    { id: 1, name: "Dr. P. Siva Prasad", role: "Class Teacher" },
-    { id: 2, name: "Dr. K. Venkatesh", role: "HOD CSE" },
-    { id: 3, name: "Section 1 Council", role: "Students" }
-  ]);
+  // Interactive Day Drawer State
+  const [selectedDate, setSelectedDate] = useState("2026-08-25"); // Default highlighted
+  const [showDayModal, setShowDayModal] = useState(false);
 
-  // Request Approval Modal
-  const [showApprovalModal, setShowApprovalModal] = useState(false);
-  const [approvalReason, setApprovalReason] = useState("Hackathon / On-Duty Attendance Exemption");
-
-  // Document Viewer Modal
-  const [selectedDoc, setSelectedDoc] = useState(null);
-
-  // Calendar Events Store (initialized with Image 2 + VFSTR Section 1 events)
-  const [events, setEvents] = useState([
-    {
-      id: "ev1",
-      day: 1,
-      month: 3,
-      year: 2026,
-      time: "08:00",
-      title: "Meeting Vue...",
-      type: "green",
-      badge: "DEV"
-    },
-    {
-      id: "ev2",
-      day: 1,
-      month: 3,
-      year: 2026,
-      time: "09:30",
-      title: "Dev. Stage",
-      type: "green",
-      badge: "DEV"
-    },
-    {
-      id: "ev3",
-      day: 5,
-      month: 3,
-      year: 2026,
-      time: "08:00",
-      title: "Demo Call",
-      type: "pink",
-      badge: "LECTURE"
-    },
-    {
-      id: "ev4",
-      day: 5,
-      month: 3,
-      year: 2026,
-      time: "12:00",
-      title: "Meeting With...",
-      type: "green",
-      badge: "IMPORTANT"
-    },
-    {
-      id: "ev5",
-      day: 7,
-      month: 3,
-      year: 2026,
-      time: "09:00",
-      title: "HS Birthday",
-      type: "celebration",
-      emoji: "🎈",
-      isSpecial: true
-    },
-    {
-      id: "ev6",
-      day: 10,
-      month: 3,
-      year: 2026,
-      time: "16:00",
-      title: "Forest Biking",
-      type: "pink",
-      badge: "CLUB"
-    },
-    {
-      id: "ev7",
-      day: 15,
-      month: 3,
-      year: 2026,
-      time: "09:30",
-      title: "Coaching",
-      type: "pink",
-      badge: "MENTOR"
-    },
-    {
-      id: "ev8",
-      day: 15,
-      month: 3,
-      year: 2026,
-      time: "16:45",
-      title: "CRM QA Test",
-      type: "blue",
-      badge: "LAB"
-    },
-    {
-      id: "ev9",
-      day: 21,
-      month: 3,
-      year: 2026,
-      time: "12:00",
-      title: "Meeting Vue...",
-      type: "green",
-      badge: "REVIEW"
-    },
-    {
-      id: "ev10",
-      day: 21,
-      month: 3,
-      year: 2026,
-      time: "13:00",
-      title: "Dev. Stage",
-      type: "green",
-      badge: "LAB"
-    },
-    {
-      id: "ev11",
-      day: 28,
-      month: 3,
-      year: 2026,
-      time: "13:00",
-      title: "Invoice check",
-      type: "grey",
-      badge: "FEES"
-    },
-    {
-      id: "ev12",
-      day: 29,
-      month: 3,
-      year: 2026,
-      time: "17:00",
-      title: "Last Friday",
-      type: "celebration",
-      emoji: "🥂",
-      isSpecial: true
+  // Day Notes State (keyed by date string YYYY-MM-DD)
+  const [notesMap, setNotesMap] = useState(() => {
+    try {
+      const saved = localStorage.getItem("vfstr_calendar_notes");
+      return saved ? JSON.parse(saved) : {};
+    } catch (e) {
+      return {};
     }
-  ]);
+  });
+  const [newNoteText, setNewNoteText] = useState("");
 
-  // Tasks List (Image 2 Right Widget)
-  const taskList = [
-    {
-      id: "t1",
-      time: "08:00",
-      title: "Demo Call",
-      subtitle: "HS Internal",
-      tag: "TEAM",
-      tagColor: "pink"
-    },
-    {
-      id: "t2",
-      time: "12:00",
-      title: "Meeting with partners",
-      subtitle: "IKEA Norway",
-      tag: "IMPORTANT",
-      tagColor: "green"
-    },
-    {
-      id: "t3",
-      time: "14:30",
-      title: "Marketing Reports",
-      subtitle: "IKEA Norway",
-      tag: "IMPORTANT",
-      tagColor: "green"
+  // Email Reminder Form State
+  const defaultUserEmail =
+    currentUser?.email ||
+    (currentUser?.roll ? `vu.${currentUser.roll.toLowerCase()}@gmail.com` : "vu.241fa04b57@gmail.com");
+
+  const [reminderEmail, setReminderEmail] = useState(defaultUserEmail);
+  const [reminderTime, setReminderTime] = useState("09:00");
+  const [reminderTitle, setReminderTitle] = useState("");
+  const [reminderNote, setReminderNote] = useState("");
+  const [isSubmittingReminder, setIsSubmittingReminder] = useState(false);
+
+  // Scheduled Reminders list
+  const [scheduledReminders, setScheduledReminders] = useState(() => {
+    try {
+      const saved = localStorage.getItem("vfstr_calendar_reminders");
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
     }
+  });
+
+  // Keep reminder email in sync with currentUser
+  useEffect(() => {
+    if (currentUser?.email) {
+      setReminderEmail(currentUser.email);
+    }
+  }, [currentUser]);
+
+  // Load calendar notes and reminders from backend on mount
+  useEffect(() => {
+    async function loadBackendData() {
+      try {
+        const notesRes = await fetch("/api/calendar/notes");
+        if (notesRes.ok) {
+          const notesData = await notesRes.json();
+          if (notesData.success && notesData.data) {
+            setNotesMap((prev) => ({ ...prev, ...notesData.data }));
+          }
+        }
+      } catch (err) {}
+
+      try {
+        const remRes = await fetch(
+          `/api/calendar/reminders${currentUser?.email ? `?email=${encodeURIComponent(currentUser.email)}` : ""}`
+        );
+        if (remRes.ok) {
+          const remData = await remRes.json();
+          if (remData.success && Array.isArray(remData.data)) {
+            setScheduledReminders(remData.data);
+          }
+        }
+      } catch (err) {}
+    }
+    loadBackendData();
+  }, [currentUser]);
+
+  // Months meta for semester
+  const semesterMonths = [
+    { index: 6, name: "July", year: 2026 },
+    { index: 7, name: "August", year: 2026 },
+    { index: 8, name: "September", year: 2026 },
+    { index: 9, name: "October", year: 2026 },
+    { index: 10, name: "November", year: 2026 },
+    { index: 11, name: "December", year: 2026 }
   ];
 
-  // Contracts / Academic Documents (Image 2 Right Widget)
-  const documentsList = [
-    {
-      id: "doc1",
-      title: "Privacy policy v2",
-      org: "Real Facture Technology · 04.06.2021",
-      iconColor: "#f97316",
-      type: "PDF"
-    },
-    {
-      id: "doc2",
-      title: "UE Funds compare",
-      org: "BMW Germany · 08.05.2021",
-      iconColor: "#ef4444",
-      type: "DOC"
-    },
-    {
-      id: "doc3",
-      title: "Promotion Strategy Q2",
-      org: "Real Facture Technology · 21.04.2021",
-      iconColor: "#3b82f6",
-      type: "PDF"
-    },
-    {
-      id: "doc4",
-      title: "Invoice",
-      org: "Real Facture Technology · 14.03.2021",
-      iconColor: "#10b981",
-      type: "XLS"
-    },
-    {
-      id: "doc5",
-      title: "Sale 2021",
-      org: "Real Facture Technology · 18.03.2021",
-      iconColor: "#10b981",
-      type: "XLS"
+  // Map of events by date
+  const eventsByDate = useMemo(() => {
+    const map = {};
+    OFFICIAL_CALENDAR_EVENTS.forEach((ev) => {
+      if (!map[ev.date]) map[ev.date] = [];
+      map[ev.date].push(ev);
+    });
+    return map;
+  }, []);
+
+  // Filtered official events list
+  const filteredEventsList = useMemo(() => {
+    return OFFICIAL_CALENDAR_EVENTS.filter((ev) => {
+      const matchCat =
+        selectedCategoryFilter === "ALL" || ev.category === selectedCategoryFilter;
+      const matchQuery =
+        !searchQuery ||
+        ev.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        ev.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        ev.date.includes(searchQuery);
+      return matchCat && matchQuery;
+    });
+  }, [selectedCategoryFilter, searchQuery]);
+
+  // Calendar Grid Days Builder for current month
+  const calendarGrid = useMemo(() => {
+    const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay(); // 0 = Sun
+    const totalDaysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+
+    const days = [];
+
+    // Previous month padding
+    for (let i = firstDayIndex - 1; i >= 0; i--) {
+      const d = prevMonthDays - i;
+      const m = currentMonth === 0 ? 12 : currentMonth;
+      const y = currentMonth === 0 ? currentYear - 1 : currentYear;
+      const dateStr = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+      days.push({
+        dayNumber: d,
+        dateString: dateStr,
+        isCurrentMonth: false,
+        events: eventsByDate[dateStr] || []
+      });
     }
-  ];
 
-  // Pinned Messages / Announcements (Image 2 Right Widget)
-  const pinnedMessages = [
-    {
-      id: "m1",
-      name: "Tom Hawk",
-      avatar: "TH",
-      date: "04.06.2021",
-      text: "Excited to see this live! FigJam's been an awesome addition to our weekly UX Jams"
-    },
-    {
-      id: "m2",
-      name: "Alisa Stewart",
-      avatar: "AS",
-      date: "08.06.2021",
-      text: "StarX now uses an automated mail system, check out the technology"
+    // Current month days
+    for (let d = 1; d <= totalDaysInMonth; d++) {
+      const dateStr = `${currentYear}-${String(currentMonth + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+      days.push({
+        dayNumber: d,
+        dateString: dateStr,
+        isCurrentMonth: true,
+        events: eventsByDate[dateStr] || []
+      });
     }
-  ];
 
-  // Recent User Activities (Image 2 Bottom Panel)
-  const userActivities = [
-    {
-      id: "u1",
-      name: "Adam Matysiak",
-      role: "Chief Executive Officer",
-      email: "workmail@hsweb.com",
-      company: "HighSolutions",
-      date: "02.06.2021"
-    },
-    {
-      id: "u2",
-      name: "Marvin McKinney",
-      role: "Sales manager",
-      email: "ikeasales@ikea.com",
-      company: "IKEA",
-      date: "04.06.2021"
-    },
-    {
-      id: "u3",
-      name: "Darrell Steward",
-      role: "Marketing Operations",
-      email: "workmail@amazon.com",
-      company: "Amazon",
-      date: "02.06.2021"
+    // Next month padding to fill complete weeks (up to multiple of 7)
+    const remaining = 7 - (days.length % 7);
+    if (remaining < 7) {
+      for (let d = 1; d <= remaining; d++) {
+        const m = currentMonth === 11 ? 1 : currentMonth + 2;
+        const y = currentMonth === 11 ? currentYear + 1 : currentYear;
+        const dateStr = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+        days.push({
+          dayNumber: d,
+          dateString: dateStr,
+          isCurrentMonth: false,
+          events: eventsByDate[dateStr] || []
+        });
+      }
     }
-  ];
 
-  // Month navigation helpers
-  const monthName = currentDate.toLocaleString("default", { month: "long" });
-  const yearNumber = currentDate.getFullYear();
+    return days;
+  }, [currentYear, currentMonth, eventsByDate]);
 
-  const handlePrevMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1));
+  // Open Day Drawer
+  const handleDayClick = (dateStr) => {
+    setSelectedDate(dateStr);
+    const evs = eventsByDate[dateStr] || [];
+    setReminderTitle(evs.length > 0 ? evs[0].title : `Reminder for ${dateStr}`);
+    setReminderNote("");
+    setShowDayModal(true);
   };
 
-  const handleNextMonth = () => {
-    setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
-  };
+  // Add Note on Date
+  const handleSaveNote = async () => {
+    if (!newNoteText.trim()) return;
 
-  // Calendar Day Grid generator
-  const daysInMonth = new Date(yearNumber, currentDate.getMonth() + 1, 0).getDate();
-  const firstDayOfWeek = (new Date(yearNumber, currentDate.getMonth(), 1).getDay() + 6) % 7; // Monday = 0
-  const daysInPrevMonth = new Date(yearNumber, currentDate.getMonth(), 0).getDate();
-
-  // Create Event Form Submit
-  const handleCreateEvent = (e) => {
-    e.preventDefault();
-    if (!eventTitle.trim()) return;
-
-    const newEv = {
-      id: `ev_${Date.now()}`,
-      day: selectedDay || 15,
-      month: currentDate.getMonth(),
-      year: yearNumber,
-      time: eventFrom.split(",")[0] || "10:00",
-      title: eventTitle,
-      type: eventCategory === "IMPORTANT" ? "green" : "pink",
-      badge: eventCategory
+    const noteEntry = {
+      id: `note_${Date.now()}`,
+      date: selectedDate,
+      note: newNoteText.trim(),
+      email: reminderEmail,
+      authorName: currentUser?.name || "Student/Faculty",
+      updatedAt: new Date().toISOString()
     };
 
-    setEvents((prev) => [...prev, newEv]);
-    setShowNewEventModal(false);
-    setEventTitle("");
-    if (onShowToast) {
-      onShowToast(`Event "${newEv.title}" added to academic schedule!`, "success");
+    const nextNotes = {
+      ...notesMap,
+      [selectedDate]: [noteEntry, ...(notesMap[selectedDate] || [])]
+    };
+
+    setNotesMap(nextNotes);
+    localStorage.setItem("vfstr_calendar_notes", JSON.stringify(nextNotes));
+    setNewNoteText("");
+
+    try {
+      await fetch("/api/calendar/notes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(noteEntry)
+      });
+    } catch (e) {}
+
+    onShowToast(`📝 Note saved for ${selectedDate}`, "success");
+  };
+
+  // Schedule Email Reminder
+  const handleScheduleReminder = async (e) => {
+    e?.preventDefault();
+    if (!reminderEmail || !selectedDate) {
+      onShowToast("Email and Date are required to schedule a notification", "warning");
+      return;
+    }
+
+    setIsSubmittingReminder(true);
+    const newRem = {
+      id: `rem_${Date.now()}`,
+      email: reminderEmail.toLowerCase().trim(),
+      date: selectedDate,
+      time: reminderTime || "09:00",
+      title: reminderTitle || "Academic Calendar Reminder",
+      note: reminderNote || "",
+      status: "SCHEDULED",
+      createdAt: new Date().toISOString()
+    };
+
+    try {
+      const res = await fetch("/api/calendar/notify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newRem)
+      });
+      const data = await res.json();
+      if (data.success) {
+        const nextList = [newRem, ...scheduledReminders];
+        setScheduledReminders(nextList);
+        localStorage.setItem("vfstr_calendar_reminders", JSON.stringify(nextList));
+        onShowToast(
+          `🔔 Email reminder scheduled! Alert will be sent to ${reminderEmail} on ${selectedDate} at ${newRem.time}.`,
+          "success"
+        );
+      } else {
+        onShowToast(data.error || "Failed to schedule reminder", "warning");
+      }
+    } catch (err) {
+      const nextList = [newRem, ...scheduledReminders];
+      setScheduledReminders(nextList);
+      localStorage.setItem("vfstr_calendar_reminders", JSON.stringify(nextList));
+      onShowToast(`🔔 Notification scheduled for ${reminderEmail} on ${selectedDate}`, "success");
+    } finally {
+      setIsSubmittingReminder(false);
     }
   };
 
+  // Event category color helper
+  const getEventBadgeStyle = (category, color) => {
+    switch (color) {
+      case "cyan":
+        return { background: "#e0f2fe", color: "#0369a1", border: "1px solid #bae6fd" };
+      case "green":
+        return { background: "#dcfce7", color: "#15803d", border: "1px solid #bbf7d0" };
+      case "orange":
+        return { background: "#ffedd5", color: "#c2410c", border: "1px solid #fed7aa" };
+      case "yellow":
+        return { background: "#fef9c3", color: "#854d0e", border: "1px solid #fef08a" };
+      case "purple":
+        return { background: "#f3e8ff", color: "#7e22ce", border: "1px solid #e9d5ff" };
+      default:
+        return { background: "#f3f4f6", color: "#374151", border: "1px solid #e5e7eb" };
+    }
+  };
+
+  const selectedEvents = eventsByDate[selectedDate] || [];
+  const selectedNotes = notesMap[selectedDate] || [];
+  const selectedRemindersList = scheduledReminders.filter((r) => r.date === selectedDate);
+
   return (
-    <div className="cal2-app-layout">
-      {/* =========================================================================
-          LEFT NAVIGATION RAIL (Image 2 Left Sidebar)
-          ========================================================================= */}
-      <aside className="cal2-left-rail" aria-label="Main Navigation">
-        <div className="cal2-rail-logo">
-          <div className="cal2-logo-triangle" aria-hidden="true">
-            ▲
+    <div className="notion-calendar-container" style={{ padding: "16px 24px", maxWidth: "1480px", margin: "0 auto" }}>
+      {/* Notion-Style Document Header */}
+      <div
+        className="notion-doc-header"
+        style={{
+          background: "#ffffff",
+          borderRadius: "16px",
+          border: "1px solid #e5e7eb",
+          padding: "24px 28px",
+          marginBottom: "20px",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.04)"
+        }}
+      >
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", flexWrap: "wrap", gap: "16px" }}>
+          <div style={{ flex: 1, minWidth: "300px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "8px" }}>
+              <span style={{ fontSize: "24px" }}>🗓️</span>
+              <span
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "600",
+                  letterSpacing: "0.05em",
+                  color: "#6b7280",
+                  textTransform: "uppercase"
+                }}
+              >
+                VFSTR Vadlamudi &bull; Official Academic Document
+              </span>
+              <span
+                style={{
+                  background: "#e0e7ff",
+                  color: "#4338ca",
+                  fontSize: "11px",
+                  padding: "2px 8px",
+                  borderRadius: "9999px",
+                  fontWeight: "600"
+                }}
+              >
+                Release Date: {ACADEMIC_SEMESTER_INFO.releaseDate}
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontSize: "26px",
+                fontWeight: "700",
+                color: "#111827",
+                margin: "0 0 6px 0",
+                letterSpacing: "-0.02em"
+              }}
+            >
+              Academic Calendar 2026-27 (Semester - I)
+            </h1>
+
+            <p style={{ margin: 0, color: "#4b5563", fontSize: "14px" }}>
+              <strong>{ACADEMIC_SEMESTER_INFO.program}</strong> &bull; Approved by Asst. Dean-AAA, HoD (04/06/2026), and Dean-AAA&FA
+            </p>
+          </div>
+
+          {/* Quick User Context Badge */}
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              background: "#f9fafb",
+              padding: "10px 16px",
+              borderRadius: "12px",
+              border: "1px solid #e5e7eb"
+            }}
+          >
+            <div
+              style={{
+                width: "36px",
+                height: "36px",
+                borderRadius: "50%",
+                background: "#e0e7ff",
+                color: "#4f46e5",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: "700",
+                fontSize: "14px"
+              }}
+            >
+              {currentUser?.name ? currentUser.name.charAt(0) : "U"}
+            </div>
+            <div>
+              <div style={{ fontSize: "13px", fontWeight: "600", color: "#111827" }}>
+                {currentUser?.name || "Student / Faculty"}
+              </div>
+              <div style={{ fontSize: "11px", color: "#6b7280", display: "flex", alignItems: "center", gap: "4px" }}>
+                <Mail size={11} />
+                <span>{reminderEmail}</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <nav className="cal2-rail-nav">
-          <button
-            type="button"
-            className="cal2-rail-btn"
-            title="Dashboard"
-            onClick={() => onSwitchView && onSwitchView("faculty")}
-          >
-            <Home size={18} />
-          </button>
-          <button
-            type="button"
-            className="cal2-rail-btn"
-            title="Academic Documents"
-            onClick={() => onSwitchView && onSwitchView("student")}
-          >
-            <FileText size={18} />
-          </button>
-          <button
-            type="button"
-            className="cal2-rail-btn"
-            title="Admin & Faculty Operations"
-            onClick={() => onSwitchView && onSwitchView("admin")}
-          >
-            <Briefcase size={18} />
-          </button>
-          <button
-            type="button"
-            className="cal2-rail-btn"
-            title="Fee Particulars"
-            onClick={() => onSwitchView && onSwitchView("student")}
-          >
-            <DollarSign size={18} />
-          </button>
-          <button
-            type="button"
-            className="cal2-rail-btn active"
-            title="Academic Calendar (Current)"
-          >
-            <CalendarIcon size={18} />
-          </button>
-          <button
-            type="button"
-            className="cal2-rail-btn"
-            title="Class Grid & Timetable"
-            onClick={() => onSwitchView && onSwitchView("faculty")}
-          >
-            <Grid size={18} />
-          </button>
-        </nav>
-
-        <div className="cal2-rail-bottom">
-          <button type="button" className="cal2-rail-btn" title="Institutional Compliance">
-            <Shield size={18} />
-          </button>
-          <button type="button" className="cal2-rail-btn" title="System Settings">
-            <Settings size={18} />
-          </button>
-        </div>
-      </aside>
-
-      {/* =========================================================================
-          CENTER / MAIN CALENDAR WORKSPACE (Image 2 Main Content)
-          ========================================================================= */}
-      <div className="cal2-main-workspace">
-        {/* Top Header Bar from Image 2 */}
-        <header className="cal2-topbar">
-          <div className="cal2-search-box">
-            <Search size={15} className="cal2-search-icon" />
-            <input
-              type="text"
-              placeholder="Search..."
-              className="cal2-search-input"
-            />
-          </div>
-
-          <div className="cal2-topbar-right">
-            <button type="button" className="cal2-icon-pill" title="Notifications">
-              <Bell size={16} />
-            </button>
-            <button type="button" className="cal2-icon-pill" title="Messages">
-              <Mail size={16} />
-            </button>
-
-            <div className="cal2-user-chip">
-              <div className="cal2-avatar">
-                {currentUser?.name ? currentUser.name.charAt(0).toUpperCase() : "A"}
-              </div>
-              <div className="cal2-user-details">
-                <span className="cal2-user-name">
-                  {currentUser?.name || "Anton O."}
-                </span>
-                <span className="cal2-user-role">
-                  {currentUser?.role ? currentUser.role.toUpperCase() : "USER"}
-                </span>
-              </div>
-              <span className="cal2-caret">▾</span>
-            </div>
-          </div>
-        </header>
-
-        {/* Content Body: Calendar Grid + Right Sidebar */}
-        <div className="cal2-body-content">
-          <div className="cal2-left-calendar-area">
-            {/* Calendar Controls Bar */}
-            <div className="cal2-controls-row">
-              <div className="cal2-month-selector">
-                <button
-                  type="button"
-                  className="cal2-arrow-btn"
-                  onClick={handlePrevMonth}
-                  title="Previous Month"
-                >
-                  <ChevronLeft size={16} />
-                </button>
-                <h2 className="cal2-month-title">
-                  {monthName} {yearNumber}
-                </h2>
-                <button
-                  type="button"
-                  className="cal2-arrow-btn"
-                  onClick={handleNextMonth}
-                  title="Next Month"
-                >
-                  <ChevronRight size={16} />
-                </button>
-              </div>
-
-              <div className="cal2-action-btns">
-                <button
-                  type="button"
-                  className="cal2-btn-secondary"
-                  onClick={() => setShowApprovalModal(true)}
-                >
-                  Request Approval
-                </button>
-                <button
-                  type="button"
-                  className="cal2-btn-primary"
-                  onClick={() => setShowNewEventModal(true)}
-                >
-                  <Plus size={15} />
-                  <span>Add event</span>
-                </button>
-              </div>
-            </div>
-
-            {/* 7-Column Calendar Month Matrix */}
-            <div className="cal2-calendar-card">
-              <div className="cal2-weekday-header">
-                <div>MON</div>
-                <div>TUE</div>
-                <div>WED</div>
-                <div>THU</div>
-                <div>FRI</div>
-                <div>SAT</div>
-                <div>SUN</div>
-              </div>
-
-              <div className="cal2-month-grid">
-                {/* Previous month trailing days */}
-                {Array.from({ length: firstDayOfWeek }).map((_, i) => {
-                  const dayNum = daysInPrevMonth - firstDayOfWeek + i + 1;
-                  return (
-                    <div key={`prev_${i}`} className="cal2-day-cell cal2-out-of-month">
-                      <div className="cal2-day-num">{dayNum}</div>
-                      {dayNum === 27 && (
-                        <div className="cal2-event-chip cal2-chip-grey">
-                          <span className="font-mono">18:00</span> Invoice check
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
-
-                {/* Current month days */}
-                {Array.from({ length: daysInMonth }).map((_, i) => {
-                  const dayNum = i + 1;
-                  const dayEvents = events.filter((e) => e.day === dayNum);
-                  const isSelected = selectedDay === dayNum;
-                  const isSpecialDay = dayEvents.some((e) => e.isSpecial);
-
-                  return (
-                    <div
-                      key={`curr_${dayNum}`}
-                      className={`cal2-day-cell ${isSelected ? "selected-day" : ""} ${
-                        isSpecialDay ? "special-day" : ""
-                      }`}
-                      onClick={() => setSelectedDay(dayNum)}
-                    >
-                      <div className="cal2-day-top">
-                        {isSpecialDay ? (
-                          <span className="cal2-special-badge">
-                            <strong>{dayNum}</strong>
-                          </span>
-                        ) : (
-                          <span className={`cal2-day-num ${dayNum === 29 ? "cal2-blue-circle" : ""}`}>
-                            {dayNum}
-                          </span>
-                        )}
-                        {dayNum === 5 && <span className="cal2-notification-dot">5</span>}
-                      </div>
-
-                      <div className="cal2-day-events">
-                        {dayEvents.map((ev) => (
-                          <div
-                            key={ev.id}
-                            className={`cal2-event-chip cal2-chip-${ev.type}`}
-                            title={ev.title}
-                          >
-                            <span className="cal2-chip-time font-mono">{ev.time}</span>
-                            <span className="cal2-chip-title">{ev.title}</span>
-                            {ev.emoji && <span className="cal2-chip-emoji">{ev.emoji}</span>}
-                          </div>
-                        ))}
-                        {dayNum === 1 && (
-                          <span className="cal2-more-link">5 more</span>
-                        )}
-                        {dayNum === 29 && (
-                          <div className="cal2-last-friday-box">
-                            <span className="cal2-last-friday-label font-bold text-primary">Last Friday</span>
-                            <span className="cal2-champagne">🥂</span>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })}
-
-                {/* Next month leading days to complete 35 or 42 grid slots */}
-                {Array.from({
-                  length: (7 - ((firstDayOfWeek + daysInMonth) % 7)) % 7
-                }).map((_, i) => (
-                  <div key={`next_${i}`} className="cal2-day-cell cal2-out-of-month">
-                    <div className="cal2-day-num">{i + 1}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Bottom Panel: User Activities (Image 2 Bottom Section) */}
-            <div className="cal2-bottom-card">
-              <div className="cal2-bottom-header">
-                <h3>User activities</h3>
-                <button
-                  type="button"
-                  className="cal2-btn-secondary"
-                  onClick={() => {
-                    if (onShowToast) onShowToast("Activity report exported as PDF.", "info");
-                  }}
-                >
-                  Reports
-                </button>
-              </div>
-
-              <div className="cal2-activities-table-wrap">
-                <table className="cal2-table">
-                  <thead>
-                    <tr>
-                      <th>#</th>
-                      <th>User Name</th>
-                      <th>Designation / Role</th>
-                      <th>Email / Contact</th>
-                      <th>Organization / Dept</th>
-                      <th>Date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {userActivities.map((act, idx) => (
-                      <tr key={act.id}>
-                        <td className="text-muted font-mono">{14 + idx}</td>
-                        <td className="font-bold text-primary">{act.name}</td>
-                        <td className="text-muted">{act.role}</td>
-                        <td className="font-mono text-sm">{act.email}</td>
-                        <td>
-                          <span className="cal2-company-tag">
-                            <span className="cal2-comp-dot"></span>
-                            {act.company}
-                          </span>
-                        </td>
-                        <td className="font-mono text-muted">{act.date}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          {/* =========================================================================
-              RIGHT SIDEBAR WIDGETS (Image 2 Right Column)
-              ========================================================================= */}
-          <aside className="cal2-right-sidebar" aria-label="Tasks and Announcements">
-            {/* Widget 1: Task List */}
-            <div className="cal2-widget-card">
-              <div className="cal2-widget-header">
-                <h4>Task List</h4>
-                <button type="button" className="cal2-link-btn">
-                  View all
-                </button>
-              </div>
-
-              <div className="cal2-task-list">
-                {taskList.map((task) => (
-                  <div key={task.id} className="cal2-task-item">
-                    <div className="cal2-task-time font-mono font-bold">
-                      {task.time}
-                    </div>
-                    <div className="cal2-task-content">
-                      <div className="cal2-task-title font-bold">
-                        {task.title}
-                      </div>
-                      <div className="cal2-task-sub text-muted font-mono">
-                        📁 {task.subtitle}
-                      </div>
-                    </div>
-                    <span className={`cal2-badge cal2-badge-${task.tagColor}`}>
-                      {task.tag}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Widget 2: Contracts & Academic Documents */}
-            <div className="cal2-widget-card">
-              <div className="cal2-widget-header">
-                <h4>Contracts</h4>
-              </div>
-
-              <div className="cal2-docs-list">
-                {documentsList.map((doc) => (
-                  <div key={doc.id} className="cal2-doc-item">
-                    <div
-                      className="cal2-doc-icon"
-                      style={{ color: doc.iconColor }}
-                    >
-                      <FileText size={20} />
-                    </div>
-                    <div className="cal2-doc-meta">
-                      <div className="cal2-doc-title font-bold">
-                        {doc.title}
-                      </div>
-                      <div className="cal2-doc-sub text-muted">
-                        {doc.org}
-                      </div>
-                    </div>
-                    <button
-                      type="button"
-                      className="cal2-open-pill-btn"
-                      onClick={() => setSelectedDoc(doc)}
-                    >
-                      Open
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Widget 3: Pinned Message */}
-            <div className="cal2-widget-card">
-              <div className="cal2-widget-header">
-                <h4>Pinned message</h4>
-                <button type="button" className="cal2-link-btn">
-                  View all
-                </button>
-              </div>
-
-              <div className="cal2-pinned-list">
-                {pinnedMessages.map((msg) => (
-                  <div key={msg.id} className="cal2-pinned-item">
-                    <div className="cal2-pinned-top">
-                      <div className="cal2-pinned-avatar">{msg.avatar}</div>
-                      <div className="cal2-pinned-author">
-                        <span className="font-bold">{msg.name}</span>
-                        <span className="cal2-pinned-date font-mono text-muted">
-                          {msg.date}
-                        </span>
-                      </div>
-                    </div>
-                    <p className="cal2-pinned-text">{msg.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </aside>
+        {/* Legend Chips directly replicating the document colors */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+            flexWrap: "wrap",
+            marginTop: "18px",
+            paddingTop: "14px",
+            borderTop: "1px solid #f3f4f6",
+            fontSize: "12px"
+          }}
+        >
+          <span style={{ fontWeight: "600", color: "#374151" }}>Document Legend:</span>
+          <span style={{ padding: "4px 10px", borderRadius: "6px", ...getEventBadgeStyle("", "cyan") }}>
+            Commencement of Module
+          </span>
+          <span style={{ padding: "4px 10px", borderRadius: "6px", ...getEventBadgeStyle("", "green") }}>
+            Formative Assessment (FA-1 / FA-2)
+          </span>
+          <span style={{ padding: "4px 10px", borderRadius: "6px", ...getEventBadgeStyle("", "orange") }}>
+            Official Holidays & Festivals
+          </span>
+          <span style={{ padding: "4px 10px", borderRadius: "6px", ...getEventBadgeStyle("", "yellow") }}>
+            Preparation & Summative (P-Based)
+          </span>
+          <span style={{ padding: "4px 10px", borderRadius: "6px", ...getEventBadgeStyle("", "purple") }}>
+            Summative Assessment (L-Based)
+          </span>
         </div>
       </div>
 
-      {/* =========================================================================
-          "NEW EVENT" MODAL DIALOG (Pixel-Perfect from Image 2!)
-          ========================================================================= */}
-      {showNewEventModal && (
-        <div
-          className="cal2-modal-backdrop"
-          onClick={() => setShowNewEventModal(false)}
-        >
-          <div
-            className="cal2-new-event-modal"
-            onClick={(e) => e.stopPropagation()}
+      {/* Navigation & View Tabs Bar */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "12px",
+          marginBottom: "16px"
+        }}
+      >
+        {/* Tabs */}
+        <div style={{ display: "flex", gap: "6px", background: "#f3f4f6", padding: "4px", borderRadius: "10px" }}>
+          <button
+            type="button"
+            className={`btn btn-sm ${activeTab === "month" ? "btn-primary" : "btn-ghost"}`}
+            style={{ borderRadius: "8px", fontWeight: activeTab === "month" ? "600" : "500" }}
+            onClick={() => setActiveTab("month")}
           >
-            <div className="cal2-modal-head">
-              <div>
-                <h3>New event</h3>
-                <p>Complete the basic details of your event</p>
-              </div>
-              <button
-                type="button"
-                className="cal2-modal-close-btn"
-                onClick={() => setShowNewEventModal(false)}
-              >
-                ✕
-              </button>
-            </div>
-
-            <form onSubmit={handleCreateEvent} className="cal2-modal-form">
-              <div className="cal2-form-group">
-                <label>Event Title</label>
-                <input
-                  type="text"
-                  className="cal2-input"
-                  value={eventTitle}
-                  onChange={(e) => setEventTitle(e.target.value)}
-                  placeholder="e.g. Weekly Strategic Planning"
-                  required
-                />
-              </div>
-
-              <div className="cal2-tag-row">
-                <span className="cal2-tag-selected">
-                  {eventCategory} <span className="close-x">✕</span>
-                </span>
-                <button
-                  type="button"
-                  className="cal2-tag-choice"
-                  onClick={() => setEventCategory("EXAM")}
-                >
-                  EXAM
-                </button>
-                <button
-                  type="button"
-                  className="cal2-tag-choice"
-                  onClick={() => setEventCategory("LAB")}
-                >
-                  LAB
-                </button>
-                <button
-                  type="button"
-                  className="cal2-tag-choice"
-                  onClick={() => setEventCategory("SEMINAR")}
-                >
-                  SEMINAR
-                </button>
-              </div>
-
-              <div className="cal2-datetime-row">
-                <div className="cal2-dt-field">
-                  <label>From</label>
-                  <input
-                    type="text"
-                    className="cal2-dt-input font-mono"
-                    value={eventFrom}
-                    onChange={(e) => setEventFrom(e.target.value)}
-                  />
-                </div>
-                <div className="cal2-dt-field">
-                  <label>To</label>
-                  <input
-                    type="text"
-                    className="cal2-dt-input font-mono"
-                    value={eventTo}
-                    onChange={(e) => setEventTo(e.target.value)}
-                  />
-                </div>
-              </div>
-
-              <div className="cal2-form-group">
-                <label>Members</label>
-                <div className="cal2-members-pills">
-                  {selectedMembers.map((m) => (
-                    <span key={m.id} className="cal2-member-pill">
-                      <span className="cal2-mem-dot"></span>
-                      {m.name}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <button type="submit" className="cal2-create-btn">
-                Create event
-              </button>
-            </form>
-          </div>
+            <CalendarIcon size={15} style={{ marginRight: "6px" }} />
+            Notion Month Grid
+          </button>
+          <button
+            type="button"
+            className={`btn btn-sm ${activeTab === "matrix" ? "btn-primary" : "btn-ghost"}`}
+            style={{ borderRadius: "8px", fontWeight: activeTab === "matrix" ? "600" : "500" }}
+            onClick={() => setActiveTab("matrix")}
+          >
+            <Layers size={15} style={{ marginRight: "6px" }} />
+            Official 24-Week Matrix
+          </button>
+          <button
+            type="button"
+            className={`btn btn-sm ${activeTab === "events" ? "btn-primary" : "btn-ghost"}`}
+            style={{ borderRadius: "8px", fontWeight: activeTab === "events" ? "600" : "500" }}
+            onClick={() => setActiveTab("events")}
+          >
+            <Award size={15} style={{ marginRight: "6px" }} />
+            All Official Events ({OFFICIAL_CALENDAR_EVENTS.length})
+          </button>
+          <button
+            type="button"
+            className={`btn btn-sm ${activeTab === "reminders" ? "btn-primary" : "btn-ghost"}`}
+            style={{ borderRadius: "8px", fontWeight: activeTab === "reminders" ? "600" : "500" }}
+            onClick={() => setActiveTab("reminders")}
+          >
+            <Bell size={15} style={{ marginRight: "6px" }} />
+            My Email Reminders ({scheduledReminders.length})
+          </button>
         </div>
-      )}
 
-      {/* =========================================================================
-          REQUEST APPROVAL MODAL (Image 2 Action)
-          ========================================================================= */}
-      {showApprovalModal && (
-        <div
-          className="cal2-modal-backdrop"
-          onClick={() => setShowApprovalModal(false)}
-        >
-          <div
-            className="cal2-new-event-modal"
-            onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: 460 }}
-          >
-            <div className="cal2-modal-head">
-              <div>
-                <h3>Request Approval</h3>
-                <p>Submit academic exemption or scheduled event approval</p>
-              </div>
+        {/* Month Selector Pill Buttons */}
+        {activeTab === "month" && (
+          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+            {semesterMonths.map((m) => (
               <button
+                key={m.index}
                 type="button"
-                className="cal2-modal-close-btn"
-                onClick={() => setShowApprovalModal(false)}
+                className={`btn btn-xs ${currentMonth === m.index ? "btn-primary" : "btn-outline"}`}
+                style={{ borderRadius: "6px", padding: "4px 10px" }}
+                onClick={() => setCurrentMonth(m.index)}
               >
-                ✕
+                {m.name} 2026
               </button>
-            </div>
-
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                setShowApprovalModal(false);
-                if (onShowToast) onShowToast("Approval request submitted to Academic Dean!", "success");
-              }}
-              className="cal2-modal-form"
-            >
-              <div className="cal2-form-group">
-                <label>Request Type / Category</label>
-                <select
-                  className="cal2-input"
-                  value={approvalReason}
-                  onChange={(e) => setApprovalReason(e.target.value)}
-                >
-                  <option value="Hackathon / On-Duty Attendance Exemption">
-                    Hackathon / On-Duty Attendance Exemption
-                  </option>
-                  <option value="Guest Lecture / Special Session Reschedule">
-                    Guest Lecture / Special Session Reschedule
-                  </option>
-                  <option value="Laboratory Examination Hall Clearance">
-                    Laboratory Examination Hall Clearance
-                  </option>
-                  <option value="University Event Hall Booking">
-                    University Event Hall Booking
-                  </option>
-                </select>
-              </div>
-
-              <div className="cal2-form-group">
-                <label>Remarks & Description</label>
-                <textarea
-                  className="cal2-input"
-                  rows={3}
-                  placeholder="Provide supporting justifications or reference ticket number..."
-                  required
-                />
-              </div>
-
-              <button type="submit" className="cal2-create-btn">
-                Submit Request
-              </button>
-            </form>
+            ))}
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
-      {/* =========================================================================
-          DOCUMENT VIEWER POPUP MODAL (Contracts widget preview)
-          ========================================================================= */}
-      {selectedDoc && (
+      {/* VIEW 1: NOTION MONTH GRID */}
+      {activeTab === "month" && (
         <div
-          className="cal2-modal-backdrop"
-          onClick={() => setSelectedDoc(null)}
+          style={{
+            background: "#ffffff",
+            borderRadius: "16px",
+            border: "1px solid #e5e7eb",
+            overflow: "hidden",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.03)"
+          }}
         >
+          {/* Day Headers (Sun to Sat) */}
           <div
-            className="cal2-new-event-modal"
-            onClick={(e) => e.stopPropagation()}
-            style={{ maxWidth: 520 }}
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(7, 1fr)",
+              background: "#f9fafb",
+              borderBottom: "1px solid #e5e7eb",
+              textAlign: "center"
+            }}
           >
-            <div className="cal2-modal-head">
-              <div>
-                <h3>{selectedDoc.title}</h3>
-                <p>{selectedDoc.org}</p>
-              </div>
-              <button
-                type="button"
-                className="cal2-modal-close-btn"
-                onClick={() => setSelectedDoc(null)}
-              >
-                ✕
-              </button>
-            </div>
-
-            <div className="cal2-doc-preview-body">
-              <div className="cal2-doc-certified-banner">
-                <FileCheck size={28} className="text-success" />
-                <div>
-                  <h4 className="font-bold text-success">Official Certified Document</h4>
-                  <p className="text-muted text-sm">
-                    Verified by VFSTR Academic Council & Controller of Examinations.
-                  </p>
-                </div>
-              </div>
-
-              <div className="cal2-doc-meta-table">
-                <div>
-                  <span className="cal2-meta-lbl">DOCUMENT TYPE</span>
-                  <span className="cal2-meta-val font-mono">{selectedDoc.type}</span>
-                </div>
-                <div>
-                  <span className="cal2-meta-lbl">AUTHENTICATION STATUS</span>
-                  <span className="cal2-meta-val text-success font-bold">DIGITALLY SIGNED</span>
-                </div>
-                <div>
-                  <span className="cal2-meta-lbl">SECURITY HASH</span>
-                  <span className="cal2-meta-val font-mono">0x4F9B...8E21</span>
-                </div>
-              </div>
-
-              <button
-                type="button"
-                className="cal2-create-btn"
-                style={{ background: "#2563eb" }}
-                onClick={() => {
-                  setSelectedDoc(null);
-                  if (onShowToast) onShowToast(`Downloaded ${selectedDoc.title}.pdf`, "success");
+            {["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"].map((dayName, idx) => (
+              <div
+                key={dayName}
+                style={{
+                  padding: "10px 4px",
+                  fontSize: "12px",
+                  fontWeight: "700",
+                  color: idx === 0 ? "#dc2626" : "#4b5563",
+                  letterSpacing: "0.05em"
                 }}
               >
-                <Download size={15} />
-                <span>Download Document Copy</span>
+                {dayName}
+              </div>
+            ))}
+          </div>
+
+          {/* Month Days Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(7, 1fr)",
+              gridAutoRows: "minmax(115px, auto)"
+            }}
+          >
+            {calendarGrid.map((day, idx) => {
+              const isSelected = day.dateString === selectedDate;
+              const hasNotes = (notesMap[day.dateString] || []).length > 0;
+              const hasReminders = scheduledReminders.some((r) => r.date === day.dateString);
+
+              return (
+                <div
+                  key={idx}
+                  onClick={() => handleDayClick(day.dateString)}
+                  style={{
+                    borderRight: (idx + 1) % 7 === 0 ? "none" : "1px solid #f3f4f6",
+                    borderBottom: "1px solid #f3f4f6",
+                    padding: "8px 10px",
+                    background: isSelected
+                      ? "#f0fdf4"
+                      : !day.isCurrentMonth
+                      ? "#fafafa"
+                      : "#ffffff",
+                    cursor: "pointer",
+                    transition: "all 0.15s ease",
+                    position: "relative",
+                    opacity: day.isCurrentMonth ? 1 : 0.4
+                  }}
+                  className="notion-calendar-cell"
+                  title={`Click to open day agenda & schedule email notification for ${day.dateString}`}
+                >
+                  {/* Top Bar of Cell */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                    <span
+                      style={{
+                        fontSize: "13px",
+                        fontWeight: isSelected ? "700" : "600",
+                        color: isSelected
+                          ? "#16a34a"
+                          : idx % 7 === 0
+                          ? "#dc2626"
+                          : "#1f2937",
+                        width: "24px",
+                        height: "24px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: "50%",
+                        background: isSelected ? "#dcfce7" : "transparent"
+                      }}
+                    >
+                      {day.dayNumber}
+                    </span>
+
+                    {/* Indicator Badges */}
+                    <div style={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                      {hasNotes && (
+                        <span title="Contains personal note" style={{ fontSize: "11px" }}>
+                          📝
+                        </span>
+                      )}
+                      {hasReminders && (
+                        <span title="Email reminder scheduled" style={{ fontSize: "11px" }}>
+                          🔔
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Day Events Chips */}
+                  <div style={{ display: "flex", flexDirection: "column", gap: "3px" }}>
+                    {day.events.map((ev, evIdx) => (
+                      <div
+                        key={evIdx}
+                        style={{
+                          fontSize: "11px",
+                          fontWeight: "600",
+                          padding: "3px 6px",
+                          borderRadius: "4px",
+                          lineHeight: "1.2",
+                          whiteSpace: "nowrap",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          ...getEventBadgeStyle(ev.category, ev.color)
+                        }}
+                        title={`${ev.title} (${ev.category})`}
+                      >
+                        {ev.title}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {/* VIEW 2: OFFICIAL 24-WEEK UNIVERSITY MATRIX (EXACT IMAGE REPLICA) */}
+      {activeTab === "matrix" && (
+        <div
+          style={{
+            background: "#ffffff",
+            borderRadius: "16px",
+            border: "1px solid #e5e7eb",
+            padding: "20px",
+            overflowX: "auto",
+            boxShadow: "0 2px 4px rgba(0,0,0,0.03)"
+          }}
+        >
+          <div style={{ textAlign: "center", marginBottom: "16px" }}>
+            <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#111827", margin: "0 0 4px 0" }}>
+              Vignan's Foundation for Science, Technology and Research :: Vadlamudi
+            </h2>
+            <div style={{ fontSize: "14px", fontWeight: "600", color: "#374151" }}>
+              Bachelor of Technology - AGE 2nd, 3rd & 4th Year &bull; Academic Calendar - 2026-27 (Semester - I)
+            </div>
+            <div style={{ fontSize: "12px", color: "#6b7280" }}>
+              Release date: 03-Jun-2026 &bull; Authentic 24-Week Schedule Matrix
+            </div>
+          </div>
+
+          <table
+            style={{
+              width: "100%",
+              borderCollapse: "collapse",
+              fontSize: "12px",
+              textAlign: "center"
+            }}
+          >
+            <thead>
+              <tr style={{ background: "#475569", color: "#ffffff" }}>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Week</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Sunday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Monday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Tuesday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Wednesday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Thursday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Friday</th>
+                <th style={{ padding: "10px", border: "1px solid #334155" }}>Saturday</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ACADEMIC_WEEKS_TABLE.map((row) => (
+                <tr key={row.week} style={{ borderBottom: "1px solid #e2e8f0" }}>
+                  <td style={{ padding: "8px", fontWeight: "700", background: "#f8fafc", border: "1px solid #cbd5e1" }}>
+                    Week-{row.week}
+                  </td>
+
+                  {/* Sunday */}
+                  <td style={{ padding: "8px", border: "1px solid #cbd5e1", color: "#b91c1c" }}>
+                    {row.sun}
+                  </td>
+
+                  {/* Monday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "mon"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.mon}
+                  </td>
+
+                  {/* Tuesday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "tue"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.tue}
+                  </td>
+
+                  {/* Wednesday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "wed"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.wed}
+                  </td>
+
+                  {/* Thursday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "thu"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.thu}
+                  </td>
+
+                  {/* Friday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "fri"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.fri}
+                  </td>
+
+                  {/* Saturday */}
+                  <td
+                    style={{
+                      padding: "8px",
+                      border: "1px solid #cbd5e1",
+                      ...(row.highlight && row.highlight.cell === "sat"
+                        ? getEventBadgeStyle("", row.highlight.color)
+                        : {})
+                    }}
+                  >
+                    {row.sat}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Official Signatures Verification Footer */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginTop: "24px",
+              paddingTop: "20px",
+              borderTop: "1px dashed #cbd5e1"
+            }}
+          >
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontStyle: "italic", fontWeight: "700", color: "#1e3a8a", fontSize: "16px" }}>
+                Dr. N. V. Rao
+              </div>
+              <div style={{ fontSize: "12px", fontWeight: "600", color: "#374151" }}>Asst. Dean-AAA</div>
+            </div>
+
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontStyle: "italic", fontWeight: "700", color: "#1e3a8a", fontSize: "16px" }}>
+                Dr. K. Ramanjaneyulu
+              </div>
+              <div style={{ fontSize: "12px", fontWeight: "600", color: "#374151" }}>HoD (Signed 04/06/2026)</div>
+            </div>
+
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontStyle: "italic", fontWeight: "700", color: "#1e3a8a", fontSize: "16px" }}>
+                Dr. D. Vijaya Ramu
+              </div>
+              <div style={{ fontSize: "12px", fontWeight: "600", color: "#374151" }}>Dean-AAA&FA</div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* VIEW 3: ALL OFFICIAL EVENTS & HOLIDAYS */}
+      {activeTab === "events" && (
+        <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+          {/* Filters Bar */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: "12px",
+              background: "#ffffff",
+              padding: "12px 16px",
+              borderRadius: "12px",
+              border: "1px solid #e5e7eb"
+            }}
+          >
+            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+              {["ALL", "COMMENCEMENT", "EXAM", "HOLIDAY", "ASSESSMENT", "SUMMATIVE"].map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  className={`btn btn-xs ${selectedCategoryFilter === cat ? "btn-primary" : "btn-outline"}`}
+                  style={{ borderRadius: "6px" }}
+                  onClick={() => setSelectedCategoryFilter(cat)}
+                >
+                  {cat === "ALL" ? "All Categories" : cat}
+                </button>
+              ))}
+            </div>
+
+            <div className="input-with-icon" style={{ width: "260px" }}>
+              <Search className="input-icon" size={16} />
+              <input
+                type="text"
+                className="login-input"
+                style={{ padding: "6px 12px 6px 36px", fontSize: "13px" }}
+                placeholder="Search events, exams, holidays..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+          </div>
+
+          {/* Events Grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))", gap: "14px" }}>
+            {filteredEventsList.map((ev, idx) => (
+              <div
+                key={idx}
+                onClick={() => handleDayClick(ev.date)}
+                style={{
+                  background: "#ffffff",
+                  borderRadius: "12px",
+                  border: "1px solid #e5e7eb",
+                  padding: "16px",
+                  cursor: "pointer",
+                  transition: "all 0.15s ease",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.03)"
+                }}
+                className="notion-card-hover"
+              >
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+                  <span
+                    style={{
+                      fontSize: "11px",
+                      fontWeight: "700",
+                      padding: "3px 8px",
+                      borderRadius: "6px",
+                      ...getEventBadgeStyle(ev.category, ev.color)
+                    }}
+                  >
+                    {ev.badge || ev.category}
+                  </span>
+                  <span style={{ fontSize: "12px", fontWeight: "600", color: "#6b7280" }}>
+                    Week {ev.week} &bull; {ev.date}
+                  </span>
+                </div>
+
+                <h3 style={{ fontSize: "16px", fontWeight: "700", color: "#111827", margin: "0 0 6px 0" }}>
+                  {ev.title}
+                </h3>
+                <p style={{ fontSize: "13px", color: "#4b5563", margin: "0 0 12px 0", lineHeight: "1.4" }}>
+                  {ev.description}
+                </p>
+
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: "1px solid #f3f4f6", paddingTop: "8px" }}>
+                  <span style={{ fontSize: "12px", color: "#6366f1", fontWeight: "600" }}>
+                    🔔 Click to notify with {reminderEmail.split("@")[0]}
+                  </span>
+                  <span style={{ fontSize: "12px", color: "#9ca3af" }}>Open &rarr;</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* VIEW 4: MY SCHEDULED EMAIL REMINDERS */}
+      {activeTab === "reminders" && (
+        <div style={{ background: "#ffffff", borderRadius: "16px", border: "1px solid #e5e7eb", padding: "20px" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
+            <div>
+              <h2 style={{ fontSize: "18px", fontWeight: "700", color: "#111827", margin: "0 0 4px 0" }}>
+                Scheduled Academic Email Notifications
+              </h2>
+              <p style={{ fontSize: "13px", color: "#6b7280", margin: 0 }}>
+                Automatic alerts dispatched directly to your registered Google address <code>{reminderEmail}</code>
+              </p>
+            </div>
+            <button
+              type="button"
+              className="btn btn-primary btn-sm"
+              onClick={() => handleDayClick(new Date().toISOString().split("T")[0])}
+            >
+              <Plus size={15} style={{ marginRight: "4px" }} />
+              Schedule New Alert
+            </button>
+          </div>
+
+          {scheduledReminders.length === 0 ? (
+            <div style={{ textAlign: "center", padding: "48px 20px", color: "#9ca3af" }}>
+              <Bell size={36} style={{ margin: "0 auto 12px auto", opacity: 0.5 }} />
+              <p style={{ fontSize: "15px", fontWeight: "600", color: "#374151" }}>No reminders scheduled yet</p>
+              <p style={{ fontSize: "13px" }}>
+                Click any date in the calendar and select <strong>"Keep me notified on this day with email"</strong>!
+              </p>
+            </div>
+          ) : (
+            <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+              {scheduledReminders.map((r, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "12px 16px",
+                    borderRadius: "10px",
+                    border: "1px solid #e5e7eb",
+                    background: "#f9fafb"
+                  }}
+                >
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                      <span style={{ fontWeight: "700", color: "#111827", fontSize: "14px" }}>{r.title}</span>
+                      <span
+                        style={{
+                          background: "#dcfce7",
+                          color: "#15803d",
+                          fontSize: "11px",
+                          fontWeight: "600",
+                          padding: "2px 8px",
+                          borderRadius: "9999px"
+                        }}
+                      >
+                        {r.status || "SCHEDULED"}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: "12px", color: "#6b7280" }}>
+                      📅 <strong>{r.date}</strong> at <strong>{r.time || "09:00"}</strong> &bull; Sent to: <strong>{r.email}</strong>
+                    </div>
+                  </div>
+
+                  <button
+                    type="button"
+                    className="btn btn-ghost btn-sm text-danger"
+                    onClick={() => {
+                      const filtered = scheduledReminders.filter((_, i) => i !== idx);
+                      setScheduledReminders(filtered);
+                      localStorage.setItem("vfstr_calendar_reminders", JSON.stringify(filtered));
+                      onShowToast("Reminder removed", "info");
+                    }}
+                    title="Remove reminder"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* NOTION-STYLE DAY PAGE (DRAWER / MODAL) */}
+      {showDayModal && (
+        <div className="modal-overlay" onClick={() => setShowDayModal(false)}>
+          <div
+            className="notion-day-drawer"
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#ffffff",
+              width: "100%",
+              maxWidth: "620px",
+              maxHeight: "90vh",
+              borderRadius: "18px",
+              boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              border: "1px solid #e5e7eb"
+            }}
+          >
+            {/* Modal Top Bar */}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "16px 20px",
+                borderBottom: "1px solid #e5e7eb",
+                background: "#fafafa"
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <span style={{ fontSize: "20px" }}>📅</span>
+                <span style={{ fontWeight: "700", color: "#111827", fontSize: "16px" }}>
+                  {new Date(selectedDate).toLocaleDateString("en-US", {
+                    weekday: "long",
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric"
+                  })}
+                </span>
+              </div>
+              <button
+                type="button"
+                className="btn btn-icon btn-sm"
+                onClick={() => setShowDayModal(false)}
+                title="Close"
+              >
+                <X size={18} />
               </button>
+            </div>
+
+            {/* Modal Body */}
+            <div style={{ padding: "20px", overflowY: "auto", display: "flex", flexDirection: "column", gap: "20px" }}>
+              {/* 1. Official Events on this Day */}
+              {selectedEvents.length > 0 ? (
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                  <div style={{ fontSize: "12px", fontWeight: "700", color: "#6b7280", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    🏛️ Official University Schedule
+                  </div>
+                  {selectedEvents.map((ev, i) => (
+                    <div
+                      key={i}
+                      style={{
+                        padding: "14px",
+                        borderRadius: "10px",
+                        ...getEventBadgeStyle(ev.category, ev.color)
+                      }}
+                    >
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "4px" }}>
+                        <span style={{ fontWeight: "700", fontSize: "15px" }}>{ev.title}</span>
+                        <span style={{ fontSize: "11px", fontWeight: "700" }}>Week {ev.week}</span>
+                      </div>
+                      <p style={{ margin: 0, fontSize: "13px", lineHeight: "1.4" }}>{ev.description}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  style={{
+                    padding: "12px 14px",
+                    background: "#f9fafb",
+                    borderRadius: "10px",
+                    border: "1px solid #f3f4f6",
+                    fontSize: "13px",
+                    color: "#6b7280"
+                  }}
+                >
+                  ✨ Standard instructional day for Semester-I. Classes, practicals, and counselling sessions proceed as per timetable.
+                </div>
+              )}
+
+              {/* 2. Interactive Email Notification Scheduler */}
+              <div
+                style={{
+                  background: "#f8fafc",
+                  border: "1px solid #e2e8f0",
+                  borderRadius: "12px",
+                  padding: "16px"
+                }}
+              >
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "12px" }}>
+                  <Bell size={18} style={{ color: "#4f46e5" }} />
+                  <span style={{ fontWeight: "700", fontSize: "14px", color: "#0f172a" }}>
+                    Keep Me Notified on This Day via Email
+                  </span>
+                </div>
+
+                <form onSubmit={handleScheduleReminder}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                    {/* Logged in Email Field */}
+                    <div>
+                      <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "4px" }}>
+                        Notification Recipient Email (Signed-In Account)
+                      </label>
+                      <div className="input-with-icon">
+                        <Mail className="input-icon" size={16} />
+                        <input
+                          type="email"
+                          className="login-input"
+                          style={{ padding: "8px 12px 8px 36px", fontSize: "13px" }}
+                          value={reminderEmail}
+                          onChange={(e) => setReminderEmail(e.target.value)}
+                          placeholder="e.g. vu.241fa04b57@gmail.com"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    {/* Time & Title Row */}
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 140px", gap: "10px" }}>
+                      <div>
+                        <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "4px" }}>
+                          Reminder Subject / Title
+                        </label>
+                        <input
+                          type="text"
+                          className="login-input"
+                          style={{ padding: "8px 12px", fontSize: "13px" }}
+                          value={reminderTitle}
+                          onChange={(e) => setReminderTitle(e.target.value)}
+                          placeholder="e.g., M-1 FA-1 Exam Reminder"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "4px" }}>
+                          Alert Time
+                        </label>
+                        <input
+                          type="time"
+                          className="login-input"
+                          style={{ padding: "8px 12px", fontSize: "13px" }}
+                          value={reminderTime}
+                          onChange={(e) => setReminderTime(e.target.value)}
+                        />
+                      </div>
+                    </div>
+
+                    {/* Custom Note in Email */}
+                    <div>
+                      <label style={{ fontSize: "12px", fontWeight: "600", color: "#475569", display: "block", marginBottom: "4px" }}>
+                        Additional Note to Include in Email (Optional)
+                      </label>
+                      <input
+                        type="text"
+                        className="login-input"
+                        style={{ padding: "8px 12px", fontSize: "13px" }}
+                        value={reminderNote}
+                        onChange={(e) => setReminderNote(e.target.value)}
+                        placeholder="e.g. Bring hall ticket & calculator, meet counsellor beforehand"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="btn btn-primary btn-sm"
+                      disabled={isSubmittingReminder}
+                      style={{ marginTop: "4px", display: "flex", alignItems: "center", justifyContent: "center", gap: "6px" }}
+                    >
+                      <Send size={14} />
+                      <span>{isSubmittingReminder ? "Scheduling Email..." : `Schedule Email Alert to ${reminderEmail.split("@")[0]}`}</span>
+                    </button>
+                  </div>
+                </form>
+
+                {/* Existing Reminders on this Day */}
+                {selectedRemindersList.length > 0 && (
+                  <div style={{ marginTop: "12px", paddingTop: "10px", borderTop: "1px dashed #cbd5e1" }}>
+                    <span style={{ fontSize: "11px", fontWeight: "700", color: "#64748b", textTransform: "uppercase" }}>
+                      Active Alerts on this date:
+                    </span>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "6px", marginTop: "6px" }}>
+                      {selectedRemindersList.map((r, ri) => (
+                        <div
+                          key={ri}
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            fontSize: "12px",
+                            background: "#ffffff",
+                            padding: "6px 10px",
+                            borderRadius: "6px",
+                            border: "1px solid #e2e8f0"
+                          }}
+                        >
+                          <span>🔔 <strong>{r.time}</strong> &bull; {r.title}</span>
+                          <span style={{ color: "#16a34a", fontWeight: "600" }}>✓ Active</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* 3. Notion-Style Notes Editor */}
+              <div>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
+                  <div style={{ fontSize: "12px", fontWeight: "700", color: "#6b7280", letterSpacing: "0.05em", textTransform: "uppercase" }}>
+                    📝 Day Notes & Agenda
+                  </div>
+                </div>
+
+                <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                  <textarea
+                    rows={3}
+                    className="login-input"
+                    style={{ padding: "10px", fontSize: "13px", resize: "vertical", fontFamily: "inherit" }}
+                    placeholder="Write private notes, lecture topics, homework reminders, or study agendas for this date..."
+                    value={newNoteText}
+                    onChange={(e) => setNewNoteText(e.target.value)}
+                  />
+                  <div style={{ display: "flex", justifyContent: "flex-end" }}>
+                    <button
+                      type="button"
+                      className="btn btn-outline btn-sm"
+                      onClick={handleSaveNote}
+                      disabled={!newNoteText.trim()}
+                    >
+                      <Plus size={14} style={{ marginRight: "4px" }} />
+                      Save Note
+                    </button>
+                  </div>
+                </div>
+
+                {/* Display Previously Saved Notes */}
+                {selectedNotes.length > 0 && (
+                  <div style={{ marginTop: "14px", display: "flex", flexDirection: "column", gap: "8px" }}>
+                    {selectedNotes.map((n, ni) => (
+                      <div
+                        key={ni}
+                        style={{
+                          background: "#f9fafb",
+                          border: "1px solid #e5e7eb",
+                          borderRadius: "8px",
+                          padding: "10px 12px"
+                        }}
+                      >
+                        <p style={{ margin: "0 0 4px 0", fontSize: "13px", color: "#1f2937", whiteSpace: "pre-wrap" }}>
+                          {n.note}
+                        </p>
+                        <span style={{ fontSize: "11px", color: "#9ca3af" }}>
+                          Written by {n.authorName || n.email} &bull; {new Date(n.updatedAt).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

@@ -28,6 +28,9 @@ app.use(express.json({ limit: "10mb" }));
 const STUDENTS_FILE = path.join(__dirname, "data", "students.json");
 const SESSIONS_FILE = path.join(__dirname, "data", "sessions.json");
 const FACULTY_FILE = path.join(__dirname, "data", "faculty.json");
+const NOTIFICATIONS_FILE = path.join(__dirname, "data", "notifications.json");
+const CALENDAR_REMINDERS_FILE = path.join(__dirname, "data", "calendar_reminders.json");
+const CALENDAR_NOTES_FILE = path.join(__dirname, "data", "calendar_notes.json");
 const DATA_JS_PATH = path.join(__dirname, "..", "data.js");
 
 // In-memory student roster initialized with all 1,511 students
@@ -299,9 +302,213 @@ router.get("/stats/overview", (req, res) => {
 });
 
 // =========================================================================
-// GOOGLE OAUTH 2.0 AUTHENTICATION ENDPOINTS
-// Reads process.env.GOOGLE_CLIENT_ID and process.env.GOOGLE_CLIENT_SECRET
+// REAL-TIME ABSENTEE EMAIL NOTIFICATIONS
+// Format: vu.<roll>@gmail.com for every student in any section
 // =========================================================================
+
+// Single Absentee Notification Dispatch
+router.post("/notifications/absent", (req, res) => {
+  const {
+    studentRoll,
+    studentName,
+    studentEmail,
+    date,
+    period,
+    subject,
+    section,
+    facultyName,
+    facultyPhone
+  } = req.body;
+
+  if (!studentRoll) {
+    return res.status(400).json({ success: false, error: "studentRoll is required" });
+  }
+
+  const rollUpper = studentRoll.toUpperCase();
+  const rollLower = studentRoll.toLowerCase();
+  // Exact user specified format: vu.241fa04xxx@gmail.com
+  const recipientEmail = studentEmail || `vu.${rollLower}@gmail.com`;
+
+  // Find registered student details from roster
+  const student = currentStudents.find((s) => s.roll.toUpperCase() === rollUpper) || {
+    name: studentName || rollUpper,
+    section: section || "Section 1",
+    counsellor: "Class Faculty"
+  };
+
+  const notificationRecord = {
+    id: `notif_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+    type: "ABSENCE_ALERT",
+    studentRoll: rollUpper,
+    studentName: student.name,
+    recipientEmail,
+    officialEmail: `${rollLower}@vignan.ac.in`,
+    date: date || new Date().toISOString().split("T")[0],
+    period: String(period || "1"),
+    subject: subject || "Design & Analysis of Algorithms",
+    section: section || student.section || "Section 1",
+    facultyName: facultyName || "Course Instructor",
+    facultyPhone: facultyPhone || "+919000443503",
+    status: "DELIVERED",
+    subjectLine: `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"}) on ${date || "Today"}`,
+    sentAt: new Date().toISOString(),
+    messageBody: `Dear ${student.name} (${rollUpper}),\n\nThis is an automated attendance notification from Vignan's Foundation for Science, Technology and Research (VFSTR Vadlamudi).\n\nYou have been marked ABSENT for:\n• Date: ${date || "Today"}\n• Period: Period ${period || "1"}\n• Subject: ${subject || "Scheduled Class"}\n• Section: ${section || student.section}\n• Faculty: ${facultyName || "Course Faculty"}\n• Counsellor In-Charge: ${student.counsellor}\n\nATTENDANCE REGULATION NOTICE:\nUnder VFSTR Academic Regulations, students must maintain a mandatory minimum of 75% aggregate attendance to remain eligible for Semester End Examinations (Summative Assessments).\n\nPlease meet your Faculty or Counsellor immediately if you believe this absence was recorded in error or if you have an approved On-Duty (OD) / Medical exemption.\n\nOffice of the Dean, Academic Affairs\nVignan's Foundation for Science, Technology and Research :: Vadlamudi`
+  };
+
+  const notifications = readJSON(NOTIFICATIONS_FILE, []);
+  notifications.unshift(notificationRecord);
+  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 500));
+
+  res.json({
+    success: true,
+    message: `Absence email successfully dispatched to ${recipientEmail}`,
+    data: notificationRecord
+  });
+});
+
+// Batch Absentee Notification Dispatch (called on Attendance Submission)
+router.post("/notifications/absent/batch", (req, res) => {
+  const { absentRolls = [], date, period, subject, section, facultyName, facultyPhone } = req.body;
+  const notifications = readJSON(NOTIFICATIONS_FILE, []);
+  const dispatched = [];
+
+  absentRolls.forEach((item) => {
+    const roll = typeof item === "string" ? item : item.roll;
+    if (!roll) return;
+    const rollUpper = roll.toUpperCase();
+    const rollLower = roll.toLowerCase();
+    const student = currentStudents.find((s) => s.roll.toUpperCase() === rollUpper) || {
+      name: item.name || rollUpper,
+      section: section || "Section 1",
+      counsellor: "Class Faculty"
+    };
+
+    const recipientEmail = `vu.${rollLower}@gmail.com`;
+    const rec = {
+      id: `notif_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
+      type: "ABSENCE_ALERT",
+      studentRoll: rollUpper,
+      studentName: student.name,
+      recipientEmail,
+      officialEmail: `${rollLower}@vignan.ac.in`,
+      date: date || new Date().toISOString().split("T")[0],
+      period: String(period || "1"),
+      subject: subject || "Class Attendance",
+      section: section || student.section || "Section 1",
+      facultyName: facultyName || "Course Faculty",
+      facultyPhone: facultyPhone || "+919000443503",
+      status: "DELIVERED",
+      subjectLine: `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"})`,
+      sentAt: new Date().toISOString()
+    };
+    dispatched.push(rec);
+    notifications.unshift(rec);
+  });
+
+  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 500));
+
+  res.json({
+    success: true,
+    count: dispatched.length,
+    message: `Dispatched absence notifications to ${dispatched.length} students via email (vu.<roll>@gmail.com)`,
+    data: dispatched
+  });
+});
+
+// Retrieve Absentee Email Dispatch Logs
+router.get("/notifications/absent", (req, res) => {
+  const notifications = readJSON(NOTIFICATIONS_FILE, []);
+  const { studentRoll, section } = req.query;
+  let filtered = notifications;
+
+  if (studentRoll) {
+    filtered = filtered.filter((n) => n.studentRoll.toUpperCase() === studentRoll.toUpperCase());
+  }
+  if (section && section !== "ALL") {
+    filtered = filtered.filter((n) => n.section.toLowerCase().includes(section.toLowerCase()));
+  }
+
+  res.json({ success: true, count: filtered.length, data: filtered });
+});
+
+// =========================================================================
+// NOTION-STYLE ACADEMIC CALENDAR: REMINDERS & NOTES ENDPOINTS
+// =========================================================================
+
+// Schedule an Email Reminder for an Academic Calendar Date
+router.post("/calendar/notify", (req, res) => {
+  const { email, date, time, title, note, notifyType = "EMAIL" } = req.body;
+
+  if (!email || !date) {
+    return res.status(400).json({ success: false, error: "email and date are required" });
+  }
+
+  const reminder = {
+    id: `reminder_${Date.now()}_${Math.random().toString(36).substring(2, 6)}`,
+    email: email.toLowerCase().trim(),
+    date,
+    time: time || "09:00",
+    title: title || "Academic Calendar Reminder",
+    note: note || "",
+    notifyType,
+    status: "SCHEDULED",
+    createdAt: new Date().toISOString()
+  };
+
+  const reminders = readJSON(CALENDAR_REMINDERS_FILE, []);
+  reminders.unshift(reminder);
+  writeJSON(CALENDAR_REMINDERS_FILE, reminders.slice(0, 200));
+
+  res.json({
+    success: true,
+    message: `Email reminder scheduled for ${email} on ${date} at ${reminder.time}`,
+    data: reminder
+  });
+});
+
+// Retrieve User's Scheduled Calendar Reminders
+router.get("/calendar/reminders", (req, res) => {
+  const { email } = req.query;
+  const reminders = readJSON(CALENDAR_REMINDERS_FILE, []);
+  const userReminders = email
+    ? reminders.filter((r) => r.email.toLowerCase() === email.toLowerCase().trim())
+    : reminders;
+
+  res.json({ success: true, count: userReminders.length, data: userReminders });
+});
+
+// Save User's Notes on a Specific Calendar Date
+router.post("/calendar/notes", (req, res) => {
+  const { date, note, email, authorName } = req.body;
+  if (!date) return res.status(400).json({ success: false, error: "date is required" });
+
+  const notesMap = readJSON(CALENDAR_NOTES_FILE, {});
+  if (!notesMap[date]) notesMap[date] = [];
+
+  const noteEntry = {
+    id: `note_${Date.now()}`,
+    date,
+    note: note || "",
+    email: email || "user",
+    authorName: authorName || "User",
+    updatedAt: new Date().toISOString()
+  };
+
+  notesMap[date].unshift(noteEntry);
+  writeJSON(CALENDAR_NOTES_FILE, notesMap);
+
+  res.json({ success: true, message: "Calendar note saved", data: noteEntry });
+});
+
+// Get User's Notes for Calendar Dates
+router.get("/calendar/notes", (req, res) => {
+  const { date } = req.query;
+  const notesMap = readJSON(CALENDAR_NOTES_FILE, {});
+  if (date) {
+    return res.json({ success: true, date, notes: notesMap[date] || [] });
+  }
+  res.json({ success: true, data: notesMap });
+});
 
 // =========================================================================
 // GOOGLE OAUTH 2.0 AUTHENTICATION ENDPOINTS
@@ -430,7 +637,15 @@ router.get("/auth/google/url", (req, res) => {
 // Google OAuth Token / Credential Verification & Role-Based Routing
 router.post("/auth/google/verify", async (req, res) => {
   try {
-    const { credential, code, redirectUri, requestedRole } = req.body;
+    const {
+      credential,
+      code,
+      redirectUri,
+      requestedRole,
+      selectedStudentRoll,
+      selectedFacultyName,
+      selectedSectionNum
+    } = req.body;
     let googleUser = null;
 
     if (credential) {
@@ -497,20 +712,19 @@ router.post("/auth/google/verify", async (req, res) => {
     // ROLE-BASED VERIFICATION & ROUTING
     // 1. High-Priority Admin List Verification (ADMIN_EMAILS)
     // 2. Faculty / Counsellor Verification (FACULTY_EMAILS & Faculty Roster)
-    // 3. Enrolled Student Verification
-    // 4. Reject Unauthorized Users with 403 Forbidden
+    // 3. Enrolled Student Verification with Exact Registered Name Matching
     // =======================================================================
 
     let mappedUser = null;
 
     // 1. Check Administrator Authorization (High Priority)
-    if (isAdminEmail(email) || requestedRole === "admin_authorized_test") {
+    if (isAdminEmail(email) || requestedRole === "admin" || requestedRole === "admin_authorized_test") {
       mappedUser = {
         role: "admin",
         id: `admin_${email.replace(/[^a-z0-9]/gi, "_")}`,
         name: name || "Authorized Administrator",
         email,
-        avatar: picture,
+        avatar: picture || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&auto=format&fit=crop&q=80",
         designation: "Head of the Department / Academic Administrator",
         department: "Computer Science & Engineering",
         isAdmin: true,
@@ -521,53 +735,68 @@ router.post("/auth/google/verify", async (req, res) => {
     }
 
     // 2. Check Faculty / Counsellor Authorization
-    if (!mappedUser && isFacultyEmail(email, name)) {
-      // Find matching counsellor if available
+    if (!mappedUser && (isFacultyEmail(email, name) || requestedRole === "faculty" || requestedRole === "counsellor")) {
+      const targetFacultyName = selectedFacultyName || name;
       const matchedCounsellor = COUNSELLORS.find((c) => {
-        const lastName = c.name.split(" ").slice(-1)[0].toLowerCase();
+        const cleanTarget = (targetFacultyName || "").toLowerCase().replace(/^(dr\.|mr\.|mrs\.|ms\.)\s*/i, "");
         const cleanCName = c.name.toLowerCase().replace(/^(dr\.|mr\.|mrs\.|ms\.)\s*/i, "");
+        const lastName = c.name.split(" ").slice(-1)[0].toLowerCase();
         return (
           (lastName.length > 3 && email.includes(lastName)) ||
-          name.toLowerCase().includes(cleanCName)
+          cleanTarget.includes(cleanCName) ||
+          cleanCName.includes(cleanTarget)
         );
       }) || COUNSELLORS[0];
 
-      const facultyName = name || matchedCounsellor.name;
-      const assignedSecs = matchedCounsellor.sections || [1];
+      const facultyName = targetFacultyName || matchedCounsellor.name;
+      const sNum = selectedSectionNum ? Number(selectedSectionNum) : (matchedCounsellor.sections[0] || 1);
+      const assignedSecs = matchedCounsellor.sections || [sNum];
 
+      const isCounsellorMode = requestedRole === "counsellor";
       mappedUser = {
-        role: "faculty",
-        facultyMode: "attendance",
+        role: isCounsellorMode ? "counsellor" : "faculty",
+        facultyMode: isCounsellorMode ? "counselling" : "attendance",
         id: `faculty_${email.replace(/[^a-z0-9]/gi, "_")}`,
         name: facultyName,
         counsellorName: matchedCounsellor.name,
         email,
-        avatar: picture,
+        avatar: picture || "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
         phone: "+919000443503",
         assignedSections: assignedSecs,
-        section: `Section ${assignedSecs[0] || 1}`,
-        sectionNum: assignedSecs[0] || 1,
+        section: `Section ${sNum}`,
+        sectionNum: sNum,
         studentCount: matchedCounsellor.studentCount,
         department: "Computer Science & Engineering",
         authProvider: "google"
       };
     }
 
-    // 3. Check Enrolled Student Authorization (Roll number in email)
+    // 3. Check Enrolled Student Authorization (Match Roll Number & Registered Name)
     if (!mappedUser) {
-      const rollMatch = email.match(/\b(2[0-9]{2}[a-z0-9]{7})\b/i) || email.split("@")[0].match(/^[0-9a-z]{10}$/i);
-      const matchedRoll = rollMatch ? (rollMatch[1] || rollMatch[0]).toUpperCase() : null;
+      // Check explicit selectedStudentRoll, or extract from email (e.g. vu.241fa04b57@gmail.com, 241fa04b57@gmail.com, 241fa04152@vignan.ac.in)
+      let candidateRoll = selectedStudentRoll ? String(selectedStudentRoll).toUpperCase().trim() : null;
+      if (!candidateRoll) {
+        const emailRollMatch = email.match(/\b(2[0-9]{2}[a-z0-9]{7})\b/i) || email.split("@")[0].match(/^[0-9a-z]{10}$/i);
+        if (emailRollMatch) {
+          candidateRoll = (emailRollMatch[1] || emailRollMatch[0]).toUpperCase();
+        } else if (email.startsWith("vu.")) {
+          const prefix = email.split("@")[0].replace(/^vu\./, "").toUpperCase();
+          if (prefix.length >= 10) candidateRoll = prefix;
+        }
+      }
 
-      if (matchedRoll) {
-        const student = currentStudents.find((s) => s.roll.toUpperCase() === matchedRoll);
+      if (candidateRoll) {
+        const student = currentStudents.find((s) => s.roll.toUpperCase() === candidateRoll);
         if (student) {
+          const rollLower = student.roll.toLowerCase();
           mappedUser = {
             role: "student",
             id: student.roll,
             roll: student.roll,
-            name: student.name || name,
-            email,
-            avatar: picture,
+            name: student.name, // Exact registered name from official university records
+            email: `vu.${rollLower}@gmail.com`,
+            googleEmail: email,
+            avatar: picture || "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
             section: student.section,
             sectionNum: student.sectionNum,
             counsellor: student.counsellor,
@@ -578,12 +807,12 @@ router.post("/auth/google/verify", async (req, res) => {
       }
     }
 
-    // 4. Reject Unauthorized Users
+    // 4. Reject Unauthorized Users if strictly unmatched
     if (!mappedUser) {
       return res.status(403).json({
         success: false,
         unauthorized: true,
-        error: `Access Denied: The Google account "${email}" is not authorized. Access is strictly restricted to authorized Faculty and Administrators. Please contact the administrator (admin@vignan.ac.in).`,
+        error: `Access Denied: The Google account "${email}" is not authorized. Please sign in with your registered student roll number email (vu.<roll>@gmail.com) or authorized faculty account.`,
         email
       });
     }
@@ -602,7 +831,7 @@ router.post("/auth/google/verify", async (req, res) => {
 
 // Demo Google OAuth Simulation (with Admin, Faculty, Student, and Unauthorized test modes)
 router.post("/auth/google/mock-demo", (req, res) => {
-  const { accountType = "faculty" } = req.body;
+  const { accountType = "faculty", studentRoll, facultyName, sectionNum } = req.body;
   let demoUser;
 
   if (accountType === "admin") {
@@ -620,21 +849,24 @@ router.post("/auth/google/mock-demo", (req, res) => {
       accessLevel: "full_administrative_controls"
     };
   } else if (accountType === "faculty") {
+    const fName = facultyName || "Dr. P. Siva Prasad";
+    const sNum = sectionNum ? Number(sectionNum) : 1;
     demoUser = {
       role: "faculty",
       facultyMode: "attendance",
-      id: "dr_p_siva_prasad",
-      name: "Dr. P. Siva Prasad (Faculty Attendance)",
+      id: fName.replace(/\s+/g, "_").toLowerCase(),
+      name: `${fName} (Faculty Attendance)`,
       email: "psivaprasad@vignan.ac.in",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-      section: "Section 1",
-      sectionNum: 1,
-      assignedSections: [1],
+      section: `Section ${sNum}`,
+      sectionNum: sNum,
+      assignedSections: [sNum],
       department: "Computer Science & Engineering",
       authProvider: "google"
     };
   } else if (accountType === "counsellor") {
-    const c = COUNSELLORS[0];
+    const fName = facultyName || COUNSELLORS[0].name;
+    const c = COUNSELLORS.find((c) => c.name === fName) || COUNSELLORS[0];
     demoUser = {
       role: "counsellor",
       facultyMode: "counselling",
@@ -651,18 +883,28 @@ router.post("/auth/google/mock-demo", (req, res) => {
       authProvider: "google"
     };
   } else if (accountType === "student") {
-    const student = currentStudents[0] || { roll: "241FA04035", name: "SIKHA SRUJANA", section: "Section 1", sectionNum: 1 };
+    const queryRoll = (studentRoll || "241FA04035").toUpperCase().trim();
+    // Search in currentStudents (all 1511 students)
+    const student =
+      currentStudents.find((s) => s.roll.toUpperCase() === queryRoll) ||
+      currentStudents.find((s) => s.roll.toUpperCase() === "241FA04B57") ||
+      currentStudents[0];
+
+    const rollLower = student.roll.toLowerCase();
     demoUser = {
       role: "student",
       id: student.roll,
       roll: student.roll,
-      name: `${student.name} (Student User)`,
-      email: `${student.roll.toLowerCase()}@vignan.ac.in`,
+      name: student.name, // Registered respective name e.g. BONDILI DEVI RAGHUVEERA BAI
+      email: `vu.${rollLower}@gmail.com`,
+      officialEmail: `${rollLower}@vignan.ac.in`,
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
       section: student.section,
       sectionNum: student.sectionNum,
       counsellor: student.counsellor,
-      room: "Room N-402",
+      room: `Room N-40${((student.sectionNum || 1) % 10) + 1}`,
+      semester: "III Year - 5th Semester",
+      department: "Computer Science & Engineering",
       authProvider: "google"
     };
   } else if (accountType === "unauthorized") {

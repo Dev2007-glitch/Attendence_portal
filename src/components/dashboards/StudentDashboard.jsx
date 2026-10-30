@@ -42,7 +42,7 @@ import {
   getTimetablePeriodsForDate,
   SECTION_1_TIMETABLE
 } from "../../data/timetable";
-import { SECTIONS } from "../../../data.js";
+import { SECTIONS, ALL_STUDENTS } from "../../../data.js";
 
 export default function StudentDashboard({
   currentUser,
@@ -122,11 +122,25 @@ export default function StudentDashboard({
     }
   ]);
 
-  // Active student object
+  // Active student object (resolves registered name, section, counsellor)
   const activeStudent = useMemo(() => {
     const targetRoll = !isStaff && currentUser?.roll ? currentUser.roll : selectedRoll;
-    return (
+    const found =
       students.find((s) => s.roll.toUpperCase() === targetRoll.toUpperCase()) ||
+      ALL_STUDENTS.find((s) => s.roll.toUpperCase() === targetRoll.toUpperCase()) ||
+      (currentUser?.roll && currentUser.roll.toUpperCase() === targetRoll.toUpperCase() ? currentUser : null);
+
+    if (found) {
+      return {
+        ...found,
+        name: currentUser?.roll?.toUpperCase() === targetRoll.toUpperCase() && currentUser?.name ? currentUser.name : found.name,
+        section: found.section || currentUser?.section || `Section ${found.sectionNum || 1}`,
+        counsellor: found.counsellor || currentUser?.counsellor || "Class Counsellor",
+        room: found.room || currentUser?.room || `Room N-40${((found.sectionNum || 1) % 10) + 1}`
+      };
+    }
+
+    return (
       students[0] || {
         roll: targetRoll,
         name: currentUser?.name || "Student",
@@ -475,6 +489,12 @@ export default function StudentDashboard({
                 <div>
                   <dt>Academic Regulation</dt>
                   <dd>R22 CBCS</dd>
+                </div>
+                <div>
+                  <dt>Official Student Gmail</dt>
+                  <dd className="font-mono text-primary" style={{ color: "#4f46e5", fontWeight: "600" }}>
+                    vu.{activeStudent.roll.toLowerCase()}@gmail.com
+                  </dd>
                 </div>
               </dl>
             </div>

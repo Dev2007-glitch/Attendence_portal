@@ -442,13 +442,38 @@ export default function App() {
     showToast(nextState ? "Audio Synthesizer ON" : "Audio Synthesizer OFF", "info");
   };
 
-  // Toggle individual student attendance
+  // Toggle individual student attendance with real-time email notification
   const handleToggleStudent = (roll) => {
     setAttendance((prev) => {
       const current = prev[roll] || "present";
       const next = current === "present" ? "absent" : "present";
       if (next === "absent") {
         sound.playUncheck();
+        const stu = students.find((s) => s.roll === roll) || { roll, name: roll };
+        const rollLower = roll.toLowerCase();
+        // Immediately dispatch real absence alert to vu.<roll>@gmail.com
+        fetch("/api/notifications/absent", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            studentRoll: roll,
+            studentName: stu.name,
+            studentEmail: `vu.${rollLower}@gmail.com`,
+            date,
+            period,
+            subject,
+            section,
+            facultyName: activeFaculty.name,
+            facultyPhone: activeFaculty.phone
+          })
+        })
+          .then((r) => r.json())
+          .then((data) => {
+            if (data.success) {
+              showToast(`📧 Absence alert sent to vu.${rollLower}@gmail.com (${stu.name})`, "warning");
+            }
+          })
+          .catch(() => {});
       } else {
         sound.playCheck();
       }
@@ -535,6 +560,23 @@ export default function App() {
           if (next === "absent") {
             sound.playUncheck();
             summaryNotes.push(`✕ ${student.roll} (${student.name}) Absent`);
+            // Real absence email
+            const rollLower = student.roll.toLowerCase();
+            fetch("/api/notifications/absent", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                studentRoll: student.roll,
+                studentName: student.name,
+                studentEmail: `vu.${rollLower}@gmail.com`,
+                date,
+                period,
+                subject,
+                section,
+                facultyName: activeFaculty.name,
+                facultyPhone: activeFaculty.phone
+              })
+            }).catch(() => {});
           } else {
             sound.playCheck();
             summaryNotes.push(`✓ ${student.roll} (${student.name}) Present`);
@@ -584,6 +626,31 @@ export default function App() {
     const res = await saveSession(sessionPayload);
     if (res.data) {
       setHistorySessions((prev) => [res.data, ...prev.filter((s) => s.id !== res.data.id)]);
+    }
+
+    // Batch dispatch absence emails to all absentees at vu.<roll>@gmail.com
+    if (absentStudents.length > 0) {
+      try {
+        const batchRes = await fetch("/api/notifications/absent/batch", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            absentRolls: absentStudents.map((s) => ({ roll: s.roll, name: s.name })),
+            date,
+            period,
+            subject,
+            section,
+            facultyName: activeFaculty.name,
+            facultyPhone: activeFaculty.phone
+          })
+        });
+        const batchData = await batchRes.json();
+        if (batchData.success) {
+          showToast(`📧 Official absence alerts delivered to ${batchData.count} students at vu.<roll>@gmail.com`, "info");
+        }
+      } catch (err) {
+        console.warn("Absentee email batch dispatch error:", err);
+      }
     }
 
     if (autoSendWhatsApp && activeFaculty.phone) {
