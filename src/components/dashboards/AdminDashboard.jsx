@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { SECTION_1_FACULTIES, SECTION_1_SUBJECTS } from "../../data/timetable";
 import { SECTIONS, COUNSELLORS } from "../../../data.js";
+import { computeStudentStats, computeSectionLiveStats } from "../../utils/attendanceStats.js";
 
 export default function AdminDashboard({
   currentUser,
@@ -45,35 +46,14 @@ export default function AdminDashboard({
   const [newSection, setNewSection] = useState("Section 1");
   const [attendanceThreshold, setAttendanceThreshold] = useState(75);
 
-  // Compute student-by-student attendance stats
+  // Compute student-by-student attendance stats with live immediate synchronization
   const studentStats = useMemo(() => {
-    const totalSessions = sessions.length;
     return students.map((student) => {
-      let attended = 0;
-      let missed = 0;
-
-      if (totalSessions > 0) {
-        sessions.forEach((s) => {
-          const status = s.attendance?.[student.roll];
-          if (status === "present") attended++;
-          else if (status === "absent") missed++;
-        });
-      } else {
-        // Mock baseline if no sessions
-        attended = 10;
-        missed = 2;
-      }
-
-      const total = attended + missed > 0 ? attended + missed : 1;
-      const pct = Number(((attended / total) * 100).toFixed(1));
-
+      const stats = computeStudentStats(student, sessions);
       return {
         ...student,
-        attended,
-        missed,
-        total,
-        pct,
-        isDefaulter: pct < attendanceThreshold
+        ...stats,
+        isDefaulter: stats.pct < attendanceThreshold
       };
     });
   }, [students, sessions, attendanceThreshold]);
@@ -449,58 +429,127 @@ export default function AdminDashboard({
           </div>
 
           <div className="admin-sections-grid">
-            {SECTIONS.map((sec) => (
-              <div key={sec.sectionNum} className="admin-section-card">
-                <div className="sec-card-header">
-                  <div>
-                    <h4 className="sec-card-title">{sec.section}</h4>
-                    <span className="sec-card-room">
-                      <DoorClosed size={12} style={{ display: "inline", verticalAlign: "middle", marginRight: 3 }} />
-                      {sec.room}
+            {SECTIONS.map((sec) => {
+              const secLive = computeSectionLiveStats(sec.sectionNum, students, sessions, attendanceThreshold);
+
+              return (
+                <div key={sec.sectionNum} className="admin-section-card">
+                  <div className="sec-card-header">
+                    <div>
+                      <h4 className="sec-card-title">{sec.section}</h4>
+                      <span className="sec-card-room">
+                        <DoorClosed size={12} style={{ display: "inline", verticalAlign: "middle", marginRight: 3 }} />
+                        {sec.room}
+                      </span>
+                    </div>
+                    <span className="sec-card-badge">
+                      <Users size={12} style={{ display: "inline", verticalAlign: "middle", marginRight: 3 }} />
+                      {sec.studentCount} Students
                     </span>
                   </div>
-                  <span className="sec-card-badge">
-                    <Users size={12} style={{ display: "inline", verticalAlign: "middle", marginRight: 3 }} />
-                    {sec.studentCount} Students
-                  </span>
-                </div>
 
-                <div className="sec-card-body">
-                  <div className="sec-teacher-row">
-                    <span style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 600 }}>Class In-Charge:</span>
-                    <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1e293b" }}>{sec.classTeacher}</span>
-                  </div>
-
-                  <div className="sec-counsellors-list">
-                    <span style={{ fontSize: "0.72rem", color: "#64748b", fontWeight: 600 }}>
-                      Designated Counsellors ({sec.counsellors.length}):
-                    </span>
-                    <div className="sec-c-pills">
-                      {sec.counsellors.map((c, idx) => (
-                        <span key={idx} className="sec-c-pill">
-                          {c}
+                  <div className="sec-card-body">
+                    {/* Live Section Metrics */}
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        background: "#f8fafc",
+                        padding: "8px 10px",
+                        borderRadius: "8px",
+                        marginBottom: "10px",
+                        border: "1px solid #e2e8f0"
+                      }}
+                    >
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Section Attendance</span>
+                        <strong
+                          style={{
+                            fontSize: "0.95rem",
+                            color: Number(secLive.avgPct) >= 75 ? "#15803d" : "#b91c1c"
+                          }}
+                        >
+                          {secLive.avgPct}% Avg
+                        </strong>
+                      </div>
+                      <div style={{ textAlign: "right" }}>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Defaulters</span>
+                        <span
+                          className={secLive.defaultersCount > 0 ? "badge-danger font-bold" : "text-success font-bold"}
+                          style={{ fontSize: "0.85rem" }}
+                        >
+                          {secLive.defaultersCount} Students
                         </span>
-                      ))}
+                      </div>
+                    </div>
+
+                    {/* Latest posted session indicator */}
+                    {secLive.latestSession ? (
+                      <div
+                        style={{
+                          background: "#ecfdf5",
+                          border: "1px solid #a7f3d0",
+                          borderRadius: "6px",
+                          padding: "5px 8px",
+                          marginBottom: "10px",
+                          fontSize: "0.72rem",
+                          color: "#065f46"
+                        }}
+                      >
+                        <strong>🟢 Live Posted:</strong> Period {secLive.latestSession.period} &bull; {secLive.latestSession.presentCount}/{secLive.latestSession.total} ({secLive.latestSession.percentage}%)
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          background: "#f1f5f9",
+                          borderRadius: "6px",
+                          padding: "4px 8px",
+                          marginBottom: "10px",
+                          fontSize: "0.7rem",
+                          color: "#64748b"
+                        }}
+                      >
+                        ⚡ 0 live sessions today &bull; Ready for attendance
+                      </div>
+                    )}
+
+                    <div className="sec-teacher-row">
+                      <span style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: 600 }}>Class In-Charge:</span>
+                      <span style={{ fontSize: "0.8rem", fontWeight: 700, color: "#1e293b" }}>{sec.classTeacher}</span>
+                    </div>
+
+                    <div className="sec-counsellors-list">
+                      <span style={{ fontSize: "0.72rem", color: "#64748b", fontWeight: 600 }}>
+                        Designated Counsellors ({sec.counsellors.length}):
+                      </span>
+                      <div className="sec-c-pills">
+                        {sec.counsellors.map((c, idx) => (
+                          <span key={idx} className="sec-c-pill">
+                            {c}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="sec-card-footer">
-                  <span style={{ fontSize: "0.72rem", color: "#94a3b8", fontFamily: "monospace" }}>
-                    {sec.firstRoll.slice(-4)} &rarr; {sec.lastRoll.slice(-4)}
-                  </span>
-                  <button
-                    type="button"
-                    className="sec-open-btn"
-                    onClick={() => onSwitchToSection && onSwitchToSection(sec.sectionNum)}
-                    title={`Open ${sec.section} to mark attendance`}
-                  >
-                    <span>Mark Attendance</span>
-                    <ArrowRight size={13} />
-                  </button>
+                  <div className="sec-card-footer">
+                    <span style={{ fontSize: "0.72rem", color: "#94a3b8", fontFamily: "monospace" }}>
+                      {sec.firstRoll.slice(-4)} &rarr; {sec.lastRoll.slice(-4)}
+                    </span>
+                    <button
+                      type="button"
+                      className="sec-open-btn"
+                      onClick={() => onSwitchToSection && onSwitchToSection(sec.sectionNum)}
+                      title={`Open ${sec.section} to mark attendance`}
+                    >
+                      <span>Mark Attendance</span>
+                      <ArrowRight size={13} />
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       )}
@@ -890,6 +939,7 @@ export default function AdminDashboard({
                 <thead>
                   <tr>
                     <th>Date</th>
+                    <th>Section</th>
                     <th>Period</th>
                     <th>Subject</th>
                     <th>Faculty Submitter</th>
@@ -902,6 +952,11 @@ export default function AdminDashboard({
                   {sessions.map((sess) => (
                     <tr key={sess.id}>
                       <td className="font-mono">{sess.date}</td>
+                      <td>
+                        <span className="badge-tag" style={{ background: "#ede9fe", color: "#6d28d9", fontWeight: 700 }}>
+                          {sess.section || "Section 1"}
+                        </span>
+                      </td>
                       <td>
                         <span className="badge-tag">{sess.period}</span>
                       </td>

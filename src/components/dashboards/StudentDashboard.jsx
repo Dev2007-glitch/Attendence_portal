@@ -43,6 +43,7 @@ import {
   SECTION_1_TIMETABLE
 } from "../../data/timetable";
 import { SECTIONS, ALL_STUDENTS } from "../../../data.js";
+import { getStudentBaseline } from "../../utils/attendanceStats.js";
 
 export default function StudentDashboard({
   currentUser,
@@ -194,19 +195,15 @@ export default function StudentDashboard({
       }
     });
 
-    let totalClassesHeld = attendedCount + absentCount;
-
-    // Realistic baseline if no session exists yet for this student in DB
-    if (totalClassesHeld === 0) {
-      const rollNum = parseInt(String(activeStudent.roll).replace(/\D/g, "").slice(-3), 10) || 35;
-      totalClassesHeld = 28;
-      absentCount = rollNum % 7 === 0 ? 8 : (rollNum % 4 === 0 ? 3 : 2);
-      attendedCount = totalClassesHeld - absentCount;
-    }
+    // Incorporate realistic semester baseline plus live recorded sessions
+    const { baseHeld, baseAttended, baseAbsent } = getStudentBaseline(activeStudent);
+    let totalClassesHeld = baseHeld + attendedCount + absentCount;
+    let finalAttended = baseAttended + attendedCount;
+    let finalAbsent = baseAbsent + absentCount;
 
     const overallPct =
       totalClassesHeld > 0
-        ? Number(((attendedCount / totalClassesHeld) * 100).toFixed(1))
+        ? Number(((finalAttended / totalClassesHeld) * 100).toFixed(1))
         : 100;
 
     // University 75% formula:
@@ -214,10 +211,10 @@ export default function StudentDashboard({
     let safeMargin = 0;
 
     if (overallPct < 75) {
-      const needed = (0.75 * totalClassesHeld - attendedCount) / 0.25;
+      const needed = (0.75 * totalClassesHeld - finalAttended) / 0.25;
       classesToAttend = Math.max(1, Math.ceil(needed));
     } else {
-      const margin = attendedCount / 0.75 - totalClassesHeld;
+      const margin = finalAttended / 0.75 - totalClassesHeld;
       safeMargin = Math.max(0, Math.floor(margin));
     }
 
@@ -237,8 +234,8 @@ export default function StudentDashboard({
 
     return {
       totalClassesHeld,
-      attendedCount,
-      absentCount,
+      attendedCount: finalAttended,
+      absentCount: finalAbsent,
       odCount: 2,
       overallPct,
       classesToAttend,

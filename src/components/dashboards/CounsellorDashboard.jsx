@@ -20,6 +20,7 @@ import {
   ShieldAlert
 } from "lucide-react";
 import { COUNSELLORS, getStudentsByCounsellor } from "../../../data.js";
+import { computeStudentStats } from "../../utils/attendanceStats.js";
 
 export default function CounsellorDashboard({
   currentUser,
@@ -97,34 +98,16 @@ export default function CounsellorDashboard({
     );
   }, [activeCounsellorName]);
 
-  // Allotted counselees for this counsellor
+  // Allotted counselees for this counsellor with live immediate attendance synchronization
   const counselees = useMemo(() => {
     const list = getStudentsByCounsellor(activeCounsellorName);
     return list.map((stu) => {
-      let attended = 0;
-      let missed = 0;
-      if (sessions.length > 0) {
-        sessions.forEach((sess) => {
-          const status = sess.attendance?.[stu.roll];
-          if (status === "present") attended++;
-          else if (status === "absent") missed++;
-        });
-      } else {
-        // Baseline mock classes for demo
-        attended = 11;
-        missed = 2;
-      }
-      const total = attended + missed > 0 ? attended + missed : 1;
-      const pct = Number(((attended / total) * 100).toFixed(1));
+      const stats = computeStudentStats(stu, sessions);
       const hasNote = counsellingLogs.some((l) => l.studentRoll === stu.roll);
 
       return {
         ...stu,
-        attended,
-        missed,
-        total,
-        pct,
-        isDefaulter: pct < 75,
+        ...stats,
         hasNote
       };
     });
@@ -563,7 +546,23 @@ export default function CounsellorDashboard({
                           </span>
                         </td>
                         <td>
-                          <strong>{stu.attended}</strong> / {stu.total}
+                          <div style={{ display: "flex", flexDirection: "column", gap: "2px" }}>
+                            <span><strong>{stu.attended}</strong> / {stu.total}</span>
+                            {stu.liveSessionsCount > 0 && stu.lastSessionStatus && (
+                              <span
+                                style={{
+                                  fontSize: "0.68rem",
+                                  fontWeight: 700,
+                                  color: stu.lastSessionStatus === "present" ? "#15803d" : "#b91c1c",
+                                  display: "inline-flex",
+                                  alignItems: "center",
+                                  gap: "3px"
+                                }}
+                              >
+                                {stu.lastSessionStatus === "present" ? "✓ Attended latest" : "✕ Absent latest"}
+                              </span>
+                            )}
+                          </div>
                         </td>
                         <td>
                           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>

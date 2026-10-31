@@ -171,7 +171,37 @@ export default function App() {
 
   const [soundEnabled, setSoundEnabled] = useState(sound.enabled);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [historySessions, setHistorySessions] = useState([]);
+  const [historySessions, setHistorySessions] = useState(() => {
+    try {
+      const cached =
+        localStorage.getItem("vfstr_attendance_sessions_cache") ||
+        localStorage.getItem("att_history");
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      }
+    } catch (e) {}
+    return [];
+  });
+
+  // Cross-tab and window session synchronization for immediate reflection
+  useEffect(() => {
+    const handleStorageSync = (e) => {
+      if (e.key === "vfstr_attendance_sessions_cache" || e.key === "att_history") {
+        try {
+          if (e.newValue) {
+            const parsed = JSON.parse(e.newValue);
+            if (Array.isArray(parsed)) {
+              setHistorySessions(parsed);
+            }
+          }
+        } catch (err) {}
+      }
+    };
+    window.addEventListener("storage", handleStorageSync);
+    return () => window.removeEventListener("storage", handleStorageSync);
+  }, []);
+
   const [showHistoryModal, setShowHistoryModal] = useState(false);
   const [showQuickKeyModal, setShowQuickKeyModal] = useState(false);
   const [toasts, setToasts] = useState([]);
@@ -419,7 +449,13 @@ export default function App() {
 
       // Load sessions history from backend
       const sessions = await fetchSessions();
-      setHistorySessions(sessions);
+      if (Array.isArray(sessions) && sessions.length > 0) {
+        setHistorySessions(sessions);
+        try {
+          localStorage.setItem("vfstr_attendance_sessions_cache", JSON.stringify(sessions.slice(0, 100)));
+          localStorage.setItem("att_history", JSON.stringify(sessions.slice(0, 100)));
+        } catch (e) {}
+      }
 
       // Load custom faculty contacts from backend
       try {
@@ -622,11 +658,38 @@ export default function App() {
       timestamp: new Date().toISOString()
     };
 
-    // Save to Express backend
-    const res = await saveSession(sessionPayload);
-    if (res.data) {
-      setHistorySessions((prev) => [res.data, ...prev.filter((s) => s.id !== res.data.id)]);
-    }
+    // 1. Immediate optimistic synchronous update across all views (0ms latency)
+    setHistorySessions((prev) => {
+      const updated = [sessionPayload, ...prev.filter((s) => s.id !== sessionPayload.id)];
+      try {
+        localStorage.setItem("att_history", JSON.stringify(updated.slice(0, 100)));
+        localStorage.setItem("vfstr_attendance_sessions_cache", JSON.stringify(updated.slice(0, 100)));
+      } catch (e) {}
+      return updated;
+    });
+
+    // 2. Dispatch cross-component and cross-tab window event immediately
+    try {
+      window.dispatchEvent(new CustomEvent("attendance_session_saved", { detail: sessionPayload }));
+    } catch (e) {}
+
+    // 3. Save to Express backend asynchronously without blocking or delaying portals
+    saveSession(sessionPayload)
+      .then((res) => {
+        if (res && res.data && res.data.id !== sessionPayload.id) {
+          setHistorySessions((prev) => {
+            const synced = prev.map((s) => (s.id === sessionPayload.id ? res.data : s));
+            try {
+              localStorage.setItem("att_history", JSON.stringify(synced.slice(0, 100)));
+              localStorage.setItem("vfstr_attendance_sessions_cache", JSON.stringify(synced.slice(0, 100)));
+            } catch (e) {}
+            return synced;
+          });
+        }
+      })
+      .catch((err) => {
+        console.warn("Backend saveSession background error (local state preserved):", err);
+      });
 
     // Batch dispatch absence emails to all absentees at vu.<roll>@gmail.com
     if (absentStudents.length > 0) {
@@ -734,8 +797,18 @@ export default function App() {
 
   // Delete session
   const handleDeleteSession = async (id) => {
+    setHistorySessions((prev) => {
+      const updated = prev.filter((s) => String(s.id) !== String(id));
+      try {
+        localStorage.setItem("att_history", JSON.stringify(updated));
+        localStorage.setItem("vfstr_attendance_sessions_cache", JSON.stringify(updated));
+      } catch (e) {}
+      return updated;
+    });
+    try {
+      window.dispatchEvent(new CustomEvent("attendance_session_deleted", { detail: { id } }));
+    } catch (e) {}
     await deleteSession(id);
-    setHistorySessions((prev) => prev.filter((s) => String(s.id) !== String(id)));
     showToast("Session removed from records", "info");
   };
 
