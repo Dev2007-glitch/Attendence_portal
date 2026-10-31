@@ -45,26 +45,82 @@ export default function SubmissionSummary({
     absentStudents
   });
 
-  // Handle Send WhatsApp
-  const handleSendWhatsApp = () => {
+  // Recipient email addresses for all absentees: vu.<roll>@gmail.com
+  const recipientEmailsList = absentStudents.map((s) => `vu.${s.roll.toLowerCase()}@gmail.com`);
+  const recipientEmailsString = recipientEmailsList.join(", ");
+
+  // Handle Send WhatsApp directly to WhatsApp Web (bypasses landing screen)
+  const handleSendWhatsAppWeb = () => {
     if (!facultyPhone) {
       onShowToast("Please enter or select a Faculty WhatsApp number in the toolbar above!", "warning");
       return;
     }
 
-    const { url, cleanNumber, opened } = openWhatsAppChat({
+    const { directWebUrl, cleanNumber, opened } = openWhatsAppChat({
       phone: facultyPhone,
-      message: fullWhatsAppMessage
+      message: fullWhatsAppMessage,
+      useDesktop: false
     });
 
     if (opened) {
       onShowToast(
-        `Opening WhatsApp with absent rolls for ${facultyName || "Faculty"} (+${cleanNumber})!`,
+        `Opening WhatsApp Web directly for ${facultyName || "Faculty"} (+${cleanNumber})!`,
         "success"
       );
     } else {
-      window.location.href = url;
+      window.location.href = directWebUrl;
     }
+  };
+
+  // Handle Send WhatsApp to installed desktop app
+  const handleSendWhatsAppDesktop = () => {
+    if (!facultyPhone) {
+      onShowToast("Please enter or select a Faculty WhatsApp number in the toolbar above!", "warning");
+      return;
+    }
+    const { desktopUrl } = openWhatsAppChat({
+      phone: facultyPhone,
+      message: fullWhatsAppMessage,
+      useDesktop: true
+    });
+    window.location.href = desktopUrl;
+    onShowToast("Opening WhatsApp Desktop application...", "info");
+  };
+
+  // Handle Send Real Email via Google Webmail directly
+  const handleSendGmailDirect = () => {
+    if (recipientEmailsList.length === 0) {
+      onShowToast("All students are present! No absentee emails needed.", "info");
+      return;
+    }
+
+    const subjectText = `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period} (${subject || "Class"}) on ${formattedDate}`;
+    const bodyText = `Dear Students,\n\nYou have been recorded as ABSENT for the following academic session at VFSTR (Vadlamudi):\n\n• Date: ${formattedDate}\n• Period: Period ${period}\n• Subject: ${subject || "Scheduled Class"}\n• Section: ${section || "CSE Section 1"}\n• Faculty: ${facultyName || "Course Faculty"} (${facultyPhone || "+919000443503"})\n\nATTENDANCE REGULATION NOTICE:\nUnder VFSTR University Academic Guidelines (R22 CBCS), every student must maintain a mandatory minimum of 75% aggregate attendance to remain eligible for Semester End Examinations (Summative Assessments).\n\nIf you have an approved Medical or On-Duty (OD) duty slip, please submit it to your Class Faculty or Counsellor within 48 hours.\n\nOffice of the Dean, Academic Affairs\nVignan's Foundation for Science, Technology and Research (VFSTR Vadlamudi)`;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipientEmailsList.join(","))}&su=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+    const win = window.open(gmailUrl, "_blank");
+    if (win) {
+      onShowToast(`Opening Google Gmail with ${recipientEmailsList.length} student inboxes (vu.<roll>@gmail.com)...`, "success");
+    } else {
+      window.location.href = `mailto:${recipientEmailsList.join(",")}?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+    }
+  };
+
+  // Copy Student Email Addresses
+  const handleCopyStudentEmails = () => {
+    if (recipientEmailsList.length === 0) {
+      onShowToast("No absent students to copy emails for.", "info");
+      return;
+    }
+    navigator.clipboard.writeText(recipientEmailsString).then(
+      () => {
+        onShowToast(`Copied ${recipientEmailsList.length} student emails (vu.<roll>@gmail.com) to clipboard!`, "success");
+      },
+      () => {
+        onShowToast("Unable to copy to clipboard", "warning");
+      }
+    );
   };
 
   // Copy Roll Numbers only
@@ -205,17 +261,25 @@ export default function SubmissionSummary({
         <div className="summary-header-actions">
           <button
             className="btn btn-whatsapp-action btn-sm"
-            onClick={handleSendWhatsApp}
-            title="Open WhatsApp to send Absent Roll Numbers"
+            onClick={handleSendWhatsAppWeb}
+            title="Open WhatsApp Web directly without intermediate landing screen"
           >
-            💬 Send to WhatsApp
+            💬 WhatsApp Web
+          </button>
+          <button
+            className="btn btn-sm"
+            style={{ background: "#4f46e5", color: "#ffffff", border: "1px solid #6366f1" }}
+            onClick={handleSendGmailDirect}
+            title="Open Google Gmail to send absence notice directly to student inboxes (vu.<roll>@gmail.com)"
+          >
+            📧 Send Gmail to Absentees
           </button>
           <button
             className="btn btn-primary btn-sm"
             onClick={handleExportExcel}
             title="Download Excel Sheet with Absentees in Red & Presentees in Black"
           >
-            📊 Download Excel (Colored)
+            📊 Excel (Colored)
           </button>
           <button
             className="btn btn-secondary btn-sm"
@@ -338,7 +402,51 @@ export default function SubmissionSummary({
         )}
       </div>
 
-      {/* WhatsApp Action Strip (Preview removed) */}
+      {/* Real Student Email Dispatch Strip */}
+      <div className="email-dispatch-preview-box" style={{ padding: "1rem 1.25rem", background: "rgba(99, 102, 241, 0.08)", border: "1px solid rgba(99, 102, 241, 0.25)", borderRadius: "12px", marginBottom: "1rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+              <span style={{ fontSize: "1.2rem" }}>📧</span>
+              <strong>Official Student Email Dispatch:</strong>
+              <span className="badge" style={{ background: "#4f46e5", color: "#ffffff", padding: "2px 8px", borderRadius: "9999px", fontSize: "0.75rem", fontWeight: "600" }}>
+                vu.&lt;roll&gt;@gmail.com
+              </span>
+            </div>
+            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+              {absentCount > 0 ? (
+                <span>
+                  Delivering absence alerts to <strong>{absentCount}</strong> student inbox{absentCount > 1 ? "es" : ""}:{" "}
+                  <code style={{ fontSize: "0.8rem", color: "#6366f1", wordBreak: "break-all" }}>{recipientEmailsString}</code>
+                </span>
+              ) : (
+                <span>All {total} students present. No absence emails queued.</span>
+              )}
+            </div>
+          </div>
+          {absentCount > 0 && (
+            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
+              <button
+                className="btn btn-sm"
+                style={{ background: "#4f46e5", color: "#ffffff", border: "1px solid #6366f1" }}
+                onClick={handleSendGmailDirect}
+                title="Send real email blast directly via Google Webmail"
+              >
+                🚀 Send via Google Webmail
+              </button>
+              <button
+                className="btn btn-sm btn-secondary"
+                onClick={handleCopyStudentEmails}
+                title="Copy all vu.<roll>@gmail.com recipient addresses"
+              >
+                📋 Copy Student Emails
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* WhatsApp Action Strip (Bypasses intermediate prompt straight into WhatsApp Web) */}
       <div className="whatsapp-preview-box" style={{ padding: "0.85rem 1.25rem" }}>
         <div className="whatsapp-header" style={{ marginBottom: 0 }}>
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
@@ -353,10 +461,17 @@ export default function SubmissionSummary({
           <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
             <button
               className="btn btn-sm btn-whatsapp-action"
-              onClick={handleSendWhatsApp}
-              title="Open WhatsApp chat with absentee rolls pre-filled"
+              onClick={handleSendWhatsAppWeb}
+              title="Open directly in WhatsApp Web without landing screen"
             >
-              🚀 Open in WhatsApp
+              🚀 Open WhatsApp Web (Direct)
+            </button>
+            <button
+              className="btn btn-sm btn-secondary"
+              onClick={handleSendWhatsAppDesktop}
+              title="Open WhatsApp Desktop App on Windows"
+            >
+              💻 Desktop App
             </button>
             <button className="btn btn-sm btn-secondary" onClick={handleCopyRollsOnly}>
               📋 Copy Absent Rolls

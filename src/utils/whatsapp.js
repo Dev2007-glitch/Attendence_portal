@@ -88,15 +88,47 @@ export function generateWhatsAppMessage({
   return msg;
 }
 
-export function openWhatsAppChat({ phone, message }) {
+/**
+ * Returns direct WhatsApp Web URL that bypasses the intermediate landing page
+ */
+export function getDirectWhatsAppWebUrl(phone, message) {
+  const cleanNumber = sanitizePhoneNumber(phone);
+  const encodedText = encodeURIComponent(message);
+  return cleanNumber
+    ? `https://web.whatsapp.com/send?phone=${cleanNumber}&text=${encodedText}`
+    : `https://web.whatsapp.com/send?text=${encodedText}`;
+}
+
+/**
+ * Returns WhatsApp Desktop native app protocol
+ */
+export function getWhatsAppDesktopUrl(phone, message) {
+  const cleanNumber = sanitizePhoneNumber(phone);
+  const encodedText = encodeURIComponent(message);
+  return cleanNumber
+    ? `whatsapp://send?phone=${cleanNumber}&text=${encodedText}`
+    : `whatsapp://send?text=${encodedText}`;
+}
+
+/**
+ * Opens WhatsApp chat directly in WhatsApp Web without the intermediate prompt
+ */
+export function openWhatsAppChat({ phone, message, useDesktop = false }) {
   const cleanNumber = sanitizePhoneNumber(phone);
   const encodedText = encodeURIComponent(message);
 
-  const url = cleanNumber
-    ? `https://api.whatsapp.com/send?phone=${cleanNumber}&text=${encodedText}`
-    : `https://api.whatsapp.com/send?text=${encodedText}`;
+  // Directly open WhatsApp Web to prevent the intermediate "Chat on WhatsApp / Open App" landing page
+  const directWebUrl = cleanNumber
+    ? `https://web.whatsapp.com/send?phone=${cleanNumber}&text=${encodedText}`
+    : `https://web.whatsapp.com/send?text=${encodedText}`;
+
+  const desktopUrl = cleanNumber
+    ? `whatsapp://send?phone=${cleanNumber}&text=${encodedText}`
+    : `whatsapp://send?text=${encodedText}`;
+
+  const url = useDesktop ? desktopUrl : directWebUrl;
 
   // Attempt to open in a new tab
   const win = window.open(url, "_blank");
-  return { url, cleanNumber, opened: !!win };
+  return { url, directWebUrl, desktopUrl, cleanNumber, opened: !!win };
 }

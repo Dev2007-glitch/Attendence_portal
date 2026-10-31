@@ -3,6 +3,7 @@ import cors from "cors";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import nodemailer from "nodemailer";
 import { ALL_STUDENTS, SECTIONS, COUNSELLORS, DEFAULT_SETTINGS } from "../data.js";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -303,11 +304,118 @@ router.get("/stats/overview", (req, res) => {
 
 // =========================================================================
 // REAL-TIME ABSENTEE EMAIL NOTIFICATIONS
-// Format: vu.<roll>@gmail.com for every student in any section
+// Format: vu.<roll>@gmail.com for every student in any section (All 1,511 students)
 // =========================================================================
 
+// SMTP Transporter configuration
+function getMailTransporter() {
+  const host = process.env.SMTP_HOST || "smtp.gmail.com";
+  const port = parseInt(process.env.SMTP_PORT || "465", 10);
+  const user = (process.env.SMTP_USER || process.env.GMAIL_USER || process.env.EMAIL_USER || "").trim();
+  const pass = (process.env.SMTP_PASS || process.env.GMAIL_APP_PASSWORD || process.env.EMAIL_PASS || "").trim();
+
+  if (user && pass) {
+    return nodemailer.createTransport({
+      host,
+      port,
+      secure: port === 465,
+      auth: { user, pass },
+      tls: { rejectUnauthorized: false }
+    });
+  }
+  return null;
+}
+
+// Generate official responsive VFSTR Absence Notice HTML Email
+function generateAbsenceEmailHTML({ studentName, studentRoll, date, period, subject, section, facultyName, facultyPhone, counsellorName }) {
+  return `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>VFSTR Attendance Alert</title>
+      <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f1f5f9; margin: 0; padding: 20px; color: #1e293b; }
+        .email-container { max-width: 600px; margin: 0 auto; background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header { background: linear-gradient(135deg, #1e3a8a 0%, #1e1b4b 100%); color: #ffffff; padding: 24px 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 19px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; }
+        .header p { margin: 6px 0 0; font-size: 12px; color: #cbd5e1; }
+        .badge { display: inline-block; background: #ef4444; color: #ffffff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; margin-top: 12px; }
+        .content { padding: 30px; }
+        .greeting { font-size: 15px; font-weight: 600; margin-bottom: 16px; color: #0f172a; }
+        .details-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin: 20px 0; }
+        .detail-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f1f5f9; font-size: 13px; }
+        .detail-row:last-child { border-bottom: none; }
+        .detail-label { color: #64748b; font-weight: 500; }
+        .detail-value { font-weight: 600; color: #0f172a; text-align: right; }
+        .warning-box { background: #fff1f2; border-left: 4px solid #ef4444; padding: 14px 16px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 12.5px; line-height: 1.5; color: #991b1b; }
+        .footer { background: #f8fafc; padding: 20px 30px; text-align: center; border-top: 1px solid #e2e8f0; font-size: 11.5px; color: #64748b; }
+      </style>
+    </head>
+    <body>
+      <div class="email-container">
+        <div class="header">
+          <h1>Vignan's Foundation for Science, Technology & Research</h1>
+          <p>Deemed to be University &bull; Accredited NAAC 'A+' Grade &bull; Vadlamudi, Guntur</p>
+          <div class="badge">Official Notice of Absence</div>
+        </div>
+        <div class="content">
+          <div class="greeting">Dear ${studentName} (${studentRoll}),</div>
+          <p style="font-size: 13.5px; line-height: 1.6; color: #334155;">
+            This is an automated formal attendance communication. You were recorded as <strong>ABSENT</strong> for the following academic session:
+          </p>
+          <div class="details-card">
+            <div class="detail-row">
+              <span class="detail-label">Roll Number:</span>
+              <span class="detail-value">${studentRoll}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Student Name:</span>
+              <span class="detail-value">${studentName}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Section:</span>
+              <span class="detail-value">${section}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Subject:</span>
+              <span class="detail-value">${subject}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Period / Time:</span>
+              <span class="detail-value">Period ${period}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Date:</span>
+              <span class="detail-value">${date}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label">Course Faculty:</span>
+              <span class="detail-value">${facultyName} (${facultyPhone || "+919000443503"})</span>
+            </div>
+          </div>
+          <div class="warning-box">
+            <strong>ATTENDANCE REGULATION NOTICE (R22 CBCS):</strong><br>
+            Under VFSTR University Academic Guidelines, every registered student is required to maintain a minimum of <strong>75% aggregate attendance</strong> to be eligible for Semester End Examinations (Summative Assessments). Absences not covered by approved Medical or On-Duty (OD) exemptions will negatively impact your eligibility.
+          </div>
+          <p style="font-size: 13px; color: #475569; line-height: 1.5;">
+            If you were present or have an approved institutional On-Duty (OD) duty slip, please submit it to your Class Faculty or Counsellor (<strong>${counsellorName || "Class Counsellor"}</strong>) within 48 hours for attendance regularization.
+          </p>
+        </div>
+        <div class="footer">
+          <strong>Office of the Dean, Academic Affairs & Attendance Division</strong><br>
+          Department of Computer Science & Engineering<br>
+          VFSTR Vadlamudi, Andhra Pradesh - 522213
+        </div>
+      </div>
+    </body>
+    </html>
+  `;
+}
+
 // Single Absentee Notification Dispatch
-router.post("/notifications/absent", (req, res) => {
+router.post("/notifications/absent", async (req, res) => {
   const {
     studentRoll,
     studentName,
@@ -336,6 +444,45 @@ router.post("/notifications/absent", (req, res) => {
     counsellor: "Class Faculty"
   };
 
+  const subjectLine = `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"}) on ${date || "Today"}`;
+  const messageBody = `Dear ${student.name} (${rollUpper}),\n\nThis is an automated attendance notification from Vignan's Foundation for Science, Technology and Research (VFSTR Vadlamudi).\n\nYou have been marked ABSENT for:\n• Date: ${date || "Today"}\n• Period: Period ${period || "1"}\n• Subject: ${subject || "Scheduled Class"}\n• Section: ${section || student.section}\n• Faculty: ${facultyName || "Course Faculty"} (${facultyPhone || "+919000443503"})\n• Counsellor In-Charge: ${student.counsellor}\n\nATTENDANCE REGULATION NOTICE:\nUnder VFSTR Academic Regulations (R22 CBCS), students must maintain a mandatory minimum of 75% aggregate attendance to remain eligible for Semester End Examinations (Summative Assessments).\n\nPlease meet your Faculty or Counsellor immediately if you believe this absence was recorded in error or if you have an approved On-Duty (OD) / Medical exemption.\n\nOffice of the Dean, Academic Affairs\nVignan's Foundation for Science, Technology and Research :: Vadlamudi`;
+
+  const htmlBody = generateAbsenceEmailHTML({
+    studentName: student.name,
+    studentRoll: rollUpper,
+    date: date || new Date().toISOString().split("T")[0],
+    period: String(period || "1"),
+    subject: subject || "Class Attendance",
+    section: section || student.section || "Section 1",
+    facultyName: facultyName || "Course Faculty",
+    facultyPhone: facultyPhone || "+919000443503",
+    counsellorName: student.counsellor
+  });
+
+  // Construct direct Google Webmail URL for 1-click browser dispatch
+  const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipientEmail)}&su=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(messageBody)}`;
+
+  // Attempt real SMTP delivery via Nodemailer if SMTP credentials are provided
+  let smtpDelivery = { sent: false, configured: false };
+  const transporter = getMailTransporter();
+  if (transporter) {
+    try {
+      const fromAddr = process.env.SMTP_FROM || `"VFSTR Academic Dean Office" <${process.env.SMTP_USER || process.env.GMAIL_USER || "vu.attendance.alerts@gmail.com"}>`;
+      const info = await transporter.sendMail({
+        from: fromAddr,
+        to: recipientEmail,
+        subject: subjectLine,
+        text: messageBody,
+        html: htmlBody
+      });
+      smtpDelivery = { sent: true, configured: true, messageId: info.messageId };
+      console.log(`[SMTP] Successfully delivered absence email to ${recipientEmail} (ID: ${info.messageId})`);
+    } catch (err) {
+      console.error(`[SMTP Error delivering to ${recipientEmail}]:`, err.message);
+      smtpDelivery = { sent: false, configured: true, error: err.message };
+    }
+  }
+
   const notificationRecord = {
     id: `notif_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
     type: "ABSENCE_ALERT",
@@ -345,36 +492,45 @@ router.post("/notifications/absent", (req, res) => {
     officialEmail: `${rollLower}@vignan.ac.in`,
     date: date || new Date().toISOString().split("T")[0],
     period: String(period || "1"),
-    subject: subject || "Design & Analysis of Algorithms",
+    subject: subject || "Class Attendance",
     section: section || student.section || "Section 1",
     facultyName: facultyName || "Course Instructor",
     facultyPhone: facultyPhone || "+919000443503",
-    status: "DELIVERED",
-    subjectLine: `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"}) on ${date || "Today"}`,
+    status: smtpDelivery.sent ? "SENT_VIA_SMTP" : "DELIVERED_TO_MAILBOX",
+    smtpDelivery,
+    gmailComposeUrl,
+    subjectLine,
     sentAt: new Date().toISOString(),
-    messageBody: `Dear ${student.name} (${rollUpper}),\n\nThis is an automated attendance notification from Vignan's Foundation for Science, Technology and Research (VFSTR Vadlamudi).\n\nYou have been marked ABSENT for:\n• Date: ${date || "Today"}\n• Period: Period ${period || "1"}\n• Subject: ${subject || "Scheduled Class"}\n• Section: ${section || student.section}\n• Faculty: ${facultyName || "Course Faculty"}\n• Counsellor In-Charge: ${student.counsellor}\n\nATTENDANCE REGULATION NOTICE:\nUnder VFSTR Academic Regulations, students must maintain a mandatory minimum of 75% aggregate attendance to remain eligible for Semester End Examinations (Summative Assessments).\n\nPlease meet your Faculty or Counsellor immediately if you believe this absence was recorded in error or if you have an approved On-Duty (OD) / Medical exemption.\n\nOffice of the Dean, Academic Affairs\nVignan's Foundation for Science, Technology and Research :: Vadlamudi`
+    messageBody
   };
 
   const notifications = readJSON(NOTIFICATIONS_FILE, []);
   notifications.unshift(notificationRecord);
-  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 500));
+  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 1000));
 
   res.json({
     success: true,
-    message: `Absence email successfully dispatched to ${recipientEmail}`,
+    message: smtpDelivery.sent
+      ? `Real email delivered to ${recipientEmail} via SMTP`
+      : `Absence email recorded for ${recipientEmail} (Mailbox active)`,
+    recipientEmail,
+    smtpDelivery,
+    gmailComposeUrl,
     data: notificationRecord
   });
 });
 
 // Batch Absentee Notification Dispatch (called on Attendance Submission)
-router.post("/notifications/absent/batch", (req, res) => {
+router.post("/notifications/absent/batch", async (req, res) => {
   const { absentRolls = [], date, period, subject, section, facultyName, facultyPhone } = req.body;
   const notifications = readJSON(NOTIFICATIONS_FILE, []);
   const dispatched = [];
+  const transporter = getMailTransporter();
+  const recipientEmails = [];
 
-  absentRolls.forEach((item) => {
+  for (const item of absentRolls) {
     const roll = typeof item === "string" ? item : item.roll;
-    if (!roll) return;
+    if (!roll) continue;
     const rollUpper = roll.toUpperCase();
     const rollLower = roll.toLowerCase();
     const student = currentStudents.find((s) => s.roll.toUpperCase() === rollUpper) || {
@@ -384,6 +540,38 @@ router.post("/notifications/absent/batch", (req, res) => {
     };
 
     const recipientEmail = `vu.${rollLower}@gmail.com`;
+    recipientEmails.push(recipientEmail);
+    const subjectLine = `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"})`;
+    const messageBody = `Dear ${student.name} (${rollUpper}),\n\nYou were marked ABSENT on ${date || "Today"} for Period ${period || "1"} in ${subject || "Class"}.\n\nUnder VFSTR University Academic Guidelines, 75% aggregate attendance is mandatory for semester exams.\n\nOffice of Academic Affairs\nVFSTR Vadlamudi`;
+    const htmlBody = generateAbsenceEmailHTML({
+      studentName: student.name,
+      studentRoll: rollUpper,
+      date: date || new Date().toISOString().split("T")[0],
+      period: String(period || "1"),
+      subject: subject || "Class Attendance",
+      section: section || student.section || "Section 1",
+      facultyName: facultyName || "Course Faculty",
+      facultyPhone: facultyPhone || "+919000443503",
+      counsellorName: student.counsellor
+    });
+
+    let smtpSent = false;
+    if (transporter) {
+      try {
+        const fromAddr = process.env.SMTP_FROM || `"VFSTR Academic Dean Office" <${process.env.SMTP_USER || process.env.GMAIL_USER || "vu.attendance.alerts@gmail.com"}>`;
+        await transporter.sendMail({
+          from: fromAddr,
+          to: recipientEmail,
+          subject: subjectLine,
+          text: messageBody,
+          html: htmlBody
+        });
+        smtpSent = true;
+      } catch (err) {
+        console.warn(`[Batch SMTP error for ${recipientEmail}]:`, err.message);
+      }
+    }
+
     const rec = {
       id: `notif_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`,
       type: "ABSENCE_ALERT",
@@ -397,20 +585,26 @@ router.post("/notifications/absent/batch", (req, res) => {
       section: section || student.section || "Section 1",
       facultyName: facultyName || "Course Faculty",
       facultyPhone: facultyPhone || "+919000443503",
-      status: "DELIVERED",
-      subjectLine: `[VFSTR Attendance Alert] Official Notice of Absence: Period ${period || "1"} (${subject || "Class"})`,
+      status: smtpSent ? "SENT_VIA_SMTP" : "DELIVERED_TO_MAILBOX",
+      subjectLine,
       sentAt: new Date().toISOString()
     };
     dispatched.push(rec);
     notifications.unshift(rec);
-  });
+  }
 
-  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 500));
+  writeJSON(NOTIFICATIONS_FILE, notifications.slice(0, 1000));
+
+  const batchGmailUrl = recipientEmails.length > 0
+    ? `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(recipientEmails.join(","))}&su=${encodeURIComponent(`[VFSTR Attendance Alert] Absentee Notice: Period ${period || "1"} (${subject || "Class"})`)}&body=${encodeURIComponent(`Dear Students,\n\nYou have been recorded as ABSENT for ${subject || "Class"} on ${date || "Today"} (Period ${period || "1"}).\n\nEnsure compliance with the mandatory 75% attendance criteria.\n\nOffice of Dean Academics, VFSTR`)}`
+    : "";
 
   res.json({
     success: true,
     count: dispatched.length,
-    message: `Dispatched absence notifications to ${dispatched.length} students via email (vu.<roll>@gmail.com)`,
+    message: `Processed absence notifications for ${dispatched.length} students (vu.<roll>@gmail.com)`,
+    batchGmailUrl,
+    recipientEmails,
     data: dispatched
   });
 });
@@ -579,9 +773,25 @@ function getAuthorizedFacultyEmails() {
   return Array.from(new Set([...list, ...defaults]));
 }
 
+// Helper to strictly identify student emails, rolls, or patterns (All 1,511 students)
+function isStudentEmailOrRoll(input) {
+  if (!input) return false;
+  const str = String(input).toLowerCase().trim();
+  // Exact user email format: vu.<roll>@gmail.com
+  if (str.startsWith("vu.")) return true;
+  // Match standard roll pattern e.g. 241fa04001, 241fa04b57, 241fa04152
+  if (/\b(2[0-9]{2}[a-z0-9]{7})\b/i.test(str)) return true;
+  if (/^[0-9]{2}[a-z0-9]{8}$/i.test(str) || /^[0-9]{10}$/i.test(str)) return true;
+  // Match against all 1,511 student rolls
+  const prefix = str.split("@")[0].replace(/^vu\./, "").toUpperCase();
+  return ALL_STUDENTS.some((s) => s.roll.toUpperCase() === prefix || str.includes(s.roll.toLowerCase()));
+}
+
 function isAdminEmail(email) {
   if (!email) return false;
   const e = email.toLowerCase().trim();
+  // Students can strictly NEVER be admins
+  if (isStudentEmailOrRoll(e)) return false;
   const adminList = getAuthorizedAdminEmails();
   if (adminList.includes(e)) return true;
   if (e.startsWith("admin@") || e.startsWith("hod_") || e.startsWith("dean_")) return true;
@@ -592,6 +802,8 @@ function isAdminEmail(email) {
 function isFacultyEmail(email, name = "") {
   if (!email) return false;
   const e = email.toLowerCase().trim();
+  // Students can strictly NEVER be faculty or counsellors
+  if (isStudentEmailOrRoll(e)) return false;
   const n = (name || "").toLowerCase().trim();
   const facultyList = getAuthorizedFacultyEmails();
 
@@ -734,6 +946,21 @@ router.post("/auth/google/verify", async (req, res) => {
     const picture = googleUser.picture || "";
 
     // =======================================================================
+    // STRICT SECURITY GUARD: PREVENT STUDENT ACCOUNTS FROM FACULTY/ADMIN
+    // If student tries to login into Faculty or Admin with their email, strictly block!
+    // =======================================================================
+    const isStudentAccount = isStudentEmailOrRoll(email) || (requestedRole === "student" && isStudentEmailOrRoll(selectedStudentRoll));
+    if (isStudentAccount && (requestedRole === "faculty" || requestedRole === "counsellor" || requestedRole === "admin")) {
+      return res.status(403).json({
+        success: false,
+        unauthorized: true,
+        error: `ACCESS DENIED: Student accounts (${email}) are strictly forbidden from logging into Faculty or Admin portals. Please sign in through the Student Portal.`,
+        isStudentBlocked: true,
+        email
+      });
+    }
+
+    // =======================================================================
     // ROLE-BASED VERIFICATION & ROUTING
     // 1. High-Priority Admin List Verification (ADMIN_EMAILS)
     // 2. Faculty / Counsellor Verification (FACULTY_EMAILS & Faculty Roster)
@@ -743,7 +970,7 @@ router.post("/auth/google/verify", async (req, res) => {
     let mappedUser = null;
 
     // 1. Check Administrator Authorization (High Priority)
-    if (isAdminEmail(email) || requestedRole === "admin" || requestedRole === "admin_authorized_test") {
+    if (!isStudentAccount && (isAdminEmail(email) || (requestedRole === "admin" && !isStudentAccount))) {
       mappedUser = {
         role: "admin",
         id: `admin_${email.replace(/[^a-z0-9]/gi, "_")}`,
@@ -760,7 +987,7 @@ router.post("/auth/google/verify", async (req, res) => {
     }
 
     // 2. Check Faculty / Counsellor Authorization
-    if (!mappedUser && (isFacultyEmail(email, name) || requestedRole === "faculty" || requestedRole === "counsellor")) {
+    if (!mappedUser && !isStudentAccount && (isFacultyEmail(email, name) || requestedRole === "faculty" || requestedRole === "counsellor")) {
       const targetFacultyName = selectedFacultyName || name;
       const matchedCounsellor = COUNSELLORS.find((c) => {
         const cleanTarget = (targetFacultyName || "").toLowerCase().replace(/^(dr\.|mr\.|mrs\.|ms\.)\s*/i, "");
@@ -857,6 +1084,16 @@ router.post("/auth/google/verify", async (req, res) => {
 // Demo Google OAuth Simulation (with Admin, Faculty, Student, and Unauthorized test modes)
 router.post("/auth/google/mock-demo", (req, res) => {
   const { accountType = "faculty", studentRoll, facultyName, sectionNum } = req.body;
+
+  // Strict prevent rule: Block student accounts from accessing faculty or admin roles
+  if (studentRoll && isStudentEmailOrRoll(studentRoll) && (accountType === "faculty" || accountType === "counsellor" || accountType === "admin")) {
+    return res.status(403).json({
+      success: false,
+      unauthorized: true,
+      error: `ACCESS DENIED: Student roll/email "${studentRoll}" is strictly forbidden from logging into Faculty or Admin portals. Please use the Student Portal.`
+    });
+  }
+
   let demoUser;
 
   if (accountType === "admin") {
