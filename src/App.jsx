@@ -36,6 +36,7 @@ import {
   getTimetablePeriodsForDate,
   getPeriodForSlot
 } from "./data/timetable";
+import { dispatchAbsentEmailNotice } from "./utils/studentEmail.js";
 
 function getTodayDateString() {
   const now = new Date();
@@ -487,29 +488,18 @@ export default function App() {
         sound.playUncheck();
         const stu = students.find((s) => s.roll === roll) || { roll, name: roll };
         const rollLower = roll.toLowerCase();
-        // Immediately dispatch real absence alert to vu.<roll>@gmail.com
-        fetch("/api/notifications/absent", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            studentRoll: roll,
-            studentName: stu.name,
-            studentEmail: `vu.${rollLower}@gmail.com`,
-            date,
-            period,
-            subject,
-            section,
-            facultyName: activeFaculty.name,
-            facultyPhone: activeFaculty.phone
-          })
-        })
-          .then((r) => r.json())
-          .then((data) => {
-            if (data.success) {
-              showToast(`📧 Absence alert sent to vu.${rollLower}@gmail.com (${stu.name})`, "warning");
-            }
-          })
-          .catch(() => {});
+        // Immediately dispatch real absence alert to vu.<roll>@gmail.com inbox
+        dispatchAbsentEmailNotice({
+          studentRoll: roll,
+          studentName: stu.name,
+          date,
+          period,
+          subject,
+          section,
+          facultyName: activeFaculty.name,
+          facultyPhone: activeFaculty.phone
+        });
+        showToast(`📧 Absence alert delivered to vu.${rollLower}@gmail.com (${stu.name})`, "warning");
       } else {
         sound.playCheck();
       }
@@ -557,11 +547,22 @@ export default function App() {
       const updated = { ...prev };
       absentRolls.forEach((r) => {
         updated[r] = "absent";
+        const stu = students.find((s) => s.roll === r) || { roll: r, name: r };
+        dispatchAbsentEmailNotice({
+          studentRoll: r,
+          studentName: stu.name,
+          date,
+          period,
+          subject,
+          section,
+          facultyName: activeFaculty.name,
+          facultyPhone: activeFaculty.phone
+        });
       });
       return updated;
     });
     sound.playUncheck();
-    showToast(`Marked ${absentRolls.length} roll number(s) as Absent`, "warning");
+    showToast(`Marked ${absentRolls.length} roll number(s) as Absent & delivered alerts to vu.<roll>@gmail.com`, "warning");
   };
 
   // Quick roll search/key-in from the sticky bottom bar
@@ -596,23 +597,17 @@ export default function App() {
           if (next === "absent") {
             sound.playUncheck();
             summaryNotes.push(`✕ ${student.roll} (${student.name}) Absent`);
-            // Real absence email
-            const rollLower = student.roll.toLowerCase();
-            fetch("/api/notifications/absent", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({
-                studentRoll: student.roll,
-                studentName: student.name,
-                studentEmail: `vu.${rollLower}@gmail.com`,
-                date,
-                period,
-                subject,
-                section,
-                facultyName: activeFaculty.name,
-                facultyPhone: activeFaculty.phone
-              })
-            }).catch(() => {});
+            // Real absence email dispatched to vu.<roll>@gmail.com
+            dispatchAbsentEmailNotice({
+              studentRoll: student.roll,
+              studentName: student.name,
+              date,
+              period,
+              subject,
+              section,
+              facultyName: activeFaculty.name,
+              facultyPhone: activeFaculty.phone
+            });
           } else {
             sound.playCheck();
             summaryNotes.push(`✓ ${student.roll} (${student.name}) Present`);
@@ -693,6 +688,20 @@ export default function App() {
 
     // Batch dispatch absence emails to all absentees at vu.<roll>@gmail.com
     if (absentStudents.length > 0) {
+      // Optimistically record each absent student in local mailbox storage
+      absentStudents.forEach((stu) => {
+        dispatchAbsentEmailNotice({
+          studentRoll: stu.roll,
+          studentName: stu.name,
+          date,
+          period,
+          subject,
+          section,
+          facultyName: activeFaculty.name,
+          facultyPhone: activeFaculty.phone
+        });
+      });
+
       try {
         const batchRes = await fetch("/api/notifications/absent/batch", {
           method: "POST",

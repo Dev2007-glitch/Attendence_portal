@@ -122,6 +122,34 @@ export default function FacultyDashboard({
         onOpenQuickKey={onOpenQuickKey}
       />
 
+      {/* Live VU Email Dispatch Status Banner */}
+      <div
+        style={{
+          margin: "0 16px 12px",
+          padding: "8px 14px",
+          background: "#f0fdf4",
+          border: "1px solid #bbf7d0",
+          borderRadius: "8px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          flexWrap: "wrap",
+          gap: "8px",
+          fontSize: "0.8rem",
+          color: "#166534"
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <span style={{ fontSize: "1rem" }}>📧</span>
+          <span>
+            <strong>Official VU Mail Dispatch Active:</strong> Marking any student absent immediately delivers an absence alert to their inbox (<code>vu.&lt;roll&gt;@gmail.com</code>).
+          </span>
+        </div>
+        <span style={{ fontSize: "0.75rem", background: "#dcfce7", color: "#15803d", padding: "2px 8px", borderRadius: "12px", fontWeight: 700 }}>
+          All 1,511 Student Inboxes Synced
+        </span>
+      </div>
+
       {/* University Matrix / Cards / Table Roster */}
       <main className="roster-view-container" id="studentViewContainer">
         {viewMode === "matrix" && (

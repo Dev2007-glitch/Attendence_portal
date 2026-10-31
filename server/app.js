@@ -431,6 +431,31 @@ router.get("/notifications/absent", (req, res) => {
   res.json({ success: true, count: filtered.length, data: filtered });
 });
 
+// Student Personal Mailbox Endpoint (vu.<roll>@gmail.com)
+router.get("/notifications/mailbox/:roll", (req, res) => {
+  const roll = req.params.roll.toUpperCase();
+  const notifications = readJSON(NOTIFICATIONS_FILE, []);
+  const studentNotices = notifications.filter(
+    (n) => n.studentRoll && n.studentRoll.toUpperCase() === roll
+  );
+  res.json({
+    success: true,
+    count: studentNotices.length,
+    recipientEmail: `vu.${roll.toLowerCase()}@gmail.com`,
+    officialEmail: `${roll.toLowerCase()}@vignan.ac.in`,
+    data: studentNotices
+  });
+});
+
+router.post("/notifications/mailbox/read", (req, res) => {
+  const { id } = req.body;
+  if (!id) return res.status(400).json({ success: false, error: "Notification id required" });
+  const notifications = readJSON(NOTIFICATIONS_FILE, []);
+  const updated = notifications.map((n) => (n.id === id ? { ...n, isRead: true } : n));
+  writeJSON(NOTIFICATIONS_FILE, updated);
+  res.json({ success: true, message: "Marked as read" });
+});
+
 // =========================================================================
 // NOTION-STYLE ACADEMIC CALENDAR: REMINDERS & NOTES ENDPOINTS
 // =========================================================================

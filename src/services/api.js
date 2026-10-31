@@ -146,3 +146,41 @@ export async function fetchOverviewStats() {
     return { success: false, fallback: true };
   }
 }
+
+export async function fetchStudentMailbox(roll) {
+  if (!roll) return [];
+  const rollClean = String(roll).trim().toUpperCase();
+
+  try {
+    const res = await fetch(`${API_BASE}/notifications/mailbox/${encodeURIComponent(rollClean)}`);
+    if (res.ok) {
+      const json = await res.json();
+      if (Array.isArray(json.data)) {
+        return json.data;
+      }
+    }
+  } catch (err) {
+    console.warn("Backend mailbox fetch error, reading local mailbox cache:", err);
+  }
+
+  try {
+    const cached = localStorage.getItem("vfstr_student_mailbox_notices_v1");
+    if (cached) {
+      const list = JSON.parse(cached);
+      return list.filter((n) => n.studentRoll?.toUpperCase() === rollClean);
+    }
+  } catch (e) {}
+
+  return [];
+}
+
+export async function markNoticeRead(id) {
+  try {
+    await fetch(`${API_BASE}/notifications/mailbox/read`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id })
+    });
+  } catch (err) {}
+}
+

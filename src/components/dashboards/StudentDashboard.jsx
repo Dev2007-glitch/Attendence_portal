@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect } from "react";
 import {
   GraduationCap,
   Calendar,
@@ -23,6 +23,8 @@ import {
   Download,
   Filter,
   CheckSquare,
+  Mail,
+  Inbox,
   AlertCircle,
   Layers,
   ChevronRight,
@@ -44,6 +46,8 @@ import {
 } from "../../data/timetable";
 import { SECTIONS, ALL_STUDENTS } from "../../../data.js";
 import { getStudentBaseline } from "../../utils/attendanceStats.js";
+import { getStudentMailboxNotices, markMailNoticeAsRead } from "../../utils/studentEmail.js";
+import { fetchStudentMailbox } from "../../services/api.js";
 
 export default function StudentDashboard({
   currentUser,
@@ -88,9 +92,13 @@ export default function StudentDashboard({
     }));
   };
 
-  // Popups: Academic Calendar & Student Feedback
+  // Popups: Academic Calendar, Student Feedback, and VU Mailbox
   const [showCalendarModal, setShowCalendarModal] = useState(false);
   const [showFeedbackModal, setShowFeedbackModal] = useState(false);
+  const [showMailboxModal, setShowMailboxModal] = useState(false);
+  const [mailboxNotices, setMailboxNotices] = useState([]);
+  const [selectedNotice, setSelectedNotice] = useState(null);
+  const [mailboxFilter, setMailboxFilter] = useState("ALL"); // "ALL" | "UNREAD"
   const [feedbackRating, setFeedbackRating] = useState(5);
   const [feedbackCategory, setFeedbackCategory] = useState("Curriculum & Teaching Quality");
   const [feedbackComment, setFeedbackComment] = useState("");
@@ -149,6 +157,50 @@ export default function StudentDashboard({
       }
     );
   }, [students, selectedRoll, currentUser, isStaff]);
+
+  // Sync VU Mailbox notices for the active student (supports all 1,511 students)
+  useEffect(() => {
+    async function loadMailbox() {
+      if (!activeStudent?.roll) return;
+      const rollClean = activeStudent.roll.toUpperCase();
+      const localNotices = getStudentMailboxNotices(rollClean);
+      setMailboxNotices(localNotices);
+      if (localNotices.length > 0) {
+        setSelectedNotice(localNotices[0]);
+      }
+
+      try {
+        const remoteNotices = await fetchStudentMailbox(rollClean);
+        if (Array.isArray(remoteNotices) && remoteNotices.length > 0) {
+          const map = new Map();
+          localNotices.forEach((n) => map.set(n.id, n));
+          remoteNotices.forEach((n) => map.set(n.id, n));
+          const merged = Array.from(map.values());
+          merged.sort((a, b) => new Date(b.sentAt || b.date) - new Date(a.sentAt || a.date));
+          setMailboxNotices(merged);
+          if (merged.length > 0) {
+            setSelectedNotice(merged[0]);
+          }
+        }
+      } catch (e) {}
+    }
+
+    loadMailbox();
+
+    const handleMailDelivery = (e) => {
+      const notice = e.detail;
+      if (notice && notice.studentRoll?.toUpperCase() === activeStudent?.roll?.toUpperCase()) {
+        setMailboxNotices((prev) => [notice, ...prev.filter((n) => n.id !== notice.id)]);
+        setSelectedNotice(notice);
+        if (onShowToast) {
+          onShowToast(`📬 New official absence alert delivered to your VU inbox!`, "warning");
+        }
+      }
+    };
+
+    window.addEventListener("vu_student_mail_received", handleMailDelivery);
+    return () => window.removeEventListener("vu_student_mail_received", handleMailDelivery);
+  }, [activeStudent?.roll]);
 
   // Computed attendance records
   const stats = useMemo(() => {
@@ -378,6 +430,45 @@ export default function StudentDashboard({
 
           <button
             type="button"
+            className="btn btn-sm"
+            style={{
+              background: "#4f46e5",
+              color: "#ffffff",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "6px",
+              padding: "7px 13px",
+              borderRadius: "8px",
+              fontWeight: 700,
+              fontSize: "0.82rem",
+              border: "none",
+              cursor: "pointer",
+              boxShadow: "0 2px 4px rgba(79, 70, 229, 0.2)"
+            }}
+            onClick={() => setShowMailboxModal(true)}
+            id="studentVUMailboxBtn"
+            title={`Open Official VU Mailbox for vu.${activeStudent.roll.toLowerCase()}@gmail.com`}
+          >
+            <Mail size={14} />
+            <span>VU Mailbox</span>
+            {mailboxNotices.filter((n) => !n.isRead).length > 0 && (
+              <span
+                style={{
+                  background: "#ef4444",
+                  color: "#ffffff",
+                  fontSize: "0.68rem",
+                  padding: "1px 6px",
+                  borderRadius: "10px",
+                  fontWeight: 800
+                }}
+              >
+                {mailboxNotices.filter((n) => !n.isRead).length}
+              </span>
+            )}
+          </button>
+
+          <button
+            type="button"
             className="fb-dash-btn"
             onClick={() => setShowFeedbackModal(true)}
             id="studentFeedbackBtn"
@@ -489,8 +580,53 @@ export default function StudentDashboard({
                 </div>
                 <div>
                   <dt>Official Student Gmail</dt>
-                  <dd className="font-mono text-primary" style={{ color: "#4f46e5", fontWeight: "600" }}>
-                    vu.{activeStudent.roll.toLowerCase()}@gmail.com
+                  <dd style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap", marginTop: "4px" }}>
+                    <span className="font-mono text-primary" style={{ color: "#4f46e5", fontWeight: "700", fontSize: "0.85rem" }}>
+                      vu.{activeStudent.roll.toLowerCase()}@gmail.com
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() => setShowMailboxModal(true)}
+                      style={{
+                        background: "#ede9fe",
+                        color: "#6d28d9",
+                        border: "1px solid #c4b5fd",
+                        borderRadius: "6px",
+                        padding: "2px 8px",
+                        fontSize: "0.72rem",
+                        fontWeight: 700,
+                        cursor: "pointer",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "4px"
+                      }}
+                      title="View Official Absence Alerts in VU Mailbox"
+                    >
+                      <Mail size={12} />
+                      <span>Inbox ({mailboxNotices.length})</span>
+                    </button>
+                    <a
+                      href={`https://mail.google.com/mail/u/?authuser=vu.${activeStudent.roll.toLowerCase()}@gmail.com`}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{
+                        background: "#f1f5f9",
+                        color: "#475569",
+                        border: "1px solid #cbd5e1",
+                        borderRadius: "6px",
+                        padding: "2px 8px",
+                        fontSize: "0.72rem",
+                        fontWeight: 600,
+                        textDecoration: "none",
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "4px"
+                      }}
+                      title="Open in Gmail Webmail Client"
+                    >
+                      <span>Gmail</span>
+                      <ExternalLink size={11} />
+                    </a>
                   </dd>
                 </div>
               </dl>
@@ -1695,6 +1831,388 @@ export default function StudentDashboard({
                 <span>Submit Feedback to IQAC Cell</span>
               </button>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* =========================================================================
+          VU STUDENT OFFICIAL MAILBOX MODAL (vu.<roll>@gmail.com)
+          ========================================================================= */}
+      {showMailboxModal && (
+        <div className="modal-backdrop" onClick={() => setShowMailboxModal(false)}>
+          <div
+            className="modal-card"
+            style={{
+              maxWidth: "960px",
+              width: "95vw",
+              height: "85vh",
+              display: "flex",
+              flexDirection: "column",
+              padding: 0,
+              overflow: "hidden",
+              borderRadius: "16px",
+              background: "#ffffff",
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Mailbox Top Banner */}
+            <div
+              style={{
+                background: "linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #4338ca 100%)",
+                color: "#ffffff",
+                padding: "16px 20px",
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                borderBottom: "1px solid rgba(255,255,255,0.1)"
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+                <div
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                    borderRadius: "10px",
+                    background: "rgba(255,255,255,0.15)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center"
+                  }}
+                >
+                  <Mail size={22} color="#ffffff" />
+                </div>
+                <div>
+                  <h3 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: "#ffffff", display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span>VFSTR Student Official Mailbox</span>
+                    <span style={{ fontSize: "0.72rem", background: "rgba(16, 185, 129, 0.2)", border: "1px solid #10b981", color: "#6ee7b7", padding: "2px 8px", borderRadius: "12px" }}>
+                      Connected
+                    </span>
+                  </h3>
+                  <p style={{ margin: "2px 0 0 0", fontSize: "0.8rem", color: "#c7d2fe", fontFamily: "monospace" }}>
+                    Inbox: vu.{activeStudent.roll.toLowerCase()}@gmail.com &bull; {activeStudent.name}
+                  </p>
+                </div>
+              </div>
+
+              <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                <a
+                  href={`https://mail.google.com/mail/u/?authuser=vu.${activeStudent.roll.toLowerCase()}@gmail.com`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-sm"
+                  style={{
+                    background: "rgba(255,255,255,0.15)",
+                    color: "#ffffff",
+                    border: "1px solid rgba(255,255,255,0.3)",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    fontSize: "0.8rem",
+                    textDecoration: "none"
+                  }}
+                  title="Open in official Google Gmail web client"
+                >
+                  <span>Open in Gmail</span>
+                  <ExternalLink size={13} />
+                </a>
+                <button
+                  type="button"
+                  style={{
+                    background: "rgba(255,255,255,0.15)",
+                    border: "none",
+                    color: "#ffffff",
+                    width: "32px",
+                    height: "32px",
+                    borderRadius: "50%",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1rem"
+                  }}
+                  onClick={() => setShowMailboxModal(false)}
+                >
+                  ✕
+                </button>
+              </div>
+            </div>
+
+            {/* Mailbox Body (Split Screen: Left List, Right Message) */}
+            <div style={{ display: "flex", flex: 1, minHeight: 0, overflow: "hidden" }}>
+              {/* Left Side: Message List */}
+              <div
+                style={{
+                  width: "360px",
+                  borderRight: "1px solid #e2e8f0",
+                  display: "flex",
+                  flexDirection: "column",
+                  background: "#f8fafc"
+                }}
+              >
+                {/* Search / Filter Header */}
+                <div style={{ padding: "12px", borderBottom: "1px solid #e2e8f0", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#ffffff" }}>
+                  <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#334155" }}>
+                    Official Notices ({mailboxNotices.length})
+                  </span>
+                  <div style={{ display: "flex", gap: "4px" }}>
+                    <button
+                      type="button"
+                      onClick={() => setMailboxFilter("ALL")}
+                      style={{
+                        fontSize: "0.75rem",
+                        padding: "3px 8px",
+                        borderRadius: "6px",
+                        border: "none",
+                        background: mailboxFilter === "ALL" ? "#4f46e5" : "#e2e8f0",
+                        color: mailboxFilter === "ALL" ? "#ffffff" : "#475569",
+                        cursor: "pointer",
+                        fontWeight: 600
+                      }}
+                    >
+                      All
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setMailboxFilter("UNREAD")}
+                      style={{
+                        fontSize: "0.75rem",
+                        padding: "3px 8px",
+                        borderRadius: "6px",
+                        border: "none",
+                        background: mailboxFilter === "UNREAD" ? "#4f46e5" : "#e2e8f0",
+                        color: mailboxFilter === "UNREAD" ? "#ffffff" : "#475569",
+                        cursor: "pointer",
+                        fontWeight: 600
+                      }}
+                    >
+                      Unread
+                    </button>
+                  </div>
+                </div>
+
+                {/* List of Messages */}
+                <div style={{ flex: 1, overflowY: "auto", padding: "8px" }}>
+                  {mailboxNotices.length === 0 ? (
+                    <div style={{ textAlign: "center", padding: "40px 16px", color: "#64748b" }}>
+                      <CheckCircle2 size={36} color="#10b981" style={{ margin: "0 auto 12px" }} />
+                      <h4 style={{ margin: "0 0 6px", fontSize: "0.95rem", color: "#1e293b" }}>Inbox Zero</h4>
+                      <p style={{ margin: 0, fontSize: "0.78rem" }}>
+                        No absence warnings have been issued for your roll number. Keep up your regular attendance!
+                      </p>
+                    </div>
+                  ) : (
+                    mailboxNotices
+                      .filter((n) => (mailboxFilter === "UNREAD" ? !n.isRead : true))
+                      .map((notice) => {
+                        const isSelected = selectedNotice?.id === notice.id;
+                        return (
+                          <div
+                            key={notice.id}
+                            onClick={() => {
+                              setSelectedNotice(notice);
+                              markMailNoticeAsRead(notice.id);
+                              setMailboxNotices((prev) =>
+                                prev.map((n) => (n.id === notice.id ? { ...n, isRead: true } : n))
+                              );
+                            }}
+                            style={{
+                              padding: "10px 12px",
+                              borderRadius: "10px",
+                              marginBottom: "6px",
+                              cursor: "pointer",
+                              background: isSelected ? "#eef2ff" : "#ffffff",
+                              border: isSelected ? "1.5px solid #6366f1" : "1px solid #e2e8f0",
+                              transition: "all 0.15s ease",
+                              position: "relative"
+                            }}
+                          >
+                            {!notice.isRead && (
+                              <span
+                                style={{
+                                  position: "absolute",
+                                  top: "10px",
+                                  right: "10px",
+                                  width: "8px",
+                                  height: "8px",
+                                  borderRadius: "50%",
+                                  background: "#ef4444"
+                                }}
+                              />
+                            )}
+                            <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "3px" }}>
+                              <span style={{ fontSize: "0.75rem", fontWeight: 700, color: "#1e293b" }}>
+                                Academic Affairs
+                              </span>
+                              <span style={{ fontSize: "0.7rem", color: "#94a3b8" }}>
+                                {notice.date}
+                              </span>
+                            </div>
+                            <div style={{ fontSize: "0.8rem", fontWeight: notice.isRead ? 500 : 700, color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "4px" }}>
+                              Period {notice.period}: {notice.subject}
+                            </div>
+                            <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                              <span style={{ fontSize: "0.68rem", background: "#fee2e2", color: "#b91c1c", fontWeight: 700, padding: "1px 6px", borderRadius: "4px" }}>
+                                ABSENT RECORDED
+                              </span>
+                              <span style={{ fontSize: "0.68rem", color: "#64748b" }}>
+                                {notice.facultyName}
+                              </span>
+                            </div>
+                          </div>
+                        );
+                      })
+                  )}
+                </div>
+              </div>
+
+              {/* Right Side: Message Reader */}
+              <div style={{ flex: 1, display: "flex", flexDirection: "column", background: "#ffffff", overflowY: "auto", padding: "24px" }}>
+                {selectedNotice ? (
+                  <div>
+                    {/* Email Letterhead */}
+                    <div style={{ borderBottom: "2px solid #f1f5f9", paddingBottom: "16px", marginBottom: "20px" }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "12px" }}>
+                        <div>
+                          <h2 style={{ fontSize: "1.15rem", fontWeight: 800, color: "#1e293b", margin: "0 0 6px 0" }}>
+                            {selectedNotice.subjectLine || `Official Absence Alert: Period ${selectedNotice.period} (${selectedNotice.subject})`}
+                          </h2>
+                          <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap", fontSize: "0.8rem", color: "#64748b" }}>
+                            <span><strong>From:</strong> Office of the Dean (Academic Affairs) &lt;attendance@vignan.ac.in&gt;</span>
+                            <span>&bull;</span>
+                            <span><strong>To:</strong> <code style={{ color: "#4f46e5" }}>{selectedNotice.recipientEmail || `vu.${activeStudent.roll.toLowerCase()}@gmail.com`}</code></span>
+                          </div>
+                        </div>
+                        <span
+                          style={{
+                            background: "#dcfce7",
+                            color: "#15803d",
+                            fontSize: "0.75rem",
+                            fontWeight: 700,
+                            padding: "4px 10px",
+                            borderRadius: "16px",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "4px"
+                          }}
+                        >
+                          <CheckCircle2 size={13} />
+                          Delivered to Inbox
+                        </span>
+                      </div>
+
+                      <div style={{ fontSize: "0.75rem", color: "#94a3b8" }}>
+                        Timestamp: {new Date(selectedNotice.sentAt || Date.now()).toLocaleString()} &bull; Message-ID: &lt;{selectedNotice.id}@sis.vignan.ac.in&gt;
+                      </div>
+                    </div>
+
+                    {/* Class Parameter Cards */}
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+                        gap: "10px",
+                        background: "#f8fafc",
+                        padding: "14px",
+                        borderRadius: "12px",
+                        border: "1px solid #e2e8f0",
+                        marginBottom: "20px"
+                      }}
+                    >
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Class Date</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#1e293b" }}>{selectedNotice.date}</strong>
+                      </div>
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Period Slot</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#4f46e5" }}>Period {selectedNotice.period}</strong>
+                      </div>
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Subject / Course</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#1e293b" }}>{selectedNotice.subject}</strong>
+                      </div>
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Academic Section</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#1e293b" }}>{selectedNotice.section || activeStudent.section}</strong>
+                      </div>
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Instructor In-Charge</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#1e293b" }}>{selectedNotice.facultyName || "Course Faculty"}</strong>
+                      </div>
+                      <div>
+                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Faculty Contact</span>
+                        <strong style={{ fontSize: "0.85rem", color: "#16a34a" }}>{selectedNotice.facultyPhone || "+919000443503"}</strong>
+                      </div>
+                    </div>
+
+                    {/* Formal University Warning Body */}
+                    <div
+                      style={{
+                        lineHeight: "1.65",
+                        fontSize: "0.88rem",
+                        color: "#334155",
+                        whiteSpace: "pre-line",
+                        background: "#ffffff",
+                        padding: "16px",
+                        borderRadius: "10px",
+                        border: "1px solid #f1f5f9",
+                        marginBottom: "20px"
+                      }}
+                    >
+                      {selectedNotice.messageBody}
+                    </div>
+
+                    {/* Action Buttons for Student */}
+                    <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", borderTop: "1px solid #e2e8f0", paddingTop: "16px" }}>
+                      <a
+                        href={`https://wa.me/${(selectedNotice.facultyPhone || "+919000443503").replace(/\D/g, "")}?text=${encodeURIComponent(`Respected Sir, this is ${activeStudent.name} (${activeStudent.roll}) regarding my absence in Period ${selectedNotice.period} (${selectedNotice.subject}) on ${selectedNotice.date}.`)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-sm"
+                        style={{ background: "#25d366", color: "#ffffff", border: "none", display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none" }}
+                      >
+                        <Phone size={14} />
+                        <span>WhatsApp Course Faculty</span>
+                      </a>
+
+                      <button
+                        type="button"
+                        className="btn btn-primary btn-sm"
+                        onClick={() => {
+                          setShowMailboxModal(false);
+                          setActiveTab("od");
+                          setOdDate(selectedNotice.date);
+                          setOdRemarks(`Exemption requested for Period ${selectedNotice.period} (${selectedNotice.subject})`);
+                          if (onShowToast) onShowToast("Auto-filled OD exemption application for this absence!", "info");
+                        }}
+                      >
+                        <FileText size={14} />
+                        <span>Apply for OD / Medical Exemption</span>
+                      </button>
+
+                      <a
+                        href={`https://mail.google.com/mail/u/?authuser=vu.${activeStudent.roll.toLowerCase()}@gmail.com`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn btn-secondary btn-sm"
+                        style={{ display: "inline-flex", alignItems: "center", gap: "6px", textDecoration: "none" }}
+                      >
+                        <ExternalLink size={14} />
+                        <span>Open in Google Mailbox</span>
+                      </a>
+                    </div>
+                  </div>
+                ) : (
+                  <div style={{ textAlign: "center", margin: "auto", color: "#64748b" }}>
+                    <Mail size={44} style={{ margin: "0 auto 12px", opacity: 0.5 }} />
+                    <h4>Select a notice to view</h4>
+                    <p style={{ fontSize: "0.85rem" }}>
+                      Official absence notifications sent to vu.{activeStudent.roll.toLowerCase()}@gmail.com are audited here.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       )}
