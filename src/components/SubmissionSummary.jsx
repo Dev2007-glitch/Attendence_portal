@@ -268,7 +268,7 @@ export default function SubmissionSummary({
           </button>
           <button
             className="btn btn-sm"
-            style={{ background: "#4f46e5", color: "#ffffff", border: "1px solid #6366f1" }}
+            style={{ background: "#ffffff", color: "#000000", border: "1px solid #ffffff", fontWeight: 700 }}
             onClick={handleSendGmailDirect}
             title="Open Google Gmail to send absence notice directly to student inboxes (vu.<roll>@gmail.com)"
           >
@@ -403,21 +403,21 @@ export default function SubmissionSummary({
       </div>
 
       {/* Real Student Email Dispatch Strip */}
-      <div className="email-dispatch-preview-box" style={{ padding: "1rem 1.25rem", background: "rgba(99, 102, 241, 0.08)", border: "1px solid rgba(99, 102, 241, 0.25)", borderRadius: "12px", marginBottom: "1rem" }}>
+      <div className="email-dispatch-preview-box" style={{ padding: "1rem 1.25rem", background: "#111113", border: "1px solid #27272a", borderRadius: "12px", marginBottom: "1rem", color: "#ffffff" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "10px" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
               <span style={{ fontSize: "1.2rem" }}>📧</span>
-              <strong>Official Student Email Dispatch:</strong>
-              <span className="badge" style={{ background: "#4f46e5", color: "#ffffff", padding: "2px 8px", borderRadius: "9999px", fontSize: "0.75rem", fontWeight: "600" }}>
+              <strong style={{ color: "#ffffff" }}>Official Student Email Dispatch:</strong>
+              <span className="badge" style={{ background: "#ffffff", color: "#000000", padding: "2px 8px", borderRadius: "9999px", fontSize: "0.75rem", fontWeight: "800" }}>
                 vu.&lt;roll&gt;@gmail.com
               </span>
             </div>
-            <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)" }}>
+            <div style={{ fontSize: "0.85rem", color: "#a1a1aa" }}>
               {absentCount > 0 ? (
                 <span>
-                  Delivering absence alerts to <strong>{absentCount}</strong> student inbox{absentCount > 1 ? "es" : ""}:{" "}
-                  <code style={{ fontSize: "0.8rem", color: "#6366f1", wordBreak: "break-all" }}>{recipientEmailsString}</code>
+                  Delivering absence alerts to <strong style={{ color: "#ffffff" }}>{absentCount}</strong> student inbox{absentCount > 1 ? "es" : ""}:{" "}
+                  <code style={{ fontSize: "0.8rem", color: "#ffffff", background: "#18181b", padding: "2px 6px", borderRadius: "4px", border: "1px solid #27272a", wordBreak: "break-all" }}>{recipientEmailsString}</code>
                 </span>
               ) : (
                 <span>All {total} students present. No absence emails queued.</span>
@@ -428,7 +428,7 @@ export default function SubmissionSummary({
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
               <button
                 className="btn btn-sm"
-                style={{ background: "#4f46e5", color: "#ffffff", border: "1px solid #6366f1" }}
+                style={{ background: "#ffffff", color: "#000000", border: "1px solid #ffffff", fontWeight: 700 }}
                 onClick={handleSendGmailDirect}
                 title="Send real email blast directly via Google Webmail"
               >

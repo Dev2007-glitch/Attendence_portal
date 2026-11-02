@@ -110,6 +110,60 @@ export default function FacultyDashboard({
         onClearAll={onClearAll}
       />
 
+      {/* Professional Monochromatic KPI Metric Cards Row */}
+      <div className="faculty-kpi-grid" aria-label="Attendance Overview">
+        <div className="faculty-kpi-card">
+          <div className="kpi-card-top">
+            <span className="kpi-label">TOTAL ENROLLED</span>
+            <span className="kpi-badge">{section}</span>
+          </div>
+          <div className="kpi-main-val">
+            <span className="kpi-number">{counts.total}</span>
+            <span className="kpi-unit">Students</span>
+          </div>
+          <span className="kpi-subtext">Active Section Roster</span>
+        </div>
+
+        <div className="faculty-kpi-card kpi-card-present">
+          <div className="kpi-card-top">
+            <span className="kpi-label">MARKED PRESENT</span>
+            <span className="kpi-pill kpi-pill-white">
+              {counts.total > 0 ? ((counts.present / counts.total) * 100).toFixed(1) : 0}%
+            </span>
+          </div>
+          <div className="kpi-main-val">
+            <span className="kpi-number">{counts.present}</span>
+            <span className="kpi-unit">Attending</span>
+          </div>
+          <span className="kpi-subtext">In Classroom / Lab</span>
+        </div>
+
+        <div className="faculty-kpi-card kpi-card-absent">
+          <div className="kpi-card-top">
+            <span className="kpi-label">MARKED ABSENT</span>
+            <span className="kpi-pill kpi-pill-invert">
+              {counts.absent} Absentees
+            </span>
+          </div>
+          <div className="kpi-main-val">
+            <span className="kpi-number">{counts.absent}</span>
+            <span className="kpi-unit">To Notify</span>
+          </div>
+          <span className="kpi-subtext">Automated VU Mail Queued</span>
+        </div>
+
+        <div className="faculty-kpi-card">
+          <div className="kpi-card-top">
+            <span className="kpi-label">SESSION DETAILS</span>
+            <span className="kpi-badge">Period {period}</span>
+          </div>
+          <div className="kpi-main-val">
+            <span className="kpi-title-text">{subject || "Scheduled Class"}</span>
+          </div>
+          <span className="kpi-subtext">Faculty: {activeFaculty?.name || "Course Faculty"}</span>
+        </div>
+      </div>
+
       {/* Toolbar: Search, Filters, View Modes, Key-In */}
       <Toolbar
         searchQuery={searchQuery}
@@ -123,29 +177,14 @@ export default function FacultyDashboard({
       />
 
       {/* Live VU Email Dispatch Status Banner */}
-      <div
-        style={{
-          margin: "0 16px 12px",
-          padding: "8px 14px",
-          background: "#f0fdf4",
-          border: "1px solid #bbf7d0",
-          borderRadius: "8px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-          gap: "8px",
-          fontSize: "0.8rem",
-          color: "#166534"
-        }}
-      >
+      <div className="vu-mail-dispatch-bar">
         <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
           <span style={{ fontSize: "1rem" }}>📧</span>
           <span>
-            <strong>Official VU Mail Dispatch Active:</strong> Marking any student absent immediately delivers an absence alert to their inbox (<code>vu.&lt;roll&gt;@gmail.com</code>).
+            <strong>Official VU Mail Dispatch Active:</strong> Marking any student absent immediately delivers an absence notice to their inbox (<code>vu.&lt;roll&gt;@gmail.com</code>).
           </span>
         </div>
-        <span style={{ fontSize: "0.75rem", background: "#dcfce7", color: "#15803d", padding: "2px 8px", borderRadius: "12px", fontWeight: 700 }}>
+        <span className="vu-mail-dispatch-pill">
           All 1,511 Student Inboxes Synced
         </span>
       </div>

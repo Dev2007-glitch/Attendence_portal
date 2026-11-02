@@ -421,12 +421,12 @@ export default function LoginScreen({ onLogin, students = [] }) {
 
         {/* Bottom Telemetry Bar */}
         <div className="cinematic-bottom-bar" style={{ position: "relative", zIndex: 2 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.8rem", color: "#cbd5e1" }}>
-            <MapPin size={15} style={{ color: "#6366f1" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.8rem", color: "#e4e4e7" }}>
+            <MapPin size={15} style={{ color: "#ffffff" }} />
             <span>Vadlamudi Green Campus &bull; Guntur, AP</span>
           </div>
-          <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "0.78rem", color: "#94a3b8" }}>
-            <ShieldCheck size={14} style={{ color: "#10b981" }} />
+          <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "0.78rem", color: "#a1a1aa" }}>
+            <ShieldCheck size={14} style={{ color: "#ffffff" }} />
             <span>RBAC 2.0 &bull; Google OAuth Verified</span>
           </div>
         </div>

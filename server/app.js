@@ -77,8 +77,13 @@ function writeJSON(filePath, data) {
   }
 }
 
-// Initial sync
-writeJSON(STUDENTS_FILE, currentStudents);
+// Ensure students file has all 1,511 students
+const existingStored = readJSON(STUDENTS_FILE, []);
+if (existingStored.length < ALL_STUDENTS.length) {
+  writeJSON(STUDENTS_FILE, ALL_STUDENTS);
+} else {
+  currentStudents = existingStored;
+}
 
 // Live watcher on data.js for local development
 if (!process.env.VERCEL) {
@@ -90,7 +95,11 @@ if (!process.env.VERCEL) {
         reloadTimeout = setTimeout(async () => {
           try {
             const freshModule = await import(`../data.js?t=${Date.now()}`);
-            if (freshModule.INITIAL_STUDENTS) {
+            if (freshModule.ALL_STUDENTS && freshModule.ALL_STUDENTS.length > 0) {
+              currentStudents = [...freshModule.ALL_STUDENTS];
+              writeJSON(STUDENTS_FILE, currentStudents);
+              console.log(`[API Server] Live synced ${currentStudents.length} students from data.js on save!`);
+            } else if (freshModule.INITIAL_STUDENTS) {
               currentStudents = [...freshModule.INITIAL_STUDENTS];
               writeJSON(STUDENTS_FILE, currentStudents);
               console.log(`[API Server] Live synced ${currentStudents.length} students from data.js on save!`);
