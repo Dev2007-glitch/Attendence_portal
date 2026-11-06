@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "6aedf258b29c2a516a48d346",
+    "eventId": "evt_1793978968110_aae6089d",
+    "eventType": "DATABASE_INITIALIZED",
+    "module": "system",
+    "actor": {
+      "userId": "system",
+      "name": "System Initialization Service",
+      "role": "system",
+      "email": ""
+    },
+    "target": {
+      "entityType": "database",
+      "entityId": "VFSTR_CSE_Attendance_DB",
+      "details": "Master collections initialized and seeded"
+    },
+    "changes": null,
+    "metadata": {
+      "version": "2.4",
+      "totalStudents": 1511
+    },
+    "ip": "127.0.0.1",
+    "userAgent": "Application Client",
+    "result": "SUCCESS",
+    "timestamp": "2026-11-06T15:29:28.110Z",
+    "createdAt": "2026-11-06T15:29:28.111Z"
+  }
+]

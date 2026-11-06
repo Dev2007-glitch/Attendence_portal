@@ -1,0 +1,60 @@
+[
+  {
+    "_id": "6aedf258b29c2a516a48d346",
+    "eventId": "evt_1793978968110_aae6089d",
+    "eventType": "DATABASE_INITIALIZED",
+    "module": "system",
+    "actor": {
+      "userId": "system",
+      "name": "System Initialization Service",
+      "role": "system",
+      "email": ""
+    },
+    "target": {
+      "entityType": "database",
+      "entityId": "VFSTR_CSE_Attendance_DB",
+      "details": "Master collections initialized and seeded"
+    },
+    "changes": null,
+    "metadata": {
+      "version": "2.4",
+      "totalStudents": 1511
+    },
+    "ip": "127.0.0.1",
+    "userAgent": "Application Client",
+    "result": "SUCCESS",
+    "timestamp": "2026-11-06T15:29:28.110Z",
+    "createdAt": "2026-11-06T15:29:28.111Z"
+  },
+  {
+    "_id": "6aedf40043ef1ad1bb924245",
+    "eventId": "evt_1793979392807_1f038fff",
+    "eventType": "TEST_ATTENDANCE_SUBMITTED",
+    "module": "attendance",
+    "actor": {
+      "userId": "fac_sivaprasad",
+      "name": "Dr. P. Siva Prasad",
+      "role": "faculty",
+      "email": ""
+    },
+    "target": {
+      "entityType": "attendance_session",
+      "entityId": "test_session_1793979392796",
+      "details": ""
+    },
+    "changes": {
+      "previous": null,
+      "current": {
+        "absentCount": 2
+      }
+    },
+    "metadata": {
+      "testRun": true
+    },
+    "ip": "127.0.0.1",
+    "userAgent": "Application Client",
+    "result": "SUCCESS",
+    "timestamp": "2026-11-06T15:36:32.807Z",
+    "createdAt": "2026-11-06T15:36:32.807Z"
+  }
+]

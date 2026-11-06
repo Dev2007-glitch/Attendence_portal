@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "6aedf2573c77821c8de09c09",
+    "key": "default_portal_settings",
+    "createdAt": "2026-11-06T15:29:27.867Z",
+    "settings": {
+      "institution": "VFSTR :: Vadlamudi",
+      "program": "B.Tech, Computer Science & Engineering, III Year - I Semester",
+      "courseCode": "21CS204",
+      "courseName": "Design & Analysis of Algorithms",
+      "academicYear": "2026-2027",
+      "semester": "III Year - 5th Semester",
+      "section": "Section 1",
+      "soundEnabled": true,
+      "theme": "light"
+    },
+    "updatedAt": "2026-11-06T16:06:53.027Z"
+  }
+]

@@ -1,0 +1,192 @@
+[
+  {
+    "_id": "6aedf2573c77821c8de09c0f",
+    "id": "session_1793080212196",
+    "absentCount": 16,
+    "absentRolls": [
+      {
+        "roll": "241FA04124",
+        "name": "SAIRAM"
+      },
+      {
+        "roll": "241FA04152",
+        "name": "LASYA"
+      },
+      {
+        "roll": "241FA04357",
+        "name": "SRIVALLI KATYAYANI"
+      },
+      {
+        "roll": "241FA04546",
+        "name": "LAKSHMI LAVANYA"
+      },
+      {
+        "roll": "241FA04579",
+        "name": "ANJI REDDY"
+      },
+      {
+        "roll": "241FA04591",
+        "name": "MAHESH REDDY"
+      },
+      {
+        "roll": "241FA04593",
+        "name": "MANOGNA SAI"
+      },
+      {
+        "roll": "241FA04623",
+        "name": "CHARNI SRI"
+      },
+      {
+        "roll": "241FA04675",
+        "name": "BHAVYA SRI"
+      },
+      {
+        "roll": "241FA04789",
+        "name": "ARAVIND VARMA"
+      },
+      {
+        "roll": "241FA04905",
+        "name": "DEVA RAJU"
+      },
+      {
+        "roll": "241FA04935",
+        "name": "YASWANTH NARENDRA"
+      },
+      {
+        "roll": "241FA04964",
+        "name": "HEMA AMAR NADH"
+      },
+      {
+        "roll": "241FA04966",
+        "name": "SIVA PRAKASH"
+      },
+      {
+        "roll": "241FA04981",
+        "name": "(LR)GAYATHRI"
+      },
+      {
+        "roll": "241FA04F76",
+        "name": "NAVYA"
+      }
+    ],
+    "createdAt": "2026-11-06T15:29:27.894Z",
+    "date": "2026-10-27",
+    "facultyId": "fac_general",
+    "facultyName": "MFEF",
+    "percentage": "77.1",
+    "period": "4",
+    "presentCount": 54,
+    "section": "1 CSE",
+    "sectionNum": 1,
+    "sessionId": "session_1793080212196",
+    "status": "SUBMITTED",
+    "subject": "Optimization Techniques (OT)",
+    "timestamp": "2026-10-27T05:50:12.196Z",
+    "totalStudents": 70,
+    "version": 1
+  },
+  {
+    "_id": "6aedf2573c77821c8de09c57",
+    "id": "session_1793079802222",
+    "absentCount": 0,
+    "absentRolls": [],
+    "createdAt": "2026-11-06T15:29:27.975Z",
+    "date": "2026-10-27",
+    "facultyId": "fac_general",
+    "facultyName": "MFEF",
+    "percentage": "100.0",
+    "period": "4",
+    "presentCount": 70,
+    "section": "1 CSE",
+    "sectionNum": 1,
+    "sessionId": "session_1793079802222",
+    "status": "SUBMITTED",
+    "subject": "PC LAB",
+    "timestamp": "2026-10-27T05:43:22.222Z",
+    "totalStudents": 70,
+    "version": 1
+  },
+  {
+    "_id": "6aedf2583c77821c8de09c9f",
+    "id": "session_1789132800356",
+    "absentCount": 9,
+    "absentRolls": [
+      {
+        "roll": "241FA04307",
+        "name": "PRANITH REDDY"
+      },
+      {
+        "roll": "241FA04357",
+        "name": "SRIVALLI KATYAYANI"
+      },
+      {
+        "roll": "241FA04591",
+        "name": "MAHESH REDDY"
+      },
+      {
+        "roll": "241FA04598",
+        "name": "NAGA VEDIK KRISHNA"
+      },
+      {
+        "roll": "241FA04612",
+        "name": "Sk.Ashiq"
+      },
+      {
+        "roll": "241FA04623",
+        "name": "CHARNI SRI"
+      },
+      {
+        "roll": "241FA04958",
+        "name": "VARAPRASAD"
+      },
+      {
+        "roll": "241FA04966",
+        "name": "SIVA PRAKASH"
+      },
+      {
+        "roll": "241FA04E43",
+        "name": "KANESH"
+      }
+    ],
+    "createdAt": "2026-11-06T15:29:28.045Z",
+    "date": "2026-09-11",
+    "facultyId": "fac_general",
+    "facultyName": "4TH FLOOR ATT",
+    "percentage": "87.1",
+    "period": "1-2 (Lab)",
+    "presentCount": 61,
+    "section": "1 CSE",
+    "sectionNum": 1,
+    "sessionId": "session_1789132800356",
+    "status": "SUBMITTED",
+    "subject": "TRAINING-(N-415)",
+    "timestamp": "2026-09-11T13:20:00.356Z",
+    "totalStudents": 70,
+    "version": 1
+  },
+  {
+    "_id": "6aedf4dc3c77821c8de09ce7",
+    "id": "session_1793979612456",
+    "absentCount": 1,
+    "absentRolls": [
+      "241FA04035"
+    ],
+    "createdAt": "2026-11-06T15:40:12.457Z",
+    "date": "2026-11-06",
+    "facultyId": "fac_dr__p__siva_prasad",
+    "facultyName": "Dr. P. Siva Prasad",
+    "percentage": "66.7",
+    "period": "2",
+    "presentCount": 2,
+    "section": "Section 1",
+    "sectionNum": 1,
+    "sessionId": "session_1793979612456",
+    "status": "SUBMITTED",
+    "subject": "Compiler Design",
+    "submissionId": "sub_session_1793979612456",
+    "timestamp": "2026-11-06T15:40:12.456Z",
+    "totalStudents": 3,
+    "updatedAt": "2026-11-06T15:40:12.457Z",
+    "version": 1
+  }
+]

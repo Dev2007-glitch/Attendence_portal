@@ -1,0 +1,585 @@
+[
+  {
+    "_id": "6aedf2573c77821c8de09abd",
+    "name": "Dr. G. Balu Narasimha Rao",
+    "createdAt": "2026-11-06T15:29:27.427Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      8
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.478Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09abe",
+    "name": "Dr. J. Veeranjaneyulu",
+    "createdAt": "2026-11-06T15:29:27.438Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      22
+    ],
+    "studentCount": 37,
+    "updatedAt": "2026-11-06T15:36:45.480Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09abf",
+    "name": "Dr. M. Raja Rao",
+    "createdAt": "2026-11-06T15:29:27.438Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      4
+    ],
+    "studentCount": 35,
+    "updatedAt": "2026-11-06T15:36:45.482Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac0",
+    "name": "Dr. O. Bhaskar",
+    "createdAt": "2026-11-06T15:29:27.439Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      7
+    ],
+    "studentCount": 35,
+    "updatedAt": "2026-11-06T15:36:45.483Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac1",
+    "name": "Dr. Phanindra Thota",
+    "createdAt": "2026-11-06T15:29:27.440Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      3
+    ],
+    "studentCount": 38,
+    "updatedAt": "2026-11-06T15:36:45.484Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac2",
+    "name": "Dr. R. Prathap Kumar",
+    "createdAt": "2026-11-06T15:29:27.441Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      4
+    ],
+    "studentCount": 35,
+    "updatedAt": "2026-11-06T15:36:45.485Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac3",
+    "name": "Dr. R. Renugadevi",
+    "createdAt": "2026-11-06T15:29:27.442Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      2
+    ],
+    "studentCount": 17,
+    "updatedAt": "2026-11-06T15:36:45.486Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac4",
+    "name": "Dr. Simhadri Chinna Gopi",
+    "createdAt": "2026-11-06T15:29:27.442Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      16
+    ],
+    "studentCount": 33,
+    "updatedAt": "2026-11-06T15:36:45.487Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac5",
+    "name": "Mr. Adnan Ahmad Khan",
+    "createdAt": "2026-11-06T15:29:27.443Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      1
+    ],
+    "studentCount": 18,
+    "updatedAt": "2026-11-06T15:36:45.488Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac6",
+    "name": "Mr. Allamudi Kalyan Babu",
+    "createdAt": "2026-11-06T15:29:27.444Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      2
+    ],
+    "studentCount": 19,
+    "updatedAt": "2026-11-06T15:36:45.489Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac7",
+    "name": "Mr. Bathula Anil Babu",
+    "createdAt": "2026-11-06T15:29:27.445Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      11
+    ],
+    "studentCount": 36,
+    "updatedAt": "2026-11-06T15:36:45.490Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac8",
+    "name": "Mr. Chennamsetty Naga Gopi",
+    "createdAt": "2026-11-06T15:29:27.446Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      19
+    ],
+    "studentCount": 17,
+    "updatedAt": "2026-11-06T15:36:45.491Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ac9",
+    "name": "Mr. D. Senthil",
+    "createdAt": "2026-11-06T15:29:27.447Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      19
+    ],
+    "studentCount": 17,
+    "updatedAt": "2026-11-06T15:36:45.492Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aca",
+    "name": "Mr. Dega Balakotaiah",
+    "createdAt": "2026-11-06T15:29:27.447Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      14
+    ],
+    "studentCount": 32,
+    "updatedAt": "2026-11-06T15:36:45.493Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09acb",
+    "name": "Mr. G. Ramanjaneyulu",
+    "createdAt": "2026-11-06T15:29:27.448Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      16
+    ],
+    "studentCount": 32,
+    "updatedAt": "2026-11-06T15:36:45.495Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09acc",
+    "name": "Mr. Gujjula Murali",
+    "createdAt": "2026-11-06T15:29:27.449Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      1
+    ],
+    "studentCount": 18,
+    "updatedAt": "2026-11-06T15:36:45.497Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09acd",
+    "name": "Mr. Kanna Hareesh",
+    "createdAt": "2026-11-06T15:29:27.450Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      19
+    ],
+    "studentCount": 16,
+    "updatedAt": "2026-11-06T15:36:45.498Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ace",
+    "name": "Mr. Kudupudi Raj Kiran",
+    "createdAt": "2026-11-06T15:29:27.452Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      18
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.500Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09acf",
+    "name": "Mr. Lalu Naick Bhukya",
+    "createdAt": "2026-11-06T15:29:27.453Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      3
+    ],
+    "studentCount": 38,
+    "updatedAt": "2026-11-06T15:36:45.501Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad0",
+    "name": "Mr. Madugula Anil",
+    "createdAt": "2026-11-06T15:29:27.454Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      17
+    ],
+    "studentCount": 20,
+    "updatedAt": "2026-11-06T15:36:45.502Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad1",
+    "name": "Mr. Munipalli Veerendra",
+    "createdAt": "2026-11-06T15:29:27.455Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      9
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.503Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad2",
+    "name": "Mr. Ongole Gandhi",
+    "createdAt": "2026-11-06T15:29:27.457Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      9
+    ],
+    "studentCount": 35,
+    "updatedAt": "2026-11-06T15:36:45.504Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad3",
+    "name": "Mr. P. Venkata Rajulu",
+    "createdAt": "2026-11-06T15:29:27.458Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      20
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.505Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad4",
+    "name": "Mr. Palavelli Vamsi Krishna",
+    "createdAt": "2026-11-06T15:29:27.459Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      11
+    ],
+    "studentCount": 37,
+    "updatedAt": "2026-11-06T15:36:45.506Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad5",
+    "name": "Mr. Shaik Dehtaj",
+    "createdAt": "2026-11-06T15:29:27.460Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      20
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.510Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad6",
+    "name": "Mr. Shashi Mani",
+    "createdAt": "2026-11-06T15:29:27.460Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      5
+    ],
+    "studentCount": 24,
+    "updatedAt": "2026-11-06T15:36:45.511Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad7",
+    "name": "Mr. Sk. Khadersha",
+    "createdAt": "2026-11-06T15:29:27.461Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      10
+    ],
+    "studentCount": 33,
+    "updatedAt": "2026-11-06T15:36:45.513Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad8",
+    "name": "Mr. Sk. Sikindar",
+    "createdAt": "2026-11-06T15:29:27.462Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      6
+    ],
+    "studentCount": 38,
+    "updatedAt": "2026-11-06T15:36:45.515Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ad9",
+    "name": "Mr. Vishal Jaiswal",
+    "createdAt": "2026-11-06T15:29:27.463Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      2
+    ],
+    "studentCount": 20,
+    "updatedAt": "2026-11-06T15:36:45.516Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ada",
+    "name": "Mr. Y. Rama Mohan",
+    "createdAt": "2026-11-06T15:29:27.463Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      15
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.517Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09adb",
+    "name": "Mrs. Anusha Kakumanu",
+    "createdAt": "2026-11-06T15:29:27.464Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      13
+    ],
+    "studentCount": 21,
+    "updatedAt": "2026-11-06T15:36:45.519Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09adc",
+    "name": "Mrs. D. Tipura",
+    "createdAt": "2026-11-06T15:29:27.465Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      12
+    ],
+    "studentCount": 30,
+    "updatedAt": "2026-11-06T15:36:45.520Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09add",
+    "name": "Mrs. Guggilam Navya",
+    "createdAt": "2026-11-06T15:29:27.466Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      12
+    ],
+    "studentCount": 31,
+    "updatedAt": "2026-11-06T15:36:45.521Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ade",
+    "name": "Mrs. Varagani Tejaswi",
+    "createdAt": "2026-11-06T15:29:27.468Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      8
+    ],
+    "studentCount": 35,
+    "updatedAt": "2026-11-06T15:36:45.522Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09adf",
+    "name": "Ms. Annam Durga Bhavani",
+    "createdAt": "2026-11-06T15:29:27.469Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      21
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.523Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae0",
+    "name": "Ms. Arumalla Gopya Sri",
+    "createdAt": "2026-11-06T15:29:27.470Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      17
+    ],
+    "studentCount": 20,
+    "updatedAt": "2026-11-06T15:36:45.524Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae1",
+    "name": "Ms. Athota Padmaja",
+    "createdAt": "2026-11-06T15:29:27.472Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      19
+    ],
+    "studentCount": 17,
+    "updatedAt": "2026-11-06T15:36:45.525Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae2",
+    "name": "Ms. Bhimavarapu Jyothika",
+    "createdAt": "2026-11-06T15:29:27.472Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      10
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.526Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae3",
+    "name": "Ms. Cheggu Manasa",
+    "createdAt": "2026-11-06T15:29:27.474Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      17
+    ],
+    "studentCount": 19,
+    "updatedAt": "2026-11-06T15:36:45.527Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae4",
+    "name": "Ms. Gaddam Tejaswi",
+    "createdAt": "2026-11-06T15:29:27.475Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      1
+    ],
+    "studentCount": 18,
+    "updatedAt": "2026-11-06T15:36:45.529Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae5",
+    "name": "Ms. Kandula Divya",
+    "createdAt": "2026-11-06T15:29:27.476Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      6
+    ],
+    "studentCount": 37,
+    "updatedAt": "2026-11-06T15:36:45.531Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae6",
+    "name": "Ms. Koppula Anitha",
+    "createdAt": "2026-11-06T15:29:27.477Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      5
+    ],
+    "studentCount": 24,
+    "updatedAt": "2026-11-06T15:36:45.533Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae7",
+    "name": "Ms. Korrapati Christiana Rose Elizabeth",
+    "createdAt": "2026-11-06T15:29:27.478Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      22
+    ],
+    "studentCount": 36,
+    "updatedAt": "2026-11-06T15:36:45.534Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae8",
+    "name": "Ms. Kunapareddy Deepikasri Sai",
+    "createdAt": "2026-11-06T15:29:27.479Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      13
+    ],
+    "studentCount": 22,
+    "updatedAt": "2026-11-06T15:36:45.536Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09ae9",
+    "name": "Ms. Nase Bandhike Akhilandeswari",
+    "createdAt": "2026-11-06T15:29:27.480Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      21
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.537Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aea",
+    "name": "Ms. Peeka Anusha",
+    "createdAt": "2026-11-06T15:29:27.481Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      2
+    ],
+    "studentCount": 18,
+    "updatedAt": "2026-11-06T15:36:45.538Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aeb",
+    "name": "Ms. Ravuri Lalitha",
+    "createdAt": "2026-11-06T15:29:27.482Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      13
+    ],
+    "studentCount": 22,
+    "updatedAt": "2026-11-06T15:36:45.539Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aec",
+    "name": "Ms. Shaik Kareena Yashmin",
+    "createdAt": "2026-11-06T15:29:27.483Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      18
+    ],
+    "studentCount": 33,
+    "updatedAt": "2026-11-06T15:36:45.541Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aed",
+    "name": "Ms. Swathi Koganti",
+    "createdAt": "2026-11-06T15:29:27.484Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      14
+    ],
+    "studentCount": 33,
+    "updatedAt": "2026-11-06T15:36:45.542Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aee",
+    "name": "Ms. Upalanchi Vara Lakshmi",
+    "createdAt": "2026-11-06T15:29:27.486Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      5
+    ],
+    "studentCount": 24,
+    "updatedAt": "2026-11-06T15:36:45.543Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09aef",
+    "name": "Ms. Vyshnavi Kagga",
+    "createdAt": "2026-11-06T15:29:27.487Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      7
+    ],
+    "studentCount": 34,
+    "updatedAt": "2026-11-06T15:36:45.544Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09af0",
+    "name": "Ms. Yalavarthi Sai Eswari",
+    "createdAt": "2026-11-06T15:29:27.488Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      15
+    ],
+    "studentCount": 33,
+    "updatedAt": "2026-11-06T15:36:45.547Z"
+  },
+  {
+    "_id": "6aedf2573c77821c8de09af1",
+    "name": "Ms. Yechu Harshitha",
+    "createdAt": "2026-11-06T15:29:27.489Z",
+    "department": "Computer Science & Engineering",
+    "sections": [
+      1
+    ],
+    "studentCount": 18,
+    "updatedAt": "2026-11-06T15:36:45.548Z"
+  }
+]

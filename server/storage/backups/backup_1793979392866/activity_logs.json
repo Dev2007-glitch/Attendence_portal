@@ -1,0 +1,13 @@
+[
+  {
+    "_id": "6aedf40043ef1ad1bb924246",
+    "eventId": "evt_1793979392807_1f038fff",
+    "userId": "fac_sivaprasad",
+    "role": "faculty",
+    "action": "TEST_ATTENDANCE_SUBMITTED",
+    "module": "attendance",
+    "summary": "Dr. P. Siva Prasad performed TEST_ATTENDANCE_SUBMITTED on attendance_session",
+    "timestamp": "2026-11-06T15:36:32.807Z",
+    "createdAt": "2026-11-06T15:36:32.808Z"
+  }
+]

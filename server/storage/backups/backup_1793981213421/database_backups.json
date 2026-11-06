@@ -1,0 +1,467 @@
+[
+  {
+    "_id": "6aedf258b29c2a516a48d347",
+    "backupId": "backup_1793978968116",
+    "database": "VFSTR_CSE_Attendance_DB",
+    "timestamp": "2026-11-06T15:29:28.116Z",
+    "triggeredBy": {
+      "userId": "system",
+      "role": "system"
+    },
+    "reason": "Initial baseline database snapshot after seed",
+    "collections": {
+      "timetables": {
+        "count": 22,
+        "file": "timetables.json"
+      },
+      "class_sections": {
+        "count": 22,
+        "file": "class_sections.json"
+      },
+      "application_settings": {
+        "count": 1,
+        "file": "application_settings.json"
+      },
+      "attendance_records": {
+        "count": 210,
+        "file": "attendance_records.json"
+      },
+      "faculty": {
+        "count": 257,
+        "file": "faculty.json"
+      },
+      "attendance_sessions": {
+        "count": 3,
+        "file": "attendance_sessions.json"
+      },
+      "attendance_submissions": {
+        "count": 3,
+        "file": "attendance_submissions.json"
+      },
+      "counsellors": {
+        "count": 53,
+        "file": "counsellors.json"
+      },
+      "audit_logs": {
+        "count": 1,
+        "file": "audit_logs.json"
+      },
+      "od_applications": {
+        "count": 0,
+        "file": "od_applications.json"
+      },
+      "login_history": {
+        "count": 0,
+        "file": "login_history.json"
+      },
+      "users": {
+        "count": 0,
+        "file": "users.json"
+      },
+      "search_activity": {
+        "count": 0,
+        "file": "search_activity.json"
+      },
+      "students": {
+        "count": 1511,
+        "file": "students.json"
+      },
+      "admins": {
+        "count": 4,
+        "file": "admins.json"
+      }
+    },
+    "totalDocuments": 2087,
+    "backupDir": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\backups\\backup_1793978968116",
+    "status": "COMPLETED",
+    "createdAt": "2026-11-06T15:29:28.232Z"
+  },
+  {
+    "_id": "6aedf40143ef1ad1bb92424a",
+    "backupId": "backup_1793979392866",
+    "database": "VFSTR_CSE_Attendance_DB",
+    "timestamp": "2026-11-06T15:36:32.866Z",
+    "triggeredBy": {
+      "userId": "admin",
+      "role": "admin"
+    },
+    "reason": "Automated End-to-End Test Suite Verification",
+    "collections": {
+      "database_backups": {
+        "count": 1,
+        "file": "database_backups.json"
+      },
+      "timetables": {
+        "count": 22,
+        "file": "timetables.json"
+      },
+      "class_sections": {
+        "count": 22,
+        "file": "class_sections.json"
+      },
+      "application_settings": {
+        "count": 1,
+        "file": "application_settings.json"
+      },
+      "attendance_records": {
+        "count": 213,
+        "file": "attendance_records.json"
+      },
+      "faculty": {
+        "count": 257,
+        "file": "faculty.json"
+      },
+      "attendance_sessions": {
+        "count": 4,
+        "file": "attendance_sessions.json"
+      },
+      "attendance_submissions": {
+        "count": 3,
+        "file": "attendance_submissions.json"
+      },
+      "file_metadata": {
+        "count": 1,
+        "file": "file_metadata.json"
+      },
+      "file_download_history": {
+        "count": 1,
+        "file": "file_download_history.json"
+      },
+      "counsellors": {
+        "count": 53,
+        "file": "counsellors.json"
+      },
+      "audit_logs": {
+        "count": 2,
+        "file": "audit_logs.json"
+      },
+      "uploaded_files": {
+        "count": 1,
+        "file": "uploaded_files.json"
+      },
+      "od_applications": {
+        "count": 1,
+        "file": "od_applications.json"
+      },
+      "login_history": {
+        "count": 0,
+        "file": "login_history.json"
+      },
+      "users": {
+        "count": 0,
+        "file": "users.json"
+      },
+      "search_activity": {
+        "count": 0,
+        "file": "search_activity.json"
+      },
+      "activity_logs": {
+        "count": 1,
+        "file": "activity_logs.json"
+      },
+      "students": {
+        "count": 1511,
+        "file": "students.json"
+      },
+      "admins": {
+        "count": 4,
+        "file": "admins.json"
+      }
+    },
+    "totalDocuments": 2098,
+    "backupDir": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\backups\\backup_1793979392866",
+    "status": "COMPLETED",
+    "createdAt": "2026-11-06T15:36:33.023Z"
+  },
+  {
+    "_id": "6aedf40eeaee9a5bb0afa868",
+    "backupId": "backup_1793979406187",
+    "database": "VFSTR_CSE_Attendance_DB",
+    "timestamp": "2026-11-06T15:36:46.187Z",
+    "triggeredBy": {
+      "userId": "system",
+      "role": "system"
+    },
+    "reason": "Initial baseline database snapshot after seed",
+    "collections": {
+      "database_backups": {
+        "count": 2,
+        "file": "database_backups.json"
+      },
+      "timetables": {
+        "count": 22,
+        "file": "timetables.json"
+      },
+      "class_sections": {
+        "count": 22,
+        "file": "class_sections.json"
+      },
+      "application_settings": {
+        "count": 1,
+        "file": "application_settings.json"
+      },
+      "attendance_records": {
+        "count": 210,
+        "file": "attendance_records.json"
+      },
+      "faculty": {
+        "count": 257,
+        "file": "faculty.json"
+      },
+      "attendance_sessions": {
+        "count": 3,
+        "file": "attendance_sessions.json"
+      },
+      "attendance_submissions": {
+        "count": 3,
+        "file": "attendance_submissions.json"
+      },
+      "file_metadata": {
+        "count": 1,
+        "file": "file_metadata.json"
+      },
+      "file_download_history": {
+        "count": 1,
+        "file": "file_download_history.json"
+      },
+      "counsellors": {
+        "count": 53,
+        "file": "counsellors.json"
+      },
+      "audit_logs": {
+        "count": 3,
+        "file": "audit_logs.json"
+      },
+      "uploaded_files": {
+        "count": 1,
+        "file": "uploaded_files.json"
+      },
+      "od_applications": {
+        "count": 0,
+        "file": "od_applications.json"
+      },
+      "login_history": {
+        "count": 0,
+        "file": "login_history.json"
+      },
+      "users": {
+        "count": 0,
+        "file": "users.json"
+      },
+      "search_activity": {
+        "count": 0,
+        "file": "search_activity.json"
+      },
+      "activity_logs": {
+        "count": 1,
+        "file": "activity_logs.json"
+      },
+      "students": {
+        "count": 1511,
+        "file": "students.json"
+      },
+      "admins": {
+        "count": 4,
+        "file": "admins.json"
+      }
+    },
+    "totalDocuments": 2095,
+    "backupDir": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\backups\\backup_1793979406187",
+    "status": "COMPLETED",
+    "createdAt": "2026-11-06T15:36:46.322Z"
+  },
+  {
+    "_id": "6aedf45ca69581f2dda51e49",
+    "backupId": "backup_1793979484143",
+    "database": "VFSTR_CSE_Attendance_DB",
+    "timestamp": "2026-11-06T15:38:04.143Z",
+    "triggeredBy": {
+      "userId": "system",
+      "role": "system"
+    },
+    "reason": "Initial baseline database snapshot after seed",
+    "collections": {
+      "database_backups": {
+        "count": 3,
+        "file": "database_backups.json"
+      },
+      "timetables": {
+        "count": 22,
+        "file": "timetables.json"
+      },
+      "class_sections": {
+        "count": 22,
+        "file": "class_sections.json"
+      },
+      "application_settings": {
+        "count": 1,
+        "file": "application_settings.json"
+      },
+      "attendance_records": {
+        "count": 210,
+        "file": "attendance_records.json"
+      },
+      "faculty": {
+        "count": 257,
+        "file": "faculty.json"
+      },
+      "attendance_sessions": {
+        "count": 3,
+        "file": "attendance_sessions.json"
+      },
+      "attendance_submissions": {
+        "count": 3,
+        "file": "attendance_submissions.json"
+      },
+      "file_metadata": {
+        "count": 1,
+        "file": "file_metadata.json"
+      },
+      "file_download_history": {
+        "count": 1,
+        "file": "file_download_history.json"
+      },
+      "counsellors": {
+        "count": 53,
+        "file": "counsellors.json"
+      },
+      "audit_logs": {
+        "count": 4,
+        "file": "audit_logs.json"
+      },
+      "uploaded_files": {
+        "count": 1,
+        "file": "uploaded_files.json"
+      },
+      "od_applications": {
+        "count": 0,
+        "file": "od_applications.json"
+      },
+      "login_history": {
+        "count": 0,
+        "file": "login_history.json"
+      },
+      "users": {
+        "count": 0,
+        "file": "users.json"
+      },
+      "search_activity": {
+        "count": 0,
+        "file": "search_activity.json"
+      },
+      "activity_logs": {
+        "count": 1,
+        "file": "activity_logs.json"
+      },
+      "students": {
+        "count": 1511,
+        "file": "students.json"
+      },
+      "admins": {
+        "count": 4,
+        "file": "admins.json"
+      }
+    },
+    "totalDocuments": 2097,
+    "backupDir": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\backups\\backup_1793979484143",
+    "status": "COMPLETED",
+    "createdAt": "2026-11-06T15:38:04.276Z"
+  },
+  {
+    "_id": "6aedf504a69581f2dda51e4c",
+    "backupId": "backup_1793979652623",
+    "database": "VFSTR_CSE_Attendance_DB",
+    "timestamp": "2026-11-06T15:40:52.623Z",
+    "triggeredBy": {
+      "userId": "admin",
+      "role": "admin"
+    },
+    "reason": "User Request Verification Snapshot",
+    "collections": {
+      "database_backups": {
+        "count": 4,
+        "file": "database_backups.json"
+      },
+      "timetables": {
+        "count": 22,
+        "file": "timetables.json"
+      },
+      "class_sections": {
+        "count": 22,
+        "file": "class_sections.json"
+      },
+      "application_settings": {
+        "count": 1,
+        "file": "application_settings.json"
+      },
+      "attendance_records": {
+        "count": 213,
+        "file": "attendance_records.json"
+      },
+      "faculty": {
+        "count": 257,
+        "file": "faculty.json"
+      },
+      "attendance_sessions": {
+        "count": 4,
+        "file": "attendance_sessions.json"
+      },
+      "attendance_submissions": {
+        "count": 4,
+        "file": "attendance_submissions.json"
+      },
+      "file_metadata": {
+        "count": 1,
+        "file": "file_metadata.json"
+      },
+      "file_download_history": {
+        "count": 1,
+        "file": "file_download_history.json"
+      },
+      "counsellors": {
+        "count": 53,
+        "file": "counsellors.json"
+      },
+      "audit_logs": {
+        "count": 5,
+        "file": "audit_logs.json"
+      },
+      "uploaded_files": {
+        "count": 1,
+        "file": "uploaded_files.json"
+      },
+      "od_applications": {
+        "count": 0,
+        "file": "od_applications.json"
+      },
+      "login_history": {
+        "count": 0,
+        "file": "login_history.json"
+      },
+      "users": {
+        "count": 0,
+        "file": "users.json"
+      },
+      "search_activity": {
+        "count": 0,
+        "file": "search_activity.json"
+      },
+      "activity_logs": {
+        "count": 2,
+        "file": "activity_logs.json"
+      },
+      "students": {
+        "count": 1511,
+        "file": "students.json"
+      },
+      "admins": {
+        "count": 4,
+        "file": "admins.json"
+      }
+    },
+    "totalDocuments": 2105,
+    "backupDir": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\backups\\backup_1793979652623",
+    "status": "COMPLETED",
+    "createdAt": "2026-11-06T15:40:52.749Z"
+  }
+]

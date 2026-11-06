@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Google OAuth Modal - Authentic Google Account Chooser
+   Matches Google Accounts (accounts.google.com/v3/signin/accountchooser)
+   ========================================================================== */
+
+.google-oauth-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: googleFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes googleFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Dialog Container - Dark Theme #131314 */
+.google-oauth-dark-dialog {
+  width: 100%;
+  max-width: 440px;
+  background: #131314;
+  color: #e3e3e3;
+  border: 1px solid #303030;
+  border-radius: 28px !important;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.75), 0 10px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  text-align: left;
+}
+
+/* Top Bar */
+.google-oauth-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 10px;
+}
+
+.google-oauth-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-oauth-title-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #e3e3e3;
+  letter-spacing: -0.2px;
+}
+
+.google-oauth-close {
+  background: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50% !important;
+  display: grid;
+  place-items: center;
+  color: #c4c7c5;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.google-oauth-close:hover {
+  background: #28292a;
+  color: #ffffff;
+}
+
+/* Heading Box */
+.google-oauth-heading-box {
+  padding: 8px 24px 16px;
+}
+
+.google-oauth-main-title {
+  font-size: 26px;
+  font-weight: 400;
+  color: #e3e3e3;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.google-oauth-app-subtitle {
+  font-size: 14.5px;
+  color: #c4c7c5;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.google-oauth-app-name {
+  color: #a8c7fa;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Notice / Error Bar */
+.google-oauth-notice-bar {
+  margin: 0 24px 12px;
+  background: rgba(234, 67, 53, 0.15);
+  border: 1px solid rgba(234, 67, 53, 0.35);
+  color: #f28b82;
+  padding: 10px 14px;
+  border-radius: 8px !important;
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* Role Guard Indicator Bar */
+.google-oauth-role-strip {
+  margin: 0 24px 12px;
+  padding: 8px 12px;
+  background: #1f1f1f;
+  border: 1px solid #3c4043;
+  border-radius: 8px !important;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.google-oauth-role-strip strong {
+  color: #a8c7fa;
+  text-transform: uppercase;
+}
+
+/* Account List */
+.google-oauth-account-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  gap: 2px;
+  max-height: 380px;
+  overflow-y: auto;
+}
+
+/* Account Row - Pill Hover like in Screenshot */
+.google-oauth-account-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 28px !important;
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease, transform 0.1s ease;
+  box-sizing: border-box;
+}
+
+.google-oauth-account-row:hover,
+.google-oauth-account-row:focus-visible {
+  background: #28292a;
+  outline: none;
+}
+
+.google-oauth-avatar-wrap {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.google-oauth-avatar-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  object-fit: cover;
+  display: block;
+}
+
+.google-oauth-avatar-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50% !important;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+}
+
+.google-oauth-account-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.google-oauth-account-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #e3e3e3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.google-oauth-account-email {
+  font-size: 13px;
+  color: #8e918f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Signed Out Status Pill (matching screenshot) */
+.google-oauth-signed-out {
+  font-size: 12px;
+  color: #8e918f;
+  margin-left: auto;
+  padding-left: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Divider Line */
+.google-oauth-divider {
+  height: 1px;
+  background: #3c4043;
+  margin: 8px 14px;
+}
+
+/* "Use another account" row */
+.google-oauth-another-row {
+  margin-bottom: 6px;
+}
+
+.google-oauth-avatar-another {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: #c4c7c5;
+}
+
+.google-oauth-another-text {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #e3e3e3;
+}
+
+/* Disclaimer Footer */
+.google-oauth-disclaimer {
+  padding: 16px 24px 20px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #8e918f;
+}
+
+.google-link {
+  color: #a8c7fa;
+  text-decoration: none;
+}
+
+.google-link:hover {
+  text-decoration: underline;
+}
+
+/* "Use another account" Dark Screen */
+.google-oauth-another-screen {
+  padding: 0 0 10px;
+}
+
+.google-oauth-custom-form {
+  padding: 0 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.google-dark-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.google-dark-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #1f1f1f;
+  border: 1px solid #444746;
+  border-radius: 8px !important;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.15s ease;
+}
+
+.google-dark-input:focus {
+  border-color: #a8c7fa;
+  box-shadow: 0 0 0 1px #a8c7fa;
+  background: #28292a;
+}
+
+.google-dark-input::placeholder {
+  color: #8e918f;
+}
+
+.google-dark-input-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.google-link-sm {
+  background: none;
+  border: none;
+  color: #a8c7fa;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.google-link-sm:hover {
+  text-decoration: underline;
+}
+
+.google-student-match-badge {
+  background: rgba(52, 168, 83, 0.15);
+  border: 1px solid rgba(52, 168, 83, 0.35);
+  color: #81c995;
+  padding: 8px 12px;
+  border-radius: 6px !important;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.google-oauth-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.google-oauth-back-btn {
+  background: transparent;
+  border: none;
+  color: #a8c7fa;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 20px !important;
+  transition: background 0.15s ease;
+}
+
+.google-oauth-back-btn:hover {
+  background: rgba(168, 199, 250, 0.08);
+}
+
+.google-oauth-next-btn {
+  background: #a8c7fa;
+  color: #062e6f;
+  border: none;
+  border-radius: 24px !important;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.15s ease;
+}
+
+.google-oauth-next-btn:hover {
+  background: #b9d3fb;
+}
+
+/* Live Google Cloud OAuth Settings */
+.google-oauth-settings-panel {
+  border-top: 1px solid #303030;
+  background: #18191a;
+  padding: 12px 20px;
+}
+
+.google-oauth-settings-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.google-oauth-settings-toggle {
+  background: none;
+  border: none;
+  color: #9aa0a6;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 0;
+  text-align: left;
+  line-height: 1.35;
+  flex: 1;
+}
+
+.google-oauth-settings-toggle svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.google-oauth-settings-toggle:hover {
+  color: #a8c7fa;
+}
+
+.google-oauth-live-popup-btn {
+  background: rgba(168, 199, 250, 0.12);
+  border: 1px solid rgba(168, 199, 250, 0.3);
+  color: #a8c7fa;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 16px !important;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.google-oauth-live-popup-btn:hover {
+  background: rgba(168, 199, 250, 0.22);
+  transform: translateY(-1px);
+}
+
+.google-oauth-settings-body {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.google-oauth-settings-desc {
+  font-size: 11.5px;
+  color: #9aa0a6;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.google-oauth-settings-form {
+  display: flex;
+  gap: 8px;
+}
+
+.google-oauth-settings-input {
+  flex: 1;
+  padding: 7px 10px;
+  background: #131314;
+  border: 1px solid #444746;
+  border-radius: 6px !important;
+  color: #ffffff;
+  font-size: 12px;
+  outline: none;
+}
+
+.google-oauth-settings-input:focus {
+  border-color: #a8c7fa;
+}
+
+.google-oauth-settings-save {
+  background: #a8c7fa;
+  color: #062e6f;
+  border: none;
+  border-radius: 6px !important;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.google-oauth-settings-save:hover {
+  background: #b9d3fb;
+}
+
+.google-oauth-settings-tip {
+  font-size: 11px;
+  color: #8e918f;
+}
+
+.google-oauth-settings-tip code {
+  color: #a8c7fa;
+  background: #28292a;
+  padding: 2px 4px;
+  border-radius: 4px !important;
+}

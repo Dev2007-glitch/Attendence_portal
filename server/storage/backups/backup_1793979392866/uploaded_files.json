@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "6aedf40043ef1ad1bb924248",
+    "fileId": "file_1793979392826_9edaef69",
+    "originalName": "Hackathon_Certificate.pdf",
+    "storedName": "file_1793979392826_9edaef69.pdf",
+    "filePath": "C:\\Users\\Lenovo\\.gemini\\antigravity\\scratch\\Attendence_portal\\server\\storage\\od_documents\\file_1793979392826_9edaef69.pdf",
+    "mimeType": "application/pdf",
+    "sizeBytes": 64,
+    "checksum": "51d31616caa5031b11944bced98f712e13ed7bfbeb88c225f99d088560a26d81",
+    "module": "counsellor_od",
+    "category": "od_documents",
+    "relatedRecordId": "od_test_1793979392824",
+    "uploader": {
+      "userId": "241FA04035",
+      "name": "BONDILI DEVI RAGHUVEERA BAI",
+      "role": "student"
+    },
+    "uploadedAt": "2026-11-06T15:36:32.828Z",
+    "status": "ACTIVE",
+    "createdAt": "2026-11-06T15:36:32.839Z"
+  }
+]
