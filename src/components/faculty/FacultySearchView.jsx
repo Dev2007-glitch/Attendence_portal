@@ -37,6 +37,7 @@ export default function FacultySearchView({
   onShowToast = () => {},
   onOpenLocatorModal = () => {}
 }) {
+  console.log("[FACULTY SEARCH VIEW] Component successfully mounted and rendering. currentUser:", currentUser);
   // Search & Filter State
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedDept, setSelectedDept] = useState("ALL");
@@ -895,3 +896,4 @@ export default function FacultySearchView({
     </div>
   );
 }
+

@@ -453,8 +453,11 @@ export default function App() {
   };
 
   const handleSwitchDashboard = (target) => {
+    console.log("[APP.JSX] handleSwitchDashboard requested with target:", target);
     const userRole = currentUser?.role || "student";
-    if (!canAccessDashboard(userRole, target)) {
+    const allowed = canAccessDashboard(userRole, target);
+    console.log(`[APP.JSX] User role: '${userRole}', target: '${target}', permission granted: ${allowed}`);
+    if (!allowed) {
       sound.playUncheck();
       showToast(
         `⛔ Access Restricted: ${userRole.toUpperCase()} accounts cannot access the ${target.toUpperCase()} view.`,
@@ -474,6 +477,7 @@ export default function App() {
     sound.playCheck();
     const label = target === "faculty-search" ? "Faculty Search" : target.charAt(0).toUpperCase() + target.slice(1);
     showToast(`Switched to ${label} View`, "info");
+    console.log("[APP.JSX] State updated! activeDashboard is now:", target);
   };
 
   const handleSelectSection = (newSecNum) => {

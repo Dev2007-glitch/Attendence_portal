@@ -177,14 +177,24 @@ export default function Navbar({
           <button
             type="button"
             className={`dashboard-pill ${activeDashboard === "faculty-search" ? "active" : ""}`}
-            onClick={() => onSwitchDashboard("faculty-search")}
+            onClick={(e) => {
+              e.preventDefault();
+              console.log("[NAVBAR CLICK] 'Search for Faculty' button clicked! Current activeDashboard:", activeDashboard);
+              if (typeof onSwitchDashboard === "function") {
+                console.log("[NAVBAR CLICK] Dispatching onSwitchDashboard('faculty-search')");
+                onSwitchDashboard("faculty-search");
+              } else {
+                console.error("[NAVBAR CLICK ERROR] onSwitchDashboard prop is missing or not a function:", onSwitchDashboard);
+              }
+            }}
             title="Search for Faculty: Look up cabin, designations, subjects and live classroom locations"
             id="navFacultyLocatorPill"
             style={{
               background: activeDashboard === "faculty-search" ? "#ffffff" : "#000000",
               color: activeDashboard === "faculty-search" ? "#000000" : "#ffffff",
               border: "1px solid #000000",
-              fontWeight: 700
+              fontWeight: 700,
+              cursor: "pointer"
             }}
           >
             <Compass size={15} />
