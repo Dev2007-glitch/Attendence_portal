@@ -1,0 +1,41 @@
+[
+  {
+    "_id": "6aedfb313c77821c8de09ceb",
+    "userId": "fac_sivaprasad",
+    "createdAt": "2026-11-06T16:07:13.473Z",
+    "department": "Computer Science & Engineering",
+    "email": "psivaprasad@vignan.ac.in",
+    "id": "fac_sivaprasad",
+    "lastLoginAt": "2026-11-06T16:07:13.471Z",
+    "name": "Dr. P. Siva Prasad",
+    "role": "faculty",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "updatedAt": "2026-11-06T16:07:13.473Z"
+  },
+  {
+    "_id": "6aedfb513c77821c8de09ced",
+    "userId": "241FA04035",
+    "createdAt": "2026-11-06T16:07:45.903Z",
+    "email": "vu.241fa04035@gmail.com",
+    "id": "241FA04035",
+    "lastLoginAt": "2026-11-06T16:07:45.902Z",
+    "name": "BONDILI DEVI RAGHUVEERA BAI",
+    "role": "student",
+    "roll": "241FA04035",
+    "section": "Section 1",
+    "sectionNum": 1,
+    "updatedAt": "2026-11-06T16:07:45.903Z"
+  },
+  {
+    "_id": "6aedfb513c77821c8de09cef",
+    "userId": "admin_dean_cse",
+    "createdAt": "2026-11-06T16:07:45.966Z",
+    "email": "hod_cse@vignan.ac.in",
+    "id": "admin_dean_cse",
+    "lastLoginAt": "2026-11-06T16:07:45.964Z",
+    "name": "Dr. K. Venkateswara Rao",
+    "role": "admin",
+    "updatedAt": "2026-11-06T16:07:45.966Z"
+  }
+]

@@ -184,3 +184,92 @@ export async function markNoticeRead(id) {
   } catch (err) {}
 }
 
+export async function searchFaculty(params = {}, signal) {
+  try {
+    const query = new URLSearchParams();
+    if (params.q) query.append("q", params.q);
+    if (params.name) query.append("name", params.name);
+    if (params.id) query.append("id", params.id);
+    if (params.department && params.department !== "ALL") query.append("department", params.department);
+    if (params.subject && params.subject !== "ALL") query.append("subject", params.subject);
+    if (params.cabin) query.append("cabin", params.cabin);
+    if (params.limit) query.append("limit", params.limit);
+    if (params.page) query.append("page", params.page);
+
+    const url = `${API_BASE}/faculty/search?${query.toString()}`;
+    const res = await fetch(url, { signal });
+    if (!res.ok) throw new Error(`Server returned ${res.status}`);
+    const json = await res.json();
+    return json;
+  } catch (err) {
+    if (err.name === "AbortError") throw err;
+    console.warn("API searchFaculty failed, falling back to local search:", err);
+    // Local fallback using facultyLocator
+    const { getAllFacultyDirectory } = await import("../utils/facultyLocator.js");
+    const list = getAllFacultyDirectory();
+    const q = (params.q || "").toLowerCase().trim();
+    const name = (params.name || "").toLowerCase().trim();
+    const id = (params.id || "").toLowerCase().trim();
+    const dept = (params.department && params.department !== "ALL" ? params.department : "").toLowerCase().trim();
+    const subj = (params.subject && params.subject !== "ALL" ? params.subject : "").toLowerCase().trim();
+
+    const filtered = list.filter((f) => {
+      if (id && !f.id.toLowerCase().includes(id)) return false;
+      if (name && !f.name.toLowerCase().includes(name)) return false;
+      if (dept && !f.department.toLowerCase().includes(dept)) return false;
+      if (subj && !f.subjectsList?.some((s) => s.toLowerCase().includes(subj))) return false;
+      if (q) {
+        const match =
+          f.name.toLowerCase().includes(q) ||
+          f.id.toLowerCase().includes(q) ||
+          f.cabin.toLowerCase().includes(q) ||
+          f.subjectsList?.some((s) => s.toLowerCase().includes(q)) ||
+          f.sectionsList?.some((sec) => sec.toLowerCase().includes(q));
+        if (!match) return false;
+      }
+      return true;
+    });
+
+    return {
+      success: true,
+      total: filtered.length,
+      count: filtered.length,
+      data: filtered
+    };
+  }
+}
+
+export async function fetchFacultyDepartments() {
+  try {
+    const res = await fetch(`${API_BASE}/faculty/departments`);
+    if (res.ok) {
+      const json = await res.json();
+      if (Array.isArray(json.data) && json.data.length > 0) return json.data;
+    }
+  } catch (e) {}
+  return ["Computer Science & Engineering (CSE)"];
+}
+
+export async function fetchFacultySubjects() {
+  try {
+    const res = await fetch(`${API_BASE}/faculty/subjects`);
+    if (res.ok) {
+      const json = await res.json();
+      if (Array.isArray(json.data) && json.data.length > 0) return json.data;
+    }
+  } catch (e) {}
+  return [];
+}
+
+export async function fetchFacultyById(id) {
+  if (!id) return null;
+  try {
+    const res = await fetch(`${API_BASE}/faculty/${encodeURIComponent(id)}`);
+    if (res.ok) {
+      const json = await res.json();
+      return json.data;
+    }
+  } catch (e) {}
+  return null;
+}
+

@@ -8,6 +8,7 @@ import StudentDashboard from "./components/dashboards/StudentDashboard";
 import AdminDashboard from "./components/dashboards/AdminDashboard";
 import AcademicCalendarView from "./components/calendar/AcademicCalendarView";
 import FacultyLocatorModal from "./components/faculty/FacultyLocatorModal";
+import FacultySearchView from "./components/faculty/FacultySearchView";
 import Toast from "./components/Toast";
 import { sound } from "./utils/sound";
 import {
@@ -60,9 +61,17 @@ export default function App() {
     }
   });
 
-  // Active Dashboard state: "faculty" | "student" | "admin"
+  // Active Dashboard state: "faculty" | "counsellor" | "student" | "admin" | "calendar" | "faculty-search"
   const [activeDashboard, setActiveDashboard] = useState(() => {
     try {
+      const hash = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
+      if (hash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(hash)) {
+        return hash;
+      }
+      const savedDash = localStorage.getItem("portal_active_dashboard");
+      if (savedDash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(savedDash)) {
+        return savedDash;
+      }
       const saved = localStorage.getItem("portal_auth_user");
       if (saved) {
         const parsed = JSON.parse(saved);
@@ -72,7 +81,24 @@ export default function App() {
     return "faculty";
   });
 
-  // Faculty Locator Modal state (Search for Faculty)
+  // Track previous dashboard for smooth back-navigation
+  const [previousDashboard, setPreviousDashboard] = useState(() => {
+    return activeDashboard === "faculty-search" ? "calendar" : "student";
+  });
+
+  // Listen to browser forward/back button (URL hash changes)
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(hash)) {
+        setActiveDashboard(hash);
+      }
+    };
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  // Faculty Locator Modal state (Search for Faculty live modal)
   const [showGlobalFacultyLocator, setShowGlobalFacultyLocator] = useState(false);
 
   // Multi-Section and Mentorship State
@@ -363,7 +389,7 @@ export default function App() {
   // - Faculty & Counsellor: CAN access Attendance, Counsellor, and Student (cannot access Admin)
   // - Admin: CAN access Admin, Faculty, Counsellor, and Student
   const canAccessDashboard = (userRole, target) => {
-    if (target === "calendar") return true;
+    if (target === "calendar" || target === "faculty-search") return true;
     if (userRole === "admin") return true;
     if (userRole === "faculty" || userRole === "counsellor") {
       return target === "faculty" || target === "counsellor" || target === "student";
@@ -437,9 +463,17 @@ export default function App() {
       return;
     }
 
+    if (activeDashboard !== target) {
+      setPreviousDashboard(activeDashboard);
+    }
     setActiveDashboard(target);
+    try {
+      localStorage.setItem("portal_active_dashboard", target);
+      window.location.hash = target;
+    } catch (e) {}
     sound.playCheck();
-    showToast(`Switched to ${target.charAt(0).toUpperCase() + target.slice(1)} View`, "info");
+    const label = target === "faculty-search" ? "Faculty Search" : target.charAt(0).toUpperCase() + target.slice(1);
+    showToast(`Switched to ${label} View`, "info");
   };
 
   const handleSelectSection = (newSecNum) => {
@@ -1281,6 +1315,7 @@ export default function App() {
           sessions={historySessions}
           onShowToast={showToast}
           onOpenCalendarView={() => handleSwitchDashboard("calendar")}
+          onOpenFacultySearch={() => handleSwitchDashboard("faculty-search")}
         />
       )}
 
@@ -1295,6 +1330,16 @@ export default function App() {
           onDeleteSession={handleDeleteSession}
           onShowToast={showToast}
           onSwitchToSection={handleSwitchToSection}
+        />
+      )}
+
+      {/* Search for Faculty Full Page View */}
+      {activeDashboard === "faculty-search" && (
+        <FacultySearchView
+          currentUser={currentUser}
+          onBack={() => handleSwitchDashboard(previousDashboard || "calendar")}
+          onShowToast={showToast}
+          onOpenLocatorModal={() => setShowGlobalFacultyLocator(true)}
         />
       )}
 

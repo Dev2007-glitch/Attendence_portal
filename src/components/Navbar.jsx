@@ -173,16 +173,16 @@ export default function Navbar({
             <span>Academic Calendar</span>
           </button>
 
-          {/* Search for Faculty Pill (Find Teacher Location): Accessible to All */}
+          {/* Search for Faculty Pill: Full Directory & Location Search (Accessible to All) */}
           <button
             type="button"
-            className="dashboard-pill"
-            onClick={onOpenFacultyLocator}
-            title="Faculty not in cabin? Find teacher location through their timetable"
+            className={`dashboard-pill ${activeDashboard === "faculty-search" ? "active" : ""}`}
+            onClick={() => onSwitchDashboard("faculty-search")}
+            title="Search for Faculty: Look up cabin, designations, subjects and live classroom locations"
             id="navFacultyLocatorPill"
             style={{
-              background: "#000000",
-              color: "#ffffff",
+              background: activeDashboard === "faculty-search" ? "#ffffff" : "#000000",
+              color: activeDashboard === "faculty-search" ? "#000000" : "#ffffff",
               border: "1px solid #000000",
               fontWeight: 700
             }}

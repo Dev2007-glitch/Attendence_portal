@@ -10,6 +10,7 @@ import { COLLECTIONS, DB_NAME } from "./db/collections.js";
 import { recordAuditEvent, queryAuditLogs } from "./db/auditService.js";
 import { storeFile, recordFileDownload } from "./db/fileStorageService.js";
 import { createDatabaseBackup, listDatabaseBackups, restoreDatabaseBackup } from "./db/backupService.js";
+import { getAllFacultyDirectory } from "../src/utils/facultyLocator.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -459,7 +460,217 @@ router.get("/stats/overview", async (req, res) => {
   }
 });
 
-// 6. Faculty WhatsApp Contacts & Timetables
+// 6. Faculty Directory, Search & Timetables
+router.get("/faculty/search", async (req, res) => {
+  const { q, name, id, department, subject, cabin, limit = 50, page = 1 } = req.query;
+  const numLimit = Math.min(Math.max(parseInt(String(limit), 10) || 50, 1), 200);
+  const numPage = Math.max(parseInt(String(page), 10) || 1, 1);
+  const skip = (numPage - 1) * numLimit;
+
+  const escapeRegex = (str) => String(str).trim().replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+
+  try {
+    const coll = getCollection(COLLECTIONS.FACULTY);
+    let mongoQuery = {};
+    const conditions = [];
+
+    if (id && String(id).trim()) {
+      conditions.push({ id: { $regex: escapeRegex(id), $options: "i" } });
+    }
+    if (name && String(name).trim()) {
+      conditions.push({ name: { $regex: escapeRegex(name), $options: "i" } });
+    }
+    if (department && department !== "ALL" && String(department).trim()) {
+      conditions.push({ department: { $regex: escapeRegex(department), $options: "i" } });
+    }
+    if (subject && subject !== "ALL" && String(subject).trim()) {
+      const escapedSub = escapeRegex(subject);
+      conditions.push({
+        $or: [
+          { subjects: { $elemMatch: { $regex: escapedSub, $options: "i" } } },
+          { subjects: { $regex: escapedSub, $options: "i" } }
+        ]
+      });
+    }
+    if (cabin && String(cabin).trim()) {
+      conditions.push({ cabin: { $regex: escapeRegex(cabin), $options: "i" } });
+    }
+    if (q && String(q).trim()) {
+      const escapedQ = escapeRegex(q);
+      conditions.push({
+        $or: [
+          { name: { $regex: escapedQ, $options: "i" } },
+          { id: { $regex: escapedQ, $options: "i" } },
+          { cabin: { $regex: escapedQ, $options: "i" } },
+          { department: { $regex: escapedQ, $options: "i" } },
+          { subjects: { $elemMatch: { $regex: escapedQ, $options: "i" } } },
+          { subjects: { $regex: escapedQ, $options: "i" } },
+          { sections: { $elemMatch: { $regex: escapedQ, $options: "i" } } },
+          { sections: { $regex: escapedQ, $options: "i" } }
+        ]
+      });
+    }
+
+    if (conditions.length > 0) {
+      mongoQuery = conditions.length === 1 ? conditions[0] : { $and: conditions };
+    }
+
+    let results = [];
+    let totalCount = 0;
+
+    if (coll) {
+      try {
+        totalCount = await coll.countDocuments(mongoQuery);
+        results = await coll
+          .find(mongoQuery)
+          .sort({ name: 1 })
+          .skip(skip)
+          .limit(numLimit)
+          .toArray();
+      } catch (dbErr) {
+        console.warn("[Faculty Search DB Query Warning]:", dbErr.message);
+      }
+    }
+
+    // High-performance fallback: in-memory directory from timetable & faculty mappings
+    if (results.length === 0 && totalCount === 0) {
+      const fallbackList = getAllFacultyDirectory();
+      const qLower = (q || "").toLowerCase().trim();
+      const nameLower = (name || "").toLowerCase().trim();
+      const idLower = (id || "").toLowerCase().trim();
+      const deptLower = (department && department !== "ALL" ? department : "").toLowerCase().trim();
+      const subLower = (subject && subject !== "ALL" ? subject : "").toLowerCase().trim();
+      const cabinLower = (cabin || "").toLowerCase().trim();
+
+      const filtered = fallbackList.filter((fac) => {
+        if (idLower && !fac.id.toLowerCase().includes(idLower)) return false;
+        if (nameLower && !fac.name.toLowerCase().includes(nameLower)) return false;
+        if (deptLower && !fac.department.toLowerCase().includes(deptLower)) return false;
+        if (subLower && !fac.subjectsList?.some((s) => s.toLowerCase().includes(subLower))) return false;
+        if (cabinLower && !fac.cabin.toLowerCase().includes(cabinLower)) return false;
+        if (qLower) {
+          const matchQ =
+            fac.name.toLowerCase().includes(qLower) ||
+            fac.id.toLowerCase().includes(qLower) ||
+            fac.cabin.toLowerCase().includes(qLower) ||
+            fac.department.toLowerCase().includes(qLower) ||
+            fac.subjectsList?.some((s) => s.toLowerCase().includes(qLower)) ||
+            fac.sectionsList?.some((sec) => sec.toLowerCase().includes(qLower));
+          if (!matchQ) return false;
+        }
+        return true;
+      });
+
+      totalCount = filtered.length;
+      results = filtered.slice(skip, skip + numLimit);
+    }
+
+    // Sanitize records for public safety: exclude private passwords/hashes
+    const sanitized = results.map((f) => ({
+      id: f.id,
+      name: f.name,
+      cabin: f.cabin,
+      phone: f.phone || "+91 98480 12345",
+      department: f.department || "Computer Science & Engineering (CSE)",
+      designation: f.designation || (f.name?.startsWith("Dr.") ? "Associate Professor" : "Assistant Professor"),
+      subjects: f.subjects || f.subjectsList || [],
+      sections: f.sections || f.sectionsList || [],
+      sectionNums: f.sectionNums || f.sectionNumsList || [],
+      isClassTeacher: Boolean(f.isClassTeacher),
+      isCounsellor: Boolean(f.isCounsellor),
+      schedule: f.schedule || {}
+    }));
+
+    // Record audit / search activity asynchronously in MongoDB
+    try {
+      const searchColl = getCollection(COLLECTIONS.SEARCH_ACTIVITY);
+      if (searchColl && (q || name || id || subject)) {
+        await searchColl.insertOne({
+          type: "FACULTY_SEARCH",
+          query: { q, name, id, department, subject, cabin },
+          resultsCount: totalCount,
+          clientIp: getClientIp(req),
+          timestamp: new Date()
+        });
+      }
+    } catch (e) {}
+
+    res.json({
+      success: true,
+      query: { q: q || "", name: name || "", id: id || "", department: department || "ALL", subject: subject || "ALL" },
+      page: numPage,
+      limit: numLimit,
+      total: totalCount,
+      count: sanitized.length,
+      data: sanitized
+    });
+  } catch (err) {
+    console.error("[Faculty Search API Error]:", err);
+    res.status(500).json({ success: false, error: "Internal database search error: " + err.message });
+  }
+});
+
+router.get("/faculty/departments", async (req, res) => {
+  try {
+    const coll = getCollection(COLLECTIONS.FACULTY);
+    let departments = [];
+    if (coll) {
+      try {
+        departments = await coll.distinct("department");
+      } catch (e) {}
+    }
+    if (!departments || departments.length === 0) {
+      departments = ["Computer Science & Engineering (CSE)"];
+    }
+    res.json({ success: true, count: departments.length, data: departments });
+  } catch (err) {
+    res.json({ success: true, count: 1, data: ["Computer Science & Engineering (CSE)"] });
+  }
+});
+
+router.get("/faculty/subjects", async (req, res) => {
+  try {
+    const coll = getCollection(COLLECTIONS.FACULTY);
+    let subjects = [];
+    if (coll) {
+      try {
+        subjects = await coll.distinct("subjects");
+      } catch (e) {}
+    }
+    if (!subjects || subjects.length === 0) {
+      const facs = getAllFacultyDirectory();
+      const set = new Set();
+      facs.forEach((f) => f.subjectsList?.forEach((s) => set.add(s)));
+      subjects = Array.from(set).sort();
+    }
+    res.json({ success: true, count: subjects.length, data: subjects.filter(Boolean) });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+router.get("/faculty/:id", async (req, res) => {
+  const facId = req.params.id;
+  try {
+    const coll = getCollection(COLLECTIONS.FACULTY);
+    let fac = null;
+    if (coll) {
+      try {
+        fac = await coll.findOne({ id: facId });
+      } catch (e) {}
+    }
+    if (!fac) {
+      fac = getAllFacultyDirectory().find((f) => f.id === facId);
+    }
+    if (!fac) {
+      return res.status(404).json({ success: false, error: `Faculty with ID '${facId}' not found.` });
+    }
+    res.json({ success: true, data: fac });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
 router.get("/faculty", async (req, res) => {
   try {
     const coll = getCollection(COLLECTIONS.FACULTY);

@@ -39,14 +39,13 @@ export async function connectDB() {
 }
 
 export function getDb() {
-  if (!db) {
-    throw new Error("[Database Error] Database not initialized. Call connectDB() first.");
-  }
-  return db;
+  return db || null;
 }
 
 export function getCollection(collectionName) {
-  return getDb().collection(collectionName);
+  const database = getDb();
+  if (!database) return null;
+  return database.collection(collectionName);
 }
 
 export function getGridFS() {

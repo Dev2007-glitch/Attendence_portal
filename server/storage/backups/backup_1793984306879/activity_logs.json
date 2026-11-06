@@ -1,0 +1,68 @@
+[
+  {
+    "_id": "6aedf40043ef1ad1bb924246",
+    "eventId": "evt_1793979392807_1f038fff",
+    "userId": "fac_sivaprasad",
+    "role": "faculty",
+    "action": "TEST_ATTENDANCE_SUBMITTED",
+    "module": "attendance",
+    "summary": "Dr. P. Siva Prasad performed TEST_ATTENDANCE_SUBMITTED on attendance_session",
+    "timestamp": "2026-11-06T15:36:32.807Z",
+    "createdAt": "2026-11-06T15:36:32.808Z"
+  },
+  {
+    "_id": "6aedf4dca69581f2dda51e4b",
+    "eventId": "evt_1793979612462_70ff5de7",
+    "userId": "fac_dr__p__siva_prasad",
+    "role": "faculty",
+    "action": "ATTENDANCE_SUBMITTED",
+    "module": "attendance",
+    "summary": "Dr. P. Siva Prasad performed ATTENDANCE_SUBMITTED on attendance_session",
+    "timestamp": "2026-11-06T15:40:12.462Z",
+    "createdAt": "2026-11-06T15:40:12.463Z"
+  },
+  {
+    "_id": "6aedf504a69581f2dda51e4e",
+    "eventId": "evt_1793979652750_997a5fc8",
+    "userId": "admin",
+    "role": "admin",
+    "action": "DATABASE_BACKUP_CREATED",
+    "module": "admin",
+    "summary": "Administrator performed DATABASE_BACKUP_CREATED on database_backup",
+    "timestamp": "2026-11-06T15:40:52.750Z",
+    "createdAt": "2026-11-06T15:40:52.751Z"
+  },
+  {
+    "_id": "6aedfb31d23aa1cb0b4e880d",
+    "eventId": "evt_1793981233489_59c65ec6",
+    "userId": "fac_sivaprasad",
+    "role": "faculty",
+    "action": "USER_LOGIN",
+    "module": "authentication",
+    "summary": "Dr. P. Siva Prasad performed USER_LOGIN on session",
+    "timestamp": "2026-11-06T16:07:13.489Z",
+    "createdAt": "2026-11-06T16:07:13.490Z"
+  },
+  {
+    "_id": "6aedfb51d23aa1cb0b4e8810",
+    "eventId": "evt_1793981265906_5c5fa898",
+    "userId": "241FA04035",
+    "role": "student",
+    "action": "USER_LOGIN",
+    "module": "authentication",
+    "summary": "BONDILI DEVI RAGHUVEERA BAI performed USER_LOGIN on session",
+    "timestamp": "2026-11-06T16:07:45.906Z",
+    "createdAt": "2026-11-06T16:07:45.907Z"
+  },
+  {
+    "_id": "6aedfb51d23aa1cb0b4e8813",
+    "eventId": "evt_1793981265970_c9702ad6",
+    "userId": "admin_dean_cse",
+    "role": "admin",
+    "action": "USER_LOGIN",
+    "module": "authentication",
+    "summary": "Dr. K. Venkateswara Rao performed USER_LOGIN on session",
+    "timestamp": "2026-11-06T16:07:45.970Z",
+    "createdAt": "2026-11-06T16:07:45.971Z"
+  }
+]

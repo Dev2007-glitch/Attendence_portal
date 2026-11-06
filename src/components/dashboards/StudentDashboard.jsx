@@ -70,7 +70,8 @@ export default function StudentDashboard({
   students = [],
   sessions = [],
   onShowToast,
-  onOpenCalendarView
+  onOpenCalendarView,
+  onOpenFacultySearch
 }) {
   const isStudent = currentUser?.role === "student";
   const isStaff = !isStudent && (currentUser?.role === "faculty" || currentUser?.role === "admin");
@@ -655,7 +656,10 @@ export default function StudentDashboard({
               cursor: "pointer",
               boxShadow: "2px 2px 0px #000000"
             }}
-            onClick={() => setShowFacultyLocatorModal(true)}
+            onClick={() => {
+              if (onOpenFacultySearch) onOpenFacultySearch();
+              else setShowFacultyLocatorModal(true);
+            }}
             id="studentSearchFacultyBtn"
             title="Faculty not in cabin? Find teacher location through their timetable"
           >
@@ -1588,7 +1592,10 @@ export default function StudentDashboard({
                       cursor: "pointer",
                       boxShadow: "2px 2px 0px #000000"
                     }}
-                    onClick={() => setShowFacultyLocatorModal(true)}
+                    onClick={() => {
+              if (onOpenFacultySearch) onOpenFacultySearch();
+              else setShowFacultyLocatorModal(true);
+            }}
                     title="Find teacher location through their timetable if not in cabin"
                   >
                     <Compass size={14} />
