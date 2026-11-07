@@ -11,6 +11,22 @@ import { recordAuditEvent, queryAuditLogs } from "./db/auditService.js";
 import { storeFile, recordFileDownload } from "./db/fileStorageService.js";
 import { createDatabaseBackup, listDatabaseBackups, restoreDatabaseBackup } from "./db/backupService.js";
 import { getAllFacultyDirectory } from "../src/utils/facultyLocator.js";
+import { getSimulatedFacultyGPS, resolveCampusLocation, VFSTR_BUILDINGS } from "../src/utils/campusGeofence.js";
+import {
+  updateLiveLocation,
+  setLocationPermission,
+  getLocationPermission,
+  logLocationAccess,
+  logConsentHistory,
+  getStudentLocationForFaculty,
+  getStudentLocationForCounsellor,
+  getFacultyLocationForViewer,
+  getAdminLocationAuditData,
+  evaluateLocationFreshness
+} from "./db/locationService.js";
+
+// In-memory real-time GPS beacon cache
+const facultyGpsStore = new Map();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -573,12 +589,13 @@ router.get("/faculty/search", async (req, res) => {
       phone: f.phone || "+91 98480 12345",
       department: f.department || "Computer Science & Engineering (CSE)",
       designation: f.designation || (f.name?.startsWith("Dr.") ? "Associate Professor" : "Assistant Professor"),
-      subjects: f.subjects || f.subjectsList || [],
-      sections: f.sections || f.sectionsList || [],
-      sectionNums: f.sectionNums || f.sectionNumsList || [],
+      subjects: Array.isArray(f.subjects) && f.subjects.length > 0 ? f.subjects : (Array.isArray(f.subjectsList) ? f.subjectsList : []),
+      sections: Array.isArray(f.sections) && f.sections.length > 0 ? f.sections : (Array.isArray(f.sectionsList) ? f.sectionsList : []),
+      sectionNums: Array.isArray(f.sectionNums) && f.sectionNums.length > 0 ? f.sectionNums : (Array.isArray(f.sectionNumsList) ? f.sectionNumsList : []),
       isClassTeacher: Boolean(f.isClassTeacher),
       isCounsellor: Boolean(f.isCounsellor),
-      schedule: f.schedule || {}
+      schedule: f.schedule || {},
+      liveGps: facultyGpsStore.get(f.id) || getSimulatedFacultyGPS(f.id, f.name, f.cabin)
     }));
 
     // Record audit / search activity asynchronously in MongoDB
@@ -644,6 +661,355 @@ router.get("/faculty/subjects", async (req, res) => {
       subjects = Array.from(set).sort();
     }
     res.json({ success: true, count: subjects.length, data: subjects.filter(Boolean) });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// GPS Mobile Beacon & Geofence Endpoints
+router.post("/faculty/location/ping", async (req, res) => {
+  const { facultyId, latitude, longitude, accuracy = 10 } = req.body;
+  if (!facultyId || typeof latitude !== "number" || typeof longitude !== "number") {
+    return res.status(400).json({ success: false, error: "Missing facultyId, latitude, or longitude" });
+  }
+  const resolved = resolveCampusLocation(latitude, longitude, accuracy);
+  const locationDoc = {
+    facultyId,
+    latitude,
+    longitude,
+    accuracy,
+    ...resolved,
+    timestamp: new Date().toISOString()
+  };
+  facultyGpsStore.set(facultyId, locationDoc);
+  res.json({ success: true, data: locationDoc });
+});
+
+router.get("/faculty/:id/live-gps", async (req, res) => {
+  const facId = req.params.id;
+  const fac = getAllFacultyDirectory().find((f) => f.id === facId);
+  if (!fac) {
+    return res.status(404).json({ success: false, error: "Faculty not found" });
+  }
+  const gps = facultyGpsStore.get(facId) || getSimulatedFacultyGPS(fac.id, fac.name, fac.cabin);
+  res.json({ success: true, data: gps });
+});
+
+router.get("/faculty/locations/campus-radar", async (req, res) => {
+  const all = getAllFacultyDirectory().map((f) => {
+    const gps = facultyGpsStore.get(f.id) || getSimulatedFacultyGPS(f.id, f.name, f.cabin);
+    return {
+      id: f.id,
+      name: f.name,
+      cabin: f.cabin,
+      department: f.department,
+      phone: f.phone,
+      liveGps: gps
+    };
+  });
+  res.json({ success: true, buildings: VFSTR_BUILDINGS, count: all.length, data: all });
+});
+
+// =========================================================================
+// PHASE 10: ROLE-BASED LIVE LOCATION & MAP INTEGRATION APIS
+// =========================================================================
+
+// 1. Start explicit location sharing
+router.post("/location/share/start", async (req, res) => {
+  try {
+    const { userId, role, name, consentVersion = "v2.4" } = req.body;
+    if (!userId || !role) {
+      return res.status(400).json({ success: false, error: "userId and role are required." });
+    }
+
+    const perm = await setLocationPermission(userId, role, true);
+    await logConsentHistory(userId, role, "ENABLED", consentVersion);
+
+    res.json({
+      success: true,
+      message: "Live location sharing activated successfully.",
+      data: perm
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 2. Stop location sharing
+router.post("/location/share/stop", async (req, res) => {
+  try {
+    const { userId, role } = req.body;
+    if (!userId) {
+      return res.status(400).json({ success: false, error: "userId is required." });
+    }
+
+    const perm = await setLocationPermission(userId, role || "student", false);
+    await logConsentHistory(userId, role || "student", "DISABLED");
+
+    res.json({
+      success: true,
+      message: "Live location sharing stopped immediately.",
+      data: perm
+    });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 3. Receive genuine GPS location update from device (watchPosition / interval)
+router.post("/location/update", async (req, res) => {
+  try {
+    const { userId, role = "student", name, latitude, longitude, accuracy } = req.body;
+    if (!userId || typeof latitude !== "number" || typeof longitude !== "number") {
+      return res.status(400).json({
+        success: false,
+        error: "Missing required parameters: userId, latitude (number), longitude (number)."
+      });
+    }
+
+    // Verify user has enabled location sharing
+    const perm = await getLocationPermission(userId);
+    if (!perm.isEnabled) {
+      return res.status(403).json({
+        success: false,
+        error: "Location sharing is not enabled for this user. Please enable sharing first."
+      });
+    }
+
+    const updated = await updateLiveLocation(userId, role, name, { latitude, longitude, accuracy }, true);
+    res.json({ success: true, data: updated });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 4. Get own location & permission status
+router.get("/location/me", async (req, res) => {
+  const { userId } = req.query;
+  if (!userId) {
+    return res.status(400).json({ success: false, error: "userId query parameter required." });
+  }
+  const perm = await getLocationPermission(userId);
+  res.json({ success: true, data: perm });
+});
+
+// 5. Query sharing status
+router.get("/location/sharing-status", async (req, res) => {
+  const { userId } = req.query;
+  if (!userId) return res.status(400).json({ success: false, error: "userId required." });
+  const perm = await getLocationPermission(userId);
+  res.json({ success: true, userId, isSharing: Boolean(perm?.isEnabled), updatedAt: perm?.updatedAt });
+});
+
+// 6. Query permissions
+router.get("/location/permissions", async (req, res) => {
+  const { userId } = req.query;
+  const perm = await getLocationPermission(userId);
+  res.json({ success: true, data: perm });
+});
+
+// 7. Scoped Student Search for Attendance & Counsellor Roles
+router.get("/location/students", async (req, res) => {
+  try {
+    const { viewerRole = "faculty", viewerId, viewerName, q, section, counsellor } = req.query;
+
+    // Strict Privacy: Student role can NEVER search or view other students' locations (Phase 3)
+    if (viewerRole === "student") {
+      return res.status(403).json({
+        success: false,
+        error: "Privacy Policy Violation: Students are strictly prohibited from viewing or searching other students' locations."
+      });
+    }
+
+    let filtered = ALL_STUDENTS;
+
+    // Attendance Role: Filter only authorized sections
+    if (viewerRole === "faculty" && section && section !== "ALL") {
+      const sNum = parseInt(String(section).replace(/\D/g, ""), 10);
+      filtered = filtered.filter((s) => s.sectionNum === sNum);
+    }
+
+    // Counsellor Role: Filter assigned counselees only
+    if (viewerRole === "counsellor" && (viewerName || counsellor)) {
+      const cName = counsellor || viewerName;
+      filtered = filtered.filter(
+        (s) => s.counsellor && s.counsellor.toLowerCase().includes(cName.toLowerCase())
+      );
+    }
+
+    // Text search by name, roll, student ID, registration number
+    if (q && q.trim()) {
+      const qLower = q.toLowerCase().trim();
+      filtered = filtered.filter(
+        (s) =>
+          s.name.toLowerCase().includes(qLower) ||
+          s.roll.toLowerCase().includes(qLower) ||
+          (s.id && s.id.toLowerCase().includes(qLower)) ||
+          (s.section && s.section.toLowerCase().includes(qLower))
+      );
+    }
+
+    // Attach location sharing status indicator
+    const enriched = await Promise.all(
+      filtered.slice(0, 50).map(async (st) => {
+        const perm = await getLocationPermission(st.roll);
+        return {
+          id: st.id || st.roll,
+          roll: st.roll,
+          name: st.name,
+          section: st.section,
+          sectionNum: st.sectionNum,
+          counsellor: st.counsellor,
+          isSharingLocation: Boolean(perm?.isEnabled)
+        };
+      })
+    );
+
+    res.json({ success: true, count: enriched.length, total: filtered.length, data: enriched });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 8. Retrieve Specific Student Location with Full Authorization Check
+router.get("/location/students/:studentId", async (req, res) => {
+  try {
+    const studentId = req.params.studentId;
+    const {
+      viewerId = "faculty",
+      viewerRole = "faculty",
+      viewerName = "Faculty Member",
+      section,
+      counsellorName
+    } = req.query;
+
+    // Strict Privacy Boundary
+    if (viewerRole === "student") {
+      return res.status(403).json({
+        success: false,
+        error: "Privacy Restriction: Students cannot view other students' locations."
+      });
+    }
+
+    // Construct viewer object
+    const viewerUser = {
+      id: viewerId,
+      role: viewerRole,
+      name: viewerName,
+      section: section || "Section 1",
+      sectionNum: parseInt(String(section || "1").replace(/\D/g, ""), 10) || 1,
+      counsellorName: counsellorName || viewerName
+    };
+
+    let result;
+    if (viewerRole === "counsellor") {
+      result = await getStudentLocationForCounsellor(viewerUser, studentId, ALL_STUDENTS);
+    } else {
+      result = await getStudentLocationForFaculty(viewerUser, studentId, ALL_STUDENTS);
+    }
+
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 9. Authorized Faculty Directory for Student & Counsellor Roles
+router.get("/location/faculty", async (req, res) => {
+  try {
+    const { q, department, subject } = req.query;
+    const allFacs = getAllFacultyDirectory();
+
+    let filtered = allFacs;
+    if (q && q.trim()) {
+      const qLower = q.toLowerCase().trim();
+      filtered = filtered.filter(
+        (f) =>
+          f.name.toLowerCase().includes(qLower) ||
+          f.id.toLowerCase().includes(qLower) ||
+          f.cabin.toLowerCase().includes(qLower) ||
+          f.department.toLowerCase().includes(qLower) ||
+          f.subjectsList?.some((s) => s.toLowerCase().includes(qLower))
+      );
+    }
+    if (department && department !== "ALL") {
+      filtered = filtered.filter((f) => f.department.toLowerCase().includes(department.toLowerCase()));
+    }
+    if (subject && subject !== "ALL") {
+      filtered = filtered.filter((f) => f.subjectsList?.some((s) => s.toLowerCase().includes(subject.toLowerCase())));
+    }
+
+    const sanitized = await Promise.all(
+      filtered.slice(0, 100).map(async (f) => {
+        const perm = await getLocationPermission(f.id);
+        return {
+          id: f.id,
+          name: f.name,
+          cabin: f.cabin,
+          department: f.department,
+          designation: f.designation || (f.name?.startsWith("Dr.") ? "Associate Professor" : "Assistant Professor"),
+          subjects: f.subjects || f.subjectsList || [],
+          sections: f.sections || f.sectionsList || [],
+          phone: f.phone,
+          isSharingLocation: perm?.isEnabled !== false
+        };
+      })
+    );
+
+    res.json({ success: true, count: sanitized.length, total: filtered.length, data: sanitized });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 10. Retrieve Specific Faculty Location (Students & Counsellors)
+router.get("/location/faculty/:facultyId", async (req, res) => {
+  try {
+    const facultyId = req.params.facultyId;
+    const { viewerId = "student", viewerRole = "student", viewerName = "Student" } = req.query;
+
+    const viewerUser = { id: viewerId, role: viewerRole, name: viewerName };
+    const allFacs = getAllFacultyDirectory();
+    const result = await getFacultyLocationForViewer(viewerUser, facultyId, allFacs);
+
+    res.json(result);
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 11. Counsellor Assigned Students endpoint
+router.get("/location/counsellor/assigned-students", (req, res) => {
+  const { counsellorName = "Mr. Gujjula Murali" } = req.query;
+  const assigned = ALL_STUDENTS.filter(
+    (s) => s.counsellor && s.counsellor.toLowerCase().includes(counsellorName.toLowerCase())
+  );
+  res.json({ success: true, count: assigned.length, data: assigned });
+});
+
+// 12. Faculty Assigned Sections endpoint
+router.get("/location/faculty/assigned-sections", (req, res) => {
+  const { facultyId } = req.query;
+  const fac = getAllFacultyDirectory().find((f) => f.id === facultyId);
+  const sections = fac ? fac.sectionsList || ["Section 1"] : ["Section 1"];
+  res.json({ success: true, facultyId, sections });
+});
+
+// 13. Location Access Audit History (Phase 9 & Admin)
+router.get("/location/access-history", async (req, res) => {
+  try {
+    const data = await getAdminLocationAuditData();
+    res.json({ success: true, count: data.accessLogs.length, data: data.accessLogs });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 14. Admin Overview (Phase 4)
+router.get("/location/admin/overview", async (req, res) => {
+  try {
+    const data = await getAdminLocationAuditData();
+    res.json(data);
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }

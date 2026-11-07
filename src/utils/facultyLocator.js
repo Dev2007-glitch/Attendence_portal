@@ -174,16 +174,25 @@ export function getAllFacultyDirectory() {
   }
 
   // Format array sorted alphabetically
-  const result = Array.from(facultyMap.values()).map((f) => ({
-    ...f,
-    subjectsList: Array.from(f.subjects),
-    sectionsList: Array.from(f.sections).sort((a, b) => {
+  const result = Array.from(facultyMap.values()).map((f) => {
+    const subs = Array.from(f.subjects);
+    const secs = Array.from(f.sections).sort((a, b) => {
       const na = parseInt(a.replace(/\D/g, "") || "0", 10);
       const nb = parseInt(b.replace(/\D/g, "") || "0", 10);
       return na - nb;
-    }),
-    sectionNumsList: Array.from(f.sectionNums)
-  }));
+    });
+    const sNums = Array.from(f.sectionNums).sort((a, b) => a - b);
+
+    return {
+      ...f,
+      subjects: subs,
+      sections: secs,
+      sectionNums: sNums,
+      subjectsList: subs,
+      sectionsList: secs,
+      sectionNumsList: sNums
+    };
+  });
 
   return result.sort((a, b) => a.name.localeCompare(b.name));
 }

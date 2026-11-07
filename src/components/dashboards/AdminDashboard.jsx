@@ -20,9 +20,12 @@ import {
   DoorClosed,
   UserCheck,
   ArrowRight,
-  Database
+  Database,
+  MapPin,
+  Navigation
 } from "lucide-react";
 import AuditTrailExplorer from "../admin/AuditTrailExplorer.jsx";
+import AdminLocationManagementTab from "../location/AdminLocationManagementTab.jsx";
 import { SECTION_1_FACULTIES, SECTION_1_SUBJECTS } from "../../data/timetable";
 import { SECTIONS, COUNSELLORS } from "../../../data.js";
 import { computeStudentStats, computeSectionLiveStats } from "../../utils/attendanceStats.js";
@@ -464,7 +467,29 @@ export default function AdminDashboard({
           <Database size={16} />
           <span>MongoDB Audit Trail & History</span>
         </button>
+
+        <button
+          type="button"
+          className={`admin-tab-btn ${activeTab === "location_management" ? "active" : ""}`}
+          onClick={() => setActiveTab("location_management")}
+          id="adminTabLocation"
+          style={{
+            background: activeTab === "location_management" ? "#000000" : "#f1f5f9",
+            color: activeTab === "location_management" ? "#ffffff" : "#000000",
+            fontWeight: 800
+          }}
+        >
+          <Navigation size={16} />
+          <span>Location Tracking & Audit</span>
+        </button>
       </div>
+
+      {/* TAB: Location Management & Privacy Audit (Phase 4: Admin Role) */}
+      {activeTab === "location_management" && (
+        <div className="admin-tab-content">
+          <AdminLocationManagementTab currentUser={currentUser} onShowToast={onShowToast} />
+        </div>
+      )}
 
       {/* TAB 0: 22 Sections Bird's Eye Overview */}
       {activeTab === "sections" && (

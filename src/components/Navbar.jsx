@@ -173,33 +173,35 @@ export default function Navbar({
             <span>Academic Calendar</span>
           </button>
 
-          {/* Search for Faculty Pill: Full Directory & Location Search (Accessible to All) */}
-          <button
-            type="button"
-            className={`dashboard-pill ${activeDashboard === "faculty-search" ? "active" : ""}`}
-            onClick={(e) => {
-              e.preventDefault();
-              console.log("[NAVBAR CLICK] 'Search for Faculty' button clicked! Current activeDashboard:", activeDashboard);
-              if (typeof onSwitchDashboard === "function") {
-                console.log("[NAVBAR CLICK] Dispatching onSwitchDashboard('faculty-search')");
-                onSwitchDashboard("faculty-search");
-              } else {
-                console.error("[NAVBAR CLICK ERROR] onSwitchDashboard prop is missing or not a function:", onSwitchDashboard);
-              }
-            }}
-            title="Search for Faculty: Look up cabin, designations, subjects and live classroom locations"
-            id="navFacultyLocatorPill"
-            style={{
-              background: activeDashboard === "faculty-search" ? "#ffffff" : "#000000",
-              color: activeDashboard === "faculty-search" ? "#000000" : "#ffffff",
-              border: "1px solid #000000",
-              fontWeight: 700,
-              cursor: "pointer"
-            }}
-          >
-            <Compass size={15} />
-            <span>Search for Faculty</span>
-          </button>
+          {/* Search for Faculty Pill: Strictly NOT displayed in Attendance role (Phase 1) */}
+          {activeDashboard !== "faculty" && (
+            <button
+              type="button"
+              className={`dashboard-pill ${activeDashboard === "faculty-search" ? "active" : ""}`}
+              onClick={(e) => {
+                e.preventDefault();
+                console.log("[NAVBAR CLICK] 'Search for Faculty' button clicked! Current activeDashboard:", activeDashboard);
+                if (typeof onSwitchDashboard === "function") {
+                  console.log("[NAVBAR CLICK] Dispatching onSwitchDashboard('faculty-search')");
+                  onSwitchDashboard("faculty-search");
+                } else {
+                  console.error("[NAVBAR CLICK ERROR] onSwitchDashboard prop is missing or not a function:", onSwitchDashboard);
+                }
+              }}
+              title="Search for Faculty: Look up cabin, designations, subjects and live classroom locations"
+              id="navFacultyLocatorPill"
+              style={{
+                background: activeDashboard === "faculty-search" ? "#ffffff" : "#000000",
+                color: activeDashboard === "faculty-search" ? "#000000" : "#ffffff",
+                border: "1px solid #000000",
+                fontWeight: 700,
+                cursor: "pointer"
+              }}
+            >
+              <Compass size={15} />
+              <span>Search for Faculty</span>
+            </button>
+          )}
         </div>
       </div>
 

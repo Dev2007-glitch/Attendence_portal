@@ -64,6 +64,7 @@ import {
   submitOdApplication,
   getOdApplicationsForStudent
 } from "../../utils/odManagement.js";
+import StudentFacultyLocationTab from "../location/StudentFacultyLocationTab.jsx";
 
 export default function StudentDashboard({
   currentUser,
@@ -1233,7 +1234,32 @@ export default function StudentDashboard({
           <FileText size={16} />
           <span>Apply On-Duty / Leave</span>
         </button>
+
+        <button
+          type="button"
+          className={`sis-tab ${activeTab === "faculty_location" ? "active" : ""}`}
+          onClick={() => setActiveTab("faculty_location")}
+          id="sisTabFacultyLocation"
+          role="tab"
+          aria-selected={activeTab === "faculty_location"}
+          style={{
+            background: activeTab === "faculty_location" ? "#000000" : "#ffffff",
+            color: activeTab === "faculty_location" ? "#ffffff" : "#000000"
+          }}
+        >
+          <Compass size={16} />
+          <span>Faculty Live Location (GPS)</span>
+        </button>
       </nav>
+
+      {/* =========================================================================
+          TAB: FACULTY LIVE LOCATION & CAMPUS DIRECTORY (Phase 3: Student Role)
+          ========================================================================= */}
+      {activeTab === "faculty_location" && (
+        <div className="sis-tab-content-panel" role="tabpanel" aria-labelledby="sisTabFacultyLocation">
+          <StudentFacultyLocationTab currentUser={currentUser} onShowToast={onShowToast} />
+        </div>
+      )}
 
       {/* =========================================================================
           TAB 1: ATTENDANCE DETAILS (Signature Vignan SIS Parent View)

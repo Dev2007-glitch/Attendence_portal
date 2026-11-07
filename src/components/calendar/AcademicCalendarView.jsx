@@ -22,7 +22,8 @@ import {
   BookOpen,
   Award,
   Layers,
-  Filter
+  Filter,
+  Compass
 } from "lucide-react";
 import {
   ACADEMIC_SEMESTER_INFO,
@@ -370,42 +371,75 @@ export default function AcademicCalendarView({
             </p>
           </div>
 
-          {/* Quick User Context Badge */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "12px",
-              background: "#ffffff",
-              padding: "10px 16px",
-              borderRadius: "0px",
-              border: "2px solid #000000",
-              boxShadow: "3px 3px 0px #000000"
-            }}
-          >
-            <div
+          {/* Quick Actions & User Context */}
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap" }}>
+            {/* Search for Faculty Action Button */}
+            <button
+              type="button"
+              id="calendarFacultySearchBtn"
+              onClick={() => {
+                console.log("[ACADEMIC CALENDAR] 'Search for Faculty' button clicked! Navigating to faculty-search view.");
+                if (typeof onSwitchView === "function") {
+                  onSwitchView("faculty-search");
+                }
+              }}
               style={{
-                width: "36px",
-                height: "36px",
-                borderRadius: "0px",
-                background: "#000000",
-                color: "#ffffff",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
+                gap: "8px",
+                background: "#000000",
+                color: "#ffffff",
+                padding: "10px 18px",
+                borderRadius: "0px",
+                border: "2px solid #000000",
+                boxShadow: "3px 3px 0px #000000",
                 fontWeight: "800",
-                fontSize: "14px"
+                fontSize: "13px",
+                cursor: "pointer"
+              }}
+              title="Search for Faculty: Look up cabin, designations, subjects and live classroom locations"
+            >
+              <Compass size={16} />
+              <span>Search for Faculty</span>
+            </button>
+
+            {/* Quick User Context Badge */}
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "12px",
+                background: "#ffffff",
+                padding: "10px 16px",
+                borderRadius: "0px",
+                border: "2px solid #000000",
+                boxShadow: "3px 3px 0px #000000"
               }}
             >
-              {currentUser?.name ? currentUser.name.charAt(0) : "U"}
-            </div>
-            <div>
-              <div style={{ fontSize: "13px", fontWeight: "600", color: "#111827" }}>
-                {currentUser?.name || "Student / Faculty"}
+              <div
+                style={{
+                  width: "36px",
+                  height: "36px",
+                  borderRadius: "0px",
+                  background: "#000000",
+                  color: "#ffffff",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontWeight: "800",
+                  fontSize: "14px"
+                }}
+              >
+                {currentUser?.name ? currentUser.name.charAt(0) : "U"}
               </div>
-              <div style={{ fontSize: "11px", color: "#6b7280", display: "flex", alignItems: "center", gap: "4px" }}>
-                <Mail size={11} />
-                <span>{reminderEmail}</span>
+              <div>
+                <div style={{ fontSize: "13px", fontWeight: "600", color: "#111827" }}>
+                  {currentUser?.name || "Student / Faculty"}
+                </div>
+                <div style={{ fontSize: "11px", color: "#6b7280", display: "flex", alignItems: "center", gap: "4px" }}>
+                  <Mail size={11} />
+                  <span>{reminderEmail}</span>
+                </div>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionSwitcher from "../common/SectionSwitcher";
 import SessionBar from "../SessionBar";
 import Toolbar from "../Toolbar";
@@ -10,6 +10,7 @@ import HistoryModal from "../HistoryModal";
 import QuickKeyModal from "../QuickKeyModal";
 import FacultyWhatsAppModal from "../FacultyWhatsAppModal";
 import TimetableModal from "../TimetableModal";
+import StudentLocationModal from "../location/StudentLocationModal";
 
 export default function FacultyDashboard({
   currentUser,
@@ -78,6 +79,9 @@ export default function FacultyDashboard({
   setShowTimetableModal,
   onSelectTimetableSlot
 }) {
+  const [selectedStudentForLocation, setSelectedStudentForLocation] = useState(null);
+  const [showStudentLocationModal, setShowStudentLocationModal] = useState(false);
+
   return (
     <div className="faculty-dashboard-wrapper">
       {/* Multi-Section Switcher Bar (22 Sections & Counsellors) */}
@@ -187,6 +191,64 @@ export default function FacultyDashboard({
         counts={counts}
         onOpenQuickKey={onOpenQuickKey}
       />
+
+      {/* Dynamic Student Search & Live GPS Tracker Strip (Attendance Role) */}
+      {searchQuery && (
+        <div
+          className="search-student-location-bar"
+          style={{
+            background: "#ffffff",
+            border: "2px solid #000000",
+            padding: "10px 14px",
+            marginBottom: "12px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: "10px"
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <span style={{ fontSize: "1rem" }}>📍</span>
+            <span style={{ fontSize: "0.82rem", fontWeight: 700 }}>
+              Authorized Section {section} Student Results: <strong>{filteredStudents.length} matches</strong>
+            </span>
+          </div>
+
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", flexWrap: "wrap" }}>
+            {filteredStudents.slice(0, 3).map((stu) => (
+              <button
+                key={stu.roll}
+                type="button"
+                onClick={() => {
+                  setSelectedStudentForLocation(stu);
+                  setShowStudentLocationModal(true);
+                }}
+                style={{
+                  background: "#000000",
+                  color: "#ffffff",
+                  border: "1px solid #000000",
+                  padding: "4px 10px",
+                  fontSize: "0.74rem",
+                  fontWeight: 700,
+                  cursor: "pointer",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "5px"
+                }}
+                title={`Track live location for ${stu.name}`}
+              >
+                <span>📍 Track {stu.name.split(" ")[0]} ({stu.roll})</span>
+              </button>
+            ))}
+            {filteredStudents.length > 3 && (
+              <span style={{ fontSize: "0.72rem", color: "#64748b" }}>
+                +{filteredStudents.length - 3} more in roster below
+              </span>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Live VU Email Dispatch Status Banner */}
       <div className="vu-mail-dispatch-bar">
@@ -383,6 +445,16 @@ export default function FacultyDashboard({
         currentPeriod={period}
         selectedSection={section}
         onSelectSlot={onSelectTimetableSlot}
+      />
+
+      {/* Role-Based Student Live Location Modal */}
+      <StudentLocationModal
+        isOpen={showStudentLocationModal}
+        onClose={() => setShowStudentLocationModal(false)}
+        student={selectedStudentForLocation}
+        currentUser={currentUser}
+        section={section}
+        onShowToast={showToast}
       />
     </div>
   );

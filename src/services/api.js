@@ -273,3 +273,117 @@ export async function fetchFacultyById(id) {
   return null;
 }
 
+// =========================================================================
+// ROLE-BASED LIVE LOCATION APIS (PHASE 10)
+// =========================================================================
+
+export async function apiStartLocationSharing(userId, role, name) {
+  try {
+    const res = await fetch(`${API_BASE}/location/share/start`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, role, name })
+    });
+    return await res.json();
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+}
+
+export async function apiStopLocationSharing(userId, role) {
+  try {
+    const res = await fetch(`${API_BASE}/location/share/stop`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, role })
+    });
+    return await res.json();
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+}
+
+export async function apiSendLocationUpdate(userId, role, name, coords) {
+  try {
+    const res = await fetch(`${API_BASE}/location/update`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId,
+        role,
+        name,
+        latitude: coords.latitude,
+        longitude: coords.longitude,
+        accuracy: coords.accuracy
+      })
+    });
+    return await res.json();
+  } catch (e) {
+    return { success: false, error: e.message };
+  }
+}
+
+export async function apiGetLocationPermissions(userId) {
+  try {
+    const res = await fetch(`${API_BASE}/location/permissions?userId=${encodeURIComponent(userId)}`);
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return { success: false, data: { isEnabled: false } };
+}
+
+export async function apiSearchStudentsLocation(params = {}) {
+  try {
+    const query = new URLSearchParams(params).toString();
+    const res = await fetch(`${API_BASE}/location/students?${query}`);
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return { success: false, data: [] };
+}
+
+export async function apiGetStudentLocation(studentRoll, viewerParams = {}) {
+  try {
+    const query = new URLSearchParams(viewerParams).toString();
+    const res = await fetch(`${API_BASE}/location/students/${encodeURIComponent(studentRoll)}?${query}`);
+    return await res.json();
+  } catch (e) {
+    return { success: false, message: e.message };
+  }
+}
+
+export async function apiSearchFacultyLocation(params = {}) {
+  try {
+    const query = new URLSearchParams(params).toString();
+    const res = await fetch(`${API_BASE}/location/faculty?${query}`);
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return { success: false, data: [] };
+}
+
+export async function apiGetFacultyLocation(facultyId, viewerParams = {}) {
+  try {
+    const query = new URLSearchParams(viewerParams).toString();
+    const res = await fetch(`${API_BASE}/location/faculty/${encodeURIComponent(facultyId)}?${query}`);
+    return await res.json();
+  } catch (e) {
+    return { success: false, message: e.message };
+  }
+}
+
+export async function apiGetAdminLocationOverview() {
+  try {
+    const res = await fetch(`${API_BASE}/location/admin/overview`);
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return { success: false, summary: {} };
+}
+
+export async function apiGetLocationAccessHistory(params = {}) {
+  try {
+    const query = new URLSearchParams(params).toString();
+    const res = await fetch(`${API_BASE}/location/access-history?${query}`);
+    if (res.ok) return await res.json();
+  } catch (e) {}
+  return { success: false, logs: [] };
+}
+
+

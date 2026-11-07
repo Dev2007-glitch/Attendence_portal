@@ -26,7 +26,9 @@ import {
   ShieldCheck,
   Eye,
   Paperclip,
-  ExternalLink
+  ExternalLink,
+  MapPin,
+  Navigation
 } from "lucide-react";
 import { COUNSELLORS, getStudentsByCounsellor } from "../../../data.js";
 import { computeStudentStats } from "../../utils/attendanceStats.js";
@@ -35,6 +37,7 @@ import {
   updateOdApplicationStatus,
   markOdAsRead
 } from "../../utils/odManagement.js";
+import CounsellorLocationTab from "../location/CounsellorLocationTab.jsx";
 
 export default function CounsellorDashboard({
   currentUser,
@@ -643,7 +646,32 @@ export default function CounsellorDashboard({
           <Users size={16} />
           <span>All Counsellors ({COUNSELLORS.length})</span>
         </button>
+
+        <button
+          type="button"
+          className={`admin-tab-btn ${activeTab === "location_tracking" ? "active" : ""}`}
+          onClick={() => setActiveTab("location_tracking")}
+          style={{
+            background: activeTab === "location_tracking" ? "#000000" : "#ffffff",
+            color: activeTab === "location_tracking" ? "#ffffff" : "#000000",
+            border: "1px solid #000000"
+          }}
+        >
+          <Navigation size={16} />
+          <span>Live Location Tracking (GPS)</span>
+        </button>
       </div>
+
+      {/* TAB: Live Location Tracking (Phase 2: Counsellor Role) */}
+      {activeTab === "location_tracking" && (
+        <div className="admin-tab-content">
+          <CounsellorLocationTab
+            activeCounsellorName={activeCounsellorName}
+            currentUser={currentUser}
+            onShowToast={onShowToast}
+          />
+        </div>
+      )}
 
       {/* TAB 1: Allotted Counselees Roster */}
       {activeTab === "roster" && (

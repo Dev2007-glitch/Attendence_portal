@@ -20,7 +20,9 @@ import {
   GraduationCap,
   Layers,
   Sparkles,
-  Loader2
+  Loader2,
+  Navigation,
+  Radio
 } from "lucide-react";
 import { searchFaculty, fetchFacultyDepartments, fetchFacultySubjects } from "../../services/api.js";
 import {
@@ -28,6 +30,8 @@ import {
   getFacultyCurrentLocation,
   COLLEGE_PERIOD_INTERVALS
 } from "../../utils/facultyLocator.js";
+import { getSimulatedFacultyGPS } from "../../utils/campusGeofence.js";
+import CampusGpsMapModal from "./CampusGpsMapModal.jsx";
 
 const DAYS_OF_WEEK = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -52,6 +56,8 @@ export default function FacultySearchView({
   const [departmentsList, setDepartmentsList] = useState(["Computer Science & Engineering (CSE)"]);
   const [subjectsList, setSubjectsList] = useState([]);
   const [selectedFacultyForTimetable, setSelectedFacultyForTimetable] = useState(null);
+  const [showGpsMapModal, setShowGpsMapModal] = useState(false);
+  const [selectedFacultyForGps, setSelectedFacultyForGps] = useState(null);
   const [copiedId, setCopiedId] = useState(null);
 
   const abortControllerRef = useRef(null);
@@ -102,8 +108,14 @@ export default function FacultySearchView({
 
         let data = res?.data || [];
 
-        // Apply quick filter on client side for live status (in_cabin / in_class)
-        if (quick === "class_teacher") {
+        // Apply quick filter on client side for live status (in_cabin / in_class) or campus block (A, N, H, U)
+        if (quick && quick.startsWith("block_")) {
+          const code = quick.replace("block_", "").toUpperCase();
+          data = data.filter((fac) => {
+            const gps = fac.liveGps || getSimulatedFacultyGPS(fac.id, fac.name, fac.cabin);
+            return gps?.blockCode === code || (fac.cabin || "").toUpperCase().startsWith(code + "-");
+          });
+        } else if (quick === "class_teacher") {
           data = data.filter((f) => f.isClassTeacher);
         } else if (quick === "counsellor") {
           data = data.filter((f) => f.isCounsellor);
@@ -267,6 +279,34 @@ export default function FacultySearchView({
             <span>Database Records: {totalFacultyCount}</span>
           </div>
 
+          {/* Live Campus GPS Radar Map Button */}
+          <button
+            type="button"
+            id="openCampusGpsModalBtn"
+            onClick={() => {
+              setSelectedFacultyForGps(null);
+              setShowGpsMapModal(true);
+            }}
+            className="btn btn-sm"
+            style={{
+              background: "#000000",
+              color: "#ffffff",
+              border: "1px solid #000000",
+              fontWeight: 800,
+              fontSize: "0.82rem",
+              padding: "7px 14px",
+              display: "flex",
+              alignItems: "center",
+              gap: "7px",
+              cursor: "pointer",
+              borderRadius: "0px"
+            }}
+            title="Open Live Campus GPS Satellite & Radar Map (A, N, H, U Blocks)"
+          >
+            <Navigation size={15} color="#f59e0b" />
+            <span>Campus GPS Map (A, N, H, U)</span>
+          </button>
+
           <button
             type="button"
             onClick={onOpenLocatorModal}
@@ -397,7 +437,11 @@ export default function FacultySearchView({
 
             {[
               { id: "all", label: "All Faculty" },
-              { id: "in_cabin", label: "In Cabin Right Now" },
+              { id: "block_n", label: "🏢 N-Block (CSE)" },
+              { id: "block_a", label: "🏛️ A-Block" },
+              { id: "block_u", label: "🔬 U-Block" },
+              { id: "block_h", label: "⚙️ H-Block" },
+              { id: "in_cabin", label: "In Cabin" },
               { id: "in_class", label: "In Class / Lab" },
               { id: "class_teacher", label: "Class Teachers" },
               { id: "counsellor", label: "Counsellors" }
@@ -741,7 +785,7 @@ export default function FacultySearchView({
                     </div>
 
                     {/* Cabin & Current Room */}
-                    <div style={{ marginBottom: "12px" }}>
+                    <div style={{ marginBottom: "8px" }}>
                       <div style={{ display: "flex", alignItems: "flex-start", gap: "6px", marginBottom: "4px" }}>
                         <MapPin size={15} style={{ color: "#000000", marginTop: "2px", flexShrink: 0 }} />
                         <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0f172a" }}>
@@ -753,14 +797,64 @@ export default function FacultySearchView({
                       </div>
                     </div>
 
+                    {/* Live Mobile GPS Beacon Chip (A, N, H, U Blocks) */}
+                    {(() => {
+                      const facGps = fac.liveGps || getSimulatedFacultyGPS(fac.id, fac.name, fac.cabin);
+                      return (
+                        <div
+                          style={{
+                            margin: "0 0 12px 0",
+                            background: "#f8fafc",
+                            border: "1px solid #000000",
+                            padding: "6px 10px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            fontSize: "0.72rem"
+                          }}
+                        >
+                          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                            <span
+                              style={{
+                                width: "7px",
+                                height: "7px",
+                                borderRadius: "50%",
+                                background: facGps.color || "#16a34a",
+                                display: "inline-block"
+                              }}
+                            />
+                            <strong style={{ color: "#000000" }}>GPS: {facGps.badge}</strong>
+                          </div>
+                          <span
+                            onClick={() => {
+                              setSelectedFacultyForGps(fac);
+                              setShowGpsMapModal(true);
+                            }}
+                            style={{
+                              color: "#2563eb",
+                              fontWeight: 700,
+                              cursor: "pointer",
+                              display: "inline-flex",
+                              alignItems: "center",
+                              gap: "3px"
+                            }}
+                            title="Inspect live GPS position on VFSTR Campus Radar Map"
+                          >
+                            <Navigation size={11} />
+                            Radar Map
+                          </span>
+                        </div>
+                      );
+                    })()}
+
                     {/* Subjects Handled */}
-                    {fac.subjects && fac.subjects.length > 0 && (
+                    {((fac.subjects && fac.subjects.length > 0) || (fac.subjectsList && fac.subjectsList.length > 0)) && (
                       <div style={{ marginBottom: "10px" }}>
                         <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "#64748b", textTransform: "uppercase" }}>
                           Subjects:
                         </span>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "4px", marginTop: "4px" }}>
-                          {fac.subjects.map((sub, sIdx) => (
+                          {(fac.subjects && fac.subjects.length > 0 ? fac.subjects : fac.subjectsList).map((sub, sIdx) => (
                             <span
                               key={sIdx}
                               style={{
@@ -780,13 +874,13 @@ export default function FacultySearchView({
                     )}
 
                     {/* Assigned Sections */}
-                    {fac.sections && fac.sections.length > 0 && (
+                    {((fac.sections && fac.sections.length > 0) || (fac.sectionsList && fac.sectionsList.length > 0)) && (
                       <div>
                         <span style={{ fontSize: "0.72rem", fontWeight: 800, color: "#64748b", textTransform: "uppercase" }}>
                           Sections:
                         </span>
                         <div style={{ display: "flex", flexWrap: "wrap", gap: "4px", marginTop: "4px" }}>
-                          {fac.sections.map((sec, sIdx) => (
+                          {(fac.sections && fac.sections.length > 0 ? fac.sections : fac.sectionsList).map((sec, sIdx) => (
                             <span
                               key={sIdx}
                               style={{
@@ -866,11 +960,37 @@ export default function FacultySearchView({
 
                     <button
                       type="button"
-                      onClick={onOpenLocatorModal}
+                      onClick={() => {
+                        setSelectedFacultyForGps(fac);
+                        setShowGpsMapModal(true);
+                      }}
                       className="btn btn-sm"
                       style={{
                         background: "#000000",
                         color: "#ffffff",
+                        border: "1px solid #000000",
+                        fontSize: "0.75rem",
+                        fontWeight: 700,
+                        padding: "5px 10px",
+                        borderRadius: "0px",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "5px",
+                        cursor: "pointer"
+                      }}
+                      title="View live GPS mobile beacon on campus map (A, N, H, U Blocks)"
+                    >
+                      <Navigation size={12} color="#f59e0b" />
+                      <span>GPS Map</span>
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={onOpenLocatorModal}
+                      className="btn btn-sm"
+                      style={{
+                        background: "#ffffff",
+                        color: "#000000",
                         border: "1px solid #000000",
                         fontSize: "0.75rem",
                         fontWeight: 700,
@@ -893,6 +1013,15 @@ export default function FacultySearchView({
           })}
         </div>
       )}
+
+      {/* 5. Live Campus GPS Map & Satellite Radar Modal */}
+      <CampusGpsMapModal
+        isOpen={showGpsMapModal}
+        onClose={() => setShowGpsMapModal(false)}
+        selectedFaculty={selectedFacultyForGps}
+        allFacultyList={facultyResults}
+        onSelectFaculty={(fac) => setSelectedFacultyForGps(fac)}
+      />
     </div>
   );
 }

@@ -149,7 +149,37 @@ async function initializeIndexes(database) {
       { background: true }
     );
 
-    console.log("[Database] All core performance and uniqueness indexes verified.");
+    // 9. Location Tracking & Permissions (Phase 7)
+    await database.collection(COLLECTIONS.LIVE_LOCATIONS).createIndex(
+      { userId: 1 },
+      { unique: true, background: true }
+    );
+    await database.collection(COLLECTIONS.LIVE_LOCATIONS).createIndex(
+      { role: 1, isSharing: 1 },
+      { background: true }
+    );
+    await database.collection(COLLECTIONS.LIVE_LOCATIONS).createIndex(
+      { expiresAt: 1 },
+      { expireAfterSeconds: 0, background: true }
+    );
+    await database.collection(COLLECTIONS.LOCATION_SHARING_PERMISSIONS).createIndex(
+      { userId: 1 },
+      { unique: true, background: true }
+    );
+    await database.collection(COLLECTIONS.LOCATION_ACCESS_LOGS).createIndex(
+      { viewerId: 1, timestamp: -1 },
+      { background: true }
+    );
+    await database.collection(COLLECTIONS.LOCATION_ACCESS_LOGS).createIndex(
+      { targetUserId: 1, timestamp: -1 },
+      { background: true }
+    );
+    await database.collection(COLLECTIONS.LOCATION_CONSENT_HISTORY).createIndex(
+      { userId: 1, timestamp: -1 },
+      { background: true }
+    );
+
+    console.log("[Database] All core performance, location tracking and uniqueness indexes verified.");
   } catch (err) {
     console.warn("[Database Warning] Non-critical error initializing indexes:", err.message);
   }

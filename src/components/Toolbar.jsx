@@ -8,20 +8,36 @@ export default function Toolbar({
   viewMode,
   onViewChange,
   counts,
-  onOpenQuickKey
+  onOpenQuickKey,
+  onTrackStudentLive
 }) {
   return (
     <section className="toolbar-section" aria-label="Filters and View Controls">
-      {/* Search Bar */}
-      <div className="search-wrapper">
+      {/* Dynamic Search Student Bar (Replaces Faculty Search in Attendance Role) */}
+      <div className="search-wrapper" style={{ display: "flex", alignItems: "center", position: "relative" }}>
+        <span
+          style={{
+            background: "#000000",
+            color: "#ffffff",
+            fontSize: "0.68rem",
+            fontWeight: 800,
+            padding: "4px 8px",
+            letterSpacing: "0.04em",
+            whiteSpace: "nowrap",
+            marginRight: "6px"
+          }}
+        >
+          SEARCH STUDENT
+        </span>
         <span className="search-icon" aria-hidden="true">🔍</span>
         <input
           type="text"
           id="studentSearch"
           className="search-input"
-          placeholder="Search by student name or roll number..."
+          placeholder="SEARCH STUDENT (Name, Student ID, University Reg No, or Section)..."
           value={searchQuery}
           onChange={e => onSearchChange(e.target.value)}
+          style={{ fontWeight: 600 }}
         />
         {searchQuery && (
           <button

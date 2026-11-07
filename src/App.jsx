@@ -9,8 +9,19 @@ import AdminDashboard from "./components/dashboards/AdminDashboard";
 import AcademicCalendarView from "./components/calendar/AcademicCalendarView";
 import FacultyLocatorModal from "./components/faculty/FacultyLocatorModal";
 import FacultySearchView from "./components/faculty/FacultySearchView";
+import LocationSharingConsentBanner from "./components/location/LocationSharingConsentBanner.jsx";
 import Toast from "./components/Toast";
 import { sound } from "./utils/sound";
+import {
+  resolveCurrentRoute,
+  getAuthenticatedSession,
+  createAuthenticatedSession,
+  clearAllSessionData,
+  canRoleAccessRoute,
+  getDefaultDashboardForRole,
+  getUrlPathForDashboard,
+  syncBrowserUrl
+} from "./services/authGuard";
 import {
   fetchStudents,
   fetchSessions,
@@ -51,34 +62,29 @@ function getTodayDateString() {
 }
 
 export default function App() {
-  // Authentication State
+  // Centralized Authentication Guard: Read and validate session TTL
   const [currentUser, setCurrentUser] = useState(() => {
-    try {
-      const saved = localStorage.getItem("portal_auth_user");
-      return saved ? JSON.parse(saved) : null;
-    } catch (e) {
-      return null;
-    }
+    return getAuthenticatedSession();
   });
 
-  // Active Dashboard state: "faculty" | "counsellor" | "student" | "admin" | "calendar" | "faculty-search"
+  // Active Dashboard state: "login" | "faculty" | "counsellor" | "student" | "admin" | "calendar" | "faculty-search"
   const [activeDashboard, setActiveDashboard] = useState(() => {
-    try {
-      const hash = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
-      if (hash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(hash)) {
-        return hash;
-      }
-      const savedDash = localStorage.getItem("portal_active_dashboard");
-      if (savedDash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(savedDash)) {
-        return savedDash;
-      }
-      const saved = localStorage.getItem("portal_auth_user");
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        return parsed.role || "faculty";
-      }
-    } catch (e) {}
-    return "faculty";
+    const session = getAuthenticatedSession();
+    const route = resolveCurrentRoute();
+
+    if (!session) {
+      return "login";
+    }
+
+    if (route === "login" || route === "logout") {
+      return getDefaultDashboardForRole(session.role);
+    }
+
+    if (canRoleAccessRoute(session.role, route)) {
+      return route;
+    }
+
+    return getDefaultDashboardForRole(session.role);
   });
 
   // Track previous dashboard for smooth back-navigation
@@ -86,17 +92,101 @@ export default function App() {
     return activeDashboard === "faculty-search" ? "calendar" : "student";
   });
 
-  // Listen to browser forward/back button (URL hash changes)
+  // Centralized Route Protection Guard on Mount & URL changes
   useEffect(() => {
-    const handleHash = () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash && ["faculty", "counsellor", "student", "admin", "calendar", "faculty-search"].includes(hash)) {
-        setActiveDashboard(hash);
+    const session = getAuthenticatedSession();
+    const route = resolveCurrentRoute();
+
+    // SCENARIOS 1, 2, 3: Unauthenticated visitor accessing root '/' or protected dashboard URLs
+    if (!session) {
+      if (route !== "login") {
+        syncBrowserUrl("login", true);
       }
-    };
-    window.addEventListener("hashchange", handleHash);
-    return () => window.removeEventListener("hashchange", handleHash);
+      if (currentUser !== null) {
+        setCurrentUser(null);
+      }
+      return;
+    }
+
+    // SCENARIO 4: Authenticated user accessing root '/' -> redirect to their role-specific dashboard
+    if (route === "login" || route === "logout") {
+      const defaultDash = getDefaultDashboardForRole(session.role);
+      setActiveDashboard(defaultDash);
+      syncBrowserUrl(defaultDash, true);
+      return;
+    }
+
+    // RBAC: Check authorization for target route
+    if (!canRoleAccessRoute(session.role, route)) {
+      const fallbackDash = getDefaultDashboardForRole(session.role);
+      setActiveDashboard(fallbackDash);
+      syncBrowserUrl(fallbackDash, true);
+      showToast(`⛔ Access Restricted: ${session.role.toUpperCase()} accounts cannot access the ${route.toUpperCase()} view.`, "warning");
+      return;
+    }
+
+    setActiveDashboard(route);
+    syncBrowserUrl(route, true);
   }, []);
+
+  // Listen to browser forward/back button (URL popstate and hashchange)
+  useEffect(() => {
+    const handleNavigation = () => {
+      const session = getAuthenticatedSession();
+      const route = resolveCurrentRoute();
+
+      if (route === "logout") {
+        handleLogout();
+        return;
+      }
+
+      if (!session) {
+        if (currentUser !== null) {
+          setCurrentUser(null);
+        }
+        syncBrowserUrl("login", true);
+        return;
+      }
+
+      if (route === "login") {
+        const defaultDash = getDefaultDashboardForRole(session.role);
+        setActiveDashboard(defaultDash);
+        syncBrowserUrl(defaultDash, true);
+        return;
+      }
+
+      if (!canRoleAccessRoute(session.role, route)) {
+        sound.playUncheck();
+        showToast(`⛔ Access Restricted: ${session.role.toUpperCase()} accounts cannot access the ${route.toUpperCase()} view.`, "warning");
+        const fallbackDash = getDefaultDashboardForRole(session.role);
+        setActiveDashboard(fallbackDash);
+        syncBrowserUrl(fallbackDash, true);
+        return;
+      }
+
+      setActiveDashboard(route);
+    };
+
+    window.addEventListener("popstate", handleNavigation);
+    window.addEventListener("hashchange", handleNavigation);
+    return () => {
+      window.removeEventListener("popstate", handleNavigation);
+      window.removeEventListener("hashchange", handleNavigation);
+    };
+  }, [currentUser]);
+
+  // Periodic Session Expiration Check (checks TTL every 60s)
+  useEffect(() => {
+    if (!currentUser) return;
+    const interval = setInterval(() => {
+      const session = getAuthenticatedSession();
+      if (!session) {
+        showToast("⚠️ Your session has expired. Please sign in again.", "warning");
+        handleLogout();
+      }
+    }, 60000);
+    return () => clearInterval(interval);
+  }, [currentUser]);
 
   // Faculty Locator Modal state (Search for Faculty live modal)
   const [showGlobalFacultyLocator, setShowGlobalFacultyLocator] = useState(false);
@@ -383,51 +473,36 @@ export default function App() {
   const stickyInputRef = useRef(null);
   const summaryRef = useRef(null);
 
-  // Role-Based Access Control (RBAC) Guard Rules:
-  // - Student: CANNOT access Faculty or Admin (only student view)
-  // - Student: CANNOT access Faculty, Counsellor, or Admin (only student view)
-  // - Faculty & Counsellor: CAN access Attendance, Counsellor, and Student (cannot access Admin)
-  // - Admin: CAN access Admin, Faculty, Counsellor, and Student
-  const canAccessDashboard = (userRole, target) => {
-    if (target === "calendar" || target === "faculty-search") return true;
-    if (userRole === "admin") return true;
-    if (userRole === "faculty" || userRole === "counsellor") {
-      return target === "faculty" || target === "counsellor" || target === "student";
-    }
-    if (userRole === "student") return target === "student";
-    return false;
-  };
-
-  // Auth Handlers with RBAC Access Control & Role-Based Routing
+  // Auth Handlers with Centralized RBAC Guard & Role-Based Routing
   const handleLogin = (user) => {
-    setCurrentUser(user);
-    // Role-based routing: Admin -> Admin Dashboard, Faculty/Counsellor -> Faculty Portal, Student -> Student Dashboard
-    if (user.role === "admin") {
-      setActiveDashboard("admin");
-    } else if (user.role === "faculty" || user.role === "counsellor") {
-      setActiveDashboard("faculty");
-    } else if (user.role === "student") {
-      setActiveDashboard("student");
-    } else {
-      setActiveDashboard(user.role || "faculty");
+    const session = createAuthenticatedSession(user);
+    setCurrentUser(session);
+
+    // Role-based routing:
+    // Attendance -> Attendance Dashboard (/attendance)
+    // Counsellor -> Counsellor Dashboard (/counsellor)
+    // Student -> Student Dashboard (/student)
+    // Admin -> Admin Dashboard (/admin)
+    const targetDashboard = getDefaultDashboardForRole(session.role);
+    setActiveDashboard(targetDashboard);
+    syncBrowserUrl(targetDashboard, false);
+
+    if (session.sectionNum) {
+      setSelectedSection(session.sectionNum);
+    }
+    if (session.role === "counsellor" && session.name) {
+      setSelectedCounsellor(session.name);
     }
 
-    if (user.sectionNum) {
-      setSelectedSection(user.sectionNum);
-    }
-    if (user.role === "counsellor" && user.name) {
-      setSelectedCounsellor(user.name);
-    }
-    localStorage.setItem("portal_auth_user", JSON.stringify(user));
     sound.playSuccess();
-    showToast(`Welcome ${user.name}! (${user.role.toUpperCase()} Portal)`, "success");
+    showToast(`Welcome ${session.name}! (${session.role.toUpperCase()} Portal)`, "success");
 
     // Persist Login Event to MongoDB login_history
     try {
       fetch("/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ user, provider: user.authProvider || "credentials" })
+        body: JSON.stringify({ user: session, provider: session.authProvider || "credentials" })
       }).catch((e) => console.warn("[Auth Sync Warning]:", e.message));
     } catch (e) {}
   };
@@ -446,17 +521,22 @@ export default function App() {
         }).catch((e) => console.warn("[Logout Sync Warning]:", e.message));
       } catch (e) {}
     }
+    clearAllSessionData();
     setCurrentUser(null);
-    localStorage.removeItem("portal_auth_user");
+    setActiveDashboard("login");
+    syncBrowserUrl("login", true);
     sound.playUncheck();
     showToast("Signed out successfully.", "info");
   };
 
   const handleSwitchDashboard = (target) => {
-    console.log("[APP.JSX] handleSwitchDashboard requested with target:", target);
+    if (!currentUser) {
+      syncBrowserUrl("login", true);
+      return;
+    }
+
     const userRole = currentUser?.role || "student";
-    const allowed = canAccessDashboard(userRole, target);
-    console.log(`[APP.JSX] User role: '${userRole}', target: '${target}', permission granted: ${allowed}`);
+    const allowed = canRoleAccessRoute(userRole, target);
     if (!allowed) {
       sound.playUncheck();
       showToast(
@@ -470,14 +550,10 @@ export default function App() {
       setPreviousDashboard(activeDashboard);
     }
     setActiveDashboard(target);
-    try {
-      localStorage.setItem("portal_active_dashboard", target);
-      window.location.hash = target;
-    } catch (e) {}
+    syncBrowserUrl(target, false);
     sound.playCheck();
     const label = target === "faculty-search" ? "Faculty Search" : target.charAt(0).toUpperCase() + target.slice(1);
     showToast(`Switched to ${label} View`, "info");
-    console.log("[APP.JSX] State updated! activeDashboard is now:", target);
   };
 
   const handleSelectSection = (newSecNum) => {
@@ -535,11 +611,13 @@ export default function App() {
   // Enforce access rule on active dashboard whenever currentUser changes
   useEffect(() => {
     if (currentUser) {
-      if (!canAccessDashboard(currentUser.role, activeDashboard)) {
-        setActiveDashboard(currentUser.role === "student" ? "student" : "faculty");
+      if (!canRoleAccessRoute(currentUser.role, activeDashboard)) {
+        const dest = getDefaultDashboardForRole(currentUser.role);
+        setActiveDashboard(dest);
+        syncBrowserUrl(dest, true);
       }
     }
-  }, [currentUser]);
+  }, [currentUser, activeDashboard]);
 
   // Save contacts updates permanently to backend & localStorage
   const handleSaveFacultyContacts = async (contacts) => {
@@ -1168,9 +1246,12 @@ export default function App() {
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase().trim();
-      const matchRoll = s.roll.toLowerCase().includes(q);
+      const matchRoll = s.roll && s.roll.toLowerCase().includes(q);
       const matchName = s.name && s.name.toLowerCase().includes(q);
-      if (!matchRoll && !matchName) return false;
+      const matchId = s.id && String(s.id).toLowerCase().includes(q);
+      const matchReg = s.regNo && String(s.regNo).toLowerCase().includes(q);
+      const matchSec = s.section && String(s.section).toLowerCase().includes(q);
+      if (!matchRoll && !matchName && !matchId && !matchReg && !matchSec) return false;
     }
 
     return true;
@@ -1204,6 +1285,12 @@ export default function App() {
         totalStudents={allStudentsList.length}
         activeSection={selectedSection}
         onOpenFacultyLocator={() => setShowGlobalFacultyLocator(true)}
+      />
+
+      {/* Role-Based Live Location Sharing Opt-in Banner */}
+      <LocationSharingConsentBanner
+        currentUser={currentUser}
+        onShowToast={showToast}
       />
 
       {/* Render Selected Dashboard */}

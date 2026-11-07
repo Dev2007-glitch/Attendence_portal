@@ -78,6 +78,17 @@ export const COLLECTIONS = {
   // L. Application Configuration & Backups
   APPLICATION_SETTINGS: "application_settings",
   DATABASE_MIGRATION_HISTORY: "database_migration_history",
-  DATABASE_BACKUPS: "database_backups"
+  DATABASE_BACKUPS: "database_backups",
+
+  // M. Role-Based Live Location Tracking & Geofencing
+  LOCATION_SHARING_PERMISSIONS: "location_sharing_permissions",
+  LIVE_LOCATIONS: "live_locations",
+  LOCATION_ACCESS_LOGS: "location_access_logs",
+  LOCATION_CONSENT_HISTORY: "location_consent_history",
+  LOCATION_SHARING_SESSIONS: "location_sharing_sessions",
+  FACULTY_LOCATION_SETTINGS: "faculty_location_settings",
+  STUDENT_LOCATION_SETTINGS: "student_location_settings",
+  COUNSELLOR_LOCATION_ACCESS: "counsellor_location_access",
+  LOCATION_SYSTEM_LOGS: "location_system_logs"
 };
 
